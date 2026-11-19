@@ -1,0 +1,44 @@
+{
+ "id": "hamilton",
+ "name": "Hamilton",
+ "look": {
+  "skin": [
+   204,
+   156,
+   118
+  ],
+  "hair": [
+   22,
+   16,
+   14
+  ],
+  "hair_style": "ponytail",
+  "headphones": false,
+  "backpack": false,
+  "outfit": "coat",
+  "hood": [
+   26,
+   32,
+   70
+  ],
+  "jeans": [
+   234,
+   226,
+   204
+  ],
+  "beard": "mustache",
+  "costume": "hamilton"
+ },
+ "voice": {
+  "draft": "man",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.85,
+  "energy": 0.7,
+  "shy": 0.1
+ },
+ "relations": {},
+ "group": "bal_xviiie",
+ "notes": "Redingote bleu nuit à col et revers crème, boutons dorés par paires, gilet crème, jabot blanc, culotte crème, bottes hautes ; cheveux noirs en catogan, bouc et moustache. Tête peinte en pixels façon skin (face_skin) : sourcils, yeux, lèvres et barbe peints, yeux, sourcils et bouche animés."
+}

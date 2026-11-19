@@ -1,0 +1,12 @@
+import os
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ASSETS = os.path.join(ROOT, 'assets')
+FONTS = os.path.join(ASSETS, 'fonts')
+FONT_PIXEL = os.path.join(FONTS, 'PressStart2P-Regular.ttf')
+FONT_MONTSERRAT = os.path.join(FONTS, 'Montserrat-VF.ttf')
+FONT_BEBAS = os.path.join(FONTS, 'BebasNeue-Regular.ttf')
+FONT_MONO = os.path.join(FONTS, 'JetBrainsMono-VF.ttf')
+PROJECTS = os.environ.get('HSTUDIO_PROJECTS', os.path.join(ROOT, 'projects'))
+CONFIG = os.path.join(ROOT, 'config')
+SETTINGS_FILE = os.path.join(CONFIG, 'settings.json')
+EXAMPLES = os.path.join(ROOT, 'examples')

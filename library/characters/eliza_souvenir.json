@@ -1,0 +1,43 @@
+{
+ "id": "eliza_souvenir",
+ "name": "Eliza (souvenir, sans voile)",
+ "look": {
+  "skin": [
+   238,
+   204,
+   184
+  ],
+  "hair": [
+   56,
+   34,
+   24
+  ],
+  "hair_style": "ponytail",
+  "headphones": false,
+  "backpack": false,
+  "outfit": "dress",
+  "hood": [
+   44,
+   150,
+   158
+  ],
+  "jeans": [
+   48,
+   158,
+   164
+  ],
+  "costume": "eliza_souvenir"
+ },
+ "voice": {
+  "draft": "woman",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.85,
+  "energy": 0.7,
+  "shy": 0.1
+ },
+ "relations": {},
+ "group": "bal_xviiie",
+ "notes": "Eliza pendant le souvenir : même robe, sans voile, longue queue de cheval sur l'épaule droite. Tête peinte en pixels façon skin (face_skin) : sourcils, yeux, lèvres et barbe peints, yeux, sourcils et bouche animés."
+}

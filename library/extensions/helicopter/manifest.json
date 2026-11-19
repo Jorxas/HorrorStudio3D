@@ -1,0 +1,32 @@
+{
+ "id": "helicopter",
+ "title": "Hélicoptère",
+ "description": "Hélicoptère PIXEL 3D (rotor animé, projecteur, feux, porte latérale ouverte) et son du rotor. Utilisable comme objet d'un décor ou comme objet « mover » (vol, vol stationnaire, transport d'un personnage avec carry).",
+ "status": "stable",
+ "module": "helicopter.py",
+ "provides": [
+  {
+   "kind": "prop",
+   "name": "helicopter"
+  },
+  {
+   "kind": "sound",
+   "name": "rotor"
+  }
+ ],
+ "tests": [
+  {
+   "scene": "test_scene.json",
+   "times": [
+    0.7,
+    1.6,
+    4.2,
+    5.4
+   ],
+   "aspect": "16:9"
+  }
+ ],
+ "requested_by": "library/extensions/requests/prop_helicopter.json (planificateur : « Léa saute vers un hélicoptère »)",
+ "sha256": "84f506220c9a0f6083c0edb79818a3932360a85e23eb49637ef4613f13ad034e",
+ "promoted": "2026-10-23"
+}

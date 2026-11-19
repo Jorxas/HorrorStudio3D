@@ -1,0 +1,44 @@
+{
+ "id": "washington",
+ "name": "Washington",
+ "look": {
+  "skin": [
+   96,
+   62,
+   44
+  ],
+  "hair": [
+   24,
+   18,
+   16
+  ],
+  "hair_style": "bald",
+  "headphones": false,
+  "backpack": false,
+  "outfit": "coat",
+  "hood": [
+   20,
+   24,
+   44
+  ],
+  "jeans": [
+   214,
+   190,
+   140
+  ],
+  "costume": "washington",
+  "scale": 1.08
+ },
+ "voice": {
+  "draft": "man",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.85,
+  "energy": 0.7,
+  "shy": 0.1
+ },
+ "relations": {},
+ "group": "bal_xviiie",
+ "notes": "Le plus grand : longue redingote bleu nuit presque noire, épaulettes dorées à franges, gilet chamois, crâne rasé. Tête peinte en pixels façon skin (face_skin) : sourcils, yeux, lèvres et barbe peints, yeux, sourcils et bouche animés."
+}

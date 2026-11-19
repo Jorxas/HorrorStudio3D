@@ -1,0 +1,69 @@
+{"title": "Démo 11 — Aplats : première tranche verticale du nouveau style CONSOLE 2D",
+ "style": "console", "part": "STYLE APLATS", "aspects": ["9:16", "16:9"],
+ "description": "Chantier artistique CONSOLE 2D. Même moteur, même couche de jeu, même couche de jeu d'acteur : seule la direction artistique change, et uniquement parce que l'épisode la demande (\"art\": \"aplat\"). La démo traverse les quatre palettes (nuit, jeu, alerte, aube), les décors redessinés en aplats, la lumière traitée comme une forme, les expressions, la silhouette et la mise en scène. Rien ici n'est activé par défaut : l'ancien style reste le style de production tant qu'un humain n'a pas jugé celui-ci.",
+ "voices": {"noah": "boy", "console": "robot"},
+ "names": {"noah": "NOAH", "console": "CONSOLE · FICHIER 1"},
+ "label_colors": {"noah": "white", "console": "green"},
+ "script": [
+  {"who": "noah", "text": "Trois heures sept. Un dernier niveau et j'éteins.", "dur": 4.0},
+  {"who": "console", "text": "Tu as dit ça au niveau six, Noah.", "voice_fx": "console", "dur": 3.4},
+  {"who": "noah", "text": "Comment tu sais ce que j'ai dit ?", "dur": 3.2},
+  {"who": "console", "text": "Niveau huit. Ne quitte pas ta chambre.", "voice_fx": "console", "dur": 3.8},
+  {"who": "noah", "text": "La lumière du couloir vient de s'allumer.", "dur": 3.6},
+  {"who": "console", "text": "Quelqu'un monte l'escalier. Ne mets pas pause.", "voice_fx": "console", "dur": 4.0},
+  {"who": "noah", "text": "Il y a quelqu'un derrière la porte !", "dur": 3.2},
+  {"who": "console", "text": "Tu as perdu un cœur.", "voice_fx": "console", "dur": 2.8},
+  {"who": "noah", "text": "Je pose la console... ou pas ?", "dur": 3.6}
+ ],
+ "episode": {
+  "engine_version": 2,
+  "art": "aplat", "palette": "night",
+  "game_map": "maison", "game_hp": 3,
+  "hud": {"series": "NE METS PAS PAUSE", "level": "NIVEAU 8", "clock_start": "3:07", "clock_rate": 0.125},
+  "cast": {"noah": {"ref": "noah"}},
+  "shots": [
+   {"lines": [0, 0], "scene": {"type": "room", "palette": "night", "console_on_bed": false, "notan_x": 0.46},
+    "actors": [{"id": "noah", "at": "door.front", "hold": "console", "face": "tired"}],
+    "actions": [{"who": "noah", "do": "walk_to", "to": "bed.edge"},
+                {"who": "noah", "do": "turn_to", "target": "camera"}],
+    "camera": {"move": "pan_left", "amount": 0.5, "on": "noah"},
+    "sfx": [{"name": "step_wood", "at": 0.6, "gain": 0.4}]},
+
+   {"lines": [1, 1], "scene": {"type": "console", "palette": "night", "screen": {"type": "game"}},
+    "camera": {"move": "push_in", "amount": 0.6, "focus": [0.5, 0.42]},
+    "game": [{"at": 0.3, "do": "say", "text": "NIVEAU 8", "dur": 1.6}, {"at": 1.5, "do": "walk", "to": "key"}],
+    "sfx": [{"name": "chip_blip", "at": 0.1, "gain": 0.5}]},
+
+   {"lines": [2, 2], "scene": {"type": "face", "palette": "night", "expression": "suspicious", "light": "green",
+                               "talking": true, "skin": [224, 172, 136], "hair": [24, 26, 46], "hood": [48, 58, 100]},
+    "camera": {"move": "push_in", "amount": 0.7}},
+
+   {"lines": [3, 3], "scene": {"type": "screen", "palette": "game", "screen": {"type": "game"}},
+    "camera": {"move": "drift"},
+    "game": [{"at": 0.2, "do": "pick", "item": "key"}, {"at": 0.8, "do": "walk", "to": "door1"},
+             {"do": "open", "door": "door1"}]},
+
+   {"lines": [4, 4], "scene": {"type": "door", "palette": "night", "x": 0.5, "light_under": "warm"},
+    "camera": {"move": "push_in", "amount": 0.8}},
+
+   {"lines": [5, 5], "scene": {"type": "door", "palette": "alert", "x": 0.5, "light_under": "warm",
+                               "feet": true, "feet_move": true},
+    "camera": {"move": "push_in", "amount": 1.0, "shake": 0.12}},
+
+   {"lines": [6, 6], "scene": {"type": "room", "palette": "alert", "console_on_bed": false, "notan_x": 0.40},
+    "actions": [{"who": "noah", "do": "react", "kind": "startle"},
+                {"who": "noah", "do": "stand"},
+                {"who": "noah", "do": "turn_to", "target": "door"},
+                {"who": "noah", "do": "face", "name": "scared"}],
+    "camera": {"move": "handheld", "on": "noah", "shake": 0.18}},
+
+   {"lines": [7, 7], "scene": {"type": "hallway", "palette": "alert", "figure": true, "light_under": "red"},
+    "camera": {"move": "push_in", "amount": 0.7}, "fx": {"flicker": true}},
+
+   {"lines": [8, 8], "scene": {"type": "room", "palette": "dawn", "console_on_bed": false, "notan_x": 0.46},
+    "actions": [{"who": "noah", "do": "sit", "on": "bed"},
+                {"who": "noah", "do": "face", "name": "smile_sad"},
+                {"who": "noah", "do": "look_at", "target": "camera", "dur": 3.0}],
+    "camera": {"move": "push_in", "amount": 0.5, "on": "noah"},
+    "ui": {"choice": {"title": "TU POSES LA CONSOLE ?", "A": "OUI", "B": "ENCORE UN NIVEAU"}}}
+  ]}}

@@ -1,0 +1,133 @@
+{
+ "style": "pixel3d",
+ "engine_version": 2,
+ "default_set": "salon",
+ "sets": {
+  "salon": {
+   "type": "living_room",
+   "items": [
+    {
+     "id": "cle",
+     "type": "key",
+     "at": [
+      0.3,
+      0.82,
+      4.4
+     ]
+    }
+   ]
+  }
+ },
+ "cast": {
+  "lea": {
+   "hood": [
+    170,
+    70,
+    60
+   ],
+   "jeans": [
+    40,
+    44,
+    70
+   ],
+   "hair": [
+    70,
+    40,
+    26
+   ],
+   "hair_style": "ponytail",
+   "headphones": false,
+   "backpack": false
+  }
+ },
+ "shots": [
+  {
+   "lines": [
+    0,
+    0
+   ],
+   "actors": [
+    {
+     "id": "lea",
+     "at": [
+      2.3,
+      0.9
+     ],
+     "facing": "-x"
+    }
+   ],
+   "actions": [
+    {
+     "who": "lea",
+     "do": "walk_to",
+     "to": [
+      0.2,
+      3.6
+     ]
+    },
+    {
+     "who": "lea",
+     "do": "look_around"
+    }
+   ],
+   "camera": {
+    "shot": "wide",
+    "on": [
+     "lea"
+    ]
+   },
+   "dur": 7
+  },
+  {
+   "lines": [
+    1,
+    1
+   ],
+   "actions": [
+    {
+     "who": "lea",
+     "do": "pick",
+     "item": "cle"
+    },
+    {
+     "who": "lea",
+     "do": "face",
+     "name": "surprised"
+    }
+   ],
+   "camera": {
+    "shot": "medium_full",
+    "on": [
+     "lea"
+    ]
+   },
+   "dur": 4
+  },
+  {
+   "lines": [
+    2,
+    2
+   ],
+   "actions": [
+    {
+     "who": "lea",
+     "do": "sit",
+     "on": "canape"
+    },
+    {
+     "who": "lea",
+     "do": "face",
+     "name": "calm"
+    }
+   ],
+   "camera": {
+    "shot": "full",
+    "on": [
+     "lea"
+    ],
+    "move": "follow"
+   },
+   "dur": 5
+  }
+ ]
+}

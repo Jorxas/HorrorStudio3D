@@ -1,0 +1,28 @@
+{
+ "_comment": "Le pas de cote VOULU doit survivre a l'option. Plan 0 : Lea se tourne vers Tom puis se deplace lateralement avec \"strafe\": true -- le corps doit garder son cap, pas se tourner vers la direction du deplacement. Plan 1 : la meme action SANS \"strafe\" -- la le corps doit tourner. Sert aux verifications de tools/check_approche.py.",
+ "style": "pixel3d",
+ "engine_version": 2,
+ "default_set": "cimetiere",
+ "sets": {"cimetiere": {"type": "graveyard", "seed": 3, "sky": "day", "stars": false, "fog": 0.02}},
+ "cast": {"lea": {"ref": "lea"}, "tom": {"ref": "tom"}},
+ "shots": [
+  {
+   "lines": [0, 0], "dur": 6,
+   "actors": [
+    {"id": "lea", "at": [-11.0, 14.0], "facing": "tom"},
+    {"id": "tom", "at": [-11.0, 18.0], "facing": "lea"}
+   ],
+   "actions": [{"who": "lea", "do": "walk_to", "to": [-8.5, 14.0], "strafe": true}],
+   "camera": {"shot": "full", "on": ["lea"], "move": "static"}
+  },
+  {
+   "lines": [1, 1], "dur": 6,
+   "actors": [
+    {"id": "lea", "at": [-11.0, 14.0], "facing": "tom"},
+    {"id": "tom", "at": [-11.0, 18.0], "facing": "lea"}
+   ],
+   "actions": [{"who": "lea", "do": "walk_to", "to": [-8.5, 14.0]}],
+   "camera": {"shot": "full", "on": ["lea"], "move": "static"}
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+{
+ "id": "lea_hd",
+ "name": "Léa",
+ "look": {
+  "hood": [
+   58,
+   140,
+   96
+  ],
+  "accent": [
+   28,
+   92,
+   70
+  ],
+  "jeans": [
+   40,
+   44,
+   70
+  ],
+  "hair": [
+   70,
+   40,
+   26
+  ],
+  "hair2": [
+   150,
+   96,
+   58
+  ],
+  "skin": [
+   214,
+   160,
+   124
+  ],
+  "iris": [
+   96,
+   140,
+   120
+  ],
+  "hair_style": "strands_ponytail",
+  "face_detail": "hd",
+  "detail": true,
+  "headphones": false,
+  "backpack": false
+ },
+ "voice": {
+  "draft": "woman",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.85,
+  "energy": 0.7,
+  "shy": 0.1
+ },
+ "relations": {
+  "tom": "meilleur ami",
+  "zoe": "cousine",
+  "rex": "son chien"
+ },
+ "notes": "Variante « rendu expressif » de Léa (même personnage, look opt-in): visage 48x48 (sourcils, iris/pupille/reflet, joues nuancées, bouche émotionnelle), cheveux en mèches cubiques étagées, sweat vert à nuances. Clés opt-in: face_detail=hd, hair_style=strands_ponytail, detail=true, hair2/iris/accent. `lea.json` reste le rendu V2 inchangé: ne pas fusionner les deux."
+}

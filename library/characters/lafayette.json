@@ -1,0 +1,44 @@
+{
+ "id": "lafayette",
+ "name": "Lafayette",
+ "look": {
+  "skin": [
+   104,
+   66,
+   46
+  ],
+  "hair": [
+   20,
+   15,
+   13
+  ],
+  "hair_style": "curly",
+  "headphones": false,
+  "backpack": false,
+  "outfit": "coat",
+  "hood": [
+   34,
+   52,
+   120
+  ],
+  "jeans": [
+   240,
+   238,
+   232
+  ],
+  "beard": true,
+  "costume": "lafayette"
+ },
+ "voice": {
+  "draft": "man",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.85,
+  "energy": 0.7,
+  "shy": 0.1
+ },
+ "relations": {},
+ "group": "bal_xviiie",
+ "notes": "Redingote bleu roi à revers blancs, barbe courte, houppe bouclée relevée. Tête peinte en pixels façon skin (face_skin) : sourcils, yeux, lèvres et barbe peints, yeux, sourcils et bouche animés."
+}

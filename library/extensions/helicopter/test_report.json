@@ -1,0 +1,38 @@
+{
+ "id": "helicopter",
+ "checks": [
+  {
+   "name": "chargement",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "fournit prop:helicopter",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "fournit sound:rotor",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "test_scene.json : images non vides",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "test_scene.json : rendu déterministe",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "non-régression (tests/baseline_local.json)",
+   "ok": true,
+   "detail": "partie4@9:16           OK\npartie4@16:9           OK\nconsole_demo@9:16      OK\nconsole_demo@16:9      OK\nmonde@9:16             OK\nmonde@16:9             OK"
+  }
+ ],
+ "ok": true,
+ "sheet": "test_sheet.png",
+ "sha256": "84f506220c9a0f6083c0edb79818a3932360a85e23eb49637ef4613f13ad034e"
+}

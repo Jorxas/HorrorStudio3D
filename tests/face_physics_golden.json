@@ -1,0 +1,4 @@
+{
+ "legacy_clerk_pompe": "51b7ed3eb2364fdea10cc89489a472fba57e7a931af8ff638a3a4c482a403f82",
+ "note": "sha256 of the rows faceact.build produced for the clerk of pompe_continuite BEFORE the human model was added (commit 19e2211); the legacy path must keep producing them"
+}

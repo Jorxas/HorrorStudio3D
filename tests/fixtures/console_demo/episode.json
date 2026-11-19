@@ -1,0 +1,1549 @@
+{
+ "style": "console",
+ "hud": {
+  "series": "",
+  "level": "",
+  "clock_start": "3:07",
+  "clock_rate": 0.125,
+  "hearts": [
+   1,
+   1,
+   1
+  ]
+ },
+ "lines": {
+  "0": {
+   "keywords": [
+    "choisi"
+   ]
+  },
+  "1": {
+   "keywords": [
+    "double"
+   ]
+  },
+  "2": {
+   "keywords": [
+    "porte"
+   ]
+  },
+  "3": {
+   "keywords": [
+    "décision"
+   ]
+  },
+  "4": {
+   "keywords": [
+    "Sors"
+   ],
+   "label": "VOIX DERRIÈRE LA PORTE",
+   "label_color": "orange",
+   "voice_fx": "muffled"
+  },
+  "5": {
+   "keywords": [
+    "dévisage"
+   ]
+  },
+  "6": {
+   "keywords": [],
+   "label": "VOIX DERRIÈRE LA PORTE",
+   "label_color": "orange",
+   "voice_fx": "muffled"
+  },
+  "7": {
+   "keywords": [
+    "Maintenant"
+   ],
+   "label": "VOIX DERRIÈRE LA PORTE",
+   "label_color": "orange",
+   "voice_fx": "muffled"
+  },
+  "8": {
+   "keywords": [
+    "escaliers"
+   ]
+  },
+  "9": {
+   "keywords": [
+    "d'avancer"
+   ]
+  },
+  "10": {
+   "keywords": [
+    "solution"
+   ],
+   "label": "VOIX DERRIÈRE LA PORTE",
+   "label_color": "orange",
+   "voice_fx": "muffled"
+  },
+  "11": {
+   "keywords": [
+    "TEMPS"
+   ],
+   "label": "VOIX DERRIÈRE LA PORTE",
+   "label_color": "orange",
+   "voice_fx": "muffled"
+  },
+  "12": {
+   "keywords": [
+    "créature"
+   ]
+  },
+  "13": {
+   "keywords": [
+    "double"
+   ]
+  },
+  "14": {
+   "keywords": [
+    "porte"
+   ]
+  },
+  "15": {
+   "keywords": [
+    "soudain"
+   ]
+  },
+  "16": {
+   "keywords": [
+    "aucun"
+   ]
+  },
+  "17": {
+   "keywords": [
+    "seul"
+   ]
+  },
+  "18": {
+   "keywords": [
+    "créature"
+   ]
+  },
+  "19": {
+   "keywords": [
+    "s'arrête"
+   ]
+  },
+  "20": {
+   "keywords": [
+    "lentement"
+   ]
+  },
+  "21": {
+   "keywords": [
+    "laissé"
+   ],
+   "label": "VOIX DERRIÈRE LA PORTE",
+   "label_color": "orange",
+   "voice_fx": "muffled"
+  },
+  "22": {
+   "keywords": [
+    "réponds"
+   ]
+  },
+  "23": {
+   "keywords": [
+    "commence"
+   ]
+  },
+  "24": {
+   "keywords": [
+    "comprends"
+   ],
+   "label": "VOIX DERRIÈRE LA PORTE",
+   "label_color": "orange",
+   "voice_fx": "muffled"
+  },
+  "25": {
+   "keywords": [
+    "s'approche"
+   ]
+  },
+  "26": {
+   "keywords": [
+    "remarques"
+   ]
+  },
+  "27": {
+   "keywords": [
+    "fissures"
+   ]
+  },
+  "28": {
+   "keywords": [
+    "miroir"
+   ]
+  },
+  "29": {
+   "keywords": [
+    "reflet"
+   ],
+   "label": "VOIX DERRIÈRE LA PORTE",
+   "label_color": "orange",
+   "voice_fx": "muffled"
+  },
+  "30": {
+   "keywords": [
+    "sang"
+   ]
+  },
+  "31": {
+   "keywords": [
+    "Parce"
+   ],
+   "label": "VOIX DERRIÈRE LA PORTE",
+   "label_color": "orange",
+   "voice_fx": "muffled"
+  },
+  "32": {
+   "keywords": [
+    "créature"
+   ]
+  },
+  "33": {
+   "keywords": [
+    "reflet"
+   ],
+   "label": "VOIX DERRIÈRE LA PORTE",
+   "label_color": "orange",
+   "voice_fx": "muffled"
+  },
+  "34": {
+   "keywords": [
+    "recules"
+   ]
+  },
+  "35": {
+   "keywords": [
+    "t'attaque"
+   ]
+  },
+  "36": {
+   "keywords": [
+    "simplement"
+   ]
+  },
+  "37": {
+   "keywords": [
+    "toujours"
+   ],
+   "label": "VOIX DERRIÈRE LA PORTE",
+   "label_color": "orange",
+   "voice_fx": "muffled"
+  },
+  "38": {
+   "keywords": [
+    "regardes"
+   ]
+  },
+  "39": {
+   "keywords": [
+    "commencent"
+   ]
+  },
+  "40": {
+   "keywords": [
+    "plafond"
+   ]
+  },
+  "41": {
+   "keywords": [
+    "s'effondrer"
+   ]
+  },
+  "42": {
+   "keywords": [
+    "téléphone"
+   ]
+  },
+  "43": {
+   "keywords": [
+    "message"
+   ]
+  },
+  "44": {
+   "keywords": [
+    "jamais"
+   ],
+   "label": "VOIX DERRIÈRE LA PORTE",
+   "label_color": "orange",
+   "voice_fx": "muffled"
+  },
+  "45": {
+   "keywords": [
+    "reconnais"
+   ]
+  },
+  "46": {
+   "keywords": [
+    "t'écrivait"
+   ]
+  },
+  "47": {
+   "keywords": [
+    "double"
+   ]
+  },
+  "48": {
+   "keywords": [
+    "faiblement"
+   ]
+  },
+  "49": {
+   "keywords": [
+    "c'était"
+   ]
+  },
+  "50": {
+   "keywords": [
+    "avertissement"
+   ]
+  },
+  "51": {
+   "keywords": [
+    "essayait"
+   ]
+  },
+  "52": {
+   "keywords": [
+    "maintenant"
+   ]
+  },
+  "53": {
+   "keywords": [
+    "s'éteignent"
+   ]
+  },
+  "54": {
+   "keywords": [
+    "créature"
+   ]
+  },
+  "55": {
+   "keywords": [
+    "prends"
+   ]
+  },
+  "56": {
+   "keywords": [
+    "simplement"
+   ]
+  },
+  "57": {
+   "keywords": [
+    "zéro"
+   ]
+  },
+  "58": {
+   "keywords": [
+    "instants"
+   ]
+  },
+  "59": {
+   "keywords": [
+    "ordinaire"
+   ]
+  },
+  "60": {
+   "keywords": [
+    "l'ascenseur"
+   ]
+  },
+  "61": {
+   "keywords": [
+    "visage"
+   ]
+  },
+  "62": {
+   "keywords": [
+    "vêtements"
+   ]
+  },
+  "63": {
+   "keywords": [
+    "souvenirs"
+   ]
+  },
+  "64": {
+   "keywords": [
+    "appartement"
+   ]
+  },
+  "65": {
+   "keywords": [
+    "appartement"
+   ]
+  },
+  "66": {
+   "keywords": [
+    "téléphone"
+   ]
+  },
+  "67": {
+   "keywords": [
+    "miroir"
+   ]
+  },
+  "68": {
+   "keywords": [
+    "reflet"
+   ]
+  },
+  "69": {
+   "keywords": [
+    "longuement"
+   ]
+  },
+  "70": {
+   "keywords": [
+    "murmure"
+   ]
+  },
+  "71": {
+   "keywords": [
+    "deuxième"
+   ],
+   "label": "VOIX DERRIÈRE LA PORTE",
+   "label_color": "orange",
+   "voice_fx": "muffled"
+  },
+  "72": {
+   "keywords": [
+    "jamais"
+   ]
+  },
+  "73": {
+   "keywords": [
+    "part"
+   ]
+  },
+  "74": {
+   "keywords": [
+    "continue"
+   ]
+  },
+  "75": {
+   "keywords": []
+  }
+ },
+ "shots": [
+  {
+   "lines": [
+    0,
+    0
+   ],
+   "scene": {
+    "type": "room"
+   },
+   "camera": {
+    "move": "drift"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    1,
+    1
+   ],
+   "scene": {
+    "type": "face",
+    "expression": "scared",
+    "light": "green"
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    2,
+    2
+   ],
+   "scene": {
+    "type": "door",
+    "light_under": null,
+    "open": 0
+   },
+   "sfx": [
+    {
+     "name": "creak",
+     "at": 0.3,
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "lines": [
+    3,
+    3
+   ],
+   "scene": {
+    "type": "room"
+   },
+   "camera": {
+    "move": "drift"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    4,
+    4
+   ],
+   "scene": {
+    "type": "door",
+    "light_under": "orange",
+    "feet": true
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    5,
+    5
+   ],
+   "scene": {
+    "type": "face",
+    "expression": "wide",
+    "light": "green"
+   },
+   "camera": {
+    "move": "pan_right"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    6,
+    6
+   ],
+   "scene": {
+    "type": "door",
+    "light_under": "orange",
+    "feet": true
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    7,
+    7
+   ],
+   "scene": {
+    "type": "door",
+    "light_under": "orange",
+    "feet": true
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    8,
+    8
+   ],
+   "scene": {
+    "type": "face",
+    "expression": "wide",
+    "light": "green"
+   },
+   "camera": {
+    "move": "pan_right"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    9,
+    9
+   ],
+   "scene": {
+    "type": "room"
+   },
+   "camera": {
+    "move": "drift"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    10,
+    10
+   ],
+   "scene": {
+    "type": "door",
+    "light_under": "orange",
+    "feet": true
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    11,
+    11
+   ],
+   "scene": {
+    "type": "door",
+    "light_under": "orange",
+    "feet": true
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    12,
+    12
+   ],
+   "scene": {
+    "type": "face",
+    "expression": "scared",
+    "light": "green"
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    13,
+    13
+   ],
+   "scene": {
+    "type": "door",
+    "x": 0.55
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    14,
+    14
+   ],
+   "scene": {
+    "type": "door",
+    "light_under": null,
+    "open": 0
+   },
+   "sfx": [
+    {
+     "name": "creak",
+     "at": 0.3,
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "lines": [
+    15,
+    15
+   ],
+   "scene": {
+    "type": "room"
+   },
+   "camera": {
+    "move": "drift"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    16,
+    16
+   ],
+   "scene": {
+    "type": "door",
+    "x": 0.55
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    17,
+    17
+   ],
+   "scene": {
+    "type": "face",
+    "expression": "wide",
+    "light": "green"
+   },
+   "camera": {
+    "move": "pan_right"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    18,
+    18
+   ],
+   "scene": {
+    "type": "room"
+   },
+   "camera": {
+    "move": "drift"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    19,
+    19
+   ],
+   "scene": {
+    "type": "door",
+    "light_under": "warm",
+    "feet": true,
+    "feet_move": false
+   },
+   "sfx": [
+    {
+     "name": "footsteps_walk",
+     "at": 0,
+     "dur": 2,
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "lines": [
+    20,
+    20
+   ],
+   "scene": {
+    "type": "face",
+    "expression": "wide",
+    "light": "green"
+   },
+   "camera": {
+    "move": "pan_right"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    21,
+    21
+   ],
+   "scene": {
+    "type": "door",
+    "light_under": "orange",
+    "feet": true
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    22,
+    22
+   ],
+   "scene": {
+    "type": "door",
+    "x": 0.55
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    23,
+    23
+   ],
+   "scene": {
+    "type": "face",
+    "expression": "wide",
+    "light": "green"
+   },
+   "camera": {
+    "move": "pan_right"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    24,
+    24
+   ],
+   "scene": {
+    "type": "door",
+    "light_under": "orange",
+    "feet": true
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    25,
+    25
+   ],
+   "scene": {
+    "type": "door",
+    "x": 0.55
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    26,
+    26
+   ],
+   "scene": {
+    "type": "door",
+    "light_under": "warm",
+    "feet": true,
+    "feet_move": false
+   },
+   "sfx": [
+    {
+     "name": "footsteps_walk",
+     "at": 0,
+     "dur": 2,
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "lines": [
+    27,
+    27
+   ],
+   "scene": {
+    "type": "face",
+    "expression": "scared",
+    "light": "green"
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    28,
+    28
+   ],
+   "scene": {
+    "type": "door",
+    "x": 0.55
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    29,
+    29
+   ],
+   "scene": {
+    "type": "door",
+    "light_under": "orange",
+    "feet": true
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    30,
+    30
+   ],
+   "scene": {
+    "type": "room"
+   },
+   "camera": {
+    "move": "drift"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    31,
+    31
+   ],
+   "scene": {
+    "type": "door",
+    "light_under": "orange",
+    "feet": true
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    32,
+    32
+   ],
+   "scene": {
+    "type": "face",
+    "expression": "wide",
+    "light": "green"
+   },
+   "camera": {
+    "move": "pan_right"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    33,
+    33
+   ],
+   "scene": {
+    "type": "door",
+    "light_under": "orange",
+    "feet": true
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    34,
+    34
+   ],
+   "scene": {
+    "type": "door",
+    "x": 0.55
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    35,
+    35
+   ],
+   "scene": {
+    "type": "face",
+    "expression": "wide",
+    "light": "green"
+   },
+   "camera": {
+    "move": "pan_right"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    36,
+    36
+   ],
+   "scene": {
+    "type": "room"
+   },
+   "camera": {
+    "move": "drift"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    37,
+    37
+   ],
+   "scene": {
+    "type": "door",
+    "light_under": "orange",
+    "feet": true
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    38,
+    38
+   ],
+   "scene": {
+    "type": "face",
+    "expression": "scared",
+    "light": "green"
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    39,
+    39
+   ],
+   "scene": {
+    "type": "room"
+   },
+   "camera": {
+    "move": "drift"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    40,
+    40
+   ],
+   "scene": {
+    "type": "door",
+    "x": 0.55
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    41,
+    41
+   ],
+   "scene": {
+    "type": "face",
+    "expression": "wide",
+    "light": "green"
+   },
+   "camera": {
+    "move": "pan_right"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    42,
+    42
+   ],
+   "scene": {
+    "type": "room"
+   },
+   "camera": {
+    "move": "drift"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    43,
+    43
+   ],
+   "scene": {
+    "type": "door",
+    "x": 0.55
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    44,
+    44
+   ],
+   "scene": {
+    "type": "door",
+    "light_under": "orange",
+    "feet": true
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    45,
+    45
+   ],
+   "scene": {
+    "type": "room"
+   },
+   "camera": {
+    "move": "drift"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    46,
+    46
+   ],
+   "scene": {
+    "type": "door",
+    "x": 0.55
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    47,
+    47
+   ],
+   "scene": {
+    "type": "face",
+    "expression": "wide",
+    "light": "green"
+   },
+   "camera": {
+    "move": "pan_right"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    48,
+    48
+   ],
+   "scene": {
+    "type": "room"
+   },
+   "camera": {
+    "move": "drift"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    49,
+    49
+   ],
+   "scene": {
+    "type": "door",
+    "x": 0.55
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    50,
+    50
+   ],
+   "scene": {
+    "type": "face",
+    "expression": "wide",
+    "light": "green"
+   },
+   "camera": {
+    "move": "pan_right"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    51,
+    51
+   ],
+   "scene": {
+    "type": "room"
+   },
+   "camera": {
+    "move": "drift"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    52,
+    52
+   ],
+   "scene": {
+    "type": "door",
+    "x": 0.55
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    53,
+    53
+   ],
+   "scene": {
+    "type": "room",
+    "figure": false
+   },
+   "fx": {
+    "flicker": true
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    54,
+    54
+   ],
+   "scene": {
+    "type": "room"
+   },
+   "camera": {
+    "move": "drift"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    55,
+    55
+   ],
+   "scene": {
+    "type": "door",
+    "x": 0.55
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    56,
+    56
+   ],
+   "scene": {
+    "type": "face",
+    "expression": "closed",
+    "light": "green"
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    57,
+    57
+   ],
+   "scene": {
+    "type": "room"
+   },
+   "camera": {
+    "move": "drift"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    58,
+    58
+   ],
+   "scene": {
+    "type": "door",
+    "light_under": "warm",
+    "feet": true,
+    "feet_move": false
+   },
+   "sfx": [
+    {
+     "name": "footsteps_walk",
+     "at": 0,
+     "dur": 2,
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "lines": [
+    59,
+    59
+   ],
+   "scene": {
+    "type": "face",
+    "expression": "wide",
+    "light": "green"
+   },
+   "camera": {
+    "move": "pan_right"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    60,
+    60
+   ],
+   "scene": {
+    "type": "room"
+   },
+   "camera": {
+    "move": "drift"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    61,
+    61
+   ],
+   "scene": {
+    "type": "face",
+    "expression": "scared",
+    "light": "green"
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    62,
+    62
+   ],
+   "scene": {
+    "type": "face",
+    "expression": "wide",
+    "light": "green"
+   },
+   "camera": {
+    "move": "pan_right"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    63,
+    63
+   ],
+   "scene": {
+    "type": "room"
+   },
+   "camera": {
+    "move": "drift"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    64,
+    64
+   ],
+   "scene": {
+    "type": "door",
+    "x": 0.55
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    65,
+    65
+   ],
+   "scene": {
+    "type": "face",
+    "expression": "wide",
+    "light": "green"
+   },
+   "camera": {
+    "move": "pan_right"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    66,
+    66
+   ],
+   "scene": {
+    "type": "room"
+   },
+   "camera": {
+    "move": "drift"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    67,
+    67
+   ],
+   "scene": {
+    "type": "door",
+    "x": 0.55
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    68,
+    68
+   ],
+   "scene": {
+    "type": "face",
+    "expression": "wide",
+    "light": "green"
+   },
+   "camera": {
+    "move": "pan_right"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    69,
+    69
+   ],
+   "scene": {
+    "type": "face",
+    "expression": "scared",
+    "light": "green"
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    70,
+    70
+   ],
+   "scene": {
+    "type": "door",
+    "x": 0.55
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    71,
+    71
+   ],
+   "scene": {
+    "type": "door",
+    "light_under": "orange",
+    "feet": true
+   },
+   "camera": {
+    "move": "push_in"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    72,
+    72
+   ],
+   "scene": {
+    "type": "room"
+   },
+   "camera": {
+    "move": "drift"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    73,
+    73
+   ],
+   "scene": {
+    "type": "door",
+    "light_under": "warm",
+    "feet": true,
+    "feet_move": false
+   },
+   "sfx": [
+    {
+     "name": "footsteps_walk",
+     "at": 0,
+     "dur": 2,
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "lines": [
+    74,
+    74
+   ],
+   "scene": {
+    "type": "face",
+    "expression": "wide",
+    "light": "green"
+   },
+   "camera": {
+    "move": "pan_right"
+   },
+   "sfx": []
+  },
+  {
+   "lines": [
+    75,
+    75
+   ],
+   "scene": {
+    "type": "black"
+   },
+   "ui": {
+    "endcard": {
+     "part": "",
+     "headline": "A OU B ?"
+    }
+   },
+   "sfx": []
+  }
+ ],
+ "summary": "Mise en scène automatique (sans IA)."
+}

@@ -1,0 +1,1092 @@
+{
+ "title": "Démo 9 — La tempête (scène ambitieuse)",
+ "style": "pixel3d",
+ "part": "DÉMO 9",
+ "aspects": [
+  "9:16",
+  "16:9"
+ ],
+ "description": "V3, scénario 3 : la scène du cahier des charges. Orage sur les toits, un dragon gigantesque traverse les nuages, la foudre frappe la tour voisine qui s'effondre plan après plan, un hélicoptère (extension testée puis promue) vient les chercher : Léa saute dans le vide jusqu'à la cabine, Tom la suit, l'hélicoptère les emporte. Onze plans, deux personnages, cinq effets coordonnés.",
+ "voices": {
+  "lea": "woman",
+  "tom": "man"
+ },
+ "names": {
+  "lea": "LÉA",
+  "tom": "TOM"
+ },
+ "label_colors": {
+  "lea": "orange",
+  "tom": "blue"
+ },
+ "script": [
+  {
+   "text": "",
+   "dur": 3.4
+  },
+  {
+   "who": "tom",
+   "text": "Léa... Regarde le ciel.",
+   "dur": 2.6
+  },
+  {
+   "text": "",
+   "dur": 4.6
+  },
+  {
+   "text": "",
+   "dur": 3.8
+  },
+  {
+   "who": "lea",
+   "text": "La tour ! Elle s'effondre !",
+   "dur": 2.6
+  },
+  {
+   "text": "",
+   "dur": 3.6
+  },
+  {
+   "who": "tom",
+   "text": "Saute ! Vite, saute !",
+   "dur": 2.2
+  },
+  {
+   "text": "",
+   "dur": 3.8
+  },
+  {
+   "who": "lea",
+   "text": "Tom ! Prends ma main !",
+   "dur": 2.4
+  },
+  {
+   "text": "",
+   "dur": 3.6
+  },
+  {
+   "text": "",
+   "dur": 4.6
+  }
+ ],
+ "episode": {
+  "sfx_library": true,
+  "engine_version": 2,
+  "default_set": "toits",
+  "music": "epic",
+  "intensity_start": 0.4,
+  "hud": {
+   "title": [
+    "TU",
+    "DÉCIDES"
+   ],
+   "part": "DÉMO 9",
+   "hearts": []
+  },
+  "requires": [
+   "creature:dragon",
+   "effect:mover",
+   "effect:lightning_bolt",
+   "effect:collapse",
+   "prop:helicopter",
+   "action:jump",
+   "feature:levels",
+   "feature:carry"
+  ],
+  "sets": {
+   "toits": {
+    "type": "composed",
+    "ground_y": -32,
+    "ground": "asphalt",
+    "sky": "storm",
+    "backdrop": [
+     {
+      "type": "city",
+      "height": 8,
+      "density": 40
+     }
+    ],
+    "weather": "storm",
+    "wet": true,
+    "fog": 0.009,
+    "fill": 0.65,
+    "ambience": "storm",
+    "elements": [
+     {
+      "kind": "building",
+      "id": "toit",
+      "rect": [
+       -6,
+       -4,
+       6,
+       7
+      ],
+      "top": 0,
+      "style": "brick",
+      "lit": 0.3,
+      "seed": 6,
+      "parapet": {
+       "height": 0.9,
+       "sides": "SWE"
+      },
+      "roof": {
+       "floor": "tar",
+       "furniture": [
+        {
+         "type": "stair_hut",
+         "at": [
+          4.0,
+          -2.4
+         ],
+         "rot": 3
+        },
+        {
+         "type": "water_tank",
+         "at": [
+          -4.0,
+          -2.2
+         ]
+        },
+        {
+         "type": "ac_unit",
+         "at": [
+          4.5,
+          3.6
+         ],
+         "rot": 1
+        },
+        {
+         "type": "antenna",
+         "at": [
+          -4.8,
+          5.4
+         ],
+         "height": 4
+        }
+       ]
+      }
+     },
+     {
+      "kind": "tower",
+      "id": "tour",
+      "rect": [
+       10,
+       6,
+       18,
+       14
+      ],
+      "top": 22,
+      "style": "office",
+      "lit": 0.38,
+      "seed": 12
+     },
+     {
+      "kind": "building",
+      "id": "voisin_ouest",
+      "rect": [
+       -17,
+       -6,
+       -9,
+       4
+      ],
+      "top": -4,
+      "style": "old",
+      "lit": 0.3,
+      "seed": 3
+     },
+     {
+      "kind": "street",
+      "id": "rue",
+      "rect": [
+       -70,
+       16,
+       70,
+       22
+      ],
+      "cars": 6,
+      "seed": 5
+     },
+     {
+      "kind": "district",
+      "area": [
+       -100,
+       -80,
+       100,
+       140
+      ],
+      "count": 48,
+      "top": [
+       -20,
+       30
+      ],
+      "lit": 0.32,
+      "seed": 9
+     }
+    ],
+    "blocks": [
+     {
+      "at": [
+       -5.75,
+       0.9,
+       0.5
+      ],
+      "size": [
+       0.22,
+       0.22,
+       0.22
+      ],
+      "material": "light",
+      "color": [
+       255,
+       214,
+       150
+      ],
+      "light": 1.6,
+      "light_radius": 7
+     },
+     {
+      "at": [
+       5.75,
+       0.9,
+       1.0
+      ],
+      "size": [
+       0.22,
+       0.22,
+       0.22
+      ],
+      "material": "light",
+      "color": [
+       255,
+       214,
+       150
+      ],
+      "light": 1.4,
+      "light_radius": 7
+     }
+    ]
+   }
+  },
+  "cast": {
+   "lea": {
+    "ref": "lea"
+   },
+   "tom": {
+    "ref": "tom"
+   }
+  },
+  "shots": [
+   {
+    "lines": [
+     0,
+     0
+    ],
+    "actors": [
+     {
+      "id": "lea",
+      "at": [
+       -0.8,
+       2.0
+      ],
+      "facing": "+z",
+      "face": "nervous"
+     },
+     {
+      "id": "tom",
+      "at": [
+       0.9,
+       2.4
+      ],
+      "facing": "+z",
+      "face": "nervous"
+     }
+    ],
+    "actions": [
+     {
+      "who": "lea",
+      "do": "look_around",
+      "dur": 2.4,
+      "amount": 0.6,
+      "at": 0.4
+     }
+    ],
+    "camera": {
+     "shot": "wide",
+     "on": [
+      "lea",
+      "tom"
+     ],
+     "from": "toit.SW",
+     "angle": "high",
+     "move": "crane_up",
+     "amount": 0.4
+    },
+    "audio": {
+     "intensity": 0.35
+    }
+   },
+   {
+    "lines": [
+     1,
+     1
+    ],
+    "actions": [
+     {
+      "who": "tom",
+      "do": "gesture",
+      "name": "point",
+      "at": 0.6,
+      "dur": 1.8
+     },
+     {
+      "who": "lea",
+      "do": "turn_to",
+      "target": "tom",
+      "at": 0.2
+     }
+    ],
+    "camera": {
+     "shot": "dialogue",
+     "on": [
+      "lea",
+      "tom"
+     ],
+     "speaker": "tom"
+    },
+    "audio": {
+     "intensity": 0.4
+    }
+   },
+   {
+    "lines": [
+     2,
+     2
+    ],
+    "actions": [
+     {
+      "who": "lea",
+      "do": "look_at",
+      "target": [
+       0,
+       30,
+       80
+      ],
+      "dur": 4.4
+     },
+     {
+      "who": "tom",
+      "do": "look_at",
+      "target": [
+       0,
+       30,
+       80
+      ],
+      "dur": 4.4
+     },
+     {
+      "who": "lea",
+      "do": "face",
+      "name": "shocked"
+     }
+    ],
+    "objects": [
+     {
+      "type": "mover",
+      "thing": "creature:dragon",
+      "size": 7,
+      "path": [
+       [
+        62,
+        30,
+        56
+       ],
+       [
+        22,
+        34,
+        62
+       ],
+       [
+        -20,
+        32,
+        57
+       ],
+       [
+        -66,
+        26,
+        42
+       ]
+      ],
+      "start": 0.1,
+      "dur": 4.6,
+      "ease": "linear",
+      "bank": 0.5,
+      "pitch": 0.6,
+      "sound": {
+       "name": "wings",
+       "dur": 4.6,
+       "gain": 0.8
+      },
+      "color": [
+       200,
+       64,
+       44
+      ]
+     },
+     {
+      "type": "lightning_bolt",
+      "to": [
+       36,
+       4,
+       125
+      ],
+      "from": [
+       26,
+       70,
+       128
+      ],
+      "at": 2.1,
+      "seed": 11,
+      "flash": 0.45,
+      "sparks": 0,
+      "sound": false
+     }
+    ],
+    "camera": {
+     "preset": "free",
+     "keys": [
+      {
+       "pos": [
+        0.2,
+        1.05,
+        -1.6
+       ],
+       "look": [
+        8,
+        26,
+        56
+       ],
+       "fov": 72
+      },
+      {
+       "pos": [
+        0.2,
+        0.95,
+        -1.3
+       ],
+       "look": [
+        -12,
+        28,
+        56
+       ],
+       "fov": 70
+      }
+     ]
+    },
+    "sfx": [
+     {
+      "name": "roar",
+      "at": 1.8,
+      "gain": 0.9
+     }
+    ],
+    "audio": {
+     "intensity": 0.75
+    }
+   },
+   {
+    "lines": [
+     3,
+     3
+    ],
+    "objects": [
+     {
+      "type": "lightning_bolt",
+      "to": "tour",
+      "at": 0.7,
+      "seed": 4,
+      "branches": 3,
+      "from": [
+       23,
+       41,
+       1
+      ]
+     },
+     {
+      "type": "collapse",
+      "target": "tour",
+      "at_abs": 12.6,
+      "dur": 5.5,
+      "remain": 0.3,
+      "lean": [
+       1.0,
+       0.5
+      ],
+      "seed": 7
+     }
+    ],
+    "camera": {
+     "preset": "free",
+     "keys": [
+      {
+       "pos": [
+        -6,
+        1.8,
+        -8
+       ],
+       "look": [
+        13,
+        19,
+        10
+       ],
+       "fov": 62
+      },
+      {
+       "pos": [
+        -5.6,
+        1.7,
+        -7.4
+       ],
+       "look": [
+        13,
+        14,
+        10
+       ],
+       "fov": 62
+      }
+     ]
+    },
+    "audio": {
+     "intensity": 1.0
+    }
+   },
+   {
+    "lines": [
+     4,
+     4
+    ],
+    "actions": [
+     {
+      "who": "lea",
+      "do": "react",
+      "kind": "startle",
+      "at": 0.1
+     },
+     {
+      "who": "lea",
+      "do": "face",
+      "name": "scared"
+     }
+    ],
+    "objects": [
+     {
+      "type": "collapse",
+      "target": "tour",
+      "at_abs": 12.6,
+      "dur": 5.5,
+      "remain": 0.3,
+      "lean": [
+       1.0,
+       0.5
+      ],
+      "seed": 7,
+      "sound": false
+     }
+    ],
+    "camera": {
+     "shot": "medium",
+     "on": [
+      "lea"
+     ]
+    },
+    "audio": {
+     "intensity": 0.9
+    }
+   },
+   {
+    "lines": [
+     5,
+     5
+    ],
+    "objects": [
+     {
+      "type": "mover",
+      "thing": "prop:helicopter",
+      "path": [
+       [
+        42,
+        15,
+        30
+       ],
+       [
+        17,
+        6,
+        17
+       ],
+       [
+        4,
+        1.0,
+        10.6
+       ],
+       [
+        0,
+        -0.1,
+        9.7
+       ]
+      ],
+      "start": 0.1,
+      "dur": 3.4,
+      "ease": "out",
+      "pitch": 0,
+      "lean": 0.3,
+      "sound": {
+       "name": "rotor",
+       "dur": 30,
+       "gain": 0.75
+      },
+      "light_power": 0.4
+     },
+     {
+      "type": "collapse",
+      "target": "tour",
+      "at_abs": 12.6,
+      "dur": 5.5,
+      "remain": 0.3,
+      "lean": [
+       1.0,
+       0.5
+      ],
+      "seed": 7,
+      "sound": false
+     }
+    ],
+    "actions": [
+     {
+      "who": "tom",
+      "do": "turn_to",
+      "target": [
+       4,
+       10
+      ],
+      "at": 0.8
+     },
+     {
+      "who": "lea",
+      "do": "turn_to",
+      "target": [
+       4,
+       10
+      ],
+      "at": 1.2
+     }
+    ],
+    "camera": {
+     "preset": "free",
+     "keys": [
+      {
+       "pos": [
+        -1.6,
+        2.1,
+        -3.6
+       ],
+       "look": [
+        3,
+        3,
+        10
+       ],
+       "fov": 68
+      },
+      {
+       "pos": [
+        -1.6,
+        2.0,
+        -3.3
+       ],
+       "look": [
+        0.5,
+        1.5,
+        9.7
+       ],
+       "fov": 64
+      }
+     ]
+    },
+    "audio": {
+     "intensity": 0.85
+    }
+   },
+   {
+    "lines": [
+     6,
+     6
+    ],
+    "objects": [
+     {
+      "type": "mover",
+      "thing": "prop:helicopter",
+      "hold": [
+       0,
+       -0.1,
+       9.7
+      ],
+      "face": -100,
+      "light_power": 0.4
+     }
+    ],
+    "actions": [
+     {
+      "who": "tom",
+      "do": "gesture",
+      "name": "point",
+      "at": 0.3,
+      "dur": 1.6
+     }
+    ],
+    "camera": {
+     "shot": "medium",
+     "on": [
+      "tom"
+     ]
+    },
+    "audio": {
+     "intensity": 0.9
+    }
+   },
+   {
+    "lines": [
+     7,
+     7
+    ],
+    "objects": [
+     {
+      "type": "mover",
+      "thing": "prop:helicopter",
+      "hold": [
+       0,
+       -0.1,
+       9.7
+      ],
+      "face": -100,
+      "carry": [
+       {
+        "who": "lea",
+        "from": "landing"
+       }
+      ],
+      "light_power": 0.4
+     }
+    ],
+    "actions": [
+     {
+      "who": "lea",
+      "do": "jump",
+      "to": [
+       0.0,
+       9.6
+      ],
+      "land_y": 0.05,
+      "at": 0.2,
+      "time": 0.5
+     },
+     {
+      "who": "lea",
+      "do": "turn_to",
+      "target": "tom"
+     }
+    ],
+    "camera": {
+     "preset": "free",
+     "keys": [
+      {
+       "pos": [
+        -1.6,
+        1.8,
+        -0.6
+       ],
+       "look": [
+        0,
+        1.2,
+        5.0
+       ],
+       "fov": 60
+      },
+      {
+       "pos": [
+        0.9,
+        1.4,
+        7.3
+       ],
+       "look": [
+        0,
+        0.9,
+        9.6
+       ],
+       "fov": 56
+      }
+     ]
+    },
+    "audio": {
+     "intensity": 1.0
+    }
+   },
+   {
+    "lines": [
+     8,
+     8
+    ],
+    "actors": [
+     {
+      "id": "lea",
+      "posture": "crouch",
+      "face": "urgent"
+     }
+    ],
+    "objects": [
+     {
+      "type": "mover",
+      "thing": "prop:helicopter",
+      "hold": [
+       0,
+       -0.1,
+       9.7
+      ],
+      "face": -100,
+      "carry": [
+       {
+        "who": "lea",
+        "from": 0
+       }
+      ],
+      "light_power": 0.4
+     }
+    ],
+    "actions": [
+     {
+      "who": "lea",
+      "do": "gesture",
+      "name": "extend",
+      "at": 0.3,
+      "dur": 2.0
+     }
+    ],
+    "camera": {
+     "preset": "free",
+     "keys": [
+      {
+       "pos": [
+        0.5,
+        1.45,
+        5.6
+       ],
+       "look": [
+        0.0,
+        0.8,
+        9.6
+       ],
+       "fov": 54
+      },
+      {
+       "pos": [
+        0.45,
+        1.4,
+        6.0
+       ],
+       "look": [
+        0.0,
+        0.8,
+        9.6
+       ],
+       "fov": 50
+      }
+     ]
+    },
+    "audio": {
+     "intensity": 0.95
+    }
+   },
+   {
+    "lines": [
+     9,
+     9
+    ],
+    "objects": [
+     {
+      "type": "mover",
+      "thing": "prop:helicopter",
+      "hold": [
+       0,
+       -0.1,
+       9.7
+      ],
+      "face": -100,
+      "carry": [
+       {
+        "who": "lea",
+        "from": 0
+       },
+       {
+        "who": "tom",
+        "from": "landing"
+       }
+      ],
+      "light_power": 0.4
+     }
+    ],
+    "actions": [
+     {
+      "who": "tom",
+      "do": "jump",
+      "to": [
+       -0.9,
+       9.6
+      ],
+      "land_y": 0.05,
+      "at": 0.2,
+      "time": 0.5
+     }
+    ],
+    "camera": {
+     "preset": "free",
+     "keys": [
+      {
+       "pos": [
+        -7.6,
+        2.1,
+        4.4
+       ],
+       "look": [
+        0,
+        0.9,
+        7.2
+       ],
+       "fov": 62
+      },
+      {
+       "pos": [
+        -7.6,
+        2.1,
+        4.8
+       ],
+       "look": [
+        0,
+        0.9,
+        8.4
+       ],
+       "fov": 62
+      }
+     ]
+    },
+    "audio": {
+     "intensity": 1.0
+    }
+   },
+   {
+    "lines": [
+     10,
+     10
+    ],
+    "objects": [
+     {
+      "type": "mover",
+      "thing": "prop:helicopter",
+      "path": [
+       [
+        0,
+        -0.1,
+        9.7
+       ],
+       [
+        -4,
+        1.6,
+        10.6
+       ],
+       [
+        -12,
+        6,
+        18
+       ],
+       [
+        -28,
+        14,
+        38
+       ]
+      ],
+      "start": 0.4,
+      "dur": 4.6,
+      "ease": "in",
+      "pitch": 0,
+      "lean": 0.3,
+      "carry": [
+       {
+        "who": "lea",
+        "from": 0
+       },
+       {
+        "who": "tom",
+        "from": 0
+       }
+      ],
+      "light_power": 0.4,
+      "bank": 0.3
+     },
+     {
+      "type": "collapse",
+      "target": "tour",
+      "at_abs": 12.6,
+      "dur": 5.5,
+      "remain": 0.3,
+      "lean": [
+       1.0,
+       0.5
+      ],
+      "seed": 7,
+      "sound": false
+     }
+    ],
+    "camera": {
+     "preset": "free",
+     "keys": [
+      {
+       "pos": [
+        2.0,
+        1.6,
+        1.5
+       ],
+       "look": [
+        -3,
+        3,
+        14
+       ],
+       "fov": 64
+      },
+      {
+       "pos": [
+        2.2,
+        1.5,
+        1.8
+       ],
+       "look": [
+        -14,
+        9,
+        28
+       ],
+       "fov": 60
+      }
+     ]
+    },
+    "sfx": [
+     {
+      "name": "roar",
+      "at": 2.6,
+      "gain": 0.5
+     }
+    ],
+    "fx": {
+     "fade_out": 0.9
+    },
+    "audio": {
+     "intensity": 0.8
+    }
+   }
+  ]
+ }
+}

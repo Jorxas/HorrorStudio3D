@@ -1,0 +1,43 @@
+{
+ "id": "peggy",
+ "name": "Peggy",
+ "look": {
+  "skin": [
+   184,
+   128,
+   92
+  ],
+  "hair": [
+   66,
+   42,
+   28
+  ],
+  "hair_style": "bun",
+  "headphones": false,
+  "backpack": false,
+  "outfit": "dress",
+  "hood": [
+   222,
+   188,
+   100
+  ],
+  "jeans": [
+   230,
+   198,
+   112
+  ],
+  "costume": "peggy"
+ },
+ "voice": {
+  "draft": "woman",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.85,
+  "energy": 0.7,
+  "shy": 0.1
+ },
+ "relations": {},
+ "group": "bal_xviiie",
+ "notes": "Robe jaune paille, ceinture dorée, boucles relevées en chignon, flûte de champagne. Tête peinte en pixels façon skin (face_skin) : sourcils, yeux, lèvres et barbe peints, yeux, sourcils et bouche animés."
+}

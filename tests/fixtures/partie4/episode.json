@@ -1,0 +1,4745 @@
+{
+ "style": "pixel3d",
+ "default_set": "etage_zero",
+ "hud": {
+  "title": [
+   "L'ÉTAGE 0",
+   "N'EXISTE PAS"
+  ],
+  "part": "PARTIE 4",
+  "hearts": [
+   1,
+   0,
+   0
+  ],
+  "last_life_label": "DERNIÈRE VIE"
+ },
+ "hearts": [
+  {
+   "line": 57,
+   "offset": 0.2,
+   "value": [
+    0,
+    0,
+    0
+   ]
+  }
+ ],
+ "cast": {
+  "hero": {},
+  "double": {},
+  "creature": {
+   "kind": "creature"
+  },
+  "boy": {},
+  "boy_reflection": {}
+ },
+ "state": {
+  "mirror": "broken",
+  "exit_door": 1.05,
+  "lock": "unlocked",
+  "sign": "UNE SEULE VERSION\nPEUT QUITTER\nL'ETAGE ZERO",
+  "elevator_doors": 0.5
+ },
+ "intensity_start": 0.6,
+ "lines": {
+  "4": {
+   "label": "TOI",
+   "label_color": "cream"
+  },
+  "6": {
+   "label": "TON DOUBLE",
+   "label_color": "blue",
+   "voice_fx": "double"
+  },
+  "7": {
+   "label": "TOI",
+   "label_color": "cream"
+  },
+  "10": {
+   "label": "TON DOUBLE",
+   "label_color": "blue",
+   "voice_fx": "double"
+  },
+  "11": {
+   "label": "TOI",
+   "label_color": "cream"
+  },
+  "21": {
+   "label": "LA CRÉATURE",
+   "label_color": "red",
+   "voice_fx": "creature"
+  },
+  "24": {
+   "label": "LA CRÉATURE",
+   "label_color": "red",
+   "voice_fx": "creature"
+  },
+  "29": {
+   "label": "LA CRÉATURE",
+   "label_color": "red",
+   "voice_fx": "creature"
+  },
+  "31": {
+   "label": "LA CRÉATURE",
+   "label_color": "red",
+   "voice_fx": "creature"
+  },
+  "33": {
+   "label": "LA CRÉATURE",
+   "label_color": "red",
+   "voice_fx": "creature"
+  },
+  "37": {
+   "label": "LA CRÉATURE",
+   "label_color": "red",
+   "voice_fx": "creature"
+  },
+  "44": {
+   "label": "NUMÉRO INCONNU",
+   "label_color": "blue"
+  },
+  "71": {
+   "label": "LUI",
+   "label_color": "blue"
+  }
+ },
+ "shots": [
+  {
+   "lines": [
+    0,
+    0
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.6,
+       15.4
+      ],
+      "look": [
+       0,
+       1.6,
+       20.4
+      ],
+      "fov": 80
+     }
+    ],
+    "shake": 0.1
+   },
+   "actors": [
+    {
+     "id": "double",
+     "at": [
+      0,
+      16.8
+     ],
+     "facing": "-z",
+     "face": "double"
+    }
+   ],
+   "ui": {
+    "recap": {
+     "title": "TON CHOIX :",
+     "letter": "B",
+     "text": [
+      "LUI LAISSER",
+      "TA PLACE"
+     ]
+    }
+   },
+   "audio": {
+    "intensity": 0.6
+   },
+   "sfx": [
+    {
+     "name": "static",
+     "at": 0,
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "lines": [
+    1,
+    1
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.65,
+       15.4
+      ],
+      "look": [
+       0,
+       1.65,
+       20.4
+      ],
+      "fov": 52
+     },
+     {
+      "pos": [
+       0,
+       1.65,
+       15.700000000000001
+      ],
+      "look": [
+       0,
+       1.65,
+       20.7
+      ],
+      "fov": 52
+     }
+    ],
+    "shake": 0.05
+   },
+   "actors": [
+    {
+     "id": "double",
+     "at": [
+      0,
+      16.8
+     ],
+     "facing": "-z",
+     "face": "double"
+    }
+   ]
+  },
+  {
+   "lines": [
+    2,
+    2
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0.25,
+       1.6,
+       15.6
+      ],
+      "look": [
+       -0.09999999999999998,
+       1.77,
+       20.4
+      ],
+      "fov": 78
+     },
+     {
+      "pos": [
+       0.25,
+       1.6,
+       15.6
+      ],
+      "look": [
+       0.6,
+       2.1,
+       20.4
+      ],
+      "fov": 78
+     }
+    ],
+    "shake": 0.05
+   },
+   "actors": [
+    {
+     "id": "double",
+     "at": [
+      -0.2,
+      16.8
+     ],
+     "facing": "-z",
+     "face": "double"
+    }
+   ],
+   "fx": {
+    "bloom": 0.12
+   }
+  },
+  {
+   "lines": [
+    3,
+    3
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.62,
+       15.5
+      ],
+      "look": [
+       0,
+       1.62,
+       20.4
+      ],
+      "fov": 60
+     },
+     {
+      "pos": [
+       0,
+       1.62,
+       15.5
+      ],
+      "look": [
+       0,
+       1.62,
+       20.4
+      ],
+      "fov": 50
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "double",
+     "at": [
+      0,
+      16.8
+     ],
+     "facing": "-z",
+     "face": "double"
+    }
+   ]
+  },
+  {
+   "lines": [
+    4,
+    4
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.62,
+       15.6
+      ],
+      "look": [
+       0,
+       1.62,
+       20.4
+      ],
+      "fov": 62
+     }
+    ],
+    "shake": 0.06
+   },
+   "actors": [
+    {
+     "id": "double",
+     "at": [
+      0,
+      16.8
+     ],
+     "facing": "-z",
+     "face": "neutral"
+    }
+   ]
+  },
+  {
+   "lines": [
+    5,
+    5
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.66,
+       16.05
+      ],
+      "look": [
+       0,
+       1.66,
+       21.8
+      ],
+      "fov": 52
+     }
+    ],
+    "shake": 0.04
+   },
+   "actors": [
+    {
+     "id": "double",
+     "at": [
+      0,
+      16.8
+     ],
+     "facing": "-z",
+     "face": "double"
+    }
+   ]
+  },
+  {
+   "lines": [
+    6,
+    6
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.66,
+       16.05
+      ],
+      "look": [
+       0,
+       1.66,
+       21.8
+      ],
+      "fov": 50
+     }
+    ],
+    "shake": 0.2
+   },
+   "actors": [
+    {
+     "id": "double",
+     "at": [
+      0,
+      16.8
+     ],
+     "facing": "-z",
+     "face": "double",
+     "lipsync": true
+    }
+   ]
+  },
+  {
+   "lines": [
+    7,
+    7
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.62,
+       15.6
+      ],
+      "look": [
+       0,
+       1.62,
+       20.4
+      ],
+      "fov": 66
+     },
+     {
+      "pos": [
+       0,
+       1.62,
+       15.6
+      ],
+      "look": [
+       0,
+       1.62,
+       20.4
+      ],
+      "fov": 56
+     }
+    ],
+    "shake": 0.05
+   },
+   "actors": [
+    {
+     "id": "double",
+     "at": [
+      0,
+      16.8
+     ],
+     "facing": "-z",
+     "face": "sad"
+    }
+   ]
+  },
+  {
+   "lines": [
+    8,
+    8
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.6,
+       15.700000000000001
+      ],
+      "look": [
+       0,
+       1.5,
+       20.4
+      ],
+      "fov": 82
+     },
+     {
+      "pos": [
+       0,
+       1.6,
+       16.150000000000002
+      ],
+      "look": [
+       0,
+       1.5,
+       21.8
+      ],
+      "fov": 82
+     }
+    ],
+    "shake": 0.25
+   },
+   "actors": [
+    {
+     "id": "double",
+     "at": [
+      0,
+      16.8
+     ],
+     "facing": "-z",
+     "face": "scared",
+     "to": [
+      0,
+      17.150000000000002
+     ],
+     "end": 0.35
+    }
+   ],
+   "objects": [
+    {
+     "type": "hands_push",
+     "rate": 9
+    }
+   ],
+   "sfx": [
+    {
+     "name": "footsteps_walk",
+     "dur": 0.6,
+     "gain": 0.45
+    },
+    {
+     "name": "whoosh",
+     "at": 0.1,
+     "gain": 0.3
+    }
+   ]
+  },
+  {
+   "lines": [
+    9,
+    9
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.62,
+       15.9
+      ],
+      "look": [
+       0,
+       1.62,
+       21.8
+      ],
+      "fov": 62
+     }
+    ],
+    "shake": 0.1
+   },
+   "actors": [
+    {
+     "id": "double",
+     "at": [
+      0,
+      17.150000000000002
+     ],
+     "facing": "-z",
+     "face": "sad",
+     "to": [
+      0,
+      16.900000000000002
+     ],
+     "end": 0.4
+    }
+   ]
+  },
+  {
+   "lines": [
+    10,
+    10
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.68,
+       16.1
+      ],
+      "look": [
+       0,
+       1.68,
+       21.8
+      ],
+      "fov": 46
+     }
+    ],
+    "shake": 0.12
+   },
+   "actors": [
+    {
+     "id": "double",
+     "at": [
+      0,
+      16.8
+     ],
+     "facing": "-z",
+     "face": "double",
+     "lipsync": true
+    }
+   ]
+  },
+  {
+   "lines": [
+    11,
+    11
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.62,
+       15.8
+      ],
+      "look": [
+       0,
+       1.62,
+       21.8
+      ],
+      "fov": 64
+     }
+    ],
+    "shake": 0.6,
+    "roll": [
+     4,
+     0
+    ]
+   },
+   "actors": [
+    {
+     "id": "double",
+     "at": [
+      0,
+      16.8
+     ],
+     "facing": "-z",
+     "face": "scared"
+    }
+   ],
+   "fx": {
+    "flash": [
+     [
+      0,
+      0.12,
+      0.15
+     ]
+    ]
+   },
+   "sfx": [
+    {
+     "name": "thump",
+     "at": 0.17,
+     "gain": 0.8
+    }
+   ],
+   "audio": {
+    "intensity": 0.9
+   }
+  },
+  {
+   "lines": [
+    12,
+    12
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.6,
+       15.8
+      ],
+      "look": [
+       0,
+       1.6,
+       10.8
+      ],
+      "fov": 82
+     }
+    ],
+    "move": "whip_turn",
+    "turn_time": 0.5,
+    "shake": 0.3
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      2.5
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "to": [
+      0,
+      10.5
+     ],
+     "ease": "linear",
+     "move": "run",
+     "smile": 1,
+     "crack": 1
+    }
+   ],
+   "state": {
+    "red": 0.9,
+    "lights": "flicker"
+   },
+   "fx": {
+    "glitch": "pulse"
+   },
+   "sfx": [
+    {
+     "name": "growl",
+     "at": 0.3,
+     "dur": 2.6,
+     "gain": 1.1
+    },
+    {
+     "name": "footsteps_heavy",
+     "at": 0.5,
+     "dur": 3.0,
+     "gain": 0.9
+    },
+    {
+     "name": "skitter",
+     "at": 0.5,
+     "dur": 3.0,
+     "gain": 0.25
+    },
+    {
+     "name": "screech",
+     "at": 0.9,
+     "dur": 2.4,
+     "gain": 0.5
+    }
+   ],
+   "audio": {
+    "intensity": 1.0
+   }
+  },
+  {
+   "lines": [
+    13,
+    13
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.6,
+       15.8
+      ],
+      "look": [
+       0,
+       1.6,
+       21.8
+      ],
+      "fov": 84
+     },
+     {
+      "pos": [
+       0,
+       1.6,
+       16.6
+      ],
+      "look": [
+       0,
+       1.6,
+       21.8
+      ],
+      "fov": 84
+     }
+    ],
+    "shake": 0.4
+   },
+   "actors": [
+    {
+     "id": "double",
+     "at": [
+      0,
+      16.8
+     ],
+     "facing": "+z",
+     "face": "scared",
+     "to": [
+      0,
+      20.2
+     ],
+     "start": 0.3,
+     "end": 0.85,
+     "move": "run",
+     "y": [
+      0,
+      1.0,
+      1.0,
+      1.6
+     ]
+    }
+   ],
+   "objects": [
+    {
+     "type": "hands_push",
+     "rate": 4
+    }
+   ],
+   "state": {
+    "red": 0.5
+   },
+   "sfx": [
+    {
+     "name": "whoosh",
+     "at": 0.45,
+     "gain": 0.7
+    }
+   ]
+  },
+  {
+   "lines": [
+    14,
+    14
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.6,
+       16.6
+      ],
+      "look": [
+       0,
+       1.6,
+       21.8
+      ],
+      "fov": 80
+     }
+    ],
+    "shake": [
+     0.7,
+     0.02
+    ]
+   },
+   "state": {
+    "exit_door": [
+     1.05,
+     0,
+     0.1,
+     0.4
+    ]
+   },
+   "fx": {
+    "flash": [
+     [
+      0.4,
+      0.25,
+      0.08
+     ]
+    ]
+   },
+   "sfx": [
+    {
+     "name": "door_slam",
+     "at": 0.4,
+     "gain": 1.3
+    }
+   ],
+   "audio": {
+    "intensity": 0.9
+   }
+  },
+  {
+   "lines": [
+    15,
+    15
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.6,
+       16.6
+      ],
+      "look": [
+       0,
+       1.6,
+       21.8
+      ],
+      "fov": 80
+     },
+     {
+      "pos": [
+       0,
+       1.6,
+       16.6
+      ],
+      "look": [
+       0,
+       1.6,
+       21.8
+      ],
+      "fov": 74
+     }
+    ]
+   },
+   "state": {
+    "exit_door": 0
+   },
+   "audio": {
+    "silence": true,
+    "intensity": 0.0
+   }
+  },
+  {
+   "lines": [
+    16,
+    16
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.6,
+       16.6
+      ],
+      "look": [
+       0,
+       1.6,
+       21.8
+      ],
+      "fov": 74
+     },
+     {
+      "pos": [
+       0,
+       1.6,
+       16.6
+      ],
+      "look": [
+       0,
+       1.6,
+       21.8
+      ],
+      "fov": 70
+     }
+    ]
+   },
+   "state": {
+    "exit_door": 0,
+    "lights": "dark"
+   },
+   "audio": {
+    "silence": true,
+    "intensity": 0
+   }
+  },
+  {
+   "lines": [
+    17,
+    17
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       1.15,
+       2.3,
+       17.7
+      ],
+      "look": [
+       -0.6,
+       0.95,
+       10.5
+      ],
+      "fov": 92
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "hero",
+     "at": [
+      0,
+      16.8
+     ],
+     "facing": "-z",
+     "face": "scared"
+    },
+    {
+     "id": "creature",
+     "at": [
+      0,
+      10.5
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "to": [
+      0,
+      11.8
+     ],
+     "move": "walk"
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.4
+   },
+   "audio": {
+    "intensity": 0.7
+   },
+   "sfx": [
+    {
+     "name": "footsteps_heavy",
+     "at": 0.2,
+     "dur": 2.5,
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "lines": [
+    18,
+    18
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.6,
+       16.8
+      ],
+      "look": [
+       0,
+       1.6,
+       11.8
+      ],
+      "fov": 80
+     },
+     {
+      "pos": [
+       0,
+       1.6,
+       16.8
+      ],
+      "look": [
+       0,
+       1.6,
+       11.8
+      ],
+      "fov": 70
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      11.8
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "to": [
+      0,
+      12.9
+     ],
+     "move": "walk"
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.5
+   }
+  },
+  {
+   "lines": [
+    19,
+    19
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.6,
+       16.8
+      ],
+      "look": [
+       0,
+       1.6,
+       11.8
+      ],
+      "fov": 66
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      12.9
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "to": [
+      0,
+      13.600000000000001
+     ],
+     "end": 0.6,
+     "move": "walk"
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.4
+   }
+  },
+  {
+   "lines": [
+    20,
+    20
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.65,
+       16.8
+      ],
+      "look": [
+       0,
+       1.65,
+       11.8
+      ],
+      "fov": 52
+     },
+     {
+      "pos": [
+       0,
+       1.65,
+       16.8
+      ],
+      "look": [
+       0,
+       1.65,
+       11.8
+      ],
+      "fov": 38
+     }
+    ],
+    "roll": [
+     0,
+     3
+    ]
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      13.600000000000001
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "tilt": [
+      0,
+      24
+     ],
+     "head_x": [
+      0,
+      -0.05
+     ],
+     "head_y": [
+      0,
+      -0.02
+     ]
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.4
+   },
+   "sfx": [
+    {
+     "name": "click",
+     "at": 0.4,
+     "gain": 0.8
+    },
+    {
+     "name": "click",
+     "at": 0.65,
+     "gain": 0.8
+    },
+    {
+     "name": "click",
+     "at": 0.9,
+     "gain": 0.8
+    },
+    {
+     "name": "click",
+     "at": 1.15,
+     "gain": 0.8
+    }
+   ]
+  },
+  {
+   "lines": [
+    21,
+    21
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.7,
+       15.100000000000001
+      ],
+      "look": [
+       0,
+       1.7,
+       8.600000000000001
+      ],
+      "fov": 46
+     }
+    ],
+    "roll": 3
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      13.600000000000001
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "tilt": 24,
+     "head_x": -0.05,
+     "head_y": -0.02,
+     "lipsync": true
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.45
+   }
+  },
+  {
+   "lines": [
+    22,
+    22
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.68,
+       15.850000000000001
+      ],
+      "look": [
+       0,
+       1.68,
+       21.8
+      ],
+      "fov": 50
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "hero",
+     "at": [
+      0,
+      16.8
+     ],
+     "facing": "-z",
+     "face": "scared"
+    }
+   ],
+   "state": {
+    "exit_door": 0
+   }
+  },
+  {
+   "lines": [
+    23,
+    23
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.68,
+       15.200000000000001
+      ],
+      "look": [
+       0,
+       1.68,
+       8.600000000000001
+      ],
+      "fov": 50
+     }
+    ],
+    "shake": 0.1,
+    "roll": [
+     2,
+     -2
+    ]
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      13.600000000000001
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "smile": 1,
+     "tilt": 18,
+     "head_x": -0.04,
+     "laugh": true
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.6
+   },
+   "fx": {
+    "glitch": "pulse"
+   },
+   "sfx": [
+    {
+     "name": "laugh_low",
+     "at": 0.35,
+     "gain": 1.0
+    }
+   ]
+  },
+  {
+   "lines": [
+    24,
+    24
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.7,
+       14.950000000000001
+      ],
+      "look": [
+       0,
+       1.7,
+       8.600000000000001
+      ],
+      "fov": 46
+     },
+     {
+      "pos": [
+       0,
+       1.7,
+       14.950000000000001
+      ],
+      "look": [
+       0,
+       1.7,
+       8.600000000000001
+      ],
+      "fov": 40
+     }
+    ],
+    "shake": 0.05
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      13.600000000000001
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "smile": 1,
+     "tilt": 12,
+     "lipsync": true
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.6
+   },
+   "sfx": [
+    {
+     "name": "laugh",
+     "line": 24,
+     "anchor": "end",
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "lines": [
+    25,
+    25
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.6,
+       16.8
+      ],
+      "look": [
+       0,
+       1.6,
+       11.8
+      ],
+      "fov": 72
+     }
+    ],
+    "shake": 0.08
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      13.600000000000001
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "to": [
+      0,
+      15.3
+     ],
+     "move": "walk"
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.6
+   },
+   "sfx": [
+    {
+     "name": "footsteps_heavy",
+     "dur": 1.5,
+     "gain": 0.7
+    }
+   ]
+  },
+  {
+   "lines": [
+    26,
+    26
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.68,
+       16.6
+      ],
+      "look": [
+       0,
+       1.68,
+       11.8
+      ],
+      "fov": 56
+     },
+     {
+      "pos": [
+       0,
+       1.68,
+       16.35
+      ],
+      "look": [
+       0,
+       1.68,
+       11.8
+      ],
+      "fov": 42
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      15.3
+     ],
+     "facing": "+z",
+     "face": "creature"
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.5
+   }
+  },
+  {
+   "lines": [
+    27,
+    27
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.69,
+       16.2
+      ],
+      "look": [
+       0,
+       1.69,
+       11.8
+      ],
+      "fov": 34
+     },
+     {
+      "pos": [
+       0,
+       1.69,
+       16.2
+      ],
+      "look": [
+       0,
+       1.69,
+       11.8
+      ],
+      "fov": 26
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      15.3
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "crack": 1
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.15
+   },
+   "sfx": [
+    {
+     "name": "riser",
+     "at": -0.9,
+     "gain": 0.3
+    }
+   ]
+  },
+  {
+   "lines": [
+    28,
+    28
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.69,
+       16.2
+      ],
+      "look": [
+       0,
+       1.69,
+       11.8
+      ],
+      "fov": 24
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      15.3
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "crack": 1
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.15
+   },
+   "cuts": [
+    {
+     "at": 1.3,
+     "camera": {
+      "preset": "free",
+      "keys": [
+       {
+        "pos": [
+         0,
+         1.5,
+         -1.0
+        ],
+        "look": [
+         0,
+         1.5,
+         -6
+        ],
+        "fov": 70
+       },
+       {
+        "pos": [
+         0,
+         1.5,
+         -1.0
+        ],
+        "look": [
+         0,
+         1.5,
+         -6
+        ],
+        "fov": 58
+       }
+      ]
+     },
+     "actors": [],
+     "state": {
+      "mirror": "writing",
+      "crack": 1.0,
+      "exit_door": 0
+     },
+     "fx": {
+      "memory": 0.7
+     }
+    }
+   ],
+   "sfx": [
+    {
+     "name": "glass_crack",
+     "at": 0.15,
+     "gain": 0.9
+    },
+    {
+     "name": "glass_crack",
+     "at": 0.55,
+     "gain": 0.8
+    },
+    {
+     "name": "whoosh_rev",
+     "at": 0.7,
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "lines": [
+    29,
+    29
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.7,
+       16.400000000000002
+      ],
+      "look": [
+       0,
+       1.7,
+       11.8
+      ],
+      "fov": 42
+     }
+    ],
+    "shake": 0.04
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      15.3
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "crack": 1,
+     "lipsync": true
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.15
+   }
+  },
+  {
+   "lines": [
+    30,
+    30
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.68,
+       15.850000000000001
+      ],
+      "look": [
+       0,
+       1.68,
+       21.8
+      ],
+      "fov": 52
+     },
+     {
+      "pos": [
+       0,
+       1.68,
+       15.850000000000001
+      ],
+      "look": [
+       0,
+       1.68,
+       21.8
+      ],
+      "fov": 44
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "hero",
+     "at": [
+      0,
+      16.8
+     ],
+     "facing": "-z",
+     "face": "scared"
+    }
+   ],
+   "state": {
+    "exit_door": 0
+   },
+   "fx": {
+    "tint": [
+     0.78,
+     0.92,
+     1.3
+    ]
+   }
+  },
+  {
+   "lines": [
+    31,
+    31
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.7,
+       16.35
+      ],
+      "look": [
+       0,
+       1.7,
+       11.8
+      ],
+      "fov": 40
+     },
+     {
+      "pos": [
+       0,
+       1.7,
+       16.35
+      ],
+      "look": [
+       0,
+       1.7,
+       11.8
+      ],
+      "fov": 32
+     }
+    ],
+    "shake": 0.08
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      15.3
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "crack": 1,
+     "smile": 1,
+     "lipsync": true
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.2
+   },
+   "audio": {
+    "silence": "before_last_line"
+   },
+   "sfx": [
+    {
+     "name": "sting",
+     "line": 31,
+     "anchor": "end",
+     "offset": -0.1,
+     "gain": 0.55
+    },
+    {
+     "name": "boom",
+     "line": 31,
+     "anchor": "end",
+     "offset": -0.1,
+     "gain": 0.9
+    }
+   ]
+  },
+  {
+   "lines": [
+    32,
+    32
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.45,
+       16.6
+      ],
+      "look": [
+       0,
+       1.3,
+       11.8
+      ],
+      "fov": 62
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      15.3
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "pose": "chest"
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.6
+   }
+  },
+  {
+   "lines": [
+    33,
+    33
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.7,
+       16.35
+      ],
+      "look": [
+       0,
+       1.7,
+       11.8
+      ],
+      "fov": 38
+     }
+    ],
+    "shake": 0.04
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      15.3
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "pose": "chest",
+     "lipsync": true
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.6
+   },
+   "cuts": [
+    {
+     "at": 2.2,
+     "camera": {
+      "preset": "free",
+      "keys": [
+       {
+        "pos": [
+         1.72,
+         1.55,
+         16.25
+        ],
+        "look": [
+         -3,
+         1.45,
+         16.25
+        ],
+        "fov": 94
+       }
+      ]
+     },
+     "actors": [
+      {
+       "id": "creature",
+       "at": [
+        0,
+        15.700000000000001
+       ],
+       "facing": "+z",
+       "face": "creature",
+       "pose": "chest",
+       "lipsync": true
+      },
+      {
+       "id": "hero",
+       "at": [
+        0,
+        16.8
+       ],
+       "facing": "-z",
+       "face": "scared"
+      }
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "name": "boom",
+     "line": 33,
+     "offset": 1.4,
+     "gain": 0.9
+    }
+   ]
+  },
+  {
+   "lines": [
+    34,
+    34
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.6,
+       16.8
+      ],
+      "look": [
+       0,
+       1.6,
+       11.8
+      ],
+      "fov": 72
+     },
+     {
+      "pos": [
+       0,
+       1.6,
+       17.3
+      ],
+      "look": [
+       0,
+       1.6,
+       12.3
+      ],
+      "fov": 72
+     }
+    ],
+    "shake": 0.1
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      15.3
+     ],
+     "facing": "+z",
+     "face": "creature"
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.6
+   }
+  },
+  {
+   "lines": [
+    35,
+    35
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.6,
+       17.3
+      ],
+      "look": [
+       0,
+       1.6,
+       12.3
+      ],
+      "fov": 70
+     },
+     {
+      "pos": [
+       0,
+       1.6,
+       17.3
+      ],
+      "look": [
+       0,
+       1.6,
+       12.3
+      ],
+      "fov": 62
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      15.3
+     ],
+     "facing": "+z",
+     "face": "creature"
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.5
+   }
+  },
+  {
+   "lines": [
+    36,
+    36
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.5,
+       17.25
+      ],
+      "look": [
+       0,
+       1.06,
+       12.3
+      ],
+      "fov": 70
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      15.4
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "pose": "extend"
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.5
+   },
+   "sfx": [
+    {
+     "name": "whoosh",
+     "at": 0.4,
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "lines": [
+    37,
+    37
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.62,
+       17.25
+      ],
+      "look": [
+       0,
+       1.45,
+       12.3
+      ],
+      "fov": 56
+     },
+     {
+      "pos": [
+       0,
+       1.62,
+       17.0
+      ],
+      "look": [
+       0,
+       1.45,
+       12.0
+      ],
+      "fov": 46
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      15.4
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "pose": "extend",
+     "lipsync": true
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.55
+   }
+  },
+  {
+   "lines": [
+    38,
+    38
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.6,
+       17.2
+      ],
+      "look": [
+       0,
+       1.6,
+       11.8
+      ],
+      "fov": 88
+     }
+    ],
+    "move": "look_around",
+    "look_deg": 55
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      15.4
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "pose": "extend"
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.5,
+    "lights": "flicker"
+   }
+  },
+  {
+   "lines": [
+    39,
+    39
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0.2,
+       1.55,
+       17.2
+      ],
+      "look": [
+       -0.5,
+       2.1,
+       11.8
+      ],
+      "fov": 92
+     }
+    ],
+    "shake": [
+     0.5,
+     0.9
+    ]
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      15.4
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "pose": "extend"
+    }
+   ],
+   "objects": [
+    {
+     "type": "dust",
+     "at": [
+      0,
+      16.3
+     ]
+    },
+    {
+     "type": "debris",
+     "at": [
+      0,
+      14.8
+     ],
+     "count": 8
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.6,
+    "lights": "flicker",
+    "quake": 1
+   },
+   "sfx": [
+    {
+     "name": "boom",
+     "at": 0,
+     "dur": 2.5,
+     "gain": 0.9
+    },
+    {
+     "name": "crumble",
+     "at": 0.4,
+     "gain": 0.5
+    },
+    {
+     "name": "crumble",
+     "at": 1.1,
+     "gain": 0.5
+    }
+   ],
+   "audio": {
+    "intensity": 1.0
+   }
+  },
+  {
+   "lines": [
+    40,
+    40
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.5,
+       17.1
+      ],
+      "look": [
+       0,
+       3.3,
+       12.3
+      ],
+      "fov": 92
+     },
+     {
+      "pos": [
+       0,
+       1.5,
+       17.1
+      ],
+      "look": [
+       0,
+       9.5,
+       12.3
+      ],
+      "fov": 92
+     }
+    ],
+    "shake": 0.5
+   },
+   "objects": [
+    {
+     "type": "dust",
+     "at": [
+      0,
+      16.3
+     ]
+    },
+    {
+     "type": "debris",
+     "at": [
+      0,
+      15.8
+     ],
+     "count": 10,
+     "start": -0.5
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.6,
+    "lights": "flicker",
+    "quake": 1,
+    "ceiling_cracks": [
+     0,
+     1
+    ]
+   },
+   "sfx": [
+    {
+     "name": "creak",
+     "at": 0,
+     "gain": 0.5
+    },
+    {
+     "name": "crumble",
+     "at": 0.3,
+     "gain": 0.5
+    },
+    {
+     "name": "creak",
+     "at": 0.8,
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "lines": [
+    41,
+    41
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       1.1,
+       2.25,
+       17.400000000000002
+      ],
+      "look": [
+       -1.2,
+       0.7,
+       10.8
+      ],
+      "fov": 96
+     }
+    ],
+    "shake": 0.8
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      15.4
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "pose": "extend"
+    },
+    {
+     "id": "hero",
+     "at": [
+      0,
+      16.900000000000002
+     ],
+     "facing": "-z",
+     "face": "scared"
+    }
+   ],
+   "objects": [
+    {
+     "type": "dust",
+     "at": [
+      0,
+      15.8
+     ],
+     "count": 60
+    },
+    {
+     "type": "debris",
+     "at": [
+      0,
+      14.3
+     ],
+     "count": 26,
+     "start": -0.6,
+     "seed": 5
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 1.0,
+    "lights": "flicker",
+    "quake": 1,
+    "ceiling_cracks": 1
+   },
+   "fx": {
+    "glitch": "pulse"
+   },
+   "sfx": [
+    {
+     "name": "metal_hit",
+     "at": 0.8,
+     "gain": 0.7
+    },
+    {
+     "name": "crumble",
+     "at": 0.2,
+     "gain": 0.6
+    },
+    {
+     "name": "crumble",
+     "at": 1.0,
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "lines": [
+    42,
+    42
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.55,
+       17.2
+      ],
+      "look": [
+       0,
+       0.3500000000000001,
+       21.8
+      ],
+      "fov": 70
+     }
+    ],
+    "shake": 0.2
+   },
+   "objects": [
+    {
+     "type": "phone",
+     "header": "INCONNU",
+     "messages": [
+      "ÉCOUTE. CELUI QUI EST DEHORS VEUT TE SAUVER."
+     ],
+     "lift": 0.6,
+     "vibrate": 1
+    },
+    {
+     "type": "dust",
+     "at": [
+      0,
+      18.3
+     ],
+     "count": 20
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.4,
+    "ceiling_cracks": 1
+   },
+   "ui": {
+    "subs": "low"
+   },
+   "sfx": [
+    {
+     "name": "phone_vibrate",
+     "at": 0.5,
+     "gain": 0.55,
+     "repeat": 3,
+     "gap": 0.7
+    }
+   ]
+  },
+  {
+   "lines": [
+    43,
+    43
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.55,
+       17.2
+      ],
+      "look": [
+       0,
+       0.5,
+       21.8
+      ],
+      "fov": 66
+     },
+     {
+      "pos": [
+       0,
+       1.55,
+       17.2
+      ],
+      "look": [
+       0,
+       0.5,
+       21.8
+      ],
+      "fov": 56
+     }
+    ]
+   },
+   "objects": [
+    {
+     "type": "phone",
+     "header": "INCONNU",
+     "messages": [
+      "ÉCOUTE. CELUI QUI EST DEHORS VEUT TE SAUVER."
+     ],
+     "typing": true
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.4,
+    "ceiling_cracks": 1
+   },
+   "ui": {
+    "subs": "low"
+   },
+   "sfx": [
+    {
+     "name": "notification",
+     "line": 44,
+     "offset": -0.25,
+     "gain": 0.7
+    }
+   ]
+  },
+  {
+   "lines": [
+    44,
+    44
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.55,
+       17.2
+      ],
+      "look": [
+       0,
+       0.5,
+       21.8
+      ],
+      "fov": 56
+     },
+     {
+      "pos": [
+       0,
+       1.55,
+       17.2
+      ],
+      "look": [
+       0,
+       0.5,
+       21.8
+      ],
+      "fov": 50
+     }
+    ]
+   },
+   "objects": [
+    {
+     "type": "phone",
+     "header": "INCONNU",
+     "messages": [
+      "ÉCOUTE. CELUI QUI EST DEHORS VEUT TE SAUVER.",
+      "MERCI. JE N'OUBLIERAI JAMAIS CE QUE TU AS FAIT."
+     ],
+     "highlight_last": true
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.3,
+    "ceiling_cracks": 1
+   },
+   "ui": {
+    "subs": "low"
+   },
+   "audio": {
+    "intensity": 0.4
+   }
+  },
+  {
+   "lines": [
+    45,
+    45
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.62,
+       17.2
+      ],
+      "look": [
+       0,
+       1.45,
+       21.8
+      ],
+      "fov": 40
+     },
+     {
+      "pos": [
+       0,
+       1.62,
+       17.2
+      ],
+      "look": [
+       0,
+       1.45,
+       21.8
+      ],
+      "fov": 28
+     }
+    ]
+   },
+   "objects": [
+    {
+     "type": "phone",
+     "header": "INCONNU",
+     "messages": [
+      "ÉCOUTE. CELUI QUI EST DEHORS VEUT TE SAUVER.",
+      "MERCI. JE N'OUBLIERAI JAMAIS CE QUE TU AS FAIT."
+     ],
+     "highlight_last": true
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.3,
+    "ceiling_cracks": 1
+   },
+   "ui": {
+    "subs": "low"
+   }
+  },
+  {
+   "lines": [
+    46,
+    46
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.55,
+       17.2
+      ],
+      "look": [
+       0,
+       0.5,
+       21.8
+      ],
+      "fov": 54
+     }
+    ]
+   },
+   "objects": [
+    {
+     "type": "phone",
+     "header": "INCONNU",
+     "messages": [
+      "POURQUOI AS-TU FERMÉ LES PORTES",
+      "MAINTENANT TU ES ENFERMÉ AVEC LUI",
+      "ÉCOUTE. CELUI QUI EST DEHORS VEUT TE SAUVER."
+     ],
+     "reveal": true
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.3,
+    "ceiling_cracks": 1
+   },
+   "ui": {
+    "subs": "low"
+   }
+  },
+  {
+   "lines": [
+    47,
+    47
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0.035,
+       1.63,
+       17.2
+      ],
+      "look": [
+       0.035,
+       1.45,
+       21.8
+      ],
+      "fov": 46
+     }
+    ]
+   },
+   "objects": [
+    {
+     "type": "phone",
+     "header": "INCONNU",
+     "messages": [
+      "ÉCOUTE. CELUI QUI EST DEHORS VEUT TE SAUVER.",
+      "MERCI. JE N'OUBLIERAI JAMAIS CE QUE TU AS FAIT."
+     ],
+     "highlight_last": true,
+     "header_after": "TON DOUBLE"
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.3,
+    "ceiling_cracks": 1
+   },
+   "fx": {
+    "glitch": [
+     0.3,
+     0,
+     0,
+     0.3
+    ]
+   },
+   "ui": {
+    "subs": "low"
+   },
+   "sfx": [
+    {
+     "name": "boom",
+     "at": 0,
+     "gain": 0.5
+    }
+   ]
+  },
+  {
+   "lines": [
+    48,
+    48
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.68,
+       15.850000000000001
+      ],
+      "look": [
+       0,
+       1.68,
+       21.8
+      ],
+      "fov": 50
+     },
+     {
+      "pos": [
+       0,
+       1.68,
+       15.850000000000001
+      ],
+      "look": [
+       0,
+       1.68,
+       21.8
+      ],
+      "fov": 42
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "hero",
+     "at": [
+      0,
+      16.8
+     ],
+     "facing": "-z",
+     "face": "smile_sad"
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "red": 0.3,
+    "ceiling_cracks": 1
+   },
+   "audio": {
+    "intensity": 0.3
+   }
+  },
+  {
+   "lines": [
+    49,
+    49
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.6,
+       -1.0
+      ],
+      "look": [
+       0,
+       1.55,
+       5
+      ],
+      "fov": 96
+     },
+     {
+      "pos": [
+       0,
+       1.6,
+       3.0
+      ],
+      "look": [
+       0,
+       1.55,
+       9
+      ],
+      "fov": 96
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "double",
+     "at": [
+      0,
+      1.0
+     ],
+     "facing": "+z",
+     "face": "urgent",
+     "to": [
+      0,
+      5.0
+     ],
+     "ease": "linear",
+     "move": "run"
+    }
+   ],
+   "state": {
+    "past": true,
+    "mirror": "writing",
+    "exit_door": 0,
+    "lock": "locked",
+    "sign": null,
+    "red": 0,
+    "elevator_doors": 0.5
+   },
+   "fx": {
+    "memory": 1
+   },
+   "sfx": [
+    {
+     "name": "whoosh_rev",
+     "at": -0.75,
+     "gain": 0.45
+    }
+   ]
+  },
+  {
+   "lines": [
+    50,
+    50
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.55,
+       -1.0
+      ],
+      "look": [
+       0,
+       0.5,
+       4
+      ],
+      "fov": 62
+     }
+    ]
+   },
+   "objects": [
+    {
+     "type": "phone",
+     "header": "INCONNU",
+     "messages": [
+      "POURQUOI AS-TU FERMÉ LES PORTES"
+     ]
+    }
+   ],
+   "state": {
+    "past": true,
+    "mirror": "writing",
+    "exit_door": 0,
+    "lock": "locked",
+    "sign": null,
+    "red": 0,
+    "elevator_doors": 0.5
+   },
+   "fx": {
+    "memory": 1
+   },
+   "ui": {
+    "subs": "low"
+   },
+   "sfx": [
+    {
+     "name": "whoosh_rev",
+     "at": -0.75,
+     "gain": 0.45
+    }
+   ]
+  },
+  {
+   "lines": [
+    51,
+    51
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.5,
+       -0.9
+      ],
+      "look": [
+       0,
+       1.4,
+       4
+      ],
+      "fov": 92
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "double",
+     "at": [
+      0,
+      0.9
+     ],
+     "facing": "-z",
+     "face": "double"
+    }
+   ],
+   "objects": [
+    {
+     "type": "arm",
+     "target": [
+      0,
+      1.3,
+      -0.3
+     ],
+     "time": 0.6
+    }
+   ],
+   "state": {
+    "past": true,
+    "mirror": "writing",
+    "exit_door": 0,
+    "lock": "locked",
+    "sign": null,
+    "red": 0,
+    "elevator_doors": 0.5
+   },
+   "fx": {
+    "memory": 1
+   },
+   "sfx": [
+    {
+     "name": "whoosh_rev",
+     "at": -0.75,
+     "gain": 0.45
+    }
+   ]
+  },
+  {
+   "lines": [
+    52,
+    52
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.8,
+       17.6
+      ],
+      "look": [
+       0,
+       2.6,
+       23.0
+      ],
+      "fov": 72
+     },
+     {
+      "pos": [
+       0,
+       1.8,
+       17.6
+      ],
+      "look": [
+       0,
+       3.2,
+       23.0
+      ],
+      "fov": 72
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "double",
+     "at": [
+      0,
+      19.4
+     ],
+     "facing": "+z",
+     "face": "neutral",
+     "to": [
+      0,
+      21.2
+     ],
+     "move": "walk",
+     "y": [
+      0,
+      0.9
+     ]
+    }
+   ],
+   "state": {
+    "past": true,
+    "mirror": "writing",
+    "exit_door": 1.05,
+    "lock": "locked",
+    "sign": null,
+    "red": 0,
+    "elevator_doors": 0.5
+   },
+   "fx": {
+    "memory": 0.5,
+    "bloom": 0.2
+   }
+  },
+  {
+   "lines": [
+    53,
+    53
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.6,
+       17.1
+      ],
+      "look": [
+       0,
+       1.6,
+       11.8
+      ],
+      "fov": 84
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      15.4
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "pose": "extend",
+     "glow": 0.5
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "ceiling_cracks": 1,
+    "red": 0.2,
+    "lights_off": [
+     0,
+     1,
+     0.1,
+     2.2
+    ]
+   },
+   "sfx": [
+    {
+     "name": "click",
+     "at": 0.1,
+     "gain": 0.45
+    },
+    {
+     "name": "click",
+     "at": 0.25,
+     "gain": 0.45
+    },
+    {
+     "name": "click",
+     "at": 0.4,
+     "gain": 0.45
+    },
+    {
+     "name": "click",
+     "at": 0.5499999999999999,
+     "gain": 0.45
+    },
+    {
+     "name": "click",
+     "at": 0.7,
+     "gain": 0.45
+    },
+    {
+     "name": "click",
+     "at": 0.85,
+     "gain": 0.45
+    },
+    {
+     "name": "click",
+     "at": 0.9999999999999999,
+     "gain": 0.45
+    },
+    {
+     "name": "click",
+     "at": 1.1500000000000001,
+     "gain": 0.45
+    },
+    {
+     "name": "click",
+     "at": 1.3,
+     "gain": 0.45
+    },
+    {
+     "name": "click",
+     "at": 1.45,
+     "gain": 0.45
+    },
+    {
+     "name": "click",
+     "at": 1.6,
+     "gain": 0.45
+    },
+    {
+     "name": "click",
+     "at": 1.75,
+     "gain": 0.45
+    },
+    {
+     "name": "click",
+     "at": 1.9,
+     "gain": 0.45
+    },
+    {
+     "name": "click",
+     "at": 2.05,
+     "gain": 0.45
+    }
+   ],
+   "audio": {
+    "intensity": 0.5
+   }
+  },
+  {
+   "lines": [
+    54,
+    54
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.62,
+       17.1
+      ],
+      "look": [
+       0,
+       1.45,
+       11.8
+      ],
+      "fov": 66
+     },
+     {
+      "pos": [
+       0,
+       1.62,
+       17.1
+      ],
+      "look": [
+       0,
+       1.45,
+       11.8
+      ],
+      "fov": 54
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      15.4
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "pose": "extend",
+     "glow": 0.45
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "ceiling_cracks": 1,
+    "lights_off": 1
+   },
+   "sfx": [
+    {
+     "name": "breath",
+     "dur": 5,
+     "gain": 0.8
+    }
+   ]
+  },
+  {
+   "lines": [
+    55,
+    55
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.6,
+       17.1
+      ],
+      "look": [
+       0,
+       0.9,
+       11.8
+      ],
+      "fov": 70
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      15.4
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "pose": "extend",
+     "glow": 0.45
+    }
+   ],
+   "objects": [
+    {
+     "type": "arm",
+     "target": [
+      0.18,
+      0.7,
+      16.7
+     ],
+     "time": 1.2,
+     "reach": 0.6
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "ceiling_cracks": 1,
+    "lights_off": 1
+   }
+  },
+  {
+   "lines": [
+    56,
+    56
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.62,
+       17.1
+      ],
+      "look": [
+       0,
+       1.62,
+       11.8
+      ],
+      "fov": 56
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      15.4
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "pose": "extend",
+     "glow": 0.45
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "ceiling_cracks": 1,
+    "lights_off": 1
+   },
+   "fx": {
+    "eyelid": "close",
+    "eyelid_time": 1.3
+   }
+  },
+  {
+   "lines": [
+    57,
+    57
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.62,
+       17.1
+      ],
+      "look": [
+       0,
+       1.62,
+       11.8
+      ],
+      "fov": 56
+     },
+     {
+      "pos": [
+       0,
+       1.62,
+       17.1
+      ],
+      "look": [
+       0,
+       1.62,
+       11.8
+      ],
+      "fov": 80
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "creature",
+     "at": [
+      0,
+      15.4
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "pose": "extend",
+     "glow": 0.45
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "ceiling_cracks": 1,
+    "lights_off": 1,
+    "red": 0.6
+   },
+   "fx": {
+    "vanish": true,
+    "vanish_time": 1.6,
+    "eyelid": "open",
+    "eyelid_time": 0.25
+   },
+   "ui": {
+    "heart_break": {
+     "at": 0
+    }
+   },
+   "sfx": [
+    {
+     "name": "riser",
+     "at": -0.2,
+     "dur": 1.6,
+     "gain": 0.55
+    },
+    {
+     "name": "boom",
+     "at": 1.3,
+     "dur": 2.2,
+     "gain": 1.0
+    },
+    {
+     "name": "static",
+     "at": 0.1,
+     "gain": 0.35
+    }
+   ]
+  },
+  {
+   "lines": [
+    58,
+    58
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.6,
+       4.0
+      ],
+      "look": [
+       0,
+       1.6,
+       -1
+      ],
+      "fov": 80
+     }
+    ]
+   },
+   "set": "apartment",
+   "fx": {
+    "black": true
+   },
+   "ui": {
+    "hud": false
+   },
+   "audio": {
+    "silence": true,
+    "mood": "calm"
+   }
+  },
+  {
+   "lines": [
+    59,
+    59
+   ],
+   "set": "apartment",
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.6,
+       3.6
+      ],
+      "look": [
+       0,
+       1.86,
+       -1.4
+      ],
+      "fov": 72
+     },
+     {
+      "pos": [
+       0,
+       1.6,
+       3.0
+      ],
+      "look": [
+       0,
+       1.86,
+       -2.0
+      ],
+      "fov": 72
+     }
+    ]
+   },
+   "state": {
+    "elevator_doors": [
+     0,
+     0.5,
+     1.2,
+     2.2
+    ]
+   },
+   "fx": {
+    "fade_in": 1.0
+   },
+   "ui": {
+    "hud": false
+   },
+   "audio": {
+    "mood": "calm",
+    "intensity": 0
+   },
+   "sfx": [
+    {
+     "name": "elevator_ding",
+     "at": 1.0,
+     "gain": 0.6
+    },
+    {
+     "name": "elevator_motor",
+     "at": 1.3,
+     "dur": 1.0,
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "lines": [
+    60,
+    60
+   ],
+   "set": "apartment",
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.6,
+       3.6
+      ],
+      "look": [
+       0,
+       1.6,
+       -1.4
+      ],
+      "fov": 74
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "boy",
+     "at": [
+      0,
+      -1.2
+     ],
+     "facing": "+z",
+     "face": "neutral",
+     "to": [
+      0,
+      1.8
+     ],
+     "move": "walk"
+    }
+   ],
+   "state": {
+    "elevator_doors": 0.5
+   },
+   "ui": {
+    "hud": false
+   },
+   "audio": {
+    "mood": "calm",
+    "intensity": 0
+   },
+   "sfx": [
+    {
+     "name": "footsteps_walk",
+     "at": 0.1,
+     "dur": 2.5,
+     "gain": 0.35
+    }
+   ]
+  },
+  {
+   "lines": [
+    61,
+    61
+   ],
+   "set": "apartment",
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.68,
+       2.85
+      ],
+      "look": [
+       0,
+       1.68,
+       -2
+      ],
+      "fov": 46
+     },
+     {
+      "pos": [
+       0,
+       1.68,
+       2.85
+      ],
+      "look": [
+       0,
+       1.68,
+       -2
+      ],
+      "fov": 38
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "boy",
+     "at": [
+      0,
+      2.0
+     ],
+     "facing": "+z",
+     "face": "neutral"
+    }
+   ],
+   "ui": {
+    "hud": false
+   },
+   "audio": {
+    "mood": "calm"
+   }
+  },
+  {
+   "lines": [
+    62,
+    62
+   ],
+   "set": "apartment",
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.4,
+       2.9
+      ],
+      "look": [
+       0,
+       0.15,
+       -2
+      ],
+      "fov": 56
+     },
+     {
+      "pos": [
+       0,
+       1.1,
+       2.9
+      ],
+      "look": [
+       0,
+       -0.1,
+       -2
+      ],
+      "fov": 56
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "boy",
+     "at": [
+      0,
+      2.0
+     ],
+     "facing": "+z",
+     "face": "neutral"
+    }
+   ],
+   "ui": {
+    "hud": false
+   },
+   "audio": {
+    "mood": "calm"
+   }
+  },
+  {
+   "lines": [
+    63,
+    63
+   ],
+   "set": "apartment",
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.68,
+       2.85
+      ],
+      "look": [
+       0,
+       1.68,
+       -2
+      ],
+      "fov": 38
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "boy",
+     "at": [
+      0,
+      2.0
+     ],
+     "facing": "+z",
+     "face": "neutral"
+    }
+   ],
+   "ui": {
+    "hud": false
+   },
+   "audio": {
+    "mood": "calm"
+   },
+   "cuts": [
+    {
+     "at": 0.4,
+     "set": "etage_zero",
+     "camera": {
+      "preset": "free",
+      "keys": [
+       {
+        "pos": [
+         0,
+         1.6,
+         17.0
+        ],
+        "look": [
+         0,
+         1.6,
+         12.0
+        ],
+        "fov": 84
+       }
+      ]
+     },
+     "actors": [],
+     "state": {
+      "exit_door": 0,
+      "red": 1.0,
+      "mirror": "broken"
+     },
+     "fx": {
+      "memory": 0.4,
+      "glitch": 0.5,
+      "tint": [
+       1.3,
+       0.7,
+       0.7
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "lines": [
+    64,
+    64
+   ],
+   "set": "apartment",
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0.3,
+       1.65,
+       3.3999999999999995
+      ],
+      "look": [
+       0.3,
+       1.65,
+       10
+      ],
+      "fov": 78
+     },
+     {
+      "pos": [
+       0.3,
+       1.65,
+       6.3999999999999995
+      ],
+      "look": [
+       0.3,
+       1.65,
+       13
+      ],
+      "fov": 78
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "boy",
+     "at": [
+      0,
+      5.6
+     ],
+     "facing": "+z",
+     "face": "neutral",
+     "to": [
+      0,
+      8.6
+     ],
+     "move": "walk"
+    }
+   ],
+   "state": {
+    "apt_door": [
+     0,
+     1,
+     0,
+     0.8
+    ]
+   },
+   "ui": {
+    "hud": false
+   },
+   "audio": {
+    "mood": "calm"
+   },
+   "sfx": [
+    {
+     "name": "door_handle",
+     "at": 0.1,
+     "gain": 0.5
+    },
+    {
+     "name": "creak",
+     "at": 0.4,
+     "gain": 0.25
+    },
+    {
+     "name": "footsteps_walk",
+     "dur": 2.5,
+     "gain": 0.3
+    }
+   ]
+  },
+  {
+   "lines": [
+    65,
+    65
+   ],
+   "set": "apartment",
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0.6,
+       1.7,
+       9.3
+      ],
+      "look": [
+       -0.30000000000000004,
+       1.35,
+       14
+      ],
+      "fov": 98
+     },
+     {
+      "pos": [
+       0.6,
+       1.7,
+       9.7
+      ],
+      "look": [
+       1.1,
+       1.35,
+       14
+      ],
+      "fov": 98
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "boy",
+     "at": [
+      -0.3,
+      11.9
+     ],
+     "facing": "+z",
+     "face": "neutral"
+    }
+   ],
+   "state": {
+    "apt_door": 1
+   },
+   "ui": {
+    "hud": false
+   },
+   "audio": {
+    "mood": "calm"
+   }
+  },
+  {
+   "lines": [
+    66,
+    66
+   ],
+   "set": "apartment",
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0.4,
+       1.35,
+       9.75
+      ],
+      "look": [
+       1.18,
+       0.82,
+       10.25
+      ],
+      "fov": 60
+     }
+    ]
+   },
+   "state": {
+    "apt_door": 1
+   },
+   "ui": {
+    "hud": false
+   },
+   "audio": {
+    "mood": "calm"
+   },
+   "objects": [
+    {
+     "type": "light",
+     "at": [
+      1.18,
+      1.4,
+      10.25
+     ],
+     "power": 0.4,
+     "radius": 1.2
+    }
+   ],
+   "sfx": [
+    {
+     "name": "click",
+     "at": 0.95,
+     "gain": 0.6
+    }
+   ]
+  },
+  {
+   "lines": [
+    67,
+    67
+   ],
+   "set": "apartment",
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0.25,
+       1.75,
+       9.55
+      ],
+      "look": [
+       0.25,
+       1.58,
+       15
+      ],
+      "fov": 76
+     },
+     {
+      "pos": [
+       0.25,
+       1.75,
+       13.85
+      ],
+      "look": [
+       0.25,
+       1.58,
+       20
+      ],
+      "fov": 76
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "boy",
+     "at": [
+      0,
+      10.8
+     ],
+     "facing": "+z",
+     "face": "neutral",
+     "to": [
+      0,
+      15.1
+     ],
+     "move": "walk",
+     "no_reflection": true
+    },
+    {
+     "id": "boy_reflection",
+     "at": [
+      0,
+      10.8
+     ],
+     "facing": "+z",
+     "face": "neutral",
+     "to": [
+      0,
+      15.1
+     ],
+     "move": "walk",
+     "reflection_only": true
+    }
+   ],
+   "state": {
+    "apt_door": 1,
+    "mirror_reflect": [
+     0,
+     0.4
+    ]
+   },
+   "ui": {
+    "hud": false
+   },
+   "audio": {
+    "mood": "calm"
+   }
+  },
+  {
+   "lines": [
+    68,
+    68
+   ],
+   "set": "apartment",
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0.6,
+       1.8,
+       14.0
+      ],
+      "look": [
+       -0.20000000000000007,
+       1.71,
+       19.1
+      ],
+      "fov": 64
+     },
+     {
+      "pos": [
+       0.6,
+       1.8,
+       14.0
+      ],
+      "look": [
+       -0.20000000000000007,
+       1.71,
+       19.1
+      ],
+      "fov": 54
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "boy",
+     "at": [
+      0,
+      15.1
+     ],
+     "facing": "+z",
+     "face": "neutral",
+     "no_reflection": true
+    },
+    {
+     "id": "boy_reflection",
+     "at": [
+      0,
+      15.1
+     ],
+     "facing": "+z",
+     "face": "neutral",
+     "reflection_only": true
+    }
+   ],
+   "state": {
+    "apt_door": 1,
+    "mirror_reflect": [
+     0.4,
+     1
+    ]
+   },
+   "ui": {
+    "hud": false
+   },
+   "audio": {
+    "mood": "calm"
+   }
+  },
+  {
+   "lines": [
+    69,
+    69
+   ],
+   "set": "apartment",
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0.45,
+       1.82,
+       14.35
+      ],
+      "look": [
+       -0.49999999999999994,
+       1.73,
+       19.35
+      ],
+      "fov": 42
+     },
+     {
+      "pos": [
+       0.45,
+       1.82,
+       14.35
+      ],
+      "look": [
+       -0.49999999999999994,
+       1.73,
+       19.35
+      ],
+      "fov": 32
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "boy",
+     "at": [
+      0,
+      15.1
+     ],
+     "facing": "+z",
+     "face": "neutral",
+     "no_reflection": true
+    },
+    {
+     "id": "boy_reflection",
+     "at": [
+      0,
+      15.1
+     ],
+     "facing": "+z",
+     "face": "neutral",
+     "reflection_only": true
+    }
+   ],
+   "state": {
+    "apt_door": 1,
+    "mirror_reflect": 1
+   },
+   "ui": {
+    "hud": false
+   },
+   "audio": {
+    "mood": "calm"
+   }
+  },
+  {
+   "lines": [
+    70,
+    70
+   ],
+   "set": "apartment",
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.68,
+       15.719999999999999
+      ],
+      "look": [
+       0,
+       1.68,
+       11.1
+      ],
+      "fov": 46
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "boy",
+     "at": [
+      0,
+      15.1
+     ],
+     "facing": "+z",
+     "face": "closed",
+     "no_reflection": true
+    },
+    {
+     "id": "boy_reflection",
+     "at": [
+      0,
+      15.1
+     ],
+     "facing": "+z",
+     "face": "closed",
+     "reflection_only": true
+    }
+   ],
+   "state": {
+    "apt_door": 1
+   },
+   "ui": {
+    "hud": false
+   },
+   "audio": {
+    "mood": "calm"
+   }
+  },
+  {
+   "lines": [
+    71,
+    71
+   ],
+   "set": "apartment",
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.68,
+       15.719999999999999
+      ],
+      "look": [
+       0,
+       1.68,
+       11.1
+      ],
+      "fov": 46
+     },
+     {
+      "pos": [
+       0,
+       1.68,
+       15.719999999999999
+      ],
+      "look": [
+       0,
+       1.68,
+       11.1
+      ],
+      "fov": 38
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "boy",
+     "at": [
+      0,
+      15.1
+     ],
+     "facing": "+z",
+     "face": "neutral",
+     "no_reflection": true,
+     "lipsync": true
+    },
+    {
+     "id": "boy_reflection",
+     "at": [
+      0,
+      15.1
+     ],
+     "facing": "+z",
+     "face": "neutral",
+     "reflection_only": true,
+     "lipsync": true
+    }
+   ],
+   "state": {
+    "apt_door": 1
+   },
+   "ui": {
+    "hud": false
+   },
+   "audio": {
+    "mood": "calm"
+   }
+  },
+  {
+   "lines": [
+    72,
+    72
+   ],
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       1.1,
+       2.3,
+       17.8
+      ],
+      "look": [
+       -0.5,
+       0.8,
+       11.8
+      ],
+      "fov": 96
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "hero",
+     "at": [
+      0,
+      16.8
+     ],
+     "facing": "-z",
+     "face": "closed"
+    },
+    {
+     "id": "creature",
+     "at": [
+      0,
+      15.4
+     ],
+     "facing": "+z",
+     "face": "creature",
+     "pose": "extend",
+     "glow": 0.35
+    }
+   ],
+   "state": {
+    "exit_door": 0,
+    "ceiling_cracks": 1,
+    "lights_off": 1,
+    "red": 0.25
+   },
+   "fx": {
+    "memory": 0.25
+   },
+   "ui": {
+    "hud": false
+   },
+   "audio": {
+    "intensity": 0.5
+   },
+   "sfx": [
+    {
+     "name": "boom",
+     "at": -0.05,
+     "gain": 0.8
+    },
+    {
+     "name": "growl",
+     "at": 0.5,
+     "dur": 2.4,
+     "gain": 0.4
+    }
+   ]
+  },
+  {
+   "lines": [
+    73,
+    73
+   ],
+   "set": "apartment",
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0.45,
+       1.82,
+       14.35
+      ],
+      "look": [
+       -0.49999999999999994,
+       1.73,
+       19.35
+      ],
+      "fov": 34
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "boy",
+     "at": [
+      0,
+      15.1
+     ],
+     "facing": "+z",
+     "face": "neutral",
+     "no_reflection": true
+    },
+    {
+     "id": "boy_reflection",
+     "at": [
+      0,
+      15.1
+     ],
+     "facing": "+z",
+     "face": "neutral",
+     "reflection_only": true
+    }
+   ],
+   "state": {
+    "apt_door": 1
+   },
+   "ui": {
+    "hud": false
+   },
+   "audio": {
+    "mood": "calm"
+   }
+  },
+  {
+   "lines": [
+    74,
+    74
+   ],
+   "set": "apartment",
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0.6,
+       1.81,
+       14.0
+      ],
+      "look": [
+       -0.20000000000000007,
+       1.72,
+       19.1
+      ],
+      "fov": 56
+     },
+     {
+      "pos": [
+       0.45,
+       1.81,
+       14.35
+      ],
+      "look": [
+       -0.49999999999999994,
+       1.72,
+       19.35
+      ],
+      "fov": 30
+     }
+    ]
+   },
+   "actors": [
+    {
+     "id": "boy",
+     "at": [
+      0,
+      15.1
+     ],
+     "facing": "+z",
+     "face": "neutral",
+     "to": [
+      1.4,
+      15.1
+     ],
+     "start": 0.15,
+     "end": 0.6,
+     "no_reflection": true
+    },
+    {
+     "id": "boy_reflection",
+     "at": [
+      0,
+      15.1
+     ],
+     "facing": "+z",
+     "face": "neutral",
+     "reflection_only": true,
+     "face_changes": [
+      {
+       "at": 1.9,
+       "face": "grin"
+      }
+     ]
+    }
+   ],
+   "state": {
+    "apt_door": 1,
+    "dim": [
+     0,
+     0.7,
+     1.9,
+     2.5
+    ]
+   },
+   "ui": {
+    "hud": false
+   },
+   "sfx": [
+    {
+     "name": "riser",
+     "at": 0.75,
+     "dur": 1.2,
+     "gain": 0.35
+    },
+    {
+     "name": "sting",
+     "at": 1.9,
+     "dur": 2.2,
+     "gain": 0.9
+    },
+    {
+     "name": "boom",
+     "at": 1.9,
+     "gain": 1.2
+    }
+   ],
+   "audio": {
+    "intensity": 0.8
+   }
+  },
+  {
+   "lines": [
+    75,
+    75
+   ],
+   "set": "apartment",
+   "camera": {
+    "preset": "free",
+    "keys": [
+     {
+      "pos": [
+       0,
+       1.6,
+       4
+      ],
+      "look": [
+       0,
+       1.6,
+       9
+      ],
+      "fov": 80
+     }
+    ]
+   },
+   "fx": {
+    "black": true
+   },
+   "ui": {
+    "endcard": {
+     "part": "PARTIE 4",
+     "headline": "FIN",
+     "cta": "MERCI D'AVOIR JOUÉ",
+     "button": "ABONNE-TOI"
+    }
+   },
+   "sfx": [
+    {
+     "name": "boom",
+     "at": -0.05,
+     "dur": 3,
+     "gain": 0.7
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{"title": "Démo 6 — Continuité : le lendemain", "style": "pixel3d", "part": "ÉPISODE 2", "aspects": ["16:9", "9:16"], "lead": 4.2, "follows": "demo2_dialogue",
+ "description": "Suite de la démo 2 (même série) : le lendemain, Léa et Tom reviennent avec la même apparence (bibliothèque de personnages) et Léa a toujours la lettre reçue à la fin de la démo 2 (état de série rejoué).",
+ "voices": {"lea": "woman", "tom": "man"}, "names": {"lea": "LÉA", "tom": "TOM"}, "label_colors": {"lea": "orange", "tom": "blue"},
+ "script": [
+  {"who": "tom", "text": "Salut. Tu as dormi un peu ?"},
+  {"who": "lea", "text": "Pas vraiment. J'ai relu la lettre toute la nuit."},
+  {"who": "tom", "text": "Et alors ? Elle dit quoi, exactement ?"},
+  {"who": "lea", "text": "Rendez-vous ce soir. Au vieux cimetière."},
+  {"who": "tom", "text": "Au cimetière ?! Évidemment..."},
+  {"who": "lea", "text": "On y va ensemble. Comme promis."}
+ ],
+ "episode": {
+  "engine_version": 2, "default_set": "cuisine", "music": "calm", "series": "tu_decides_demo",
+  "hud": {"title": ["TU", "DÉCIDES"], "part": "ÉPISODE 2", "hearts": []},
+  "sets": {"cuisine": {"type": "kitchen", "night": false}},
+  "cast": {"lea": {"ref": "lea"}, "tom": {"ref": "tom"}},
+  "shots": [
+   {"lines": [0, 0], "actors": [{"id": "lea", "on": "chair.2", "face": "tired"}, {"id": "tom", "at": "porte", "facing": "+x"}],
+    "actions": [{"who": "tom", "do": "sit", "on": "chair"}, {"who": "lea", "do": "look_at", "target": "tom", "at": 0.6, "dur": 6}],
+    "camera": {"shot": "wide", "on": ["lea", "tom"], "from": [2.2, 1.8]}},
+   {"lines": [1, 1], "actions": [{"who": "lea", "do": "gesture", "name": "show", "at": 0.6, "dur": 2.4}], "camera": {"shot": "dialogue", "on": ["lea", "tom"], "speaker": "lea"}},
+   {"lines": [2, 2], "camera": {"shot": "dialogue", "on": ["lea", "tom"], "speaker": "tom"}},
+   {"lines": [3, 3], "actions": [{"who": "lea", "do": "face", "name": "determined"}], "camera": {"shot": "close", "on": ["lea"], "move": "dolly_in", "amount": 0.4}},
+   {"lines": [4, 4], "actions": [{"who": "tom", "do": "react", "kind": "gasp", "at": 0.1}, {"who": "tom", "do": "gesture", "name": "facepalm", "at": 1.2, "dur": 1.6}],
+    "camera": {"shot": "close", "on": ["tom"]}},
+   {"lines": [5, 5], "actions": [{"who": "lea", "do": "face", "name": "smirk"}, {"who": "tom", "do": "face", "name": "nervous", "at": 0.8}],
+    "camera": {"shot": "two_shot", "on": ["lea", "tom"], "move": "dolly_out", "amount": 0.4}}
+  ]}}

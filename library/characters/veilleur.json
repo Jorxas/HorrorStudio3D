@@ -1,0 +1,34 @@
+{
+ "id": "veilleur",
+ "name": "Le Veilleur",
+ "look": {
+  "kind": "veilleur",
+  "scale": 1.2,
+  "fissure": 0,
+  "lueur": 0.07,
+  "cadre": true,
+  "gouttes": true,
+  "outfit": "coat",
+  "hood": [26, 28, 34],
+  "jeans": [20, 21, 26],
+  "skin": [236, 234, 226],
+  "hair": [26, 28, 34],
+  "hair_style": "bald",
+  "headphones": false,
+  "backpack": false,
+  "hat": "none"
+ },
+ "voice": {
+  "draft": "man",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.0,
+  "energy": 0.2,
+  "shy": 0.0
+ },
+ "relations": {
+  "noe": "imite sa voix, jamais sa cicatrice"
+ },
+ "notes": "Le gardien de verre de « Le Phare qui efface » (15/11/2026) : ≈ 2,3 m, imperméable noir trempé, gants blancs, tête = rectangle de verre dépoli vide (sans yeux ni bouche, jamais d'yeux cyan). PS1 : hstudio/engines/pixel3d/veilleur.py (clés de piste x_rampe, x_fissure). Les couleurs hood/jeans/skin servent seulement à l'approximation VOXEL (silhouette sombre)."
+}

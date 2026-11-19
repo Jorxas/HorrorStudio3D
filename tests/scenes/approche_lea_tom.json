@@ -1,0 +1,31 @@
+{
+ "_comment": "Scene A/B de la locomotion dirigee (docs/LOCOMOTION_DIRIGEE.md). Lea part de profil et marche vers Tom ; un cercueil et un tas de pierres poses en travers de la ligne droite obligent le chemin A* a faire un coude, exactement comme les meubles du salon dans le plan 0 de demo11_art_pixel3d (le defaut rapporte par le proprietaire). Mise en place pour que le defaut soit VISIBLE et non cache : coin vide du cimetiere (aucun decor entre la camera et les acteurs), ciel de jour, obstacles bas que Lea contourne par DEVANT, aucune replique donc aucun sous-titre en bas de l'image, et UN SEUL plan avec une camera FIXE (move static, aucun zoom, aucun recadrage, aucun suivi). Tout le corps et les DEUX PIEDS restent dans l'image du debut a la fin. La cle \"approach\" est absente : ce fichier est la version A (historique) ; tools/locomotion_qc.py et tools/approche_sheet.py l'injectent pour produire la version B.",
+ "style": "pixel3d",
+ "engine_version": 2,
+ "default_set": "cimetiere",
+ "sets": {
+  "cimetiere": {
+   "type": "graveyard", "seed": 3, "sky": "day", "stars": false, "fog": 0.02,
+   "props": [
+    {"type": "coffin", "at": [-9.6, 14.0], "rot": 1},
+    {"type": "rock_pile", "at": [-9.6, 14.8]}
+   ]
+  }
+ },
+ "cast": {"lea": {"ref": "lea"}, "tom": {"ref": "tom"}},
+ "shots": [
+  {
+   "lines": [0, 0],
+   "dur": 9,
+   "actors": [
+    {"id": "lea", "at": [-12.0, 14.0], "facing": "-z", "face": "urgent"},
+    {"id": "tom", "at": [-7.2, 14.2], "facing": "-x", "face": "calm"}
+   ],
+   "actions": [
+    {"who": "lea", "do": "walk_to", "to": "tom", "stop_dist": 1.3},
+    {"who": "tom", "do": "turn_to", "target": "lea", "at": 0.4}
+   ],
+   "camera": {"shot": "full", "on": ["lea", "tom"], "from": [-9.6, 8.0], "move": "static"}
+  }
+ ]
+}

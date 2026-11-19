@@ -1,0 +1,43 @@
+{
+ "id": "homme_rouge_3",
+ "name": "Homme rouge 3",
+ "look": {
+  "skin": [
+   238,
+   200,
+   170
+  ],
+  "hair": [
+   176,
+   120,
+   70
+  ],
+  "hair_style": "ponytail",
+  "headphones": false,
+  "backpack": false,
+  "outfit": "coat",
+  "hood": [
+   186,
+   34,
+   38
+  ],
+  "jeans": [
+   240,
+   238,
+   232
+  ],
+  "costume": "homme_rouge_3"
+ },
+ "voice": {
+  "draft": "man",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.6,
+  "energy": 0.7,
+  "shy": 0.1
+ },
+ "relations": {},
+ "group": "bal_xviiie",
+ "notes": "Ensemble du bal XVIIIe : redingote, catogan (queue basse et ruban), bottes. Tête peinte en pixels façon skin (face_skin) : sourcils, yeux, lèvres et barbe peints, yeux, sourcils et bouche animés."
+}

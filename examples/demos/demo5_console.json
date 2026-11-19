@@ -1,0 +1,38 @@
+{"title": "Démo 5 — Ne mets pas pause : niveau 7", "style": "console", "part": "NIVEAU 7", "aspects": ["9:16", "16:9"],
+ "description": "Ce que fait le jeu se produit dans la chambre : une porte ouverte dans la console grince dans la vraie chambre, un ennemi dans le jeu met des pieds sous la vraie porte, un cœur perdu fait clignoter la lampe.",
+ "voices": {"noah": "boy", "console": "robot"}, "names": {"noah": "NOAH", "console": "CONSOLE · FICHIER 1"}, "label_colors": {"noah": "white", "console": "green"},
+ "script": [
+  {"who": "noah", "text": "Trois heures du matin. Encore un niveau, et je dors."},
+  {"who": "console", "text": "Bienvenue au niveau sept, Noah.", "voice_fx": "console"},
+  {"who": "noah", "text": "Attends... Comment il connaît mon prénom ?"},
+  {"who": "console", "text": "Prends la clé. Ouvre la porte.", "voice_fx": "console", "dur": 4.2},
+  {"who": "noah", "text": "La porte de ma chambre... Elle vient de s'ouvrir.", "dur": 3.6},
+  {"who": "console", "text": "Quelqu'un arrive. Ne mets pas pause.", "voice_fx": "console", "dur": 3.8},
+  {"who": "noah", "text": "Il y a quelqu'un derrière la porte !"},
+  {"who": "console", "text": "Tu as perdu un cœur.", "voice_fx": "console", "dur": 3.0},
+  {"who": "noah", "text": "Je mets pause... ou pas ?", "dur": 3.6}
+ ],
+ "episode": {
+  "engine_version": 2, "game_map": "maison", "game_hp": 3,
+  "hud": {"series": "NE METS PAS PAUSE", "level": "NIVEAU 7", "clock_start": "3:07", "clock_rate": 0.125},
+  "cast": {"noah": {"ref": "noah"}},
+  "shots": [
+   {"lines": [0, 0], "scene": {"type": "room", "console_on_bed": false}, "actors": [{"id": "noah", "on": "bed", "hold": "console", "face": "tired"}],
+    "camera": {"move": "push_in", "amount": 0.6, "on": "noah"}},
+   {"lines": [1, 1], "scene": {"type": "console", "screen": {"type": "game"}}, "camera": {"move": "push_in", "focus": [0.5, 0.42]},
+    "game": [{"at": 0.4, "do": "say", "text": "NIVEAU 7", "dur": 1.6}, {"at": 1.4, "do": "walk", "to": "key"}], "sfx": [{"name": "chip_blip", "at": 0.1, "gain": 0.5}]},
+   {"lines": [2, 2], "scene": {"type": "room", "console_on_bed": false}, "actions": [{"who": "noah", "do": "face", "name": "suspicious"}, {"who": "noah", "do": "look_at", "target": [-0.2, 1.4, 2.5], "dur": 1.0, "at": 1.6}],
+    "camera": {"move": "push_in", "amount": 1.0, "on": "noah"}},
+   {"lines": [3, 3], "scene": {"type": "screen", "screen": {"type": "game"}}, "camera": {"move": "drift"},
+    "game": [{"at": 0.2, "do": "pick", "item": "key"}, {"at": 0.5, "do": "walk", "to": "door1"}, {"do": "open", "door": "door1"}]},
+   {"lines": [4, 4], "scene": {"type": "door", "x": 0.55, "light_under": "warm"}, "camera": {"move": "push_in", "amount": 0.8}},
+   {"lines": [5, 5], "scene": {"type": "split", "left": {"type": "screen", "screen": {"type": "game"}}, "right": {"type": "door", "light_under": "warm"}},
+    "game": [{"at": 0.6, "do": "enemy", "pos": [10, 3], "dur": 0.1}, {"at": 1.2, "do": "enemy_to", "to": [8, 3], "dur": 1.8}]},
+   {"lines": [6, 6], "scene": {"type": "room", "console_on_bed": false},
+    "actions": [{"who": "noah", "do": "react", "kind": "startle"}, {"who": "noah", "do": "stand"}, {"who": "noah", "do": "turn_to", "target": "door"}, {"who": "noah", "do": "face", "name": "scared"}],
+    "camera": {"move": "handheld", "on": "noah", "shake": 0.2}},
+   {"lines": [7, 7], "scene": {"type": "console", "screen": {"type": "game"}}, "camera": {"move": "push_in", "shake": 0.15, "focus": [0.5, 0.42]},
+    "game": [{"at": 0.3, "do": "hp", "delta": -1}, {"at": 0.4, "do": "say", "text": "TU AS PERDU UN COEUR", "dur": 2.2}]},
+   {"lines": [8, 8], "scene": {"type": "room", "console_on_bed": false}, "actions": [{"who": "noah", "do": "look_at", "target": "door", "dur": 3}],
+    "camera": {"move": "push_in", "amount": 0.5, "on": "noah"}, "ui": {"choice": {"title": "TU METS PAUSE ?", "A": "OUI", "B": "NON"}}}
+ ]}}

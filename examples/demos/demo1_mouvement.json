@@ -1,0 +1,25 @@
+{"title": "Démo 1 — Mouvement naturel", "style": "pixel3d", "part": "DÉMO 1", "aspects": ["16:9", "9:16"],
+ "description": "Léa entre dans le salon, marche en contournant la table, regarde autour d'elle, prend une clé et s'assoit sur le canapé.",
+ "labels": false,
+ "script": [
+  {"text": "Léa rentre chez elle.", "dur": 6.6},
+  {"text": "Sur la table... une clé qu'elle n'a jamais vue.", "dur": 4.6},
+  {"text": "Elle s'assoit, la clé à la main.", "dur": 5.8},
+  {"text": "Qui a bien pu la laisser là ?", "dur": 3.6}
+ ],
+ "episode": {
+  "engine_version": 2, "default_set": "salon", "music": "mystery",
+  "hud": {"title": ["TU", "DÉCIDES"], "part": "DÉMO 1", "hearts": []},
+  "sets": {"salon": {"type": "living_room", "items": [{"id": "cle", "type": "key", "at": [0.3, 0.82, 4.4]}]}},
+  "cast": {"lea": {"ref": "lea"}},
+  "shots": [
+   {"lines": [0, 0], "actors": [{"id": "lea", "at": [2.3, 0.9], "facing": "-x"}],
+    "actions": [{"who": "lea", "do": "walk_to", "to": [0.2, 3.6]}, {"who": "lea", "do": "look_around"}],
+    "camera": {"shot": "wide", "on": ["lea"]}},
+   {"lines": [1, 1], "actions": [{"who": "lea", "do": "pick", "item": "cle"}, {"who": "lea", "do": "face", "name": "surprised"}],
+    "camera": {"shot": "medium_full", "on": ["lea"]}},
+   {"lines": [2, 2], "actions": [{"who": "lea", "do": "sit", "on": "canape"}, {"who": "lea", "do": "face", "name": "thinking"}],
+    "camera": {"shot": "full", "on": ["lea"], "from": [-0.8, 0.2]}},
+   {"lines": [3, 3], "actions": [{"who": "lea", "do": "look_at", "target": "cle", "dur": 1.8}, {"who": "lea", "do": "face", "name": "suspicious"}],
+    "camera": {"shot": "medium", "on": ["lea"], "move": "dolly_in", "amount": 0.5}}
+  ]}}

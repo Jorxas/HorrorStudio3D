@@ -1,0 +1,43 @@
+{
+ "id": "dame_tartan",
+ "name": "Dame tartan",
+ "look": {
+  "skin": [
+   226,
+   186,
+   160
+  ],
+  "hair": [
+   88,
+   52,
+   30
+  ],
+  "hair_style": "bun",
+  "headphones": false,
+  "backpack": false,
+  "outfit": "dress",
+  "hood": [
+   232,
+   168,
+   186
+  ],
+  "jeans": [
+   232,
+   168,
+   186
+  ],
+  "costume": "dame_tartan"
+ },
+ "voice": {
+  "draft": "woman",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.6,
+  "energy": 0.7,
+  "shy": 0.1
+ },
+ "relations": {},
+ "group": "bal_xviiie",
+ "notes": "Ensemble du bal XVIIIe : robe à paniers, manches au coude, boucles relevées en chignon, flûte de champagne (main droite). Tête peinte en pixels façon skin (face_skin) : sourcils, yeux, lèvres et barbe peints, yeux, sourcils et bouche animés."
+}

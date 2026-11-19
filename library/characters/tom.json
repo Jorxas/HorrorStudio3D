@@ -1,0 +1,43 @@
+{
+ "id": "tom",
+ "name": "Tom",
+ "look": {
+  "hood": [
+   60,
+   110,
+   170
+  ],
+  "jeans": [
+   52,
+   52,
+   60
+  ],
+  "hair": [
+   30,
+   24,
+   20
+  ],
+  "skin": [
+   176,
+   118,
+   86
+  ],
+  "hair_style": "short",
+  "glasses": true,
+  "headphones": false,
+  "backpack": true
+ },
+ "voice": {
+  "draft": "man",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.5,
+  "energy": 0.5,
+  "shy": 0.35
+ },
+ "relations": {
+  "lea": "meilleure amie"
+ },
+ "notes": "Ami de Léa. Prudent, sceptique, lunettes et sac à dos."
+}

@@ -1,0 +1,40 @@
+{
+ "_comment": "Scene A/B du glissement des semelles (docs/FOOT_PLANT_COURSE.md). Deux plans : Lea COURT vers Tom puis s'arrete, Lea MARCHE vers Tom puis s'arrete. Le defaut mesure (tools/foot_plant_qc.py) ne se produit PAS pendant la foulee en ligne droite -- il se produit pendant les ~0.3 s ou le cycle de marche s'eteint a la fin du trajet : la phase est gelee, le corps ne bouge plus, et les deux semelles sont tirees vers la pose de repos A TRAVERS le sol. Il faut donc que le plan CONTINUE apres l'arrivee, c'est pourquoi dur = 6 s pour un trajet de ~2 s. Mise en place pour que le defaut soit VISIBLE et non cache : coin vide du cimetiere (aucun decor entre la camera et les acteurs), ciel de jour, aucune replique donc aucun sous-titre en bas de l'image, camera FIXE (move static, aucun zoom, aucun recadrage, aucun suivi) -- le corps traverse donc reellement le cadre, son deplacement dans l'espace n'est pas masque. Tout le corps et les DEUX PIEDS restent dans l'image du debut a la fin. La cle \"foot_plant\" est absente : ce fichier est la version A (historique) ; tools/foot_plant_sheet.py l'injecte pour produire la version B.",
+ "style": "pixel3d",
+ "engine_version": 2,
+ "default_set": "cimetiere",
+ "sets": {
+  "cimetiere": {
+   "type": "graveyard", "seed": 3, "sky": "day", "stars": false, "fog": 0.02
+  }
+ },
+ "hud": {"show": false},
+ "cast": {"lea": {"ref": "lea"}, "tom": {"ref": "tom"}},
+ "shots": [
+  {
+   "lines": [0, 0],
+   "dur": 6,
+   "actors": [
+    {"id": "lea", "at": [-15.0, 14.0], "facing": "+x", "face": "urgent"},
+    {"id": "tom", "at": [-8.4, 14.1], "facing": "-x", "face": "calm"}
+   ],
+   "actions": [
+    {"who": "lea", "do": "run_to", "to": "tom", "stop_dist": 1.2}
+   ],
+   "camera": {"shot": "full", "on": ["lea", "tom"], "from": [-11.7, 8.0], "move": "static"}
+  },
+  {
+   "lines": [1, 1],
+   "dur": 6,
+   "reset": true,
+   "actors": [
+    {"id": "lea", "at": [-15.0, 14.0], "facing": "+x", "face": "calm"},
+    {"id": "tom", "at": [-8.4, 14.1], "facing": "-x", "face": "calm"}
+   ],
+   "actions": [
+    {"who": "lea", "do": "walk_to", "to": "tom", "stop_dist": 1.2}
+   ],
+   "camera": {"shot": "full", "on": ["lea", "tom"], "from": [-11.7, 8.0], "move": "static"}
+  }
+ ]
+}

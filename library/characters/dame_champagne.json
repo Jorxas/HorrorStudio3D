@@ -1,0 +1,43 @@
+{
+ "id": "dame_champagne",
+ "name": "Dame champagne",
+ "look": {
+  "skin": [
+   170,
+   112,
+   80
+  ],
+  "hair": [
+   28,
+   20,
+   16
+  ],
+  "hair_style": "curly",
+  "headphones": false,
+  "backpack": false,
+  "outfit": "dress",
+  "hood": [
+   230,
+   210,
+   172
+  ],
+  "jeans": [
+   230,
+   210,
+   172
+  ],
+  "costume": "dame_champagne"
+ },
+ "voice": {
+  "draft": "woman",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.6,
+  "energy": 0.7,
+  "shy": 0.1
+ },
+ "relations": {},
+ "group": "bal_xviiie",
+ "notes": "Ensemble du bal XVIIIe : robe à paniers, manches au coude, afro relevée en couronne, flûte de champagne (main droite). Tête peinte en pixels façon skin (face_skin) : sourcils, yeux, lèvres et barbe peints, yeux, sourcils et bouche animés."
+}

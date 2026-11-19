@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Catalogue — Horror Studio</title>
+<style>
+:root{--bg:#101014;--card:#1a1a21;--line:#2c2c36;--tx:#ecebe6;--mut:#9a98a4;--red:#d6161a;--ok:#3fb27f;--warn:#e0a030}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.4 system-ui,Segoe UI,sans-serif}
+header{position:sticky;top:0;z-index:5;background:#0c0c10ee;backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding:10px 16px}
+h1{margin:0 0 8px;font-size:18px;letter-spacing:.08em}h1 span{color:var(--red)}h1 a{color:var(--mut);font-size:13px;font-weight:400;margin-left:12px;text-decoration:none}
+.row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}input[type=search]{flex:1;min-width:180px;background:var(--card);border:1px solid var(--line);color:var(--tx);padding:9px 12px;border-radius:8px;font-size:15px}
+.chip{background:var(--card);border:1px solid var(--line);color:var(--tx);padding:6px 11px;border-radius:99px;font-size:13px;cursor:pointer}.chip.on{background:var(--red);border-color:var(--red)}.chip small{color:var(--mut);margin-left:4px}.chip.on small{color:#ffd}
+main{padding:14px 16px 60px}.count{color:var(--mut);margin:0 0 10px;font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column}.card:hover{border-color:#555}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#23232c;display:block}.card div{padding:7px 9px}.card b{display:block;font-size:13px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.card span{font-size:11px;color:var(--mut)}
+.lic{display:inline-block;font-size:10px;padding:1px 6px;border-radius:99px;margin-top:3px;border:1px solid var(--ok);color:var(--ok)}.lic.by{border-color:var(--warn);color:var(--warn)}.lic.no{border-color:var(--red);color:var(--red)}
+button.more{display:block;margin:16px auto;background:var(--card);border:1px solid var(--line);color:var(--tx);padding:10px 22px;border-radius:8px;font-size:14px;cursor:pointer}
+dialog{background:var(--card);color:var(--tx);border:1px solid var(--line);border-radius:12px;max-width:640px;width:calc(100% - 24px);padding:0}dialog::backdrop{background:#000a}
+dialog img{width:100%;display:block;background:#23232c}.dl{padding:14px 16px}.dl h2{margin:0 0 4px;font-size:17px}.dl p{margin:4px 0;color:var(--mut);font-size:13px}
+pre{background:#0c0c10;border:1px solid var(--line);border-radius:8px;padding:10px;overflow:auto;font-size:12px;white-space:pre-wrap;word-break:break-all;margin:8px 0}
+.btn{background:var(--red);border:0;color:#fff;padding:8px 14px;border-radius:8px;font-size:13px;cursor:pointer;margin-right:6px}.btn.g{background:#2c2c36}
+</style></head><body>
+<header><h1>HORROR <span>STUDIO</span> — catalogue<a href="/">← retour au studio</a></h1>
+<div class="row"><input type="search" id="q" placeholder="Chercher : zombie, lit, église, lampe, squelette…" autocomplete="off"></div>
+<div class="row" id="cats" style="margin-top:8px"></div><div class="row" id="groups" style="margin-top:6px"></div>
+<div class="row" id="lics" style="margin-top:6px"></div><div class="row" style="margin-top:6px"><button class="chip" id="refbtn" title="Les modèles importés servent d'inspiration : ils ne sont pas utilisés tels quels dans nos films. Les éléments du studio sont créés ici."></button></div></header>
+<main><p class="count" id="count"></p><div class="grid" id="grid"></div><button class="more" id="more" hidden>Voir plus</button></main>
+<dialog id="dlg"><img id="dimg" alt=""><audio id="daud" controls hidden style="width:100%"></audio><div class="dl"><h2 id="dname"></h2><p id="dmeta"></p><p id="dlic"></p><pre id="dsnip"></pre>
+<button class="btn" id="copy">Copier la ligne</button><button class="btn g" id="close">Fermer</button></div></dialog>
+<script>
+let ALL=[],cat='',grp='',lic='',shown=120,showRef=false;const $=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const licKind=e=>e.credit_required?'by':(e.commercial_ok===false?'no':'ok');
+const licLabel=e=>e.credit_required?'CC BY — crédit exigé':(e.commercial_ok===false?'usage perso seulement':(/CC0/.test(e.license)?'CC0':'libre (créé ici)'));
+const vis=e=>showRef||!e.reference;
+function match(e,q){return vis(e)&&(!cat||e.category===cat)&&(!grp||e.group===grp)&&(!lic||licKind(e)===lic)&&(!q||(e.name+' '+e.key+' '+e.group+' '+e.category).toLowerCase().includes(q))}
+function chips(el,vals,cur,set,label){el.innerHTML='';const all=document.createElement('button');all.className='chip'+(cur?'':' on');all.textContent=label;all.onclick=()=>{set('');draw()};el.appendChild(all);
+ for(const[v,n]of vals){const b=document.createElement('button');b.className='chip'+(cur===v?' on':'');b.innerHTML=esc(v)+'<small>'+n+'</small>';b.onclick=()=>{set(cur===v?'':v);draw()};el.appendChild(b)}}
+function count(list,f){const m=new Map();for(const e of list){const k=f(e);m.set(k,(m.get(k)||0)+1)}return[...m].sort((a,b)=>b[1]-a[1])}
+function draw(reset=true){if(reset)shown=120;const q=$('q').value.trim().toLowerCase();const base=ALL.filter(e=>match(e,q));const ALL0=ALL;const ALL_=ALL.filter(vis);
+ const nref=ALL.filter(e=>e.reference).length;$('refbtn').textContent=(showRef?'Masquer':'Afficher')+' les références d\'inspiration ('+nref+')';$('refbtn').classList.toggle('on',showRef);
+ chips($('cats'),count(ALL_.filter(e=>(!grp||e.group===grp)&&(!lic||licKind(e)===lic)&&(!q||(e.name+' '+e.key).toLowerCase().includes(q))),e=>e.category),cat,v=>cat=v,'Toutes les catégories');
+ chips($('groups'),count(ALL_.filter(e=>(!cat||e.category===cat)&&(!lic||licKind(e)===lic)&&(!q||(e.name+' '+e.key).toLowerCase().includes(q))),e=>e.group).slice(0,14),grp,v=>grp=v,'Toutes les sources');
+ chips($('lics'),count(ALL_.filter(e=>(!cat||e.category===cat)&&(!grp||e.group===grp)),e=>({ok:'ok',by:'by',no:'no'}[licKind(e)])).map(([k,n])=>[k==='ok'?'ok':k,n]),lic,v=>lic=v,'Toutes licences');
+ document.querySelectorAll('#lics .chip').forEach(c=>{const t=c.firstChild.textContent;if(t==='ok')c.firstChild.textContent='libre / CC0';if(t==='by')c.firstChild.textContent='crédit exigé (CC BY)';if(t==='no')c.firstChild.textContent='usage perso seulement'});
+ $('count').textContent=base.length+' élément'+(base.length>1?'s':'')+' sur '+ALL_.length+(showRef?'':" (les références d'inspiration sont masquées)");const g=$('grid');g.innerHTML='';
+ for(const e of base.slice(0,shown)){const c=document.createElement('div');c.className='card';c.innerHTML='<img loading="lazy" src="/catalogue/'+esc(e.thumb)+'" alt=""><div><b title="'+esc(e.name)+'">'+esc(e.name)+'</b><span>'+esc(e.group)+'</span><br><i class="lic '+licKind(e)+'">'+licLabel(e)+'</i></div>';c.onclick=()=>open_(e);g.appendChild(c)}
+ $('more').hidden=base.length<=shown}
+function open_(e){$('dimg').src='/catalogue/'+e.thumb;$('dname').textContent=e.name;$('dmeta').textContent=e.category+' — '+e.group+(e.desc?' — '+e.desc:'')+(e.styles?' — PS1 : '+({native:'natif',converted:'converti',approx:"approché"}[e.styles.ps1]||'absent')+' · VOXEL : '+({native:'natif',converted:'converti',approx:"approché"}[e.styles.voxel]||'absent'):'');
+ const au=$('daud');if(e.audio){au.hidden=false;au.src='/catalogue/'+e.audio;au.play().catch(()=>{})}else{au.pause();au.hidden=true;au.removeAttribute('src')}
+ $('dlic').textContent=e.credit_required?('Licence '+e.license+'. À mettre dans la description de la vidéo : '+(e.credit_text||'')):('Licence : '+e.license+(e.source?' — '+e.source:''));$('dsnip').textContent=e.snippet||'';$('dlg').showModal()}
+$('copy').onclick=async()=>{try{await navigator.clipboard.writeText($('dsnip').textContent);$('copy').textContent='Copié ✓'}catch(_){const r=document.createRange();r.selectNode($('dsnip'));getSelection().removeAllRanges();getSelection().addRange(r);$('copy').textContent='Sélectionné : Ctrl+C'}setTimeout(()=>$('copy').textContent='Copier la ligne',1600)};
+$('refbtn').onclick=()=>{showRef=!showRef;draw()};$('close').onclick=()=>$('dlg').close();$('dlg').addEventListener('close',()=>$('daud').pause());$('more').onclick=()=>{shown+=240;draw(false)};let t;$('q').oninput=()=>{clearTimeout(t);t=setTimeout(draw,150)};
+fetch('/api/catalogue').then(r=>r.json()).then(j=>{ALL=j;if(!j.length)$('count').textContent="Catalogue vide : lance « python -m hstudio.catalogue build » dans le dossier du studio.";draw()});
+</script></body></html>

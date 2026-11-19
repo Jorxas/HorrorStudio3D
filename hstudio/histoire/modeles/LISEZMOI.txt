@@ -1,0 +1,24 @@
+DOSSIER D'UNE HISTOIRE — fabriqué par le kit du moteur ({{MOTEUR}})
+Guide pour l'IA : {{MOTEUR}}\docs\GUIDE_HISTOIRE_POUR_IA.md
+
+Toutes les commandes se lancent DEPUIS le dossier du moteur, avec son Python :
+  cd {{MOTEUR}}
+  $env:PYTHONIOENCODING="utf-8"            (PowerShell)    ou    export PYTHONIOENCODING=utf-8   (bash)
+  .venv\Scripts\python.exe -m hstudio.histoire <étape> "{{DOSSIER}}"
+
+Ordre :
+  1. voix         devis en caractères (RIEN n'est envoyé) -> le dire au propriétaire
+                  --oui seulement APRÈS son accord (ou --importer une voix existante)
+  2. phrases      PHRASES.md : numéro, début, fin de chaque phrase
+  3. (écrire histoire.py : la mise en scène, moment par moment)
+  4. construire   construit/ : film long 16:9, vertical complet, Shorts PARTIE N, bruitages
+  5. apercu       planches/apercu_*.jpg : REGARDER chaque image, corriger, recommencer
+  6. verifier     contrôles sans rendu + contrôle de scène ; 0 erreur exigée
+  7. rendre       rendus/*.video.mp4 (long ; en arrière-plan)
+  8. mixer        mix/*.wav à -14 LUFS, crête <= -1 dBTP
+  9. livrer       LIVRAISON/ : films, copies < 30 Mo, RAPPORT_MESURES.md, PDF ; REGARDER les planches finales
+  etat            où en est le dossier
+
+Fichiers : script.txt (le texte), histoire.py (la mise en scène), voix.json (voix et modèle ElevenLabs),
+voix/ (voix.mp3, alignement.json, lignes.json), construit/, planches/, rendus/, mix/, LIVRAISON/.
+Rien n'est jamais publié par le kit : le propriétaire publie lui-même.

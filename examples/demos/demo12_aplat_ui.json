@@ -1,0 +1,73 @@
+{"title": "Démo 12 — Aplats : l'interface à l'écran (HUD, sous-titres, choix, règle, chrono, carton de fin)",
+ "style": "console", "part": "STYLE APLATS · INTERFACE", "aspects": ["9:16", "16:9"],
+ "description": "Deuxième tranche du chantier CONSOLE 2D. La démo 11 montrait l'image refaite en aplats ; celle-ci montre ce qui se pose dessus. Chaque plan expose une surface d'interface : le cartouche HUD (niveau, horloge, cœurs) sur les quatre palettes, le sous-titre sur sa plaque avec l'étiquette du personnage et les mots-clés en accent, la carte de règle en plein cadre puis en surimpression, le chrono, les cartes de choix dans leurs trois états (repos, sélectionné, enfoncé) et le carton de fin. Rien n'est activé par défaut : il faut \"art\": \"aplat\" dans l'épisode. L'ancien style reste le style de production tant qu'un humain n'a pas jugé celui-ci.",
+ "voices": {"noah": "boy", "console": "robot", "voix": "man"},
+ "names": {"noah": "NOAH", "console": "CONSOLE · FICHIER 1", "voix": "VOIX DERRIÈRE LA PORTE"},
+ "label_colors": {"noah": "white", "console": "green", "voix": "orange"},
+ "script": [
+  {"who": "noah", "text": "Trois heures sept, et l'écran refuse de s'éteindre.", "keywords": ["refuse"], "dur": 4.2},
+  {"who": "console", "text": "Règle numéro un. Ne quitte pas ta chambre.", "voice_fx": "console", "keywords": ["chambre"], "dur": 4.0},
+  {"who": "console", "text": "Tu l'as lue. Elle compte maintenant.", "voice_fx": "console", "dur": 3.4},
+  {"who": "voix", "text": "Ouvre. Je sais que tu es réveillé.", "voice_fx": "muffled", "keywords": ["Ouvre"], "dur": 3.8},
+  {"who": "noah", "text": "Dix secondes pour décider. Dix.", "keywords": ["Dix"], "dur": 3.4},
+  {"who": "console", "text": "Tu as perdu un cœur. Il t'en reste deux.", "voice_fx": "console", "keywords": ["cœur"], "dur": 3.8},
+  {"who": "noah", "text": "La règle est toujours là, par-dessus tout.", "dur": 3.6},
+  {"who": "noah", "text": "Alors ? Je réponds quoi ?", "dur": 3.0},
+  {"who": "console", "text": "Appuie. Je regarde ton doigt.", "voice_fx": "console", "keywords": ["Appuie"], "dur": 3.2},
+  {"who": "noah", "text": "Demain, je range cette console.", "dur": 3.4}
+ ],
+ "episode": {
+  "engine_version": 2,
+  "art": "aplat", "palette": "night",
+  "hud": {"series": "NE METS PAS PAUSE", "level": "NIVEAU 9", "clock_start": "3:07", "clock_rate": 0.125,
+          "hearts": [1, 1, 1]},
+  "hearts": [{"line": 5, "offset": 0.6, "value": [1, 1, 0]}],
+  "cast": {"noah": {"ref": "noah"}},
+  "shots": [
+   {"lines": [0, 0], "scene": {"type": "room", "palette": "night", "console_on_bed": false, "notan_x": 0.46},
+    "actors": [{"id": "noah", "at": "bed.edge", "hold": "console", "face": "tired"}],
+    "actions": [{"who": "noah", "do": "turn_to", "target": "camera"}],
+    "camera": {"move": "drift", "on": "noah"}},
+
+   {"lines": [1, 1], "scene": {"type": "rule_card", "palette": "night", "number": 1,
+                               "lines": ["NE QUITTE PAS", "TA CHAMBRE"], "highlight": 1, "icon": "door_x"},
+    "camera": {"move": "push_in", "amount": 0.4}},
+
+   {"lines": [2, 2], "scene": {"type": "rule_card", "palette": "alert", "number": 2, "tag": "RÈGLE N°2",
+                               "lines": ["NE RÉPONDS PAS", "À LA PORTE"], "highlight": 0, "icon": "eye_x"},
+    "camera": {"move": "drift"}},
+
+   {"lines": [3, 3], "scene": {"type": "door", "palette": "night", "x": 0.5, "light_under": "warm",
+                               "feet": true, "feet_move": true},
+    "camera": {"move": "push_in", "amount": 0.8}},
+
+   {"lines": [4, 4], "scene": {"type": "door", "palette": "alert", "x": 0.5, "light_under": "red", "feet": true},
+    "camera": {"move": "push_in", "amount": 1.0, "shake": 0.1},
+    "ui": {"timer": true, "subs": "low"}},
+
+   {"lines": [5, 5], "scene": {"type": "face", "palette": "alert", "expression": "scared", "light": "red",
+                               "talking": false, "skin": [224, 172, 136], "hair": [24, 26, 46], "hood": [48, 58, 100]},
+    "camera": {"move": "push_in", "amount": 0.5}},
+
+   {"lines": [6, 6], "scene": {"type": "room", "palette": "game", "console_on_bed": true, "notan_x": 0.40},
+    "camera": {"move": "drift"},
+    "ui": {"rule": {"number": 1, "lines": ["NE QUITTE PAS", "TA CHAMBRE"], "highlight": 1, "icon": "door_x",
+                    "palette": "game"}}},
+
+   {"lines": [7, 7], "scene": {"type": "room", "palette": "night", "console_on_bed": false, "notan_x": 0.46},
+    "actions": [{"who": "noah", "do": "face", "name": "nervous"},
+                {"who": "noah", "do": "look_at", "target": "camera", "dur": 2.5}],
+    "camera": {"move": "push_in", "amount": 0.4, "on": "noah"},
+    "ui": {"choice": {"title": "TU OUVRES LA PORTE ?", "A": "OUI", "B": "JE NE BOUGE PAS", "cursor": "B"}}},
+
+   {"lines": [8, 8], "scene": {"type": "room", "palette": "alert", "console_on_bed": false, "notan_x": 0.46},
+    "actions": [{"who": "noah", "do": "face", "name": "scared"}],
+    "camera": {"move": "handheld", "on": "noah", "shake": 0.14},
+    "ui": {"choice": {"title": "TU OUVRES LA PORTE ?", "A": "OUI", "B": "JE NE BOUGE PAS",
+                      "cursor": "B", "press": "B"}}},
+
+   {"lines": [9, 9], "scene": {"type": "room", "palette": "dawn", "console_on_bed": false, "notan_x": 0.46},
+    "camera": {"move": "pull_out", "amount": 0.4},
+    "ui": {"endcard": {"title": "NE METS\nPAS PAUSE", "part": "NIVEAU 9", "headline": "A OU B ?",
+                       "cta": "VOTE EN COMMENTAIRE", "button": "ABONNE-TOI"}}}
+  ]}}

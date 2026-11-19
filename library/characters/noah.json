@@ -1,0 +1,38 @@
+{
+ "id": "noah",
+ "name": "Noah",
+ "look": {
+  "hood": [
+   48,
+   58,
+   100
+  ],
+  "jeans": [
+   30,
+   34,
+   60
+  ],
+  "hair": [
+   24,
+   26,
+   46
+  ],
+  "skin": [
+   224,
+   172,
+   136
+  ],
+  "hair_style": "short"
+ },
+ "voice": {
+  "draft": "boy",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.5,
+  "energy": 0.4,
+  "shy": 0.5
+ },
+ "relations": {},
+ "notes": "Le joueur de « Ne mets pas pause » (moteur console)."
+}

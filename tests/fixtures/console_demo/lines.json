@@ -1,0 +1,1304 @@
+[
+ {
+  "tts": "[serious, tense] Vous avez choisi B.",
+  "display": "Vous avez choisi B.",
+  "text": "Vous avez choisi B.",
+  "tags": [
+   "serious, tense"
+  ],
+  "dialogue": false,
+  "i": 0,
+  "start": 0.0,
+  "end": 1.25256,
+  "segs": [
+   [
+    0.0,
+    1.25256
+   ]
+  ]
+ },
+ {
+  "tts": "Tu regardes ton double.",
+  "display": "Tu regardes ton double.",
+  "text": "Tu regardes ton double.",
+  "tags": [],
+  "dialogue": false,
+  "i": 1,
+  "start": 1.75603,
+  "end": 2.79483,
+  "segs": [
+   [
+    1.75603,
+    2.79483
+   ]
+  ]
+ },
+ {
+  "tts": "Puis la porte ouverte derrière lui.",
+  "display": "Puis la porte ouverte derrière lui.",
+  "text": "Puis la porte ouverte derrière lui.",
+  "tags": [],
+  "dialogue": false,
+  "i": 2,
+  "start": 3.22247,
+  "end": 4.71653,
+  "segs": [
+   [
+    3.22247,
+    4.71653
+   ]
+  ]
+ },
+ {
+  "tts": "[quietly] Tu prends une décision.",
+  "display": "Tu prends une décision.",
+  "text": "Tu prends une décision.",
+  "tags": [
+   "quietly"
+  ],
+  "dialogue": false,
+  "i": 3,
+  "start": 5.20816,
+  "end": 6.18016,
+  "segs": [
+   [
+    5.20816,
+    6.18016
+   ]
+  ]
+ },
+ {
+  "tts": "« Vas-y. Sors. »",
+  "display": "« Vas-y. Sors. »",
+  "text": "« Vas-y. Sors. »",
+  "tags": [],
+  "dialogue": true,
+  "i": 4,
+  "start": 6.71483,
+  "end": 7.80855,
+  "segs": [
+   [
+    6.71483,
+    7.06578
+   ],
+   [
+    7.41354,
+    7.80855
+   ]
+  ]
+ },
+ {
+  "tts": "Il te dévisage.",
+  "display": "Il te dévisage.",
+  "text": "Il te dévisage.",
+  "tags": [],
+  "dialogue": false,
+  "i": 5,
+  "start": 8.30587,
+  "end": 9.17177,
+  "segs": [
+   [
+    8.30587,
+    9.17177
+   ]
+  ]
+ },
+ {
+  "tts": "[confused] « Quoi ? »",
+  "display": "« Quoi ? »",
+  "text": "« Quoi ? »",
+  "tags": [
+   "confused"
+  ],
+  "dialogue": true,
+  "i": 6,
+  "start": 9.60771,
+  "end": 9.88859,
+  "segs": [
+   [
+    9.60771,
+    9.88859
+   ]
+  ]
+ },
+ {
+  "tts": "« Tu m'as sauvé. Maintenant, c'est mon tour. »",
+  "display": "« Tu m'as sauvé. Maintenant, c'est mon tour. »",
+  "text": "« Tu m'as sauvé. Maintenant, c'est mon tour. »",
+  "tags": [],
+  "dialogue": true,
+  "i": 7,
+  "start": 10.3888,
+  "end": 12.7366,
+  "segs": [
+   [
+    10.3888,
+    11.0627
+   ],
+   [
+    11.4393,
+    11.8584
+   ],
+   [
+    12.0082,
+    12.7366
+   ]
+  ]
+ },
+ {
+  "tts": "Tu le pousses vers les escaliers.",
+  "display": "Tu le pousses vers les escaliers.",
+  "text": "Tu le pousses vers les escaliers.",
+  "tags": [],
+  "dialogue": false,
+  "i": 8,
+  "start": 13.1852,
+  "end": 14.4795,
+  "segs": [
+   [
+    13.1852,
+    14.4795
+   ]
+  ]
+ },
+ {
+  "tts": "Mais il refuse d'avancer.",
+  "display": "Mais il refuse d'avancer.",
+  "text": "Mais il refuse d'avancer.",
+  "tags": [],
+  "dialogue": false,
+  "i": 9,
+  "start": 14.8773,
+  "end": 16.0493,
+  "segs": [
+   [
+    14.8773,
+    16.0493
+   ]
+  ]
+ },
+ {
+  "tts": "[emotional] « On peut encore trouver une autre solution ! »",
+  "display": "« On peut encore trouver une autre solution ! »",
+  "text": "« On peut encore trouver une autre solution ! »",
+  "tags": [
+   "emotional"
+  ],
+  "dialogue": true,
+  "i": 10,
+  "start": 16.4792,
+  "end": 18.2645,
+  "segs": [
+   [
+    16.4792,
+    18.2645
+   ]
+  ]
+ },
+ {
+  "tts": "[urgent] « IL N'Y A PLUS DE TEMPS ! »",
+  "display": "« IL N'Y A PLUS DE TEMPS ! »",
+  "text": "« IL N'Y A PLUS DE TEMPS ! »",
+  "tags": [
+   "urgent"
+  ],
+  "dialogue": true,
+  "i": 11,
+  "start": 18.5589,
+  "end": 19.6,
+  "segs": [
+   [
+    18.5589,
+    19.6
+   ]
+  ]
+ },
+ {
+  "tts": "Derrière vous, la créature au visage fissuré se met à courir.",
+  "display": "Derrière vous, la créature au visage fissuré se met à courir.",
+  "text": "Derrière vous, la créature au visage fissuré se met à courir.",
+  "tags": [],
+  "dialogue": false,
+  "i": 12,
+  "start": 19.9801,
+  "end": 23.2565,
+  "segs": [
+   [
+    19.9801,
+    23.2565
+   ]
+  ]
+ },
+ {
+  "tts": "Tu attrapes ton double et le projettes de l'autre côté.",
+  "display": "Tu attrapes ton double et le projettes de l'autre côté.",
+  "text": "Tu attrapes ton double et le projettes de l'autre côté.",
+  "tags": [],
+  "dialogue": false,
+  "i": 13,
+  "start": 23.6202,
+  "end": 25.9744,
+  "segs": [
+   [
+    23.6202,
+    25.9744
+   ]
+  ]
+ },
+ {
+  "tts": "La porte se referme.",
+  "display": "La porte se referme.",
+  "text": "La porte se referme.",
+  "tags": [],
+  "dialogue": false,
+  "i": 14,
+  "start": 26.3208,
+  "end": 27.4766,
+  "segs": [
+   [
+    26.3208,
+    27.4766
+   ]
+  ]
+ },
+ {
+  "tts": "[tense] Et soudain...",
+  "display": "Et soudain...",
+  "text": "Et soudain...",
+  "tags": [
+   "tense"
+  ],
+  "dialogue": false,
+  "i": 15,
+  "start": 27.848,
+  "end": 28.3879,
+  "segs": [
+   [
+    27.848,
+    28.3879
+   ]
+  ]
+ },
+ {
+  "tts": "Plus aucun bruit.",
+  "display": "Plus aucun bruit.",
+  "text": "Plus aucun bruit.",
+  "tags": [],
+  "dialogue": false,
+  "i": 16,
+  "start": 28.9157,
+  "end": 29.7259,
+  "segs": [
+   [
+    28.9157,
+    29.7259
+   ]
+  ]
+ },
+ {
+  "tts": "Tu es seul dans le couloir.",
+  "display": "Tu es seul dans le couloir.",
+  "text": "Tu es seul dans le couloir.",
+  "tags": [],
+  "dialogue": false,
+  "i": 17,
+  "start": 30.1715,
+  "end": 31.4506,
+  "segs": [
+   [
+    30.1715,
+    31.4506
+   ]
+  ]
+ },
+ {
+  "tts": "Face à la créature.",
+  "display": "Face à la créature.",
+  "text": "Face à la créature.",
+  "tags": [],
+  "dialogue": false,
+  "i": 18,
+  "start": 31.7318,
+  "end": 32.8627,
+  "segs": [
+   [
+    31.7318,
+    32.8627
+   ]
+  ]
+ },
+ {
+  "tts": "Elle s'arrête à quelques mètres.",
+  "display": "Elle s'arrête à quelques mètres.",
+  "text": "Elle s'arrête à quelques mètres.",
+  "tags": [],
+  "dialogue": false,
+  "i": 19,
+  "start": 33.2955,
+  "end": 34.5484,
+  "segs": [
+   [
+    33.2955,
+    34.5484
+   ]
+  ]
+ },
+ {
+  "tts": "Puis elle incline lentement la tête.",
+  "display": "Puis elle incline lentement la tête.",
+  "text": "Puis elle incline lentement la tête.",
+  "tags": [],
+  "dialogue": false,
+  "i": 20,
+  "start": 34.9557,
+  "end": 36.6858,
+  "segs": [
+   [
+    34.9557,
+    36.6858
+   ]
+  ]
+ },
+ {
+  "tts": "[creepy whisper] « Tu l'as laissé partir ? »",
+  "display": "« Tu l'as laissé partir ? »",
+  "text": "« Tu l'as laissé partir ? »",
+  "tags": [
+   "creepy whisper"
+  ],
+  "dialogue": true,
+  "i": 21,
+  "start": 37.1417,
+  "end": 38.3986,
+  "segs": [
+   [
+    37.1417,
+    38.3986
+   ]
+  ]
+ },
+ {
+  "tts": "Tu ne réponds pas.",
+  "display": "Tu ne réponds pas.",
+  "text": "Tu ne réponds pas.",
+  "tags": [],
+  "dialogue": false,
+  "i": 22,
+  "start": 38.8655,
+  "end": 39.632,
+  "segs": [
+   [
+    38.8655,
+    39.632
+   ]
+  ]
+ },
+ {
+  "tts": "Elle commence à rire.",
+  "display": "Elle commence à rire.",
+  "text": "Elle commence à rire.",
+  "tags": [],
+  "dialogue": false,
+  "i": 23,
+  "start": 40.0807,
+  "end": 41.0036,
+  "segs": [
+   [
+    40.0807,
+    41.0036
+   ]
+  ]
+ },
+ {
+  "tts": "« Alors tu ne comprends vraiment rien... »",
+  "display": "« Alors tu ne comprends vraiment rien... »",
+  "text": "« Alors tu ne comprends vraiment rien... »",
+  "tags": [],
+  "dialogue": true,
+  "i": 24,
+  "start": 41.3903,
+  "end": 43.3091,
+  "segs": [
+   [
+    41.3903,
+    43.3091
+   ]
+  ]
+ },
+ {
+  "tts": "[whispers] Elle s'approche.",
+  "display": "Elle s'approche.",
+  "text": "Elle s'approche.",
+  "tags": [
+   "whispers"
+  ],
+  "dialogue": false,
+  "i": 25,
+  "start": 43.6825,
+  "end": 44.5367,
+  "segs": [
+   [
+    43.6825,
+    44.5367
+   ]
+  ]
+ },
+ {
+  "tts": "Et pour la première fois, tu remarques quelque chose.",
+  "display": "Et pour la première fois, tu remarques quelque chose.",
+  "text": "Et pour la première fois, tu remarques quelque chose.",
+  "tags": [],
+  "dialogue": false,
+  "i": 26,
+  "start": 44.9772,
+  "end": 47.61,
+  "segs": [
+   [
+    44.9772,
+    46.014
+   ],
+   [
+    46.332,
+    47.61
+   ]
+  ]
+ },
+ {
+  "tts": "Les fissures sur son visage...",
+  "display": "Les fissures sur son visage...",
+  "text": "Les fissures sur son visage...",
+  "tags": [],
+  "dialogue": false,
+  "i": 27,
+  "start": 48.0743,
+  "end": 49.552,
+  "segs": [
+   [
+    48.0743,
+    49.552
+   ]
+  ]
+ },
+ {
+  "tts": "Elles ressemblent exactement à celles du miroir de l'ascenseur.",
+  "display": "Elles ressemblent exactement à celles du miroir de l'ascenseur.",
+  "text": "Elles ressemblent exactement à celles du miroir de l'ascenseur.",
+  "tags": [],
+  "dialogue": false,
+  "i": 28,
+  "start": 50.0065,
+  "end": 52.9374,
+  "segs": [
+   [
+    50.0065,
+    52.9374
+   ]
+  ]
+ },
+ {
+  "tts": "[serious, ominous] « Tu sais pourquoi tu n'avais plus de reflet ? »",
+  "display": "« Tu sais pourquoi tu n'avais plus de reflet ? »",
+  "text": "« Tu sais pourquoi tu n'avais plus de reflet ? »",
+  "tags": [
+   "serious, ominous"
+  ],
+  "dialogue": true,
+  "i": 29,
+  "start": 53.368,
+  "end": 55.0859,
+  "segs": [
+   [
+    53.368,
+    55.0859
+   ]
+  ]
+ },
+ {
+  "tts": "Ton sang se glace.",
+  "display": "Ton sang se glace.",
+  "text": "Ton sang se glace.",
+  "tags": [],
+  "dialogue": false,
+  "i": 30,
+  "start": 55.4657,
+  "end": 56.5391,
+  "segs": [
+   [
+    55.4657,
+    56.5391
+   ]
+  ]
+ },
+ {
+  "tts": "« Parce que je te l'ai pris. »",
+  "display": "« Parce que je te l'ai pris. »",
+  "text": "« Parce que je te l'ai pris. »",
+  "tags": [],
+  "dialogue": true,
+  "i": 31,
+  "start": 56.9226,
+  "end": 58.0672,
+  "segs": [
+   [
+    56.9226,
+    58.0672
+   ]
+  ]
+ },
+ {
+  "tts": "La créature pose une main sur sa poitrine.",
+  "display": "La créature pose une main sur sa poitrine.",
+  "text": "La créature pose une main sur sa poitrine.",
+  "tags": [],
+  "dialogue": false,
+  "i": 32,
+  "start": 58.561,
+  "end": 60.5884,
+  "segs": [
+   [
+    58.561,
+    60.5884
+   ]
+  ]
+ },
+ {
+  "tts": "[whispers] « Je suis ton reflet. Et maintenant... il ne reste plus que nous deux. »",
+  "display": "« Je suis ton reflet. Et maintenant... il ne reste plus que nous deux. »",
+  "text": "« Je suis ton reflet. Et maintenant... il ne reste plus que nous deux. »",
+  "tags": [
+   "whispers"
+  ],
+  "dialogue": true,
+  "i": 33,
+  "start": 61.0264,
+  "end": 64.9078,
+  "segs": [
+   [
+    61.0264,
+    62.0615
+   ],
+   [
+    62.5733,
+    62.8093
+   ],
+   [
+    62.9294,
+    63.1693
+   ],
+   [
+    63.6217,
+    64.9078
+   ]
+  ]
+ },
+ {
+  "tts": "Tu recules.",
+  "display": "Tu recules.",
+  "text": "Tu recules.",
+  "tags": [],
+  "dialogue": false,
+  "i": 34,
+  "start": 65.3632,
+  "end": 65.9852,
+  "segs": [
+   [
+    65.3632,
+    65.9852
+   ]
+  ]
+ },
+ {
+  "tts": "Mais elle ne t'attaque pas.",
+  "display": "Mais elle ne t'attaque pas.",
+  "text": "Mais elle ne t'attaque pas.",
+  "tags": [],
+  "dialogue": false,
+  "i": 35,
+  "start": 66.4036,
+  "end": 67.3608,
+  "segs": [
+   [
+    66.4036,
+    67.3608
+   ]
+  ]
+ },
+ {
+  "tts": "Elle te tend simplement la main.",
+  "display": "Elle te tend simplement la main.",
+  "text": "Elle te tend simplement la main.",
+  "tags": [],
+  "dialogue": false,
+  "i": 36,
+  "start": 67.7636,
+  "end": 69.0983,
+  "segs": [
+   [
+    67.7636,
+    69.0983
+   ]
+  ]
+ },
+ {
+  "tts": "« Tu peux rester ici avec moi. Pour toujours. »",
+  "display": "« Tu peux rester ici avec moi. Pour toujours. »",
+  "text": "« Tu peux rester ici avec moi. Pour toujours. »",
+  "tags": [],
+  "dialogue": true,
+  "i": 37,
+  "start": 69.5862,
+  "end": 72.2703,
+  "segs": [
+   [
+    69.5862,
+    71.0829
+   ],
+   [
+    71.5282,
+    72.2703
+   ]
+  ]
+ },
+ {
+  "tts": "[anxious] Tu regardes autour de toi.",
+  "display": "Tu regardes autour de toi.",
+  "text": "Tu regardes autour de toi.",
+  "tags": [
+   "anxious"
+  ],
+  "dialogue": false,
+  "i": 38,
+  "start": 72.7247,
+  "end": 73.8437,
+  "segs": [
+   [
+    72.7247,
+    73.8437
+   ]
+  ]
+ },
+ {
+  "tts": "Les murs commencent à trembler.",
+  "display": "Les murs commencent à trembler.",
+  "text": "Les murs commencent à trembler.",
+  "tags": [],
+  "dialogue": false,
+  "i": 39,
+  "start": 74.2423,
+  "end": 75.6227,
+  "segs": [
+   [
+    74.2423,
+    75.6227
+   ]
+  ]
+ },
+ {
+  "tts": "Le plafond se fissure.",
+  "display": "Le plafond se fissure.",
+  "text": "Le plafond se fissure.",
+  "tags": [],
+  "dialogue": false,
+  "i": 40,
+  "start": 75.9077,
+  "end": 77.1264,
+  "segs": [
+   [
+    75.9077,
+    77.1264
+   ]
+  ]
+ },
+ {
+  "tts": "L'étage entier semble s'effondrer.",
+  "display": "L'étage entier semble s'effondrer.",
+  "text": "L'étage entier semble s'effondrer.",
+  "tags": [],
+  "dialogue": false,
+  "i": 41,
+  "start": 77.4202,
+  "end": 79.2485,
+  "segs": [
+   [
+    77.4202,
+    79.2485
+   ]
+  ]
+ },
+ {
+  "tts": "Soudain, ton téléphone vibre.",
+  "display": "Soudain, ton téléphone vibre.",
+  "text": "Soudain, ton téléphone vibre.",
+  "tags": [],
+  "dialogue": false,
+  "i": 42,
+  "start": 79.5772,
+  "end": 81.1505,
+  "segs": [
+   [
+    79.5772,
+    79.998
+   ],
+   [
+    80.2277,
+    81.1505
+   ]
+  ]
+ },
+ {
+  "tts": "Un dernier message apparaît.",
+  "display": "Un dernier message apparaît.",
+  "text": "Un dernier message apparaît.",
+  "tags": [],
+  "dialogue": false,
+  "i": 43,
+  "start": 81.5022,
+  "end": 82.7479,
+  "segs": [
+   [
+    81.5022,
+    82.7479
+   ]
+  ]
+ },
+ {
+  "tts": "[soft] « Merci. Je n'oublierai jamais ce que tu as fait. »",
+  "display": "« Merci. Je n'oublierai jamais ce que tu as fait. »",
+  "text": "« Merci. Je n'oublierai jamais ce que tu as fait. »",
+  "tags": [
+   "soft"
+  ],
+  "dialogue": true,
+  "i": 44,
+  "start": 83.2233,
+  "end": 85.7439,
+  "segs": [
+   [
+    83.2233,
+    83.6222
+   ],
+   [
+    84.1404,
+    85.7439
+   ]
+  ]
+ },
+ {
+  "tts": "Tu reconnais le numéro.",
+  "display": "Tu reconnais le numéro.",
+  "text": "Tu reconnais le numéro.",
+  "tags": [],
+  "dialogue": false,
+  "i": 45,
+  "start": 86.1648,
+  "end": 87.2091,
+  "segs": [
+   [
+    86.1648,
+    87.2091
+   ]
+  ]
+ },
+ {
+  "tts": "C'est celui qui t'écrivait depuis le début.",
+  "display": "C'est celui qui t'écrivait depuis le début.",
+  "text": "C'est celui qui t'écrivait depuis le début.",
+  "tags": [],
+  "dialogue": false,
+  "i": 46,
+  "start": 87.5625,
+  "end": 89.347,
+  "segs": [
+   [
+    87.5625,
+    89.347
+   ]
+  ]
+ },
+ {
+  "tts": "Ton double.",
+  "display": "Ton double.",
+  "text": "Ton double.",
+  "tags": [],
+  "dialogue": false,
+  "i": 47,
+  "start": 89.7354,
+  "end": 90.3002,
+  "segs": [
+   [
+    89.7354,
+    90.3002
+   ]
+  ]
+ },
+ {
+  "tts": "[emotional] Tu souris faiblement.",
+  "display": "Tu souris faiblement.",
+  "text": "Tu souris faiblement.",
+  "tags": [
+   "emotional"
+  ],
+  "dialogue": false,
+  "i": 48,
+  "start": 90.7372,
+  "end": 91.7867,
+  "segs": [
+   [
+    90.7372,
+    91.7867
+   ]
+  ]
+ },
+ {
+  "tts": "Alors, c'était lui.",
+  "display": "Alors, c'était lui.",
+  "text": "Alors, c'était lui.",
+  "tags": [],
+  "dialogue": false,
+  "i": 49,
+  "start": 92.2181,
+  "end": 93.7188,
+  "segs": [
+   [
+    92.2181,
+    92.6434
+   ],
+   [
+    93.0116,
+    93.7188
+   ]
+  ]
+ },
+ {
+  "tts": "Depuis le premier avertissement...",
+  "display": "Depuis le premier avertissement...",
+  "text": "Depuis le premier avertissement...",
+  "tags": [],
+  "dialogue": false,
+  "i": 50,
+  "start": 94.1427,
+  "end": 95.5567,
+  "segs": [
+   [
+    94.1427,
+    95.5567
+   ]
+  ]
+ },
+ {
+  "tts": "Il essayait de te sauver.",
+  "display": "Il essayait de te sauver.",
+  "text": "Il essayait de te sauver.",
+  "tags": [],
+  "dialogue": false,
+  "i": 51,
+  "start": 96.0239,
+  "end": 97.1988,
+  "segs": [
+   [
+    96.0239,
+    97.1988
+   ]
+  ]
+ },
+ {
+  "tts": "Et maintenant, c'est toi qui viens de le sauver.",
+  "display": "Et maintenant, c'est toi qui viens de le sauver.",
+  "text": "Et maintenant, c'est toi qui viens de le sauver.",
+  "tags": [],
+  "dialogue": false,
+  "i": 52,
+  "start": 97.6185,
+  "end": 99.943,
+  "segs": [
+   [
+    97.6185,
+    98.1484
+   ],
+   [
+    98.5358,
+    99.943
+   ]
+  ]
+ },
+ {
+  "tts": "[tense, slower] Les lumières s'éteignent une à une.",
+  "display": "Les lumières s'éteignent une à une.",
+  "text": "Les lumières s'éteignent une à une.",
+  "tags": [
+   "tense, slower"
+  ],
+  "dialogue": false,
+  "i": 53,
+  "start": 100.391,
+  "end": 102.123,
+  "segs": [
+   [
+    100.391,
+    102.123
+   ]
+  ]
+ },
+ {
+  "tts": "La créature tend toujours la main.",
+  "display": "La créature tend toujours la main.",
+  "text": "La créature tend toujours la main.",
+  "tags": [],
+  "dialogue": false,
+  "i": 54,
+  "start": 102.559,
+  "end": 104.131,
+  "segs": [
+   [
+    102.559,
+    104.131
+   ]
+  ]
+ },
+ {
+  "tts": "Mais tu ne la prends pas.",
+  "display": "Mais tu ne la prends pas.",
+  "text": "Mais tu ne la prends pas.",
+  "tags": [],
+  "dialogue": false,
+  "i": 55,
+  "start": 104.586,
+  "end": 105.471,
+  "segs": [
+   [
+    104.586,
+    105.471
+   ]
+  ]
+ },
+ {
+  "tts": "Tu fermes simplement les yeux.",
+  "display": "Tu fermes simplement les yeux.",
+  "text": "Tu fermes simplement les yeux.",
+  "tags": [],
+  "dialogue": false,
+  "i": 56,
+  "start": 105.894,
+  "end": 107.326,
+  "segs": [
+   [
+    105.894,
+    107.326
+   ]
+  ]
+ },
+ {
+  "tts": "[whispers] Et l'étage zéro disparaît.",
+  "display": "Et l'étage zéro disparaît.",
+  "text": "Et l'étage zéro disparaît.",
+  "tags": [
+   "whispers"
+  ],
+  "dialogue": false,
+  "i": 57,
+  "start": 107.767,
+  "end": 109.459,
+  "segs": [
+   [
+    107.767,
+    109.459
+   ]
+  ]
+ },
+ {
+  "tts": "[soft, storytelling] Quelques instants plus tard...",
+  "display": "Quelques instants plus tard...",
+  "text": "Quelques instants plus tard...",
+  "tags": [
+   "soft, storytelling"
+  ],
+  "dialogue": false,
+  "i": 58,
+  "start": 109.99,
+  "end": 111.182,
+  "segs": [
+   [
+    109.99,
+    111.182
+   ]
+  ]
+ },
+ {
+  "tts": "Au septième étage d'un immeuble ordinaire...",
+  "display": "Au septième étage d'un immeuble ordinaire...",
+  "text": "Au septième étage d'un immeuble ordinaire...",
+  "tags": [],
+  "dialogue": false,
+  "i": 59,
+  "start": 111.601,
+  "end": 113.551,
+  "segs": [
+   [
+    111.601,
+    113.551
+   ]
+  ]
+ },
+ {
+  "tts": "Un garçon sort de l'ascenseur.",
+  "display": "Un garçon sort de l'ascenseur.",
+  "text": "Un garçon sort de l'ascenseur.",
+  "tags": [],
+  "dialogue": false,
+  "i": 60,
+  "start": 113.957,
+  "end": 115.577,
+  "segs": [
+   [
+    113.957,
+    115.577
+   ]
+  ]
+ },
+ {
+  "tts": "Même visage.",
+  "display": "Même visage.",
+  "text": "Même visage.",
+  "tags": [],
+  "dialogue": false,
+  "i": 61,
+  "start": 116.0,
+  "end": 116.809,
+  "segs": [
+   [
+    116.0,
+    116.809
+   ]
+  ]
+ },
+ {
+  "tts": "Mêmes vêtements.",
+  "display": "Mêmes vêtements.",
+  "text": "Mêmes vêtements.",
+  "tags": [],
+  "dialogue": false,
+  "i": 62,
+  "start": 117.127,
+  "end": 117.89,
+  "segs": [
+   [
+    117.127,
+    117.89
+   ]
+  ]
+ },
+ {
+  "tts": "Mêmes souvenirs.",
+  "display": "Mêmes souvenirs.",
+  "text": "Mêmes souvenirs.",
+  "tags": [],
+  "dialogue": false,
+  "i": 63,
+  "start": 118.233,
+  "end": 119.111,
+  "segs": [
+   [
+    118.233,
+    119.111
+   ]
+  ]
+ },
+ {
+  "tts": "Il entre dans un appartement.",
+  "display": "Il entre dans un appartement.",
+  "text": "Il entre dans un appartement.",
+  "tags": [],
+  "dialogue": false,
+  "i": 64,
+  "start": 119.547,
+  "end": 120.872,
+  "segs": [
+   [
+    119.547,
+    120.872
+   ]
+  ]
+ },
+ {
+  "tts": "Ton appartement.",
+  "display": "Ton appartement.",
+  "text": "Ton appartement.",
+  "tags": [],
+  "dialogue": false,
+  "i": 65,
+  "start": 121.314,
+  "end": 122.12,
+  "segs": [
+   [
+    121.314,
+    122.12
+   ]
+  ]
+ },
+ {
+  "tts": "Il pose son téléphone.",
+  "display": "Il pose son téléphone.",
+  "text": "Il pose son téléphone.",
+  "tags": [],
+  "dialogue": false,
+  "i": 66,
+  "start": 122.528,
+  "end": 123.721,
+  "segs": [
+   [
+    122.528,
+    123.721
+   ]
+  ]
+ },
+ {
+  "tts": "Puis s'approche du miroir.",
+  "display": "Puis s'approche du miroir.",
+  "text": "Puis s'approche du miroir.",
+  "tags": [],
+  "dialogue": false,
+  "i": 67,
+  "start": 124.091,
+  "end": 125.325,
+  "segs": [
+   [
+    124.091,
+    125.325
+   ]
+  ]
+ },
+ {
+  "tts": "Son reflet apparaît.",
+  "display": "Son reflet apparaît.",
+  "text": "Son reflet apparaît.",
+  "tags": [],
+  "dialogue": false,
+  "i": 68,
+  "start": 125.725,
+  "end": 126.789,
+  "segs": [
+   [
+    125.725,
+    126.789
+   ]
+  ]
+ },
+ {
+  "tts": "Il le regarde longuement.",
+  "display": "Il le regarde longuement.",
+  "text": "Il le regarde longuement.",
+  "tags": [],
+  "dialogue": false,
+  "i": 69,
+  "start": 127.242,
+  "end": 128.562,
+  "segs": [
+   [
+    127.242,
+    128.562
+   ]
+  ]
+ },
+ {
+  "tts": "[emotional, quiet] Et murmure...",
+  "display": "Et murmure...",
+  "text": "Et murmure...",
+  "tags": [
+   "emotional, quiet"
+  ],
+  "dialogue": false,
+  "i": 70,
+  "start": 128.971,
+  "end": 129.646,
+  "segs": [
+   [
+    128.971,
+    129.646
+   ]
+  ]
+ },
+ {
+  "tts": "« Je te promets de ne pas gâcher cette deuxième chance. »",
+  "display": "« Je te promets de ne pas gâcher cette deuxième chance. »",
+  "text": "« Je te promets de ne pas gâcher cette deuxième chance. »",
+  "tags": [],
+  "dialogue": true,
+  "i": 71,
+  "start": 130.137,
+  "end": 132.629,
+  "segs": [
+   [
+    130.137,
+    132.629
+   ]
+  ]
+ },
+ {
+  "tts": "[serious, slower] Personne ne saura jamais que tu es resté là-bas.",
+  "display": "Personne ne saura jamais que tu es resté là-bas.",
+  "text": "Personne ne saura jamais que tu es resté là-bas.",
+  "tags": [
+   "serious, slower"
+  ],
+  "dialogue": false,
+  "i": 72,
+  "start": 132.934,
+  "end": 135.291,
+  "segs": [
+   [
+    132.934,
+    135.291
+   ]
+  ]
+ },
+ {
+  "tts": "Mais quelque part...",
+  "display": "Mais quelque part...",
+  "text": "Mais quelque part...",
+  "tags": [],
+  "dialogue": false,
+  "i": 73,
+  "start": 135.951,
+  "end": 136.776,
+  "segs": [
+   [
+    135.951,
+    136.776
+   ]
+  ]
+ },
+ {
+  "tts": "Une autre version de toi continue de vivre.",
+  "display": "Une autre version de toi continue de vivre.",
+  "text": "Une autre version de toi continue de vivre.",
+  "tags": [],
+  "dialogue": false,
+  "i": 74,
+  "start": 137.41,
+  "end": 139.688,
+  "segs": [
+   [
+    137.41,
+    139.688
+   ]
+  ]
+ },
+ {
+  "tts": "[soft, final] Fin.",
+  "display": "Fin.",
+  "text": "Fin.",
+  "tags": [
+   "soft, final"
+  ],
+  "dialogue": false,
+  "i": 75,
+  "start": 140.274,
+  "end": 140.619,
+  "segs": [
+   [
+    140.274,
+    140.619
+   ]
+  ]
+ }
+]

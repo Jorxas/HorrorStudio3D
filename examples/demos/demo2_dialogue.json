@@ -1,0 +1,34 @@
+{"title": "Démo 2 — Dialogue", "style": "pixel3d", "part": "DÉMO 2", "aspects": ["16:9", "9:16"],
+ "description": "Tom rejoint Léa au parc au coucher du soleil. Ils se regardent, gesticulent et réagissent pendant la conversation.",
+ "voices": {"lea": "woman", "tom": "man"}, "names": {"lea": "LÉA", "tom": "TOM"}, "label_colors": {"lea": "orange", "tom": "blue"},
+ "script": [
+  {"who": "tom", "text": "Léa ! Désolé, je suis en retard !"},
+  {"who": "lea", "text": "Pas grave. Tu as reçu mon message ?"},
+  {"who": "tom", "text": "Quel message ? J'ai rien reçu, moi."},
+  {"who": "lea", "text": "Regarde. Quelqu'un a laissé ça devant ma porte."},
+  {"who": "tom", "text": "Attends... c'est l'écriture de ton grand-père !"},
+  {"who": "lea", "text": "Je sais. Et il a disparu depuis dix ans."},
+  {"who": "tom", "text": "Alors on va le retrouver. Ensemble."}
+ ],
+ "episode": {
+  "engine_version": 2, "default_set": "parc", "music": "mystery", "series": "tu_decides_demo",
+  "hud": {"title": ["TU", "DÉCIDES"], "part": "DÉMO 2", "hearts": []},
+  "sets": {"parc": {"type": "park", "sky": "sunset", "seed": 3}},
+  "cast": {"lea": {"ref": "lea"}, "tom": {"ref": "tom"}},
+  "shots": [
+   {"lines": [0, 0], "actors": [{"id": "lea", "at": [0.7, 6.2], "facing": "-z", "hold": "letter"}, {"id": "tom", "at": [-2.8, 10.5]}],
+    "actions": [{"who": "tom", "do": "walk_to", "to": "lea", "stop_dist": 1.15, "speed": "hurry"},
+                {"who": "lea", "do": "turn_to", "target": "tom", "at": 0.6}, {"who": "lea", "do": "gesture", "name": "wave", "dur": 1.2}],
+    "camera": {"shot": "wide", "on": ["lea", "tom"]}},
+   {"lines": [1, 1], "camera": {"shot": "dialogue", "on": ["lea", "tom"], "speaker": "lea"}},
+   {"lines": [2, 2], "actions": [{"who": "tom", "do": "gesture", "name": "shrug", "at": 0.5, "dur": 1.4}],
+    "camera": {"shot": "dialogue", "on": ["lea", "tom"], "speaker": "tom"}},
+   {"lines": [3, 3], "actions": [{"who": "lea", "do": "gesture", "name": "show", "at": 0.3, "dur": 2.6}, {"who": "tom", "do": "look_at", "target": "lea", "at": 0.3, "dur": 2.6}],
+    "camera": {"shot": "two_shot", "on": ["lea", "tom"]}},
+   {"lines": [4, 4], "actions": [{"who": "tom", "do": "react", "kind": "gasp", "at": 0.15}],
+    "camera": {"shot": "close", "on": ["tom"], "move": "dolly_in", "amount": 0.5}},
+   {"lines": [5, 5], "actions": [{"who": "lea", "do": "face", "name": "sad"}],
+    "camera": {"shot": "close", "on": ["lea"]}},
+   {"lines": [6, 6], "actions": [{"who": "tom", "do": "gesture", "name": "hand_chest", "at": 0.2, "dur": 1.6}, {"who": "lea", "do": "face", "name": "determined", "at": 0.8}],
+    "camera": {"shot": "two_shot", "on": ["lea", "tom"], "move": "dolly_out", "amount": 0.4}}
+  ]}}

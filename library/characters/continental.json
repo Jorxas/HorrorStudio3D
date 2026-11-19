@@ -1,0 +1,43 @@
+{
+ "id": "continental",
+ "name": "Continental",
+ "look": {
+  "skin": [
+   210,
+   160,
+   122
+  ],
+  "hair": [
+   58,
+   40,
+   28
+  ],
+  "hair_style": "ponytail",
+  "headphones": false,
+  "backpack": false,
+  "outfit": "coat",
+  "hood": [
+   32,
+   50,
+   104
+  ],
+  "jeans": [
+   214,
+   190,
+   140
+  ],
+  "costume": "continental"
+ },
+ "voice": {
+  "draft": "man",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.6,
+  "energy": 0.7,
+  "shy": 0.1
+ },
+ "relations": {},
+ "group": "bal_xviiie",
+ "notes": "Ensemble du bal XVIIIe : redingote, catogan (queue basse et ruban), bottes, épaulettes. Tête peinte en pixels façon skin (face_skin) : sourcils, yeux, lèvres et barbe peints, yeux, sourcils et bouche animés."
+}

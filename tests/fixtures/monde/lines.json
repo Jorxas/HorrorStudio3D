@@ -1,0 +1,290 @@
+[
+ {
+  "tts": "TOUT EST FABRIQUÉ PAR NOTRE MOTEUR",
+  "display": "TOUT EST FABRIQUÉ PAR NOTRE MOTEUR",
+  "text": "TOUT EST FABRIQUÉ PAR NOTRE MOTEUR",
+  "tags": [],
+  "dialogue": false,
+  "i": 0,
+  "start": 0.15,
+  "end": 2.5500000000000003,
+  "segs": [
+   [
+    0.15,
+    2.5500000000000003
+   ]
+  ]
+ },
+ {
+  "tts": "LA PLAGE",
+  "display": "LA PLAGE",
+  "text": "LA PLAGE",
+  "tags": [],
+  "dialogue": false,
+  "i": 1,
+  "start": 2.85,
+  "end": 5.25,
+  "segs": [
+   [
+    2.85,
+    5.25
+   ]
+  ]
+ },
+ {
+  "tts": "L'ÎLE AU TRÉSOR",
+  "display": "L'ÎLE AU TRÉSOR",
+  "text": "L'ÎLE AU TRÉSOR",
+  "tags": [],
+  "dialogue": false,
+  "i": 2,
+  "start": 5.550000000000001,
+  "end": 7.950000000000001,
+  "segs": [
+   [
+    5.550000000000001,
+    7.950000000000001
+   ]
+  ]
+ },
+ {
+  "tts": "LA MONTAGNE",
+  "display": "LA MONTAGNE",
+  "text": "LA MONTAGNE",
+  "tags": [],
+  "dialogue": false,
+  "i": 3,
+  "start": 8.250000000000002,
+  "end": 10.65,
+  "segs": [
+   [
+    8.250000000000002,
+    10.65
+   ]
+  ]
+ },
+ {
+  "tts": "LE DÉSERT AU COUCHER DU SOLEIL",
+  "display": "LE DÉSERT AU COUCHER DU SOLEIL",
+  "text": "LE DÉSERT AU COUCHER DU SOLEIL",
+  "tags": [],
+  "dialogue": false,
+  "i": 4,
+  "start": 10.950000000000001,
+  "end": 13.35,
+  "segs": [
+   [
+    10.950000000000001,
+    13.35
+   ]
+  ]
+ },
+ {
+  "tts": "LA VILLE, LA NUIT, SOUS LA PLUIE",
+  "display": "LA VILLE, LA NUIT, SOUS LA PLUIE",
+  "text": "LA VILLE, LA NUIT, SOUS LA PLUIE",
+  "tags": [],
+  "dialogue": false,
+  "i": 5,
+  "start": 13.65,
+  "end": 16.05,
+  "segs": [
+   [
+    13.65,
+    16.05
+   ]
+  ]
+ },
+ {
+  "tts": "LE VILLAGE",
+  "display": "LE VILLAGE",
+  "text": "LE VILLAGE",
+  "tags": [],
+  "dialogue": false,
+  "i": 6,
+  "start": 16.35,
+  "end": 18.750000000000004,
+  "segs": [
+   [
+    16.35,
+    18.750000000000004
+   ]
+  ]
+ },
+ {
+  "tts": "LE CHÂTEAU",
+  "display": "LE CHÂTEAU",
+  "text": "LE CHÂTEAU",
+  "tags": [],
+  "dialogue": false,
+  "i": 7,
+  "start": 19.05,
+  "end": 21.450000000000003,
+  "segs": [
+   [
+    19.05,
+    21.450000000000003
+   ]
+  ]
+ },
+ {
+  "tts": "LE CIMETIÈRE",
+  "display": "LE CIMETIÈRE",
+  "text": "LE CIMETIÈRE",
+  "tags": [],
+  "dialogue": false,
+  "i": 8,
+  "start": 21.75,
+  "end": 24.150000000000002,
+  "segs": [
+   [
+    21.75,
+    24.150000000000002
+   ]
+  ]
+ },
+ {
+  "tts": "LE VOLCAN ET SON DRAGON",
+  "display": "LE VOLCAN ET SON DRAGON",
+  "text": "LE VOLCAN ET SON DRAGON",
+  "tags": [],
+  "dialogue": false,
+  "i": 9,
+  "start": 24.45,
+  "end": 26.85,
+  "segs": [
+   [
+    24.45,
+    26.85
+   ]
+  ]
+ },
+ {
+  "tts": "LE VILLAGE SOUS LA NEIGE",
+  "display": "LE VILLAGE SOUS LA NEIGE",
+  "text": "LE VILLAGE SOUS LA NEIGE",
+  "tags": [],
+  "dialogue": false,
+  "i": 10,
+  "start": 27.15,
+  "end": 29.55,
+  "segs": [
+   [
+    27.15,
+    29.55
+   ]
+  ]
+ },
+ {
+  "tts": "LE CAMPING ET SES LUCIOLES",
+  "display": "LE CAMPING ET SES LUCIOLES",
+  "text": "LE CAMPING ET SES LUCIOLES",
+  "tags": [],
+  "dialogue": false,
+  "i": 11,
+  "start": 29.85,
+  "end": 32.25000000000001,
+  "segs": [
+   [
+    29.85,
+    32.25000000000001
+   ]
+  ]
+ },
+ {
+  "tts": "L'ÉCOLE",
+  "display": "L'ÉCOLE",
+  "text": "L'ÉCOLE",
+  "tags": [],
+  "dialogue": false,
+  "i": 12,
+  "start": 32.550000000000004,
+  "end": 34.95000000000001,
+  "segs": [
+   [
+    32.550000000000004,
+    34.95000000000001
+   ]
+  ]
+ },
+ {
+  "tts": "LA CUISINE",
+  "display": "LA CUISINE",
+  "text": "LA CUISINE",
+  "tags": [],
+  "dialogue": false,
+  "i": 13,
+  "start": 35.25,
+  "end": 37.650000000000006,
+  "segs": [
+   [
+    35.25,
+    37.650000000000006
+   ]
+  ]
+ },
+ {
+  "tts": "LA STATION SPATIALE",
+  "display": "LA STATION SPATIALE",
+  "text": "LA STATION SPATIALE",
+  "tags": [],
+  "dialogue": false,
+  "i": 14,
+  "start": 37.95,
+  "end": 40.35000000000001,
+  "segs": [
+   [
+    37.95,
+    40.35000000000001
+   ]
+  ]
+ },
+ {
+  "tts": "LA GROTTE AUX CRISTAUX",
+  "display": "LA GROTTE AUX CRISTAUX",
+  "text": "LA GROTTE AUX CRISTAUX",
+  "tags": [],
+  "dialogue": false,
+  "i": 15,
+  "start": 40.65,
+  "end": 43.050000000000004,
+  "segs": [
+   [
+    40.65,
+    43.050000000000004
+   ]
+  ]
+ },
+ {
+  "tts": "ET ON LES VOIT AUSSI DE PROFIL",
+  "display": "ET ON LES VOIT AUSSI DE PROFIL",
+  "text": "ET ON LES VOIT AUSSI DE PROFIL",
+  "tags": [],
+  "dialogue": false,
+  "i": 16,
+  "start": 43.35,
+  "end": 45.75000000000001,
+  "segs": [
+   [
+    43.35,
+    45.75000000000001
+   ]
+  ]
+ },
+ {
+  "tts": "34 LIEUX · 147 DÉCORS · 6 CIELS · 12 MÉTÉOS",
+  "display": "34 LIEUX · 147 DÉCORS · 6 CIELS · 12 MÉTÉOS",
+  "text": "34 LIEUX · 147 DÉCORS · 6 CIELS · 12 MÉTÉOS",
+  "tags": [],
+  "dialogue": false,
+  "i": 17,
+  "start": 46.050000000000004,
+  "end": 48.45000000000001,
+  "segs": [
+   [
+    46.050000000000004,
+    48.45000000000001
+   ]
+  ]
+ }
+]

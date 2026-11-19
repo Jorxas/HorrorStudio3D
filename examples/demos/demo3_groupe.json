@@ -1,0 +1,358 @@
+{
+ "title": "Démo 3 — Groupe",
+ "style": "pixel3d",
+ "part": "DÉMO 3",
+ "aspects": [
+  "16:9",
+  "9:16"
+ ],
+ "description": "Léa, Zoé et Tom marchent en forêt avec Rex. Ils s'arrêtent, se tournent ensemble, le chien file en avant et découvre une porte.",
+ "voices": {
+  "lea": "woman",
+  "tom": "man",
+  "zoe": "girl"
+ },
+ "names": {
+  "lea": "LÉA",
+  "tom": "TOM",
+  "zoe": "ZOÉ"
+ },
+ "label_colors": {
+  "lea": "orange",
+  "tom": "blue",
+  "zoe": "green"
+ },
+ "script": [
+  {
+   "who": "lea",
+   "text": "C'est par là. D'après la carte, on y est presque."
+  },
+  {
+   "who": "zoe",
+   "text": "Tu es sûre ? Tous les arbres se ressemblent !"
+  },
+  {
+   "who": "tom",
+   "text": "Chut ! Vous avez entendu ?"
+  },
+  {
+   "who": "lea",
+   "text": "Rex ! Reviens ici !"
+  },
+  {
+   "who": "zoe",
+   "text": "Il a trouvé quelque chose..."
+  },
+  {
+   "who": "tom",
+   "text": "Une porte... au milieu de la forêt ?"
+  },
+  {
+   "text": "",
+   "dur": 3.2
+  }
+ ],
+ "episode": {
+  "engine_version": 2,
+  "default_set": "foret",
+  "music": "adventure",
+  "series": "tu_decides_demo",
+  "hud": {
+   "title": [
+    "TU",
+    "DÉCIDES"
+   ],
+   "part": "DÉMO 3",
+   "hearts": []
+  },
+  "sets": {
+   "foret": {
+    "type": "forest",
+    "seed": 4,
+    "props": [
+     {
+      "type": "door",
+      "at": [
+       0.6,
+       15.5
+      ],
+      "id": "porte_foret"
+     }
+    ]
+   }
+  },
+  "cast": {
+   "lea": {
+    "ref": "lea"
+   },
+   "tom": {
+    "ref": "tom"
+   },
+   "zoe": {
+    "ref": "zoe"
+   },
+   "rex": {
+    "ref": "rex"
+   }
+  },
+  "shots": [
+   {
+    "lines": [
+     0,
+     1
+    ],
+    "actors": [
+     {
+      "id": "lea",
+      "at": [
+       0.2,
+       1.2
+      ],
+      "facing": "+z",
+      "hold": "map"
+     },
+     {
+      "id": "zoe",
+      "at": [
+       -0.8,
+       0.4
+      ],
+      "facing": "+z"
+     },
+     {
+      "id": "tom",
+      "at": [
+       1.1,
+       -0.2
+      ],
+      "facing": "+z"
+     },
+     {
+      "id": "rex",
+      "at": [
+       -0.4,
+       1.8
+      ],
+      "facing": "+z"
+     }
+    ],
+    "actions": [
+     {
+      "who": "lea",
+      "do": "walk_to",
+      "to": [
+       0.3,
+       7.0
+      ]
+     },
+     {
+      "who": "zoe",
+      "do": "walk_to",
+      "to": [
+       -0.7,
+       6.3
+      ],
+      "at": 0.3
+     },
+     {
+      "who": "tom",
+      "do": "walk_to",
+      "to": [
+       1.2,
+       5.6
+      ],
+      "at": 0.6,
+      "speed": "slow"
+     },
+     {
+      "who": "rex",
+      "do": "follow",
+      "target": "lea",
+      "dist": 0.9
+     }
+    ],
+    "camera": {
+     "shot": "group",
+     "on": [
+      "lea",
+      "zoe",
+      "tom"
+     ],
+     "move": "follow"
+    }
+   },
+   {
+    "lines": [
+     2,
+     2
+    ],
+    "actions": [
+     {
+      "who": "tom",
+      "do": "gesture",
+      "name": "stop",
+      "dur": 1.4
+     },
+     {
+      "who": "tom",
+      "do": "look_around",
+      "dur": 2.0
+     },
+     {
+      "who": "lea",
+      "do": "turn_to",
+      "target": "tom",
+      "at": 0.25
+     },
+     {
+      "who": "zoe",
+      "do": "turn_to",
+      "target": "tom",
+      "at": 0.35
+     }
+    ],
+    "camera": {
+     "shot": "group",
+     "on": [
+      "lea",
+      "zoe",
+      "tom"
+     ]
+    }
+   },
+   {
+    "lines": [
+     3,
+     3
+    ],
+    "actions": [
+     {
+      "who": "rex",
+      "do": "run_to",
+      "to": [
+       0.4,
+       14.4
+      ]
+     },
+     {
+      "who": "lea",
+      "do": "turn_to",
+      "target": [
+       0.4,
+       14.4
+      ],
+      "at": 0.1
+     },
+     {
+      "who": "lea",
+      "do": "gesture",
+      "name": "point",
+      "dur": 1.6
+     }
+    ],
+    "camera": {
+     "shot": "wide",
+     "on": [
+      "lea",
+      "rex"
+     ]
+    }
+   },
+   {
+    "lines": [
+     4,
+     4
+    ],
+    "actions": [
+     {
+      "who": "zoe",
+      "do": "walk_to",
+      "to": [
+       -0.2,
+       11.0
+      ]
+     },
+     {
+      "who": "lea",
+      "do": "walk_to",
+      "to": [
+       0.9,
+       11.4
+      ],
+      "at": 0.3
+     },
+     {
+      "who": "tom",
+      "do": "walk_to",
+      "to": [
+       1.8,
+       10.6
+      ],
+      "at": 0.6
+     }
+    ],
+    "camera": {
+     "shot": "group",
+     "on": [
+      "zoe",
+      "lea",
+      "tom"
+     ],
+     "move": "follow"
+    }
+   },
+   {
+    "lines": [
+     5,
+     5
+    ],
+    "actions": [
+     {
+      "who": "tom",
+      "do": "react",
+      "kind": "gasp",
+      "at": 0.1
+     },
+     {
+      "who": "zoe",
+      "do": "react",
+      "kind": "startle",
+      "at": 0.15
+     },
+     {
+      "who": "lea",
+      "do": "react",
+      "kind": "gasp",
+      "at": 0.2
+     }
+    ],
+    "camera": {
+     "shot": "group",
+     "on": [
+      "lea",
+      "zoe",
+      "tom"
+     ],
+     "angle": "low"
+    }
+   },
+   {
+    "lines": [
+     6,
+     6
+    ],
+    "camera": {
+     "shot": "wide",
+     "on": [
+      "porte_foret"
+     ],
+     "move": "dolly_in",
+     "amount": 0.5
+    },
+    "audio": {
+     "intensity": 0.9
+    }
+   }
+  ]
+ }
+}

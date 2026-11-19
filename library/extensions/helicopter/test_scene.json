@@ -1,0 +1,19 @@
+{
+ "title": "Test de l'extension hélicoptère",
+ "style": "pixel3d",
+ "script": [{"text": "", "dur": 2.6}, {"text": "", "dur": 3.2}],
+ "episode": {
+  "engine_version": 2,
+  "default_set": "toit",
+  "hud": {"hearts": []},
+  "sets": {"toit": {"type": "composed", "ground_y": -20, "sky": "dawn", "backdrop": [{"type": "city", "height": 8}],
+                    "elements": [{"kind": "building", "id": "toit", "rect": [-6, -4, 6, 8], "top": 0, "style": "concrete", "roof": {"floor": "helipad", "furniture": []}},
+                                 {"kind": "district", "area": [-60, -40, 60, 80], "count": 20, "top": [-12, 14], "seed": 2}]}},
+  "shots": [
+   {"lines": [0, 0], "objects": [{"type": "mover", "thing": "prop:helicopter", "hold": [0, 1.6, 2.5], "hover": 0.15, "face": 30}],
+    "camera": {"preset": "free", "keys": [{"pos": [7, 3.2, -5], "look": [0, 2.0, 2.5], "fov": 58}, {"pos": [6, 3.0, -5.5], "look": [0, 2.0, 2.5], "fov": 58}]}},
+   {"lines": [1, 1], "objects": [{"type": "mover", "thing": "prop:helicopter", "path": [[0, 1.6, 2.5], [2, 5, 8], [10, 9, 20], [26, 12, 30]], "start": 0.2, "dur": 3.0, "ease": "in", "pitch": 0, "lean": 0.35}],
+    "camera": {"preset": "free", "keys": [{"pos": [-4, 2.2, -4], "look": [3, 4, 8], "fov": 62}, {"pos": [-4, 2.4, -4], "look": [12, 8, 22], "fov": 62}]}}
+  ]
+ }
+}

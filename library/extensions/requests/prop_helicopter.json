@@ -1,0 +1,24 @@
+{
+ "id": "prop_helicopter",
+ "kind": "prop",
+ "name": "helicopter",
+ "engines": [
+  "pixel3d"
+ ],
+ "asked_by": [
+  "helicoptere"
+ ],
+ "context": "Léa court sur le toit d'un immeuble pendant une tempête. Derrière elle, un dragon gigantesque traverse les nuages. Un éclair frappe la tour voisine, qui commence à s'effondrer. Léa saute vers un hélicoptère pendant que la caméra la suit dans le vide.",
+ "approximation": "",
+ "where": "extension library/extensions/helicopter/ : api.prop(name, builder, lights)",
+ "contract": "builder(p, color) -> boîtes r3d B()/C(), bas à y = 0, face avant vers -z (rot 0), moins de 80 boîtes ; animation possible avec p[\"_t\"] (temps) quand l'objet est un \"mover\"",
+ "acceptance": [
+  "une scène de test montre « helicopter » dans un vrai rendu, dans les deux formats",
+  "rendu déterministe (deux rendus identiques)",
+  "anciens épisodes inchangés (garde de non-régression)",
+  "python -m hstudio extension test <id>, puis promote"
+ ],
+ "status": "réalisée",
+ "by": "extension helicopter",
+ "date": "2026-10-23"
+}

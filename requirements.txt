@@ -1,0 +1,11 @@
+# Horror Studio - dépendances Python (Python 3.10 ou plus récent). ffmpeg doit être installé à part.
+numpy>=1.26
+pillow>=10.0
+fastapi>=0.110
+uvicorn>=0.27
+python-multipart>=0.0.9
+requests>=2.31
+anthropic>=2.1.0
+google-genai>=1.0
+# Facultatif : calage au mot près avec Whisper en local (voir docs/MODELES_LOCAUX.md)
+# faster-whisper>=1.0

@@ -1,0 +1,6 @@
+{
+  "name": "voxelgpu-peintre",
+  "private": true,
+  "description": "Peintre VOXEL GPU du studio : Playwright (Chromium) pilote la page WebGL. Dependance locale : le moteur ne lit plus rien dans moteur_voxel.",
+  "dependencies": { "playwright": "1.63.0" }
+}

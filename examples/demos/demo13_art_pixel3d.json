@@ -1,0 +1,35 @@
+{"title": "Démo 13 — PIXEL 3D v2 (prototype artistique)", "style": "pixel3d", "part": "PROTOTYPE", "aspects": ["16:9", "9:16"],
+ "description": "Prototype OPT-IN de la refonte visuelle PIXEL 3D (clé \"art\": \"voxel_hd\"). Volumes voxels plus riches, cheveux multicouches, visages 48x48 expressifs, vêtements détaillés, plinthes et corniches, étalonnage cinéma. Le rendu livré (ancien style) n'est pas modifié : la même démo sans la clé \"art\" rend exactement comme avant.",
+ "voices": {"lea": "woman", "tom": "man"}, "names": {"lea": "LÉA", "tom": "TOM"}, "label_colors": {"lea": "orange", "tom": "blue"},
+ "script": [
+  {"who": "lea", "text": "Tom, viens voir. Les murs ont changé pendant la nuit."},
+  {"who": "tom", "text": "Changé comment ? C'est le même salon qu'hier."},
+  {"who": "lea", "text": "Regarde mieux. Les plinthes, les moulures... rien n'était là."},
+  {"who": "tom", "text": "D'accord. Je commence à te croire, et ça m'inquiète."},
+  {"who": "lea", "text": "Alors on reste. Et on regarde jusqu'au bout."}
+ ],
+ "episode": {
+  "engine_version": 2, "default_set": "salon", "music": "mystery",
+  "art": "voxel_hd",
+  "hud": {"title": ["PIXEL 3D", "V2"], "part": "PROTOTYPE", "hearts": []},
+  "sets": {"salon": {"type": "living_room", "seed": 4}},
+  "cast": {"lea": {"ref": "lea"}, "tom": {"ref": "tom"}},
+  "shots": [
+   {"lines": [0, 0], "actors": [{"id": "lea", "at": [1.6, 1.2], "facing": "-x"}, {"id": "tom", "at": [-1.4, 3.4], "facing": "+x"}],
+    "actions": [{"who": "lea", "do": "walk_to", "to": "tom", "stop_dist": 1.3},
+                {"who": "lea", "do": "gesture", "name": "wave", "at": 1.2, "dur": 1.2},
+                {"who": "tom", "do": "turn_to", "target": "lea", "at": 0.4}],
+    "camera": {"shot": "wide", "on": ["lea", "tom"]}},
+   {"lines": [1, 1], "actions": [{"who": "tom", "do": "gesture", "name": "shrug", "at": 0.4, "dur": 1.5},
+                                 {"who": "tom", "do": "face", "name": "suspicious", "at": 1.0}],
+    "camera": {"shot": "dialogue", "on": ["lea", "tom"], "speaker": "tom"}},
+   {"lines": [2, 2], "actions": [{"who": "lea", "do": "gesture", "name": "show", "at": 0.3, "dur": 2.4},
+                                 {"who": "lea", "do": "face", "name": "urgent", "at": 0.2}],
+    "camera": {"shot": "two_shot", "on": ["lea", "tom"]}},
+   {"lines": [3, 3], "actions": [{"who": "tom", "do": "react", "kind": "gasp", "at": 0.2},
+                                 {"who": "tom", "do": "face", "name": "nervous", "at": 1.2}],
+    "camera": {"shot": "close", "on": ["tom"], "move": "dolly_in", "amount": 0.45}},
+   {"lines": [4, 4], "actions": [{"who": "lea", "do": "face", "name": "determined", "at": 0.3},
+                                 {"who": "lea", "do": "gesture", "name": "hand_chest", "at": 0.5, "dur": 1.6}],
+    "camera": {"shot": "close", "on": ["lea"]}}
+  ]}}

@@ -1,0 +1,43 @@
+{
+ "id": "eliza",
+ "name": "Eliza (mariée)",
+ "look": {
+  "skin": [
+   238,
+   204,
+   184
+  ],
+  "hair": [
+   56,
+   34,
+   24
+  ],
+  "hair_style": "bun",
+  "headphones": false,
+  "backpack": false,
+  "outfit": "dress",
+  "hood": [
+   44,
+   150,
+   158
+  ],
+  "jeans": [
+   48,
+   158,
+   164
+  ],
+  "costume": "eliza"
+ },
+ "voice": {
+  "draft": "woman",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.85,
+  "energy": 0.7,
+  "shy": 0.1
+ },
+ "relations": {},
+ "group": "bal_xviiie",
+ "notes": "La mariée : robe turquoise, manches au coude à volants, chignon sous un voile long semé de pois et une couronne de fleurs blanches et bleu ciel, bouquet blanc. Tête peinte en pixels façon skin (face_skin) : sourcils, yeux, lèvres et barbe peints, yeux, sourcils et bouche animés."
+}

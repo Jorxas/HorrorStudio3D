@@ -1,0 +1,43 @@
+{
+ "id": "angelica",
+ "name": "Angelica",
+ "look": {
+  "skin": [
+   112,
+   70,
+   48
+  ],
+  "hair": [
+   18,
+   13,
+   12
+  ],
+  "hair_style": "curly",
+  "headphones": false,
+  "backpack": false,
+  "outfit": "dress",
+  "hood": [
+   136,
+   78,
+   40
+  ],
+  "jeans": [
+   146,
+   86,
+   44
+  ],
+  "costume": "angelica"
+ },
+ "voice": {
+  "draft": "woman",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.85,
+  "energy": 0.7,
+  "shy": 0.1
+ },
+ "relations": {},
+ "group": "bal_xviiie",
+ "notes": "Robe de bal bronze/cuivre, plastron champagne à boutons, devant de jupe clair, grande chevelure bouclée noire, boucles d'oreilles dorées. Flûte de champagne levée au toast. Tête peinte en pixels façon skin (face_skin) : sourcils, yeux, lèvres et barbe peints, yeux, sourcils et bouche animés."
+}

@@ -1,0 +1,43 @@
+{
+ "id": "laurens",
+ "name": "Laurens",
+ "look": {
+  "skin": [
+   178,
+   124,
+   90
+  ],
+  "hair": [
+   60,
+   38,
+   24
+  ],
+  "hair_style": "ponytail",
+  "headphones": false,
+  "backpack": false,
+  "outfit": "coat",
+  "hood": [
+   28,
+   36,
+   76
+  ],
+  "jeans": [
+   232,
+   224,
+   198
+  ],
+  "costume": "laurens"
+ },
+ "voice": {
+  "draft": "man",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.85,
+  "energy": 0.7,
+  "shy": 0.1
+ },
+ "relations": {},
+ "group": "bal_xviiie",
+ "notes": "Redingote bleu nuit à revers crème, gilet crème, jabot ; cheveux bruns en petite queue ; une flûte dans chaque main. Tête peinte en pixels façon skin (face_skin) : sourcils, yeux, lèvres et barbe peints, yeux, sourcils et bouche animés."
+}

@@ -1,0 +1,86 @@
+{
+ "title": "Démo 7 — Les toits (lieu composé)",
+ "style": "pixel3d",
+ "part": "DÉMO 7",
+ "aspects": ["9:16", "16:9"],
+ "description": "V3, scénario 1 : un lieu qui n'existe dans aucune recette. Le toit d'un immeuble la nuit, sous la pluie, avec la rue 26 m plus bas et une vraie ville autour, est composé d'éléments procéduraux (immeubles, toit praticable, rue, quartier). Léa marche jusqu'au bord, la caméra plonge vers la rue, Tom sort de la cage d'escalier.",
+ "voices": {"lea": "woman", "tom": "man"},
+ "names": {"lea": "LÉA", "tom": "TOM"},
+ "label_colors": {"lea": "orange", "tom": "blue"},
+ "script": [
+  {"text": "", "dur": 4.2},
+  {"who": "lea", "text": "D'ici, on voit toute la ville...", "dur": 3.0},
+  {"text": "", "dur": 3.6},
+  {"who": "tom", "text": "Léa ? Qu'est-ce que tu fais sur le toit ?", "dur": 3.2},
+  {"who": "lea", "text": "Regarde en bas. La rue est vide. Complètement vide.", "dur": 3.8},
+  {"text": "", "dur": 3.4}
+ ],
+ "episode": {
+  "sfx_library": true,
+  "engine_version": 2,
+  "default_set": "toits",
+  "music": "mystery",
+  "intensity_start": 0.3,
+  "hud": {"title": ["TU", "DÉCIDES"], "part": "DÉMO 7", "hearts": []},
+  "sets": {
+   "toits": {
+    "type": "composed",
+    "ground_y": -26,
+    "ground": "asphalt",
+    "sky": "night",
+    "backdrop": [{"type": "city", "height": 9, "density": 42}],
+    "weather": "rain",
+    "wet": true,
+    "fog": 0.016,
+    "fill": 0.5,
+    "ambience": "rain",
+    "anchors": {"porte_toit": [-2.5, 1.2]},
+    "elements": [
+     {"kind": "building", "id": "toit", "rect": [-6, -3, 6, 10], "top": 0, "style": "brick", "lit": 0.35, "seed": 3,
+      "roof": {"floor": "tar", "furniture": [
+        {"type": "stair_hut", "at": [-4, 1.2], "rot": 3},
+        {"type": "water_tank", "at": [3.6, 7.4]},
+        {"type": "ac_unit", "at": [-4.2, 7.2], "rot": 1},
+        {"type": "antenna", "at": [4.4, -1.4], "height": 5},
+        {"type": "roof_vent", "at": [2.0, 1.0]},
+        {"type": "satellite_dish", "at": [4.6, 3.6], "rot": 1}]}},
+     {"kind": "building", "id": "tour", "rect": [9, -5, 17, 6], "top": 9, "style": "office", "lit": 0.55, "seed": 8},
+     {"kind": "street", "id": "rue", "rect": [-60, 11, 60, 17], "cars": 7, "seed": 2},
+     {"kind": "building", "id": "en_face", "rect": [-8, 19, 6, 28], "top": -5, "style": "old", "lit": 0.3, "seed": 5},
+     {"kind": "district", "area": [-95, -75, 95, 130], "count": 46, "top": [-18, 28], "lit": 0.3, "seed": 4}
+    ]
+   }
+  },
+  "cast": {"lea": {"ref": "lea"}, "tom": {"ref": "tom"}},
+  "shots": [
+   {"lines": [0, 0],
+    "actors": [{"id": "lea", "at": [0.4, 5.4], "facing": "+z", "face": "neutral"}],
+    "actions": [{"who": "lea", "do": "walk_to", "to": "toit.N", "at": 0.5}],
+    "camera": {"shot": "wide", "on": ["lea"], "from": "toit.SE", "angle": "high", "move": "crane_up", "amount": 0.4},
+    "audio": {"intensity": 0.25}},
+   {"lines": [1, 1],
+    "actions": [{"who": "lea", "do": "look_around", "dur": 2.6, "amount": 0.7}],
+    "camera": {"shot": "medium_full", "on": ["lea"], "angle": 150},
+    "audio": {"intensity": 0.3}},
+   {"lines": [2, 2],
+    "actions": [{"who": "lea", "do": "look_at", "target": [0.3, -26, 14], "dur": 3.4}, {"who": "lea", "do": "face", "name": "nervous"}],
+    "camera": {"preset": "free", "keys": [{"pos": [1.5, 2.3, 10.25], "look": [1.1, -26, 12.0], "fov": 64}, {"pos": [1.5, 2.0, 10.6], "look": [1.1, -26, 13.2], "fov": 56}]},
+    "sfx": [{"name": "heartbeat", "at": 0.6, "gain": 0.5}],
+    "audio": {"intensity": 0.55}},
+   {"lines": [3, 3],
+    "actors": [{"id": "tom", "at": "porte_toit", "facing": "+x", "face": "confused"}],
+    "actions": [{"who": "tom", "do": "walk_to", "to": [-0.9, 7.4], "at": 0.2}, {"who": "lea", "do": "turn_to", "target": "tom", "at": 1.4}],
+    "camera": {"shot": "full", "on": ["tom"], "move": "follow"},
+    "audio": {"intensity": 0.4}},
+   {"lines": [4, 4],
+    "actions": [{"who": "lea", "do": "face", "name": "scared"}],
+    "camera": {"shot": "dialogue", "on": ["lea", "tom"], "speaker": "lea"},
+    "audio": {"intensity": 0.6}},
+   {"lines": [5, 5],
+    "actions": [{"who": "tom", "do": "walk_to", "to": [-0.4, 8.6], "speed": "slow"}, {"who": "lea", "do": "turn_to", "target": "+z", "at": 0.3}],
+    "camera": {"shot": "wide", "on": ["lea", "tom"], "from": "toit.SW", "angle": "high", "move": "dolly_out", "amount": 0.4},
+    "fx": {"fade_out": 0.8},
+    "audio": {"intensity": 0.7}}
+  ]
+ }
+}

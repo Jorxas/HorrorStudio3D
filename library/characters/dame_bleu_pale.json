@@ -1,0 +1,43 @@
+{
+ "id": "dame_bleu_pale",
+ "name": "Dame bleu pale",
+ "look": {
+  "skin": [
+   126,
+   84,
+   60
+  ],
+  "hair": [
+   20,
+   15,
+   13
+  ],
+  "hair_style": "bun",
+  "headphones": false,
+  "backpack": false,
+  "outfit": "dress",
+  "hood": [
+   168,
+   196,
+   226
+  ],
+  "jeans": [
+   168,
+   196,
+   226
+  ],
+  "costume": "dame_bleu_pale"
+ },
+ "voice": {
+  "draft": "woman",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.6,
+  "energy": 0.7,
+  "shy": 0.1
+ },
+ "relations": {},
+ "group": "bal_xviiie",
+ "notes": "Ensemble du bal XVIIIe : robe à paniers, manches au coude, chignon relevé, flûte de champagne (main droite). Tête peinte en pixels façon skin (face_skin) : sourcils, yeux, lèvres et barbe peints, yeux, sourcils et bouche animés."
+}

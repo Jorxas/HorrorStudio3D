@@ -1,0 +1,263 @@
+{
+ "title": "Démo 10 — Console : sauter sur le lit",
+ "style": "console",
+ "part": "NIVEAU 8",
+ "aspects": [
+  "9:16",
+  "16:9"
+ ],
+ "description": "V3, la nouvelle famille d'actions dans le moteur CONSOLE : les mêmes verbes que PIXEL 3D (jump), calculés par la même régie, dessinés en aplats. On frappe, la porte s'entrouvre, des pieds apparaissent dessous : Noah saute sur son lit, puis en redescend d'un bond quand la lampe vacille.",
+ "voices": {
+  "noah": "boy"
+ },
+ "names": {
+  "noah": "NOAH"
+ },
+ "label_colors": {
+  "noah": "white"
+ },
+ "script": [
+  {
+   "who": "noah",
+   "text": "Encore une partie... juste une.",
+   "dur": 3.0
+  },
+  {
+   "text": "",
+   "dur": 2.8
+  },
+  {
+   "who": "noah",
+   "text": "Qui est là ?",
+   "dur": 2.0
+  },
+  {
+   "text": "",
+   "dur": 3.8
+  },
+  {
+   "who": "noah",
+   "text": "Je ne descends pas. Pas question.",
+   "dur": 3.4
+  },
+  {
+   "text": "",
+   "dur": 3.6
+  }
+ ],
+ "episode": {
+  "sfx_library": true,
+  "engine_version": 2,
+  "hud": {
+   "series": "NE METS PAS PAUSE",
+   "level": "NIVEAU 8",
+   "clock_start": "3:41",
+   "clock_rate": 0.125
+  },
+  "cast": {
+   "noah": {
+    "ref": "noah"
+   }
+  },
+  "shots": [
+   {
+    "lines": [
+     0,
+     0
+    ],
+    "scene": {
+     "type": "room",
+     "levels": "auto",
+     "console_on_bed": false
+    },
+    "actors": [
+     {
+      "id": "noah",
+      "at": [
+       0.2,
+       1.3
+      ],
+      "facing": 0,
+      "hold": "console",
+      "face": "tired"
+     }
+    ],
+    "camera": {
+     "move": "push_in",
+     "amount": 0.4,
+     "on": "noah"
+    }
+   },
+   {
+    "lines": [
+     1,
+     1
+    ],
+    "scene": {
+     "type": "room",
+     "levels": "auto",
+     "console_on_bed": false
+    },
+    "world": [
+     {
+      "at": 0.4,
+      "knock": [
+       0,
+       0.35,
+       0.7
+      ]
+     }
+    ],
+    "actions": [
+     {
+      "who": "noah",
+      "do": "react",
+      "kind": "startle",
+      "at": 0.5
+     },
+     {
+      "who": "noah",
+      "do": "look_at",
+      "target": "door",
+      "dur": 2.0,
+      "at": 0.9
+     }
+    ],
+    "camera": {
+     "move": "drift",
+     "on": "noah"
+    }
+   },
+   {
+    "lines": [
+     2,
+     2
+    ],
+    "scene": {
+     "type": "room",
+     "levels": "auto",
+     "console_on_bed": false
+    },
+    "actions": [
+     {
+      "who": "noah",
+      "do": "face",
+      "name": "scared"
+     }
+    ],
+    "camera": {
+     "move": "push_in",
+     "amount": 0.6,
+     "on": "noah"
+    }
+   },
+   {
+    "lines": [
+     3,
+     3
+    ],
+    "scene": {
+     "type": "room",
+     "levels": "auto",
+     "console_on_bed": false
+    },
+    "world": [
+     {
+      "at": 0.2,
+      "door": 0.35,
+      "dur": 2.0
+     },
+     {
+      "at": 0.9,
+      "feet": true
+     }
+    ],
+    "actions": [
+     {
+      "who": "noah",
+      "do": "jump",
+      "to": "bed.top",
+      "at": 1.1
+     },
+     {
+      "who": "noah",
+      "do": "turn_to",
+      "target": "+z"
+     }
+    ],
+    "camera": {
+     "move": "drift",
+     "on": "noah"
+    }
+   },
+   {
+    "lines": [
+     4,
+     4
+    ],
+    "scene": {
+     "type": "room",
+     "levels": "auto",
+     "console_on_bed": false
+    },
+    "actions": [
+     {
+      "who": "noah",
+      "do": "face",
+      "name": "scared"
+     },
+     {
+      "who": "noah",
+      "do": "gesture",
+      "name": "cover_face",
+      "at": 1.6,
+      "dur": 1.4
+     }
+    ],
+    "camera": {
+     "move": "push_in",
+     "amount": 0.5,
+     "on": "noah"
+    }
+   },
+   {
+    "lines": [
+     5,
+     5
+    ],
+    "scene": {
+     "type": "room",
+     "levels": "auto",
+     "console_on_bed": false
+    },
+    "world": [
+     {
+      "at": 0.3,
+      "flicker": true,
+      "dur": 1.6
+     }
+    ],
+    "actions": [
+     {
+      "who": "noah",
+      "do": "jump",
+      "to": "left",
+      "at": 0.9
+     },
+     {
+      "who": "noah",
+      "do": "turn_to",
+      "target": "door"
+     }
+    ],
+    "camera": {
+     "move": "drift",
+     "on": "noah"
+    },
+    "fx": {
+     "fade_out": 0.8
+    }
+   }
+  ]
+ }
+}

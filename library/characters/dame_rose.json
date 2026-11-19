@@ -1,0 +1,43 @@
+{
+ "id": "dame_rose",
+ "name": "Dame rose",
+ "look": {
+  "skin": [
+   150,
+   100,
+   72
+  ],
+  "hair": [
+   22,
+   16,
+   14
+  ],
+  "hair_style": "curly",
+  "headphones": false,
+  "backpack": false,
+  "outfit": "dress",
+  "hood": [
+   236,
+   170,
+   186
+  ],
+  "jeans": [
+   236,
+   170,
+   186
+  ],
+  "costume": "dame_rose"
+ },
+ "voice": {
+  "draft": "woman",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.6,
+  "energy": 0.7,
+  "shy": 0.1
+ },
+ "relations": {},
+ "group": "bal_xviiie",
+ "notes": "Ensemble du bal XVIIIe : robe à paniers, manches au coude, afro relevée en couronne, flûte de champagne (main droite). Tête peinte en pixels façon skin (face_skin) : sourcils, yeux, lèvres et barbe peints, yeux, sourcils et bouche animés."
+}

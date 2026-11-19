@@ -1,0 +1,99 @@
+{
+ "_source": "examples/ne_mets_pas_pause_demo/episode.json (épisode CONSOLE 2D interactif A/B)",
+ "project": {
+  "name": "ne_mets_pas_pause_demo",
+  "style": "console",
+  "series": "NE METS PAS PAUSE",
+  "part_label": "NIVEAU 1"
+ },
+ "base_metadata": {
+  "titles": [
+   "NE METS PAS PAUSE - NIVEAU 1 : ne regarde pas derrière toi",
+   "NE METS PAS PAUSE NIVEAU 1 | Histoire d'horreur interactive (choisis A ou B)",
+   "Tu n'aurais jamais dû faire ça... (NE METS PAS PAUSE NIVEAU 1)"
+  ],
+  "description": "\n\nUne histoire d'horreur interactive où c'est toi qui choisis la suite.\n\nA ou B ? Vote en commentaire !",
+  "hashtags": [
+   "horreur",
+   "histoiredhorreur",
+   "creepypasta",
+   "choisistonhistoire",
+   "histoireinteractive",
+   "pixelart",
+   "indiehorror",
+   "horrorstory",
+   "scary",
+   "peur",
+   "frissons",
+   "mystere",
+   "retrogaming",
+   "animation",
+   "fyp"
+  ],
+  "thumbnail_text": [
+   "LA PORTE",
+   "NE REGARDE",
+   "PAS"
+  ],
+  "tags": [
+   "horreur",
+   "histoire",
+   "creepypasta"
+  ]
+ },
+ "platforms": {
+  "series": "NE METS PAS PAUSE",
+  "episode_number": 1,
+  "episode_label": "NIVEAU 1",
+  "style": "console",
+  "interactive": true,
+  "choices": [
+   {
+    "letter": "A",
+    "text": "LA CONSOLE"
+   },
+   {
+    "letter": "B",
+    "text": "LA VOIX"
+   }
+  ],
+  "vote_line": "QUI CROIS-TU ? A ou B ?",
+  "hook": "ne regarde pas derrière toi",
+  "previous_choice": null,
+  "continuity": "",
+  "youtube_shorts": {
+   "title": "NE METS PAS PAUSE — Ép. 1 : ne regarde pas derrière toi",
+   "description": "A — LA CONSOLE\nB — LA VOIX\n\nQUI CROIS-TU ? A ou B ? Réponds en commentaire : le choix le plus voté est tourné dans le prochain épisode.\n\n#shorts #horreur #histoiredhorreur",
+   "hashtags": [
+    "shorts",
+    "horreur",
+    "histoiredhorreur",
+    "creepypasta",
+    "choisistonhistoire",
+    "nemetspaspause"
+   ],
+   "tags": [
+    "horreur",
+    "histoire",
+    "creepypasta"
+   ],
+   "pinned_comment": "QUI CROIS-TU ? A ou B ? Ton vote décide de la suite.",
+   "cover": "cover_9x16.jpg",
+   "thumbnail": "thumbnail_16x9.jpg"
+  },
+  "tiktok": {
+   "caption": "ne regarde pas derrière toi | Ép. 1 · NE METS PAS PAUSE | A LA CONSOLE / B LA VOIX | QUI CROIS-TU ? A ou B ? commente #horreur #histoiredhorreur #creepypasta #choisistonhistoire #nemetspaspause #pourtoi #fyp",
+   "hashtags": [
+    "horreur",
+    "histoiredhorreur",
+    "creepypasta",
+    "choisistonhistoire",
+    "nemetspaspause",
+    "pourtoi",
+    "fyp"
+   ],
+   "cover": "cover_9x16.jpg",
+   "sound_hint": "voix + SFX de l’épisode (pas de son tendance importé)"
+  }
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "id": "homme_bleu_1",
+ "name": "Homme bleu 1",
+ "look": {
+  "skin": [
+   226,
+   180,
+   146
+  ],
+  "hair": [
+   60,
+   40,
+   26
+  ],
+  "hair_style": "ponytail",
+  "headphones": false,
+  "backpack": false,
+  "outfit": "coat",
+  "hood": [
+   26,
+   34,
+   72
+  ],
+  "jeans": [
+   238,
+   234,
+   222
+  ],
+  "costume": "homme_bleu_1"
+ },
+ "voice": {
+  "draft": "man",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.6,
+  "energy": 0.7,
+  "shy": 0.1
+ },
+ "relations": {},
+ "group": "bal_xviiie",
+ "notes": "Ensemble du bal XVIIIe : redingote, catogan (queue basse et ruban), bottes. Tête peinte en pixels façon skin (face_skin) : sourcils, yeux, lèvres et barbe peints, yeux, sourcils et bouche animés."
+}

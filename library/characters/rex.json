@@ -1,0 +1,22 @@
+{
+ "id": "rex",
+ "name": "Rex",
+ "look": {
+  "kind": "dog",
+  "color": [
+   150,
+   100,
+   60
+  ]
+ },
+ "voice": {
+  "draft": null
+ },
+ "personality": {
+  "energy": 0.9
+ },
+ "relations": {
+  "lea": "maîtresse"
+ },
+ "notes": "Le chien de Léa."
+}

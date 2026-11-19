@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Horror Studio</title>
+<style>
+:root { --bg:#0b0c10; --panel:#14161d; --panel2:#1b1e27; --line:#2a2e3a; --txt:#e8e4d6; --dim:#9a968a; --red:#e84030; --gold:#ffc93c; --green:#9cff7a; --blue:#78b0ff; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--txt); font:15px/1.45 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+header { display:flex; align-items:center; gap:18px; padding:14px 22px; border-bottom:1px solid var(--line); background:#0f1016; position:sticky; top:0; z-index:5; }
+header h1 { margin:0; font-size:18px; letter-spacing:.08em; } header h1 span { color:var(--red); }
+nav button { background:none; border:none; color:var(--dim); font-size:15px; padding:6px 10px; cursor:pointer; border-radius:6px; }
+nav button.on { color:var(--txt); background:var(--panel2); }
+nav a { color:var(--dim); font-size:15px; padding:6px 10px; border-radius:6px; text-decoration:none; }
+nav a:hover { color:var(--txt); background:var(--panel2); }
+main { max-width:1180px; margin:0 auto; padding:22px; }
+.card { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin-bottom:16px; }
+.card h2 { margin:0 0 10px; font-size:16px; display:flex; align-items:center; gap:10px; }
+.num { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--panel2); border:1px solid var(--line); font-size:13px; }
+.num.ok { background:#1f3a22; border-color:#2f6a36; color:var(--green); }
+.row { display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+label { display:block; color:var(--dim); font-size:13px; margin:8px 0 4px; }
+input, select, textarea { width:100%; background:#0d0f14; color:var(--txt); border:1px solid var(--line); border-radius:8px; padding:8px 10px; font:inherit; }
+textarea { min-height:120px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size:13px; }
+textarea.big { min-height:340px; }
+button.b { background:var(--panel2); color:var(--txt); border:1px solid var(--line); padding:8px 14px; border-radius:8px; cursor:pointer; font:inherit; }
+button.b:hover { border-color:#4a5062; }
+button.p { background:var(--red); border-color:var(--red); color:#fff; font-weight:600; }
+button.g { background:#2a4a2e; border-color:#3a6a3e; }
+button:disabled { opacity:.5; cursor:default; }
+.muted { color:var(--dim); font-size:13px; }
+.plist { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:12px; }
+.pitem { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:14px; cursor:pointer; }
+.pitem:hover { border-color:#4a5062; }
+.tag { display:inline-block; font-size:11px; padding:2px 8px; border-radius:20px; background:var(--panel2); border:1px solid var(--line); margin-right:4px; }
+.tag.pixel3d { color:var(--red); } .tag.console { color:var(--green); }
+.bar { height:8px; background:#0d0f14; border-radius:6px; overflow:hidden; border:1px solid var(--line); }
+.bar > div { height:100%; background:var(--red); width:0; transition:width .4s; }
+pre.log { background:#08090c; border:1px solid var(--line); border-radius:8px; padding:10px; max-height:220px; overflow:auto; font-size:12px; white-space:pre-wrap; margin:8px 0 0; }
+.thumbs { display:grid; grid-template-columns:repeat(auto-fill,minmax(110px,1fr)); gap:6px; }
+.thumbs.land { grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); }
+.thumbs img { width:100%; border-radius:6px; border:1px solid var(--line); cursor:pointer; }
+.thumbs figure { margin:0; font-size:11px; color:var(--dim); text-align:center; }
+table { width:100%; border-collapse:collapse; font-size:13px; } td, th { padding:4px 6px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+video { width:100%; max-height:520px; background:#000; border-radius:8px; }
+.copy { cursor:pointer; }
+.pub { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:12px; }
+.pub h4 { margin:0 0 2px; font-size:14px; letter-spacing:.4px; }
+.pub .fld { background:#0d0f14; border:1px solid var(--line); border-radius:8px; padding:8px 10px; font-size:13px; white-space:pre-wrap; margin:2px 0 0; }
+.pub .cpb { font-size:12px; padding:4px 10px; }
+.pub .len { float:right; font-size:11px; color:var(--dim); }
+.warn { color:var(--gold); font-size:13px; }
+.hidden { display:none; }
+a { color:var(--blue); }
+.pill { padding:6px 10px; border-radius:20px; background:var(--panel2); border:1px solid var(--line); cursor:pointer; font-size:13px; }
+.pill.on { border-color:var(--red); color:#fff; }
+.steps { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
+.steps .st { font-size:12px; padding:4px 10px; border-radius:20px; background:#0d0f14; border:1px solid var(--line); color:var(--dim); }
+.steps .st.done { border-color:#2f6a36; background:#17291a; color:var(--green); }
+.steps .st.running { border-color:var(--gold); color:var(--gold); }
+.steps .st.error { border-color:var(--red); background:#2a1414; color:var(--red); }
+.steps .st.next { border-color:var(--blue); color:var(--blue); }
+@media (max-width:760px) { .grid2 { grid-template-columns:1fr; } main { padding:12px; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>HORROR <span>STUDIO</span></h1>
+  <nav>
+    <button data-tab="studio" class="on">Démos &amp; personnages</button>
+    <button data-tab="projects">Épisodes</button>
+    <button data-tab="compile">Vidéo longue</button>
+    <button data-tab="settings">Réglages</button>
+    <a href="/catalogue" target="_blank" title="Tout ce que le moteur sait peindre : décors, lieux, personnages, modèles, visages, sons">Catalogue</a>
+  </nav>
+</header>
+<main>
+<!-- ======================= PROJECTS ======================= -->
+<!-- ======================= STUDIO (demos, characters) ======================= -->
+<section id="tab-studio">
+  <div class="card"><h2>Démonstrations</h2>
+    <div class="muted">Chaque démo est fabriquée par le vrai pipeline : projet, voix de brouillon gratuite, mixage, contrôle qualité, rendu MP4. Aucune API payante.</div>
+    <div class="row" style="margin-top:10px">
+      <span class="muted">Formats :</span><span class="pill on" data-dasp="16:9">YouTube 16:9</span><span class="pill on" data-dasp="9:16">Short 9:16</span>
+      <span class="muted" style="margin-left:12px">Qualité :</span>
+      <select id="demo-quality" style="width:auto"><option value="standard">Standard</option><option value="max">Maximale</option><option value="tiktok">TikTok (&lt; 30 Mo)</option></select>
+    </div>
+    <div class="plist" id="demo-list" style="margin-top:12px"></div>
+  </div>
+
+  <div class="card"><h2>D'un brief à la vidéo, en un clic</h2>
+    <div class="muted">Donne un genre, une durée, un moteur et deux ou trois choix : le studio écrit le plan de l'épisode, le script, la mise en scène,
+      puis enchaîne tout le parcours jusqu'au MP4, au contrôle qualité et aux packs YouTube Shorts / TikTok. Tout se passe sur ta machine, sans clé et sans coût.</div>
+    <div class="warn" style="margin-top:6px">Le plan est écrit par un <b>gabarit déterministe de test</b> : il remplit un squelette dramatique avec les mots du brief, il n'invente pas d'histoire.
+      Il sert à prouver le parcours de bout en bout. Pour une vraie histoire, choisis une IA dans « Metteur en scène » (payant, ta clé).</div>
+    <div class="grid2" style="margin-top:8px">
+      <div><label>Nom de l'épisode (facultatif)</label><input id="br-name" placeholder="Étage Zéro — partie 5"></div>
+      <div><label>Moteur</label><select id="br-engine" onchange="brEngine()"><option value="auto">Au choix du studio</option><option value="pixel3d">PIXEL 3D (voxel)</option><option value="console">CONSOLE 2D (aplats)</option></select></div>
+      <div><label>Genre</label><select id="br-genre"></select></div>
+      <div><label>Durée indicative (secondes)</label><input id="br-duration" type="number" value="45" step="5"></div>
+      <div><label>Façon de raconter</label><select id="br-voicemode"><option value="voice">Voix off seule</option><option value="dialogue">Dialogue entre personnages</option><option value="hybrid">Les deux</option></select></div>
+      <div><label>Nombre de choix à la fin</label><select id="br-choices"><option value="2">2 (A / B)</option><option value="3">3 (A / B / C)</option></select></div>
+      <div><label>Héros</label><input id="br-hero" value="Toi"></div>
+      <div><label>Deuxième voix (dialogue)</label><input id="br-other" value="Léa"></div>
+      <div id="br-place-box"><label>Lieu (vide = choisi par le genre)</label><select id="br-place"></select></div>
+      <div><label>Série (garde la mémoire d'un épisode à l'autre)</label><input id="br-series" placeholder="L'Étage 0 n'existe pas"></div>
+      <div><label>Partie / niveau (affiché)</label><input id="br-part" placeholder="PARTIE 5"></div>
+      <div><label>Choix du public à la fin de l'épisode précédent</label><select id="br-prevchoice"><option value="">aucun</option><option>A</option><option>B</option><option>C</option></select></div>
+      <div><label>Voix</label><select id="br-voice"><option value="draft">Brouillon (gratuite, locale)</option><option value="local">Mes enregistrements (dossier audio/)</option><option value="">ElevenLabs (payant, ta clé)</option></select></div>
+      <div><label>Qui écrit le plan</label><select id="br-provider"><option value="mock">Gabarit de test (hors ligne, gratuit)</option></select></div>
+    </div>
+    <label>Prémisse en une phrase (facultatif)</label>
+    <textarea id="br-premise" style="min-height:60px" placeholder="Un ascenseur qui descend un étage de trop."></textarea>
+    <div class="row" style="margin-top:10px">
+      <span class="pill on" data-basp="9:16">Short 9:16</span><span class="pill" data-basp="16:9">YouTube 16:9</span>
+      <select id="br-quality" style="width:auto"><option value="standard">Standard</option><option value="max">Qualité maximale</option><option value="tiktok">TikTok (&lt; 30 Mo)</option></select>
+      <button class="b p" onclick="runBrief(true)">▶ Créer et fabriquer la vidéo</button>
+      <button class="b" onclick="runBrief(false)">Créer seulement (pour relire le script)</button>
+    </div>
+    <div id="br-out" style="margin-top:10px"></div>
+  </div>
+
+  <div class="card"><h2>Nouvelle scène avec mes personnages</h2>
+    <div class="muted">Écris une réplique par ligne en commençant par le nom du personnage (« LÉA : Salut ! »). Sans IA, la mise en scène est faite par le studio (placement, caméras, visages, gestes) ; une IA peut aussi la faire si tu en as configuré une.</div>
+    <div class="grid2">
+      <div><label>Nom de la scène</label><input id="ns-name" placeholder="Le rendez-vous"></div>
+      <div><label>Moteur</label><select id="ns-style" onchange="nsStyle()"><option value="pixel3d">PIXEL 3D</option><option value="console">CONSOLE (Ne mets pas pause)</option></select></div>
+      <div id="ns-place-box"><label>Lieu</label><select id="ns-place"></select></div>
+      <div><label>Série (garde la mémoire d'un épisode à l'autre)</label><input id="ns-series" placeholder="Tu décides"></div>
+      <div><label>Voix</label><select id="ns-voice"><option value="draft">Brouillon (gratuite, locale)</option><option value="elevenlabs">ElevenLabs (payant, ta clé)</option></select></div>
+      <div><label>Metteur en scène</label><select id="ns-director"></select></div>
+    </div>
+    <label>Personnages (clic pour choisir)</label>
+    <div class="row" id="ns-cast"></div>
+    <label>Script</label>
+    <textarea id="ns-script" placeholder="LÉA : Tu as vu la lumière dans le grenier ?&#10;TOM : Non... Et je préfère ne pas savoir.&#10;LÉA : On monte voir. Ensemble."></textarea>
+    <div class="row" style="margin-top:10px">
+      <span class="pill on" data-nasp="16:9">YouTube 16:9</span><span class="pill" data-nasp="9:16">Short 9:16</span>
+      <button class="b p" onclick="createScene(true)">▶ Créer et fabriquer la vidéo</button>
+      <button class="b" onclick="createScene(false)">Créer seulement (pour la modifier)</button>
+    </div>
+  </div>
+
+  <div class="card"><h2>Analyser une scène (capacités)</h2>
+    <div class="muted">Colle une scène telle que tu l'imagines, sans la simplifier. Le studio dit ce qu'il sait déjà représenter, ce qu'il compose, ce qui n'est qu'approché et ce qui manque, et prépare une demande d'extension pour chaque manque. Rien n'est remplacé en silence.</div>
+    <textarea id="pl-text" placeholder="Léa court sur le toit d'un immeuble pendant une tempête. Derrière elle, un dragon gigantesque traverse les nuages..."></textarea>
+    <div class="row" style="margin-top:10px">
+      <select id="pl-engine" style="width:auto"><option value="pixel3d">PIXEL 3D</option><option value="console">CONSOLE</option></select>
+      <button class="b p" onclick="planScene(false)">Analyser</button>
+      <button class="b" onclick="planScene(true)">Analyser et écrire les demandes d'extension</button>
+    </div>
+    <div id="pl-out" style="margin-top:12px"></div>
+  </div>
+
+  <div class="card"><h2>Personnages de la bibliothèque</h2>
+    <div class="muted">Fichiers JSON dans <code>library/characters</code> : même apparence dans les deux moteurs et d'un épisode à l'autre. Portraits dessinés par le moteur PIXEL 3D.</div>
+    <div class="plist" id="char-list" style="margin-top:12px"></div>
+  </div>
+</section>
+
+<section id="tab-projects" class="hidden">
+  <div id="plist-view">
+    <div class="card">
+      <h2>Nouvel épisode</h2>
+      <div class="grid2">
+        <div><label>Nom de l'épisode</label><input id="np-name" placeholder="Étage Zéro - partie 5"></div>
+        <div><label>Style</label>
+          <select id="np-style"><option value="pixel3d">PIXEL 3D (Étage Zéro)</option><option value="console">CONSOLE (Ne mets pas pause)</option></select></div>
+        <div><label>Série</label><input id="np-series" placeholder="L'Étage 0 n'existe pas"></div>
+        <div><label>Partie / niveau (affiché)</label><input id="np-part" placeholder="PARTIE 5 / NIVEAU 3"></div>
+        <div><label>Titre du HUD (2 lignes séparées par |) — PIXEL 3D</label><input id="np-hud" value="L'ÉTAGE 0|N'EXISTE PAS"></div>
+        <div><label>Choix du public à la fin de l'épisode précédent</label>
+          <div class="row"><select id="np-choice" style="width:90px"><option value="">aucun</option><option>A</option><option>B</option></select>
+          <input id="np-choicetext" placeholder="texte du choix, ex. LUI LAISSER TA PLACE" style="flex:1"></div></div>
+      </div>
+      <label>Bible de la série (personnages, lieux, règles) — gardée d'un épisode à l'autre</label>
+      <textarea id="np-bible" placeholder="Le héros : ado, sweat à capuche, casque audio, sac à dos. Son double : identique, yeux rouges..."></textarea>
+      <label>Résumé des épisodes précédents</label>
+      <textarea id="np-previous" style="min-height:70px"></textarea>
+      <div class="row" style="margin-top:12px"><button class="b p" onclick="createProject()">Créer l'épisode</button>
+      <span class="muted">Astuce : « Dupliquer » un épisode existant reprend sa série, sa bible et son style.</span></div>
+    </div>
+    <div class="plist" id="plist"></div>
+  </div>
+
+  <div id="proj-view" class="hidden">
+    <div class="row" style="margin-bottom:12px">
+      <button class="b" onclick="showList()">← Épisodes</button>
+      <h2 id="pv-title" style="margin:0 8px"></h2><span id="pv-style" class="tag"></span>
+      <span style="flex:1"></span>
+      <button class="b" onclick="duplicateProject()">Dupliquer (épisode suivant)</button>
+      <button class="b" onclick="deleteProject()">Supprimer</button>
+    </div>
+
+    <div class="card" id="jobcard">
+      <h2>Tâche en cours : <span id="job-name" class="muted">aucune</span></h2>
+      <div class="bar"><div id="job-bar"></div></div>
+      <div class="muted" id="job-detail"></div>
+      <pre class="log" id="job-log"></pre>
+    </div>
+
+    <div class="card" id="oc-card">
+      <h2>Parcours en un clic</h2>
+      <div class="muted">Enchaîne tout ce qui reste à faire : voix → calage → mise en scène → mixage → rendu → contrôle qualité → titres et packs → miniatures.
+        Une étape déjà faite n'est pas refaite, et rien de validé n'est écrasé. Si une étape échoue, les précédentes sont gardées et la relance repart de celle-là.</div>
+      <div class="row" style="margin-top:10px">
+        <span class="pill on" data-oasp="9:16">Short 9:16</span><span class="pill" data-oasp="16:9">YouTube 16:9</span>
+        <select id="oc-quality" style="width:auto"><option value="max">Qualité maximale (YouTube)</option><option value="standard">Standard</option><option value="tiktok">TikTok (&lt; 30 Mo)</option></select>
+        <button class="b p" id="oc-go" onclick="runOneClick()">▶ Fabriquer</button>
+        <button class="b" id="oc-force" onclick="forceOneClick()">Refaire le rendu et le contrôle qualité</button>
+      </div>
+      <div class="steps" id="oc-steps"></div>
+      <div class="warn" id="oc-problems"></div>
+      <div class="muted" id="oc-voice"></div>
+    </div>
+
+    <div class="card">
+      <h2>Tout automatiquement</h2>
+      <div class="row">
+        <label style="margin:0">Metteur en scène</label>
+        <select id="pv-director" style="width:auto"></select>
+        <span class="pill on" data-asp="9:16">Short 9:16</span><span class="pill" data-asp="16:9">YouTube 16:9</span>
+        <button class="b p" onclick="runAll()">▶ Lancer : voix → calage → mise en scène → son → rendu → miniature</button>
+      </div>
+      <div class="muted" style="margin-top:6px">Chaque étape ci-dessous peut aussi être lancée, vérifiée et corrigée à la main.</div>
+    </div>
+
+    <div class="card"><h2><span class="num" id="n1">1</span> Script</h2>
+      <div class="muted">Une phrase par ligne (une respiration). Les balises ElevenLabs [whispers], [tense]… sont gardées pour la voix et retirées des sous-titres. *mot* = mot-clé en couleur (facultatif).</div>
+      <textarea id="pv-script" class="big"></textarea>
+      <div class="row" style="margin-top:8px"><button class="b" onclick="saveScript()">Enregistrer le script</button><span class="muted" id="script-count"></span></div>
+    </div>
+
+    <div class="card"><h2><span class="num" id="n2">2</span> Voix</h2>
+      <div class="row">
+        <button class="b g" onclick="run('voice')">Générer la voix avec ElevenLabs</button>
+        <button class="b" onclick="run('draft_voice')">Voix de brouillon (gratuite)</button>
+        <span class="muted">ou</span>
+        <input type="file" id="voice-file" accept="audio/*" style="width:auto">
+        <button class="b" onclick="uploadVoice()">Importer mon MP3 ElevenLabs</button>
+      </div>
+      <audio id="voice-audio" controls style="width:100%; margin-top:10px" class="hidden"></audio>
+    </div>
+
+    <div class="card"><h2><span class="num" id="n3">3</span> Calage voix / texte</h2>
+      <div class="row"><button class="b" onclick="run('align')">Caler les phrases sur la voix</button>
+      <span class="muted">Horodatage ElevenLabs au mot près si la voix vient d'ici ; sinon alignement ElevenLabs, Whisper local, ou silences.</span></div>
+      <div id="lines-box" style="max-height:260px; overflow:auto; margin-top:8px"></div>
+    </div>
+
+    <div class="card"><h2><span class="num" id="n4">4</span> Mise en scène</h2>
+      <div class="row">
+        <button class="b g" onclick="run('direct')">Générer la mise en scène</button>
+        <button class="b" onclick="run('preview', {aspect: previewAspect})">Aperçu des plans</button>
+        <select id="prev-asp" style="width:auto" onchange="previewAspect=this.value"><option value="9:16">aperçu 9:16</option><option value="16:9">aperçu 16:9</option></select>
+        <button class="b" onclick="run('qc', {aspect: previewAspect})">Contrôle qualité</button>
+      </div>
+      <div id="pv-cast" class="muted" style="margin-top:6px"></div>
+      <pre class="log hidden" id="pv-qc"></pre>
+      <label>Notes de réalisation pour l'IA (facultatif) : ambiance, plans voulus, lieu...</label>
+      <textarea id="pv-notes" style="min-height:60px" onchange="saveMeta({notes:this.value})"></textarea>
+      <div id="warnings" class="warn"></div>
+      <div class="thumbs" id="thumbs" style="margin-top:10px"></div>
+      <details style="margin-top:10px"><summary class="muted" style="cursor:pointer">Modifier l'épisode à la main (JSON)</summary>
+        <textarea id="pv-episode" class="big"></textarea>
+        <div class="row" style="margin-top:8px"><button class="b" onclick="saveEpisode()">Enregistrer et vérifier</button><span class="muted">Le format est décrit dans docs/FORMAT_EPISODE.md</span></div>
+      </details>
+    </div>
+
+    <div class="card"><h2><span class="num" id="n5">5</span> Son</h2>
+      <div class="row"><button class="b" onclick="run('mix')">Mixer (voix + effets + bruitages + ambiance, -14 LUFS)</button></div>
+      <audio id="mix-audio" controls style="width:100%; margin-top:10px" class="hidden"></audio>
+    </div>
+
+    <div class="card"><h2><span class="num" id="n6">6</span> Rendu</h2>
+      <div class="row">
+        <select id="render-engine" style="width:auto" title="Moteur qui peint les images de ce projet" onchange="saveMeta({render_engine:this.value})"><option value="pixel3d">Style PS1 (CPU) : décors, personnages et sons du style PS1</option><option value="voxel">Style VOXEL (GPU) : les mêmes éléments en VOXEL</option></select>
+        <select id="quality" style="width:auto"><option value="max">Qualité maximale (YouTube)</option><option value="standard">Standard</option><option value="tiktok">TikTok (&lt; 30 Mo)</option></select>
+        <button class="b p" onclick="run('render', {aspect:'9:16', quality:q()})">Rendu Short 9:16 (1080×1920)</button>
+        <button class="b p" onclick="run('render', {aspect:'16:9', quality:q()})">Rendu YouTube 16:9 (1920×1080)</button>
+      </div>
+      <div id="renders" style="margin-top:10px"></div>
+    </div>
+
+    <div class="card"><h2><span class="num" id="n7">7</span> Publication</h2>
+      <div class="row"><button class="b" onclick="run('metadata')">Titres, description, hashtags</button><button class="b" onclick="run('thumbnail')">Miniatures</button></div>
+      <div id="meta-box" style="margin-top:10px"></div>
+      <div class="row" id="thumb-box" style="margin-top:10px; align-items:flex-start"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= LONG VIDEO ======================= -->
+<section id="tab-compile" class="hidden">
+  <div class="card"><h2>Vidéo longue YouTube (plusieurs épisodes en 16:9)</h2>
+    <div class="muted">Coche les rendus 16:9 dans l'ordre voulu. Les chapitres sont ajoutés dans le fichier et écrits pour la description.</div>
+    <label>Titre de la vidéo</label><input id="c-title" placeholder="L'Étage 0 n'existe pas — l'histoire complète">
+    <table id="c-table" style="margin-top:10px"></table>
+    <div class="row" style="margin-top:10px"><button class="b p" onclick="compile()">Assembler la vidéo longue</button></div>
+    <div class="bar" style="margin-top:10px"><div id="c-bar"></div></div>
+    <pre class="log" id="c-log"></pre>
+    <div id="c-result"></div>
+  </div>
+</section>
+
+<!-- ======================= SETTINGS ======================= -->
+<section id="tab-settings" class="hidden">
+  <div class="card"><h2>ElevenLabs (voix)</h2>
+    <div class="grid2">
+      <div><label>Clé API ElevenLabs</label><input id="s-elevenlabs_api_key" type="password"></div>
+      <div><label>Voix</label><div class="row"><select id="s-elevenlabs_voice_id" style="flex:1"></select><button class="b" onclick="loadVoices()">Charger mes voix</button></div></div>
+      <div><label>Modèle (ex. eleven_v3, ou ton modèle v4)</label><input id="s-elevenlabs_model" list="models-list"><datalist id="models-list"></datalist></div>
+      <div><label>Vitesse</label><input id="s-voice_speed" type="number" step="0.05"></div>
+      <div><label>Stabilité</label><input id="s-voice_stability" type="number" step="0.05"></div>
+      <div><label>Similarité</label><input id="s-voice_similarity" type="number" step="0.05"></div>
+    </div>
+  </div>
+  <div class="card"><h2>Metteur en scène (IA)</h2>
+    <div class="muted">La mise en scène (choix des plans, caméra, bruitages, mots-clés, titres) est la seule étape qui demande une IA. Tout le reste tourne sur ta machine.</div>
+    <div class="grid2">
+      <div><label>Par défaut</label><select id="s-director"></select></div>
+      <div><label>Taille des morceaux (lignes) pour les modèles locaux</label><input id="s-director_chunk_lines" type="number" placeholder="30"></div>
+      <div><label>Clé API Anthropic (Claude)</label><input id="s-anthropic_api_key" type="password"></div>
+      <div><label>Modèle Claude</label><input id="s-claude_model"></div>
+      <div><label>Effort Claude (low, medium, high, xhigh, max)</label><input id="s-claude_effort"></div>
+      <div><label>Clé API Google Gemini</label><input id="s-gemini_api_key" type="password"></div>
+      <div><label>Modèle Gemini</label><input id="s-gemini_model"></div>
+      <div><label>Ollama : adresse</label><input id="s-ollama_host"></div>
+      <div><label>Ollama : modèle (ex. qwen2.5:32b-instruct, llama3.3:70b)</label><input id="s-ollama_model"></div>
+      <div><label>Serveur local compatible OpenAI (LM Studio, llama.cpp) : adresse</label><input id="s-local_base_url"></div>
+      <div><label>… modèle</label><input id="s-local_model"></div>
+    </div>
+  </div>
+  <div class="card"><h2>Calcul</h2>
+    <div class="grid2">
+      <div><label>Calage (auto, tts, elevenlabs, whisper, silences)</label><input id="s-alignment"></div>
+      <div><label>Modèle Whisper local (si installé)</label><input id="s-whisper_model"></div>
+      <div><label>Processus de rendu (0 = tous les cœurs)</label><input id="s-workers" type="number"></div>
+      <div><label>Qualité par défaut (max, standard, tiktok)</label><input id="s-quality"></div>
+    </div>
+    <div class="row" style="margin-top:12px"><button class="b p" onclick="saveSettings()">Enregistrer les réglages</button><span class="muted" id="s-saved"></span></div>
+  </div>
+</section>
+</main>
+
+<script>
+const DIRECTORS = [['claude','Claude (Anthropic) — meilleur résultat'],['gemini','Gemini (Google)'],['ollama','Modèle local (Ollama) — gratuit'],['openai_local','Modèle local (LM Studio / llama.cpp)'],['heuristic','Automatique sans IA (règles)']];
+let cur = null, timer = null, previewAspect = '9:16', aspects = new Set(['9:16']);
+const $ = id => document.getElementById(id);
+const api = async (url, opt = {}) => { const r = await fetch(url, opt); if (!r.ok) { let m = await r.text(); try { m = JSON.parse(m).detail } catch (e) {} ; throw new Error(m) } return r.json() };
+const post = (url, body, method = 'POST') => api(url, {method, headers: {'Content-Type': 'application/json'}, body: JSON.stringify(body || {})});
+const q = () => $('quality').value;
+const esc = s => (s ?? '').toString().replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+
+function showTab(tab) {
+  document.querySelectorAll('nav button').forEach(x => x.classList.toggle('on', x.dataset.tab === tab));
+  ['studio','projects','compile','settings'].forEach(t => $('tab-' + t).classList.toggle('hidden', t !== tab));
+  if (tab === 'settings') loadSettings(); if (tab === 'compile') loadLongs(); if (tab === 'projects') showList(); if (tab === 'studio') loadStudio();
+}
+document.querySelectorAll('nav button').forEach(b => b.onclick = () => showTab(b.dataset.tab));
+document.querySelectorAll('.pill[data-asp]').forEach(p => p.onclick = () => { p.classList.toggle('on'); aspects.has(p.dataset.asp) ? aspects.delete(p.dataset.asp) : aspects.add(p.dataset.asp) });
+for (const sel of [$('s-director'), $('pv-director')]) DIRECTORS.forEach(([v, t]) => sel.add(new Option(t, v)));
+
+async function showList() {
+  $('plist-view').classList.remove('hidden'); $('proj-view').classList.add('hidden'); cur = null; clearInterval(timer);
+  const ps = await api('/api/projects');
+  $('plist').innerHTML = ps.map(p => `<div class="pitem" onclick="openProject('${p.slug}')"><b>${esc(p.name)}</b><br>
+    <span class="tag ${p.style}">${p.style === 'console' ? 'CONSOLE' : 'PIXEL 3D'}</span><span class="muted">${esc(p.series || '')} ${esc(p.part_label || '')}</span><br>
+    <span class="muted">${p.status.renders.length ? '🎬 ' + p.status.renders.length + ' rendu(s)' : (p.status.episode ? 'mise en scène prête' : p.status.voice ? 'voix prête' : p.status.script ? 'script' : 'vide')}</span></div>`).join('') || '<div class="muted">Aucun épisode pour l’instant.</div>';
+}
+async function createProject() {
+  const d = {name: $('np-name').value, style: $('np-style').value, series: $('np-series').value, part_label: $('np-part').value, hud_title: $('np-hud').value,
+             previous_choice: $('np-choice').value, previous_choice_text: $('np-choicetext').value, bible: $('np-bible').value, previous: $('np-previous').value};
+  const r = await post('/api/projects', d); openProject(r.slug);
+}
+async function openProject(slug) {
+  $('plist-view').classList.add('hidden'); $('proj-view').classList.remove('hidden');
+  cur = slug; await refresh(true); await loadOneClick(); clearInterval(timer); timer = setInterval(pollJob, 1500);
+}
+function fileUrl(f) { return `/api/projects/${cur}/file/${f}?t=${Date.now()}` }
+async function refresh(full) {
+  const p = await api('/api/projects/' + cur); window.P = p;
+  $('pv-title').textContent = p.meta.name; $('pv-style').textContent = p.meta.style === 'console' ? 'CONSOLE' : 'PIXEL 3D'; $('pv-style').className = 'tag ' + p.meta.style;
+  if (full) { $('pv-script').value = p.script; $('pv-episode').value = p.episode; $('pv-notes').value = p.meta.notes || ''; $('pv-director').value = p.meta.director || (await api('/api/settings')).director; }
+  $('render-engine').value = p.meta.render_engine === 'voxel' ? 'voxel' : 'pixel3d';
+  const st = p.status; const ok = (id, v) => $(id).classList.toggle('ok', !!v);
+  ok('n1', st.script); ok('n2', st.voice); ok('n3', st.lines); ok('n4', st.episode); ok('n5', st.mix); ok('n6', st.renders.length); ok('n7', st.metadata);
+  $('pv-cast').textContent = (p.meta.cast || []).length ? 'Personnages : ' + p.meta.cast.join(', ') + (p.meta.place ? ' — lieu : ' + p.meta.place : '') + (p.meta.voice_mode === 'draft' ? ' — voix de brouillon' : '') : '';
+  const qcs = Object.entries(p.qc || {}); $('pv-qc').classList.toggle('hidden', !qcs.length); $('pv-qc').textContent = qcs.map(([a, r]) => a + ' — ' + r.summary).join('\n\n');
+  $('script-count').textContent = p.script ? p.script.split('\n').filter(l => l.trim()).length + ' lignes' : '';
+  const va = $('voice-audio'); if (st.voice) { va.classList.remove('hidden'); if (!va.src || full) va.src = fileUrl('voice.mp3') } else va.classList.add('hidden');
+  const ma = $('mix-audio'); if (st.mix) { ma.classList.remove('hidden'); if (!ma.src || full) ma.src = fileUrl('mix.wav') } else ma.classList.add('hidden');
+  $('lines-box').innerHTML = p.lines.length ? '<table><tr><th>#</th><th>début</th><th>fin</th><th>texte</th></tr>' + p.lines.map((l, i) => `<tr><td>${i}</td><td>${l.start.toFixed(2)}</td><td>${l.end.toFixed(2)}</td><td>${esc(l.text)}</td></tr>`).join('') + '</table>' : '';
+  $('warnings').innerHTML = (p.warnings || []).length ? '⚠ Corrections automatiques : ' + p.warnings.slice(0, 12).map(esc).join(' · ') : '';
+  $('thumbs').className = 'thumbs' + (previewAspect === '16:9' ? ' land' : '');
+  $('thumbs').innerHTML = p.previews.map((f, i) => `<figure><img src="${fileUrl('preview/' + f)}" onclick="window.open(this.src)"><figcaption>plan ${i}</figcaption></figure>`).join('');
+  $('renders').innerHTML = st.renders.map(r => `<div style="margin-bottom:12px"><div class="row"><b>${esc(r)}</b> <a href="${fileUrl('renders/' + r)}" download>télécharger</a></div>
+     <video controls preload="metadata" src="${fileUrl('renders/' + r)}"></video></div>`).join('');
+  const md = p.metadata;
+  $('meta-box').innerHTML = md ? `<label>Titres proposés (clic = copier)</label>${(md.titles || []).map(t => `<div class="copy" onclick="cp(this.textContent)">${esc(t)}</div>`).join('')}
+     <label>Description</label><textarea style="min-height:140px">${esc(md.description)}</textarea>
+     <label>Hashtags (clic = copier)</label><div class="copy" onclick="cp(this.textContent)">${(md.hashtags || []).map(h => '#' + h).join(' ')}</div>
+     <label>Tags YouTube</label><div class="copy muted" onclick="cp(this.textContent)">${(md.tags || []).join(', ')}</div>
+     ${pubHtml(md.platforms)}` : '';
+  $('thumb-box').innerHTML = st.thumbnail ? `<img src="${fileUrl('thumbnail_16x9.jpg')}" style="width:62%; border-radius:8px"><img src="${fileUrl('cover_9x16.jpg')}" style="width:20%; border-radius:8px">` : '';
+}
+function cp(t) {
+  t = String(t || '').trim();
+  if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(t).catch(() => cpFallback(t));
+  cpFallback(t);
+}
+function cpFallback(t) {            // http://127.0.0.1 without a secure context: the old way still works
+  const a = document.createElement('textarea'); a.value = t; a.style.position = 'fixed'; a.style.opacity = '0';
+  document.body.appendChild(a); a.select(); try { document.execCommand('copy') } catch (e) {} a.remove();
+}
+function cpFlash(btn, t) { cp(t); const o = btn.dataset.lbl || btn.textContent; btn.dataset.lbl = o; btn.textContent = 'copié ✓'; setTimeout(() => { btn.textContent = o }, 1200) }
+function cpf(btn, path) { cpFlash(btn, pubField(path)) }
+let PUB = null;
+function pubField(path) {
+  const v = path.split('.').reduce((o, k) => (o || {})[k], PUB);
+  if (Array.isArray(v)) return path.endsWith('hashtags') ? v.map(h => '#' + h).join(' ') : v.join(', ');
+  return v == null ? '' : String(v);
+}
+function pubSheet(which) {          // the whole block, ready to paste
+  const NL = String.fromCharCode(10);
+  const p = PUB || {}, yt = p.youtube_shorts || {}, tk = p.tiktok || {};
+  const tags = l => (l || []).map(h => '#' + h).join(' ');
+  if (which === 'yt') return [yt.title, '', yt.description, '', 'Tags YouTube : ' + (yt.tags || []).join(', '),
+                              yt.pinned_comment ? 'Commentaire épinglé : ' + yt.pinned_comment : ''].filter(x => x !== undefined).join(NL);
+  return [tk.caption, '', 'Hashtags : ' + tags(tk.hashtags)].join(NL);
+}
+function pubHtml(pf) {              // anciens projets sans « platforms » : rien, le bloc commun suffit
+  if (!pf || (!pf.youtube_shorts && !pf.tiktok)) { PUB = null; return '' }
+  PUB = pf;
+  const yt = pf.youtube_shorts || {}, tk = pf.tiktok || {};
+  const head = [pf.series, pf.episode_label, (pf.style || '').toUpperCase()].filter(Boolean).map(esc).join(' · ');
+  const vote = (pf.choices || []).length
+    ? `<div class="muted">Vote : ${esc(pf.vote_line || '')} — ` + pf.choices.map(c => `<b>${esc(c.letter)}</b> ${esc(c.text)}`).join(' · ') + '</div>'
+    : '<div class="muted">Aucun choix écrit dans cet épisode : rien n’est promis au public.</div>';
+  const cont = pf.continuity ? `<div class="muted">${esc(pf.continuity)}</div>` : '';
+  const fld = (lbl, path, extra) => `<label>${lbl} <button class="b cpb" onclick="cpf(this,'${path}')">copier</button>` +
+    (extra || '') + `</label><div class="fld">${esc(pubField(path))}</div>`;
+  return `<label style="margin-top:14px">Publication — un pack par plateforme <span class="muted">(aucun envoi automatique)</span></label>
+  <div class="muted">${head}</div>${vote}${cont}
+  <div class="grid2" style="margin-top:8px">
+    <div class="pub"><h4>YouTube Shorts <button class="b cpb" onclick="cpFlash(this, pubSheet('yt'))">copier tout</button></h4>
+      ${fld('Titre', 'youtube_shorts.title', `<span class="len">${(yt.title || '').length}/70</span>`)}
+      ${fld('Description', 'youtube_shorts.description')}
+      ${fld('Hashtags', 'youtube_shorts.hashtags')}
+      ${fld('Tags YouTube', 'youtube_shorts.tags')}
+      ${yt.pinned_comment ? fld('Commentaire épinglé', 'youtube_shorts.pinned_comment') : ''}
+      <div class="muted" style="margin-top:6px">Images : ${esc(yt.thumbnail || '')} (16:9) · ${esc(yt.cover || '')} (9:16)</div></div>
+    <div class="pub"><h4>TikTok <button class="b cpb" onclick="cpFlash(this, pubSheet('tk'))">copier tout</button></h4>
+      ${fld('Légende (hashtags compris)', 'tiktok.caption', `<span class="len">${(tk.caption || '').length} car.</span>`)}
+      ${fld('Hashtags', 'tiktok.hashtags')}
+      <div class="muted" style="margin-top:6px">Image : ${esc(tk.cover || '')} (9:16)<br>${esc(tk.sound_hint || '')}</div></div>
+  </div>`;
+}
+let lastState = null;
+async function pollJob() {
+  if (!cur) return; const j = await api(`/api/projects/${cur}/job`);
+  if (!j || !j.name) { $('job-name').textContent = 'aucune'; return }
+  $('job-name').textContent = j.name + (j.state === 'running' ? ' …' : j.state === 'done' ? ' ✓' : ' ✗');
+  $('job-bar').style.width = (j.progress * 100).toFixed(1) + '%'; $('job-detail').textContent = j.detail || '';
+  const lg = $('job-log'); lg.textContent = j.log.join('\n'); lg.scrollTop = lg.scrollHeight;
+  if (lastState === 'running' && j.state !== 'running') { refresh(true); loadOneClick() }
+  lastState = j.state;
+}
+async function run(step, opts = {}) {
+  try { if (step === 'direct' || step === 'all') opts.director = $('pv-director').value; await post(`/api/projects/${cur}/run/${step}`, opts); lastState = 'running'; pollJob() }
+  catch (e) { alert(e.message) }
+}
+// ---------------- le parcours en un clic
+const ocAspects = new Set(['9:16']);
+document.querySelectorAll('.pill[data-oasp]').forEach(p => p.onclick = () => {
+  p.classList.toggle('on'); ocAspects.has(p.dataset.oasp) ? ocAspects.delete(p.dataset.oasp) : ocAspects.add(p.dataset.oasp);
+  if (!ocAspects.size) { ocAspects.add(p.dataset.oasp); p.classList.add('on') }    // au moins un format
+  loadOneClick();
+});
+function ocOpts(force) { return {aspects: [...ocAspects], quality: $('oc-quality').value, force: force || []} }
+async function loadOneClick() {
+  if (!cur) return;
+  let p; try { p = await api(`/api/projects/${cur}/oneclick?aspects=${[...ocAspects].join(',')}`) } catch (e) { return }
+  window.OCP = p;
+  const next = p.next;
+  $('oc-steps').innerHTML = p.stages.map((s, i) => {
+    const cls = s.state === 'done' ? 'done' : s.state === 'error' ? 'error' : s.key === next ? 'next' : '';
+    const mark = s.state === 'done' ? ' ✓' : s.state === 'error' ? ' ✗' : s.key === next ? ' →' : '';
+    return `<span class="st ${cls}" title="${esc(s.detail || '')}">${i + 1}. ${esc(s.label)}${mark}</span>`;
+  }).join('');
+  const todo = p.stages.filter(s => (!s.done || s.forced) && s.key !== 'script').length;
+  $('oc-go').textContent = p.complete ? '✓ Tout est déjà fait' : p.failed
+    ? '▶ Reprendre à : ' + (p.stages.find(s => s.key === p.failed) || {}).label
+    : '▶ Fabriquer (' + todo + ' étape' + (todo > 1 ? 's' : '') + ')';
+  $('oc-go').disabled = p.complete || !!p.problems.filter(x => !x.startsWith('Metteur en scène')).length;
+  const warn = p.problems.map(esc).join(' · ');
+  // un rendu illisible (encodage interrompu) ne compte plus comme un rendu : il faut le dire, pas l'effacer
+  const broken = Object.entries(p.broken || {}).flatMap(([a, v]) => (v || []).map(b =>
+    a + ' : ' + esc(b.file) + ' (' + b.size + ' o) — ' + esc(b.reason) + ' ; il sera refait et le fichier gardé de côté'));
+  $('oc-problems').innerHTML = (p.error ? '✗ ' + esc(p.error) + '<br>' : '')
+    + (broken.length ? '✗ ' + broken.join('<br>✗ ') + (warn ? '<br>' : '') : '') + (warn ? '⚠ ' + warn : '');
+  const r = Object.entries(p.renders).map(([a, v]) => a + ' : ' + (v.join(', ') || '—')).join(' · ');
+  $('oc-voice').textContent = p.voice_label + ' — rendus : ' + r;
+}
+function runOneClick() { return saveScript(true).then(() => run('oneclick', ocOpts())).then(loadOneClick) }
+function forceOneClick() {
+  if (!confirm('Refabriquer le rendu et le contrôle qualité de ' + [...ocAspects].join(' et ') + ' ? Les MP4 existants de ces formats seront remplacés.')) return Promise.resolve();
+  return run('oneclick', ocOpts(['render', 'qc'])).then(loadOneClick);
+}
+function runAll() { saveScript(true).then(() => run('all', {aspects: [...aspects]})) }
+async function saveScript(silent) { await post(`/api/projects/${cur}/script`, {script: $('pv-script').value}, 'PUT'); if (!silent) refresh(false) }
+async function saveMeta(d) { await post(`/api/projects/${cur}/meta`, d, 'PUT') }
+async function saveEpisode() { try { const r = await post(`/api/projects/${cur}/episode`, {episode: $('pv-episode').value}, 'PUT'); alert('Enregistré. ' + (r.warnings.length ? r.warnings.length + ' correction(s) automatique(s).' : '')); refresh(true) } catch (e) { alert(e.message) } }
+async function uploadVoice() { const f = $('voice-file').files[0]; if (!f) return alert('Choisis un fichier audio'); const fd = new FormData(); fd.append('file', f); await api(`/api/projects/${cur}/voice`, {method: 'POST', body: fd}); refresh(true) }
+async function duplicateProject() { const n = prompt('Nom du nouvel épisode ?', (P.meta.name || '') + ' (suite)'); if (!n) return; const r = await post(`/api/projects/${cur}/duplicate`, {name: n}); openProject(r.slug) }
+async function deleteProject() { if (!confirm('Mettre cet épisode à la corbeille ?')) return; await api('/api/projects/' + cur, {method: 'DELETE'}); showList() }
+
+async function loadSettings() {
+  const s = await api('/api/settings');
+  for (const [k, v] of Object.entries(s)) { const el = $('s-' + k); if (!el) continue; if (el.tagName === 'SELECT' && el.id === 's-elevenlabs_voice_id' && v && !el.options.length) el.add(new Option(v, v)); el.value = v ?? '' }
+}
+async function saveSettings() {
+  const d = {}; document.querySelectorAll('[id^="s-"]').forEach(el => { if (el.id === 's-saved') return; let v = el.value; if (el.type === 'number' && v !== '') v = parseFloat(v); d[el.id.slice(2)] = v });
+  await post('/api/settings', d); $('s-saved').textContent = 'Enregistré ✓'; setTimeout(() => $('s-saved').textContent = '', 2500);
+}
+async function loadVoices() {
+  try { await saveSettings(); const r = await api('/api/voices'); const sel = $('s-elevenlabs_voice_id'); const curv = sel.value; sel.innerHTML = '';
+    r.voices.forEach(v => sel.add(new Option(`${v.name} (${v.category})`, v.voice_id))); if (curv) sel.value = curv;
+    $('models-list').innerHTML = r.models.map(m => `<option value="${m.model_id}">${esc(m.name)}</option>`).join('') } catch (e) { alert(e.message) }
+}
+async function loadLongs() {
+  const L = await api('/api/longs');
+  $('c-table').innerHTML = '<tr><th></th><th>ordre</th><th>épisode</th><th>titre du chapitre</th></tr>' + L.map((x, i) => `<tr><td><input type="checkbox" data-i="${i}" checked style="width:auto"></td>
+    <td><input type="number" value="${i + 1}" data-o="${i}" style="width:70px"></td><td>${esc(x.name)}<br><span class="muted">${esc(x.file)}</span></td>
+    <td><input data-c="${i}" value="${esc(x.part_label || x.name)}"></td></tr>`).join('');
+  window.LONGS = L;
+}
+async function compile() {
+  const items = [];
+  document.querySelectorAll('#c-table input[data-i]').forEach(cb => { if (!cb.checked) return; const i = +cb.dataset.i;
+    items.push({...LONGS[i], chapter: document.querySelector(`[data-c="${i}"]`).value, order: +document.querySelector(`[data-o="${i}"]`).value}) });
+  items.sort((a, b) => a.order - b.order);
+  try { await post('/api/compile', {items, title: $('c-title').value}); const t = setInterval(async () => {
+    const j = await api('/api/compile/job'); $('c-log').textContent = (j.log || []).join('\n'); $('c-bar').style.width = (j.state === 'done' ? 100 : 30) + '%';
+    if (j.state !== 'running') { clearInterval(t); if (j.result) $('c-result').innerHTML = `<p><a href="/api/compile/file/${j.result.file}" download>Télécharger ${esc(j.result.file)}</a></p><label>Chapitres pour la description</label><textarea>${esc(j.result.chapters)}</textarea>` }
+  }, 2000) } catch (e) { alert(e.message) }
+}
+// ---------------- studio: demos, new scene with library characters, characters
+const PLACES_FR = {attic:'grenier', basement:'sous-sol', bathroom:'salle de bain', beach:'plage', bedroom:'chambre', cafe:'café', campsite:'camping', castle:'château',
+  cave:'grotte', city_street:'rue en ville', classroom:'salle de classe', countryside:'campagne', desert:'désert', forest:'forêt', graveyard:'cimetière',
+  hospital_room:'chambre d\'hôpital', island:'île', kid_bedroom:'chambre d\'enfant', kitchen:'cuisine', lab:'laboratoire', lake:'lac', library:'bibliothèque',
+  living_room:'salon', mountain:'montagne', office:'bureau', park:'parc', river:'rivière', shop:'magasin', snow_village:'village enneigé',
+  snowy_forest:'forêt enneigée', space_station:'station spatiale', throne_room:'salle du trône', village:'village', volcano:'volcan'};
+const dAspects = new Set(['16:9', '9:16']), nAspects = new Set(['16:9']), nCast = new Set(['lea', 'tom']);
+let studioTimer = null, studioReady = false;
+document.querySelectorAll('.pill[data-dasp]').forEach(p => p.onclick = () => { p.classList.toggle('on'); dAspects.has(p.dataset.dasp) ? dAspects.delete(p.dataset.dasp) : dAspects.add(p.dataset.dasp) });
+document.querySelectorAll('.pill[data-nasp]').forEach(p => p.onclick = () => { p.classList.toggle('on'); nAspects.has(p.dataset.nasp) ? nAspects.delete(p.dataset.nasp) : nAspects.add(p.dataset.nasp) });
+DIRECTORS.slice().sort((a, b) => (a[0] === 'heuristic' ? -1 : b[0] === 'heuristic' ? 1 : 0)).forEach(([v, t]) => $('ns-director').add(new Option(v === 'heuristic' ? 'Sans IA : le studio (gratuit)' : t, v)));
+function nsStyle() { $('ns-place-box').classList.toggle('hidden', $('ns-style').value !== 'pixel3d') }
+async function loadStudio() {
+  if (!studioReady) {
+    const [pl, cs] = await Promise.all([api('/api/places'), api('/api/characters')]);
+    pl.forEach(x => $('ns-place').add(new Option(PLACES_FR[x] || x, x))); $('ns-place').value = 'park';
+    $('ns-cast').innerHTML = cs.map(c => `<span class="pill${nCast.has(c.id) ? ' on' : ''}" data-cid="${c.id}" style="display:inline-flex;align-items:center;gap:6px"><img src="/api/characters/${c.id}/portrait.png" style="width:28px;height:28px;border-radius:50%">${esc(c.name || c.id)}</span>`).join('');
+    document.querySelectorAll('.pill[data-cid]').forEach(p => p.onclick = () => { p.classList.toggle('on'); nCast.has(p.dataset.cid) ? nCast.delete(p.dataset.cid) : nCast.add(p.dataset.cid) });
+    $('char-list').innerHTML = cs.map(c => `<div class="pitem" style="cursor:default"><div class="row" style="align-items:flex-start;flex-wrap:nowrap">
+      <img src="/api/characters/${c.id}/portrait.png" style="width:96px;height:96px;border-radius:8px;border:1px solid var(--line)">
+      <div><b>${esc(c.name || c.id)}</b> <span class="muted">(${esc(c.id)})</span><br><span class="muted">${esc(c.notes || '')}</span><br>
+      <span class="muted">Voix de brouillon : ${esc((c.voice || {}).draft || '—')}</span>${c.relations ? '<br><span class="muted">' + Object.entries(c.relations).map(([k, v]) => esc(k) + ' : ' + esc(v)).join(' · ') + '</span>' : ''}</div></div></div>`).join('');
+    await loadBriefOptions(); brEngine();
+    studioReady = true;
+  }
+  await refreshDemos();
+}
+function qcBadge(qc) { return Object.entries(qc || {}).map(([a, r]) => `<span class="tag" title="${esc(r.summary)}">QC ${a} : ${r.score}/100</span>`).join('') }
+async function refreshDemos() {
+  const ds = await api('/api/demos'); let running = false;
+  $('demo-list').innerHTML = ds.map(d => { const j = d.job || {}; if (j.state === 'running') running = true;
+    return `<div class="pitem" style="cursor:default"><b>${esc(d.title)}</b><br><span class="tag ${d.style}">${d.style === 'console' ? 'CONSOLE' : 'PIXEL 3D'}</span>${qcBadge(d.qc)}
+    <div class="muted" style="margin:6px 0">${esc(d.description)}</div>
+    <div class="row"><button class="b" onclick="runDemo('${d.id}', true)">Contrôle qualité</button><button class="b p" onclick="runDemo('${d.id}', false)">Fabriquer la vidéo</button>
+    ${d.renders.length || d.qc['9:16'] || d.qc['16:9'] ? `<button class="b" onclick="showTab('projects'); openProject('${d.id}')">Ouvrir le projet</button>` : ''}</div>
+    ${j.name ? `<div class="muted" style="margin-top:6px">${esc(j.name)} ${j.state === 'running' ? '…' : j.state === 'done' ? '✓' : '✗'} ${esc(j.detail || '')}</div><div class="bar"><div style="width:${((j.state === 'done' ? 1 : j.progress || 0) * 100).toFixed(1)}%"></div></div>
+      <details><summary class="muted" style="cursor:pointer">journal</summary><pre class="log">${esc((j.log || []).slice(-30).join('\n'))}</pre></details>` : ''}
+    ${d.renders.map(r => `<div style="margin-top:8px"><div class="row"><span class="muted">${esc(r)}</span> <a href="/api/projects/${d.id}/file/renders/${r}" download>télécharger</a></div>
+      <video controls preload="none" src="/api/projects/${d.id}/file/renders/${r}"></video></div>`).join('')}</div>` }).join('');
+  clearTimeout(studioTimer); if (running) studioTimer = setTimeout(refreshDemos, 2000);
+}
+async function runDemo(id, qcOnly) {
+  if (!dAspects.size) return alert('Choisis au moins un format');
+  try { await post(`/api/demos/${id}/run`, {aspects: [...dAspects], quality: $('demo-quality').value, qc_only: qcOnly}); refreshDemos() } catch (e) { alert(e.message) }
+}
+async function planScene(writeRequests) {
+  const text = $('pl-text').value.trim();
+  if (!text) return alert('Écris ou colle la scène à analyser');
+  $('pl-out').innerHTML = '<span class="muted">Analyse…</span>';
+  try {
+    const r = await post('/api/plan', {text, engine: $('pl-engine').value, requests: writeRequests});
+    const label = {native: ['disponible', 'var(--green)'], composed: ['composé', 'var(--blue)'], partial: ['partiel', 'var(--gold)'], missing: ['manquant', 'var(--red)']};
+    let h = `<div class="muted">${r.needs.length} besoins : ` + Object.entries(r.counts).filter(([k, v]) => v).map(([k, v]) => `${v} ${label[k][0]}`).join(', ') + '</div>';
+    h += r.needs.map(n => `<div class="row" style="margin-top:6px"><span class="tag" style="color:${label[n.status][1]}">${label[n.status][0]}</span>`
+      + `<b>${esc(n.kind)}:${esc(n.name)}</b><span class="muted">« ${esc(n.terms.join(', '))} »${n.note || n.how ? ' — ' + esc(n.note || n.how) : ''}</span></div>`).join('');
+    if (r.requests.length) h += `<div class="muted" style="margin-top:10px">Demandes d'extension : ${r.requests.map(q => esc(q.id) + (q.need === 'manquant' ? '' : ' (amélioration)')).join(', ')}`
+      + (r.written ? ` — écrites dans <code>library/extensions/requests</code>` : '') + '</div>';
+    if (r.extensions.length) h += `<div class="muted" style="margin-top:6px">Extensions : ${r.extensions.map(e => esc(e.title || e.id) + ' (' + (e.loaded ? 'chargée' : esc(e.problem || e.status)) + ')').join(', ')}</div>`;
+    $('pl-out').innerHTML = h;
+  } catch (e) { $('pl-out').innerHTML = '<span style="color:var(--red)">' + esc(e.message) + '</span>'; }
+}
+
+// ---------------- un brief -> un épisode fabriqué
+const GENRES_FR = {horror:'horreur', adventure:'aventure', comedy:'comédie', romance:'romance', mystery:'mystère', sad:'triste', action:'action', epic:'épique', calm:'calme'};
+const bAspects = new Set(['9:16']);
+document.querySelectorAll('.pill[data-basp]').forEach(p => p.onclick = () => {
+  p.classList.toggle('on'); bAspects.has(p.dataset.basp) ? bAspects.delete(p.dataset.basp) : bAspects.add(p.dataset.basp);
+  if (!bAspects.size) { bAspects.add(p.dataset.basp); p.classList.add('on') }
+});
+function brEngine() { $('br-place-box').classList.toggle('hidden', $('br-engine').value === 'console') }
+async function loadBriefOptions() {
+  const o = await api('/api/story/options');
+  const g = $('br-genre'); if (!g.options.length) o.genres.forEach(x => g.add(new Option(GENRES_FR[x] || x, x)));
+  const pv = $('br-provider');
+  if (pv.options.length < 2) DIRECTORS.filter(([v]) => v !== 'heuristic').forEach(([v, t]) => pv.add(new Option('IA : ' + t, v)));
+  const pl = $('br-place'); if (!pl.options.length) { pl.add(new Option('— selon le genre —', '')); (await api('/api/places')).forEach(x => pl.add(new Option(PLACES_FR[x] || x, x))) }
+}
+async function runBrief(make) {
+  const brief = {genre: $('br-genre').value, duration_s: parseFloat($('br-duration').value) || 45, voice_mode: $('br-voicemode').value,
+                 engine: $('br-engine').value, hero: $('br-hero').value.trim() || 'Toi', other: $('br-other').value.trim() || 'Léa',
+                 place: $('br-engine').value === 'console' ? '' : $('br-place').value, premise: $('br-premise').value.trim(),
+                 series: $('br-series').value.trim(), part_label: $('br-part').value.trim(),
+                 n_choices: parseInt($('br-choices').value, 10), previous_choice: $('br-prevchoice').value};
+  const body = {brief, name: $('br-name').value.trim(), voice_mode: $('br-voice').value, provider: $('br-provider').value,
+                run: !!make, opts: {aspects: [...bAspects], quality: $('br-quality').value}};
+  $('br-out').innerHTML = '<span class="muted">Écriture du plan…</span>';
+  try {
+    const r = await post('/api/story/project', body);
+    $('br-out').innerHTML = `<div class="muted">Épisode « ${esc(r.slug)} » — ${r.beats} lignes, choix ${r.choices.join(' / ')},
+      ${r.seconds} s estimées, moteur ${r.style === 'console' ? 'CONSOLE 2D' : 'PIXEL 3D'}${r.place ? ', lieu ' + esc(PLACES_FR[r.place] || r.place) : ''},
+      plan écrit par « ${esc(r.generator)} ».${r.started ? ' Fabrication lancée.' : ''}</div>`;
+    showTab('projects'); openProject(r.slug);
+  } catch (e) { $('br-out').innerHTML = '<span style="color:var(--red)">' + esc(e.message) + '</span>' }
+}
+
+async function createScene(make) {
+  if (!nCast.size) return alert('Choisis au moins un personnage');
+  if (!$('ns-script').value.trim()) return alert('Écris le script (une réplique par ligne : « LÉA : ... »)');
+  const series = $('ns-series').value.trim();
+  const d = {name: $('ns-name').value || 'Nouvelle scène', style: $('ns-style').value, series, part_label: '', hud_title: series ? '' : 'TU|DÉCIDES',
+             cast: [...nCast], place: $('ns-style').value === 'pixel3d' ? $('ns-place').value : '', voice_mode: $('ns-voice').value === 'draft' ? 'draft' : '',
+             director: $('ns-director').value, script: $('ns-script').value};
+  try {
+    const r = await post('/api/projects', d);
+    if (make) await post(`/api/projects/${r.slug}/run/all`, {aspects: [...nAspects], director: d.director});
+    showTab('projects'); openProject(r.slug);
+  } catch (e) { alert(e.message) }
+}
+nsStyle(); showTab('studio');
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{
+ "id": "dame_or",
+ "name": "Dame or",
+ "look": {
+  "skin": [
+   110,
+   72,
+   50
+  ],
+  "hair": [
+   24,
+   16,
+   14
+  ],
+  "hair_style": "bun",
+  "headphones": false,
+  "backpack": false,
+  "outfit": "dress",
+  "hood": [
+   226,
+   196,
+   120
+  ],
+  "jeans": [
+   226,
+   196,
+   120
+  ],
+  "costume": "dame_or"
+ },
+ "voice": {
+  "draft": "woman",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.6,
+  "energy": 0.7,
+  "shy": 0.1
+ },
+ "relations": {},
+ "group": "bal_xviiie",
+ "notes": "Ensemble du bal XVIIIe : robe à paniers, manches au coude, boucles relevées en chignon, flûte de champagne (main droite). Tête peinte en pixels façon skin (face_skin) : sourcils, yeux, lèvres et barbe peints, yeux, sourcils et bouche animés."
+}

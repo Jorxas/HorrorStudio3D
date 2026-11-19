@@ -1,0 +1,19 @@
+{
+ "id": "mamie",
+ "name": "Mamie Jo",
+ "look": {
+  "kind": "grandma"
+ },
+ "voice": {
+  "draft": "old_woman",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.6,
+  "energy": 0.3
+ },
+ "relations": {
+  "lea": "petite-fille"
+ },
+ "notes": "Grand-mère de Léa."
+}

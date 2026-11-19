@@ -1,0 +1,44 @@
+{
+ "style": "pixel3d",
+ "engine_version": 2,
+ "default_set": "cimetiere",
+ "sets": {"cimetiere": {"type": "graveyard", "sky": "day", "stars": false, "fog": 0.02}},
+ "cast": {"lea": {"ref": "lea"}, "tom": {"ref": "tom"}},
+ "hud": {"title": [], "hearts": []},
+ "shots": [
+  {"lines": [0, 0], "speaker": "lea", "dur": 4.5,
+   "actors": [{"id": "lea", "at": [-1.2, 4.0], "facing": "+x", "face": "nervous"},
+              {"id": "tom", "at": [0.9, 3.8], "facing": "-x", "face": "calm"}],
+   "actions": [{"who": "lea", "do": "gesture", "name": "point", "at": 0.5, "dur": 1.8},
+               {"who": "tom", "do": "react", "kind": "nod", "at": 2.8}],
+   "camera": {"shot": "group", "on": ["lea", "tom"]},
+   "ui": {"hud": false, "subs": "off"},
+   "text": "Tu as entendu ce bruit, derrière la crypte ?"},
+
+  {"lines": [1, 1], "speaker": "tom", "dur": 4.0,
+   "actions": [{"who": "tom", "do": "face", "name": "nervous"},
+               {"who": "tom", "do": "gesture", "name": "shake_head", "at": 0.5, "dur": 1.5},
+               {"who": "tom", "do": "gesture", "name": "surrender", "at": 2.2, "dur": 1.6}],
+   "camera": {"shot": "medium", "on": ["tom"]},
+   "ui": {"hud": false, "subs": "off"},
+   "text": "Non. Et je ne veux pas le savoir."},
+
+  {"lines": [2, 2], "speaker": "lea", "dur": 9.0,
+   "actions": [{"who": "lea", "do": "face", "name": "determined"},
+               {"who": "lea", "do": "walk_to", "to": [-4.0, 9.0], "at": 0.4},
+               {"who": "lea", "do": "turn_to", "target": "tom"},
+               {"who": "lea", "do": "look_at", "target": "tom", "dur": 2.4},
+               {"who": "tom", "do": "look_at", "target": "lea", "at": 0.4, "dur": 8.0}],
+   "camera": {"shot": "full", "on": ["lea"], "move": "follow"},
+   "ui": {"hud": false, "subs": "off"},
+   "text": "Moi si. Je vais regarder."},
+
+  {"lines": [3, 3], "speaker": "tom", "dur": 5.0,
+   "actions": [{"who": "tom", "do": "react", "kind": "startle", "at": 0.2},
+               {"who": "tom", "do": "look_at", "target": "lea", "dur": 2.2},
+               {"who": "tom", "do": "gesture", "name": "extend", "at": 2.5, "dur": 1.8}],
+   "camera": {"shot": "medium", "on": ["tom"]},
+   "ui": {"hud": false, "subs": "off"},
+   "text": "Lea ! Attends-moi, ne pars pas seule !"}
+ ]
+}

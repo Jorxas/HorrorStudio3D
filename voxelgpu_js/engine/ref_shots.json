@@ -1,0 +1,452 @@
+[
+ {
+  "i": 0,
+  "t0": 0.0,
+  "t1": 1.8,
+  "words": "IN THIS TOWN YOUR SHADOW CAN NEVER TOUCH"
+ },
+ {
+  "i": 1,
+  "t0": 1.8,
+  "t1": 2.9,
+  "words": "ANOTHER PERSON'S SHADOW"
+ },
+ {
+  "i": 2,
+  "t0": 2.9,
+  "t1": 4.7,
+  "words": "PEOPLE WALK SINGLE FILE ONE ARM APART"
+ },
+ {
+  "i": 3,
+  "t0": 4.7,
+  "t1": 6.433,
+  "words": "THE SIDEWALKS HAVE LANES PAINTED ON THEM"
+ },
+ {
+  "i": 4,
+  "t0": 6.433,
+  "t1": 7.967,
+  "words": "THE BUS HAS ONE SEAT PER"
+ },
+ {
+  "i": 5,
+  "t0": 7.967,
+  "t1": 13.233,
+  "words": "THE WEDDING PHOTO IN THE BAKERY WINDOW SHOWS A BRIDE AND GROOM SIX FEET APART HOLDING OPPOSITE ENDS OF A LONG WHITE RIBBON"
+ },
+ {
+  "i": 6,
+  "t0": 13.233,
+  "t1": 15.9,
+  "words": "AT NOON WHEN SHADOWS ARE TINY THE WHOLE TOWN COMES OUT TO SHOP"
+ },
+ {
+  "i": 7,
+  "t0": 15.9,
+  "t1": 18.367,
+  "words": "THE SECOND THE SUN GETS LOW EVERYONE SPRINTS INDOORS"
+ },
+ {
+  "i": 8,
+  "t0": 18.367,
+  "t1": 20.333,
+  "words": "WE MOVED HERE IN THE SPRING NOBODY TOLD US THE RULE"
+ },
+ {
+  "i": 9,
+  "t0": 20.333,
+  "t1": 23.667,
+  "words": "MY FIRST MORNING I WALKED TO SCHOOL NEXT TO A KID NAMED THEO SHOULDER TO SHOULDER"
+ },
+ {
+  "i": 10,
+  "t0": 23.667,
+  "t1": 25.333,
+  "words": "AND OUR SHADOWS CROSSED ON THE SIDEWALK"
+ },
+ {
+  "i": 11,
+  "t0": 25.333,
+  "t1": 26.7,
+  "words": "THE WHOLE STREET ROSE"
+ },
+ {
+  "i": 12,
+  "t0": 26.7,
+  "t1": 27.633,
+  "words": "A WOMAN DROPPED HER GROCERIES"
+ },
+ {
+  "i": 13,
+  "t0": 27.633,
+  "t1": 30.133,
+  "words": "THE CROSSING GUARD BLEW HIS WHISTLE UNTIL HE RAN OUT OF AIR"
+ },
+ {
+  "i": 14,
+  "t0": 30.133,
+  "t1": 31.733,
+  "words": "THEO'S MOM YANKED HIM INTO A HEDGE"
+ },
+ {
+  "i": 15,
+  "t0": 31.733,
+  "t1": 34.1,
+  "words": "A MAN ON A LADDER CLIMBED HIGHER INSTEAD OF COMING DOWN"
+ },
+ {
+  "i": 16,
+  "t0": 34.1,
+  "t1": 37.033,
+  "words": "ALL DAY EVERYWHERE I WENT PEOPLE SHUFFLED SIDEWAYS AWAY FROM ME"
+ },
+ {
+  "i": 17,
+  "t0": 37.033,
+  "t1": 38.567,
+  "words": "LIKE I WAS DRAGGING SOMETHING BEHIND ME"
+ },
+ {
+  "i": 18,
+  "t0": 38.567,
+  "t1": 39.6,
+  "words": "NOBODY WOULD SAY WHY"
+ },
+ {
+  "i": 19,
+  "t0": 39.6,
+  "t1": 41.233,
+  "words": "THAT EVENING THE SUN WENT ORANGE"
+ },
+ {
+  "i": 20,
+  "t0": 41.233,
+  "t1": 43.133,
+  "words": "AND EVERY SHADOW IN TOWN STRETCHED"
+ },
+ {
+  "i": 21,
+  "t0": 43.133,
+  "t1": 45.0,
+  "words": "ACROSS THE STREET LIKE LONG BLACK FINGERS"
+ },
+ {
+  "i": 22,
+  "t0": 45.0,
+  "t1": 48.367,
+  "words": "MAN RAN FOR HIS PORCH HIS SHADOW SLID OVER HIS NEIGHBOR'S SHADOW ON THE FENCE"
+ },
+ {
+  "i": 23,
+  "t0": 48.367,
+  "t1": 49.033,
+  "words": "JUST FOR A SECOND"
+ },
+ {
+  "i": 24,
+  "t0": 49.033,
+  "t1": 54.3,
+  "words": "BOTH SHADOWS TURNED THICK AND BLACK LIKE TAR AND THEN OUT OF THE DARK SEAM WHERE THEY OVERLAPPED SOMETHING CLIMBED UP"
+ },
+ {
+  "i": 25,
+  "t0": 54.3,
+  "t1": 55.633,
+  "words": "TALL THIN FLAT AS"
+ },
+ {
+  "i": 26,
+  "t0": 55.633,
+  "t1": 57.7,
+  "words": "PAPER NO FACE NO FRONT NO BACK JUST DARK"
+ },
+ {
+  "i": 27,
+  "t0": 57.7,
+  "t1": 61.133,
+  "words": "IT'S STOOD BETWEEN THE TWO MEN AND TURNED ITS HEAD FROM ONE TO THE OTHER LIKE IT WAS CHOOSING"
+ },
+ {
+  "i": 28,
+  "t0": 61.133,
+  "t1": 66.5,
+  "words": "THEN IT FOLDED ITSELF AROUND THE MAN FROM THE PORCH AND BOTH OF THEM SLID DOWN INTO THE PAVEMENT JUST HIS SHOES LEFT ON THE STEP"
+ },
+ {
+  "i": 29,
+  "t0": 66.5,
+  "t1": 68.833,
+  "words": "THE NEXT MORNING I GRABBED MY BIKE AND RODE FOR THE TOWN LINE"
+ },
+ {
+  "i": 30,
+  "t0": 68.833,
+  "t1": 69.633,
+  "words": "I COULD SEE THE SIGN"
+ },
+ {
+  "i": 31,
+  "t0": 69.633,
+  "t1": 70.4,
+  "words": "I COULD SEE THE HIGHWAY"
+ },
+ {
+  "i": 32,
+  "t0": 70.4,
+  "t1": 72.133,
+  "words": "THEN PEOPLE STARTED STEPPING OUT OF THEIR HOUSES"
+ },
+ {
+  "i": 33,
+  "t0": 72.133,
+  "t1": 73.167,
+  "words": "DOZENS THEN HUNDREDS"
+ },
+ {
+  "i": 34,
+  "t0": 73.167,
+  "t1": 77.067,
+  "words": "THEY SPREAD ACROSS THE WHOLE ROAD IN A PERFECT CHECKERBOARD NOBODY'S SHADOW TOUCHING ANYBODY'S"
+ },
+ {
+  "i": 35,
+  "t0": 77.067,
+  "t1": 78.467,
+  "words": "ISLAND THE MAYOR STEPPED FORWARD"
+ },
+ {
+  "i": 36,
+  "t0": 78.467,
+  "t1": 79.867,
+  "words": "EVEN HIS SHADOW WORE A LITTLE HAT"
+ },
+ {
+  "i": 37,
+  "t0": 79.867,
+  "t1": 81.067,
+  "words": "YOU CROSSED A SHADOW HE SAID"
+ },
+ {
+  "i": 38,
+  "t0": 81.067,
+  "t1": 82.6,
+  "words": "TONIGHT IT COMES FOR YOU OR FOR THE"
+ },
+ {
+  "i": 39,
+  "t0": 82.6,
+  "t1": 86.333,
+  "words": "BOY IT ONLY EVER TAKES ONE HE POINTED BACK TOWARD THE SQUARE SO WE DECIDE WHICH ONE"
+ },
+ {
+  "i": 40,
+  "t0": 86.333,
+  "t1": 91.233,
+  "words": "THEY SAT ME DOWN IN THE MIDDLE OF THE SQUARE AT SUNSET THEN THE WHOLE TOWN BACKED INTO THE DOORWAYS AND UNDER THE AWNINGS"
+ },
+ {
+  "i": 41,
+  "t0": 91.233,
+  "t1": 95.233,
+  "words": "INTO THE SHADE WHERE NOBODY CASTS A SHADOW AT ALL I WAS THE ONLY SHADOW IN THE SQUARE"
+ },
+ {
+  "i": 42,
+  "t0": 95.233,
+  "t1": 97.433,
+  "words": "IT STRETCHED OUT IN FRONT OF ME LONGER AND LONGER"
+ },
+ {
+  "i": 43,
+  "t0": 97.433,
+  "t1": 98.533,
+  "words": "ALL THE WAY TO THE FOUNTAIN"
+ },
+ {
+  "i": 44,
+  "t0": 98.533,
+  "t1": 100.267,
+  "words": "DON'T MOVE THE MAYOR CALLED FROM THE SHADE"
+ },
+ {
+  "i": 45,
+  "t0": 100.267,
+  "t1": 104.0,
+  "words": "THE STREET LIGHTS DIED ONE BY ONE AND THE THING CLIMBED UP OUT OF MY OWN SHADOW"
+ },
+ {
+  "i": 46,
+  "t0": 104.0,
+  "t1": 108.5,
+  "words": "RIGHT BETWEEN MY FEET IT ROSE UP TALLER THAN THE TOWN HALL FLAT AND BLACK AND BENT DOWN UNTIL THE"
+ },
+ {
+  "i": 47,
+  "t0": 108.5,
+  "t1": 111.0,
+  "words": "PLACE WHERE ITS FACE SHOULD BE WAS AN INCH FROM MINE IT STUDIED"
+ },
+ {
+  "i": 48,
+  "t0": 111.0,
+  "t1": 115.0,
+  "words": "ME THEN IT REACHED ONE LONG ARM DOWN AND IT TOUCHED MY SHADOW AND NOTHING HAPPENED IT TOUCHED"
+ },
+ {
+  "i": 49,
+  "t0": 115.0,
+  "t1": 116.967,
+  "words": "IT AGAIN NOTHING IT TILTED ITS HEAD LIKE IT DIDN'T UNDERSTAND"
+ },
+ {
+  "i": 50,
+  "t0": 116.967,
+  "t1": 117.8,
+  "words": "THEN FOOTSTEPS"
+ },
+ {
+  "i": 51,
+  "t0": 117.8,
+  "t1": 121.2,
+  "words": "THEO RAN OUT OF THE SHADE AND INTO THE SQUARE STRAIGHT AT ME YELLING MY NAME"
+ },
+ {
+  "i": 52,
+  "t0": 121.2,
+  "t1": 123.633,
+  "words": "HIS SHADOW SLAMMED INTO MINE AND THE TWO SHADOWS PILED"
+ },
+ {
+  "i": 53,
+  "t0": 123.633,
+  "t1": 129.667,
+  "words": "ON TOP OF EACH OTHER INTO ONE THICK BLACK POOL AROUND OUR FEET AND THE THING FLINCHED IT PULLED ITS ARM BACK LIKE THE GROUND WAS HOT"
+ },
+ {
+  "i": 54,
+  "t0": 129.667,
+  "t1": 133.933,
+  "words": "IT COULDN'T STEP ON A SHADOW THAT THICK WHERE OUR SHADOWS OVERLAP THERE WAS NO SEAM TO CLIMB OUT OF"
+ },
+ {
+  "i": 55,
+  "t0": 133.933,
+  "t1": 134.7,
+  "words": "IT WASN'T THE TOUCHING"
+ },
+ {
+  "i": 56,
+  "t0": 134.7,
+  "t1": 135.633,
+  "words": "IT WAS NEVER THE TOUCHING"
+ },
+ {
+  "i": 57,
+  "t0": 135.633,
+  "t1": 137.6,
+  "words": "IT ONLY EVER CAME FOR THE PEOPLE STANDING ALONE"
+ },
+ {
+  "i": 58,
+  "t0": 137.6,
+  "t1": 139.133,
+  "words": "FOR FIFTY YEARS THIS TOWN"
+ },
+ {
+  "i": 59,
+  "t0": 139.133,
+  "t1": 140.633,
+  "words": "HAD BEEN SPACING ITSELF OUT LIKE A BUFFET"
+ },
+ {
+  "i": 60,
+  "t0": 140.633,
+  "t1": 142.7,
+  "words": "HANDING IT ONE LONELY PERSON AT A TIME"
+ },
+ {
+  "i": 61,
+  "t0": 142.7,
+  "t1": 146.0,
+  "words": "I GRABBED THEO'S HAND AND YELLED AT THE DOORWAYS AND TOGETHER NOBODY"
+ },
+ {
+  "i": 62,
+  "t0": 146.0,
+  "t1": 148.3,
+  "words": "MOVED THEN AN OLD WOMAN STEPPED OUT OF THE BAKERY AND PUT"
+ },
+ {
+  "i": 63,
+  "t0": 148.3,
+  "t1": 152.0,
+  "words": "HER SHADOW ON OURS THEN THE CROSSING GUARD THEN THEO'S MOM THEN ALL OF THEM HUNDREDS"
+ },
+ {
+  "i": 64,
+  "t0": 152.0,
+  "t1": 156.5,
+  "words": "POURING OUT OF THE SHADE PILING THEIR SHADOWS INTO ONE GIANT BLACK PUDDLE ACROSS THE WHOLE SQUARE"
+ },
+ {
+  "i": 65,
+  "t0": 156.5,
+  "t1": 158.6,
+  "words": "THE THING GOT THINNER AND THINNER SMALLER AND"
+ },
+ {
+  "i": 66,
+  "t0": 158.6,
+  "t1": 161.5,
+  "words": "SMALLER UNTIL IT WAS A SINGLE BLACK THREAD WHIPPING AROUND ON THE COBBLESTONES"
+ },
+ {
+  "i": 67,
+  "t0": 161.5,
+  "t1": 164.0,
+  "words": "LOOKING FOR A CRACK TO SLIDE INTO AND THEN IT"
+ },
+ {
+  "i": 68,
+  "t0": 164.0,
+  "t1": 167.0,
+  "words": "FOUND ONE THE MAYOR HE WAS STILL STANDING AT THE VERY BACK OF THE SQUARE"
+ },
+ {
+  "i": 69,
+  "t0": 167.0,
+  "t1": 169.2,
+  "words": "ALONE UNDER THE ONE STREET LIGHT THAT STILL WORKED"
+ },
+ {
+  "i": 70,
+  "t0": 169.2,
+  "t1": 170.6,
+  "words": "WITH HIS OWN LITTLE SHADOW AND HIS"
+ },
+ {
+  "i": 71,
+  "t0": 170.6,
+  "t1": 171.233,
+  "words": "OWN LITTLE HAT"
+ },
+ {
+  "i": 72,
+  "t0": 171.233,
+  "t1": 175.7,
+  "words": "NOBODY HAD EVER BEEN ALLOWED CLOSE ENOUGH TO TOUCH IT THE THREAD SLID UNDER HIS SHOE THE STREET LIGHT DIED"
+ },
+ {
+  "i": 73,
+  "t0": 175.7,
+  "t1": 178.0,
+  "words": "NOW THE MAYOR'S SHADOW WAVES AT ME WHEN HE ISN'T LOOKING"
+ },
+ {
+  "i": 74,
+  "t0": 178.0,
+  "t1": 179.9,
+  "words": "LIKE AND SUBSCRIBE OR STAND CLOSER TO SOMEBODY"
+ }
+]

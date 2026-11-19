@@ -1,0 +1,44 @@
+{
+ "id": "lea",
+ "name": "Léa",
+ "look": {
+  "hood": [
+   170,
+   70,
+   60
+  ],
+  "jeans": [
+   40,
+   44,
+   70
+  ],
+  "hair": [
+   70,
+   40,
+   26
+  ],
+  "skin": [
+   214,
+   160,
+   124
+  ],
+  "hair_style": "ponytail",
+  "headphones": false,
+  "backpack": false
+ },
+ "voice": {
+  "draft": "woman",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.85,
+  "energy": 0.7,
+  "shy": 0.1
+ },
+ "relations": {
+  "tom": "meilleur ami",
+  "zoe": "cousine",
+  "rex": "son chien"
+ },
+ "notes": "Héroïne de la série démo « Tu décides ». Curieuse, courageuse, parle avec les mains."
+}

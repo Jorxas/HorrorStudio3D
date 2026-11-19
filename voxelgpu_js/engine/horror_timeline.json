@@ -1,0 +1,185 @@
+{
+ "fps": 30,
+ "duration": 54.47,
+ "lines": [
+  {
+   "id": "H1",
+   "text": "Dans ma ville, il n'y a qu'une seule r\u00e8gle.",
+   "start": 0.9,
+   "end": 3.143,
+   "s0": 1030,
+   "s1": 50499
+  },
+  {
+   "id": "H2",
+   "text": "\u00c0 minuit, on ferme les volets. Et on ne regarde jamais dehors.",
+   "start": 3.743,
+   "end": 7.906,
+   "s0": 295,
+   "s1": 92077
+  },
+  {
+   "id": "H3",
+   "text": "Ce soir, maman a oubli\u00e9 celui de ma chambre.",
+   "start": 8.706,
+   "end": 11.511,
+   "s0": 3423,
+   "s1": 65268
+  },
+  {
+   "id": "H4",
+   "text": "Alors, j'ai regard\u00e9.",
+   "start": 12.211,
+   "end": 13.692,
+   "s0": 3181,
+   "s1": 35836
+  },
+  {
+   "id": "H5",
+   "text": "La rue \u00e9tait pleine de gens.",
+   "start": 14.692,
+   "end": 16.201,
+   "s0": 989,
+   "s1": 34263
+  },
+  {
+   "id": "H6",
+   "text": "Immobiles. Bien espac\u00e9s. Ils fixaient notre maison.",
+   "start": 16.801,
+   "end": 20.663,
+   "s0": 880,
+   "s1": 86036
+  },
+  {
+   "id": "H7",
+   "text": "Puis les lampadaires se sont \u00e9teints. Un par un.",
+   "start": 21.663,
+   "end": 24.653,
+   "s0": 2620,
+   "s1": 68555
+  },
+  {
+   "id": "H8",
+   "text": "Et au bout de la rue, quelque chose de tr\u00e8s grand s'est mis \u00e0 marcher vers nous.",
+   "start": 25.453,
+   "end": 28.702,
+   "s0": 856,
+   "s1": 72506
+  },
+  {
+   "id": "H9",
+   "text": "D'un coup, ils ont tous tourn\u00e9 la t\u00eate vers ma fen\u00eatre.",
+   "start": 29.702,
+   "end": 32.654,
+   "s0": 2301,
+   "s1": 67391
+  },
+  {
+   "id": "H10",
+   "text": "On a frapp\u00e9 \u00e0 la porte. Trois coups.",
+   "start": 33.854,
+   "end": 36.041,
+   "s0": 3646,
+   "s1": 51872
+  },
+  {
+   "id": "H11",
+   "text": "Puis la voix de maman, dehors, a dit mon pr\u00e9nom.",
+   "start": 36.941,
+   "end": 40.317,
+   "s0": 2181,
+   "s1": 76610
+  },
+  {
+   "id": "M1",
+   "text": "Jade ? Ouvre-moi, ma ch\u00e9rie.",
+   "start": 40.917,
+   "end": 43.455,
+   "s0": 341,
+   "s1": 56302
+  },
+  {
+   "id": "H12",
+   "text": "Sauf que maman \u00e9tait juste \u00e0 c\u00f4t\u00e9 de moi.",
+   "start": 44.855,
+   "end": 46.894,
+   "s0": 3424,
+   "s1": 48393
+  },
+  {
+   "id": "H13",
+   "text": "Tu ouvres ? Ou tu te caches ? Dis-le en commentaire.",
+   "start": 47.894,
+   "end": 51.272,
+   "s0": 0,
+   "s1": 74482
+  }
+ ],
+ "shots": [
+  {
+   "name": "aerial",
+   "t0": 0,
+   "t1": 3.593
+  },
+  {
+   "name": "windows",
+   "t0": 3.593,
+   "t1": 8.556
+  },
+  {
+   "name": "litwin",
+   "t0": 8.556,
+   "t1": 12.061
+  },
+  {
+   "name": "ots",
+   "t0": 12.061,
+   "t1": 14.442
+  },
+  {
+   "name": "pov",
+   "t0": 14.442,
+   "t1": 17.901
+  },
+  {
+   "name": "faces",
+   "t0": 17.901,
+   "t1": 21.463
+  },
+  {
+   "name": "lamps",
+   "t0": 21.463,
+   "t1": 25.253
+  },
+  {
+   "name": "thing",
+   "t0": 25.253,
+   "t1": 29.502
+  },
+  {
+   "name": "snap",
+   "t0": 29.502,
+   "t1": 33.554
+  },
+  {
+   "name": "door",
+   "t0": 33.554,
+   "t1": 37.141
+  },
+  {
+   "name": "peep",
+   "t0": 37.141,
+   "t1": 44.455
+  },
+  {
+   "name": "twist",
+   "t0": 44.455,
+   "t1": 47.294
+  },
+  {
+   "name": "final",
+   "t0": 47.294,
+   "t1": 54.47
+  }
+ ]
+}

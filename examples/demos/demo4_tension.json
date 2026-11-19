@@ -1,0 +1,326 @@
+{
+ "title": "Démo 4 — Tension",
+ "style": "pixel3d",
+ "part": "DÉMO 4",
+ "aspects": [
+  "9:16",
+  "16:9"
+ ],
+ "description": "Nuit d'orage. Léa, lampe torche à la main, entend un bruit. La porte s'ouvre toute seule, un éclair révèle une silhouette, Léa recule pas à pas, la lumière vacille, la porte claque.",
+ "voices": {
+  "lea": "woman"
+ },
+ "names": {
+  "lea": "LÉA"
+ },
+ "label_colors": {
+  "lea": "orange"
+ },
+ "script": [
+  {
+   "who": "lea",
+   "text": "Il y a quelqu'un... ?",
+   "dur": 3.4,
+   "voice_fx": "whisper"
+  },
+  {
+   "text": "",
+   "dur": 4.6
+  },
+  {
+   "who": "lea",
+   "text": "Maman ?",
+   "dur": 2.4,
+   "voice_fx": "whisper"
+  },
+  {
+   "text": "",
+   "dur": 3.6
+  },
+  {
+   "who": "lea",
+   "text": "Non... non...",
+   "dur": 3.8,
+   "voice_fx": "whisper"
+  },
+  {
+   "text": "",
+   "dur": 3.0
+  }
+ ],
+ "episode": {
+  "engine_version": 2,
+  "default_set": "chambre",
+  "music": "horror",
+  "intensity_start": 0.25,
+  "hud": {
+   "title": [
+    "TU",
+    "DÉCIDES"
+   ],
+   "part": "DÉMO 4",
+   "hearts": []
+  },
+  "sets": {
+   "chambre": {
+    "type": "bedroom",
+    "night": true,
+    "ambient": [
+     0.035,
+     0.035,
+     0.055
+    ],
+    "fill": 0.22,
+    "light": "blue",
+    "light_power": 0.35
+   }
+  },
+  "cast": {
+   "lea": {
+    "ref": "lea"
+   },
+   "ombre": {
+    "kind": "creature"
+   }
+  },
+  "shots": [
+   {
+    "lines": [
+     0,
+     0
+    ],
+    "actors": [
+     {
+      "id": "lea",
+      "at": [
+       0.4,
+       2.7
+      ],
+      "facing": "porte",
+      "hold": "flashlight",
+      "face": "nervous"
+     }
+    ],
+    "actions": [
+     {
+      "who": "lea",
+      "do": "look_around",
+      "dur": 2.6,
+      "at": 0.2
+     }
+    ],
+    "world": [
+     {
+      "at": 2.1,
+      "lightning": true
+     }
+    ],
+    "camera": {
+     "shot": "wide",
+     "on": [
+      "lea"
+     ]
+    },
+    "audio": {
+     "intensity": 0.3
+    }
+   },
+   {
+    "lines": [
+     1,
+     1
+    ],
+    "actions": [
+     {
+      "who": "lea",
+      "do": "look_at",
+      "target": "porte",
+      "dur": 4.5
+     }
+    ],
+    "world": [
+     {
+      "at": 0.6,
+      "door": "porte",
+      "open": 0.8,
+      "dur": 3.6
+     }
+    ],
+    "camera": {
+     "shot": "full",
+     "on": [
+      "porte"
+     ],
+     "move": "dolly_in",
+     "amount": 0.5
+    },
+    "audio": {
+     "intensity": 0.55
+    }
+   },
+   {
+    "lines": [
+     2,
+     2
+    ],
+    "actions": [
+     {
+      "who": "lea",
+      "do": "react",
+      "kind": "flinch",
+      "at": 0.1
+     },
+     {
+      "who": "lea",
+      "do": "face",
+      "name": "scared"
+     }
+    ],
+    "camera": {
+     "shot": "close",
+     "on": [
+      "lea"
+     ],
+     "move": "handheld",
+     "shake": 0.25
+    },
+    "audio": {
+     "intensity": 0.65
+    }
+   },
+   {
+    "lines": [
+     3,
+     3
+    ],
+    "actors": [
+     {
+      "id": "ombre",
+      "at": [
+       -3.05,
+       1.5
+      ],
+      "facing": "+x",
+      "visible": [
+       0.4,
+       99
+      ]
+     }
+    ],
+    "actions": [
+     {
+      "who": "lea",
+      "do": "look_at",
+      "target": "ombre",
+      "dur": 3.5
+     }
+    ],
+    "world": [
+     {
+      "at": 1.4,
+      "lightning": true,
+      "thunder_delay": 0.35
+     }
+    ],
+    "camera": {
+     "shot": "pov",
+     "on": [
+      "lea"
+     ],
+     "move": "dolly_in",
+     "amount": 0.3
+    },
+    "sfx": [
+     {
+      "name": "heartbeat",
+      "at": 0.3,
+      "gain": 0.6
+     }
+    ],
+    "audio": {
+     "intensity": 0.95
+    }
+   },
+   {
+    "lines": [
+     4,
+     4
+    ],
+    "actions": [
+     {
+      "who": "lea",
+      "do": "walk_to",
+      "to": [
+       1.0,
+       4.1
+      ],
+      "speed": "slow",
+      "backwards": true
+     },
+     {
+      "who": "lea",
+      "do": "face",
+      "name": "shocked"
+     }
+    ],
+    "world": [
+     {
+      "at": 0.8,
+      "lights": "flicker",
+      "dur": 2.6
+     }
+    ],
+    "camera": {
+     "shot": "full",
+     "on": [
+      "lea"
+     ],
+     "move": "handheld",
+     "shake": 0.2
+    },
+    "audio": {
+     "intensity": 1.0
+    }
+   },
+   {
+    "lines": [
+     5,
+     5
+    ],
+    "world": [
+     {
+      "at": 0.9,
+      "door": "porte",
+      "open": 0.0,
+      "dur": 0.22
+     },
+     {
+      "at": 1.15,
+      "lights": "off",
+      "dur": 9
+     }
+    ],
+    "camera": {
+     "shot": "pov",
+     "on": [
+      "lea"
+     ]
+    },
+    "audio": {
+     "intensity": 0.4
+    },
+    "fx": {
+     "fade_out": 0.6
+    },
+    "actions": [
+     {
+      "who": "lea",
+      "do": "look_at",
+      "target": "porte",
+      "dur": 3
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "id": "dame_lilas",
+ "name": "Dame lilas",
+ "look": {
+  "skin": [
+   240,
+   210,
+   190
+  ],
+  "hair": [
+   196,
+   160,
+   96
+  ],
+  "hair_style": "bun",
+  "headphones": false,
+  "backpack": false,
+  "outfit": "dress",
+  "hood": [
+   188,
+   166,
+   216
+  ],
+  "jeans": [
+   188,
+   166,
+   216
+  ],
+  "costume": "dame_lilas"
+ },
+ "voice": {
+  "draft": "woman",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.6,
+  "energy": 0.7,
+  "shy": 0.1
+ },
+ "relations": {},
+ "group": "bal_xviiie",
+ "notes": "Ensemble du bal XVIIIe : robe à paniers, manches au coude, boucles relevées en chignon, flûte de champagne (main droite). Tête peinte en pixels façon skin (face_skin) : sourcils, yeux, lèvres et barbe peints, yeux, sourcils et bouche animés."
+}

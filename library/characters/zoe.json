@@ -1,0 +1,43 @@
+{
+ "id": "zoe",
+ "name": "Zoé",
+ "look": {
+  "outfit": "tshirt",
+  "hood": [
+   240,
+   190,
+   60
+  ],
+  "jeans": [
+   60,
+   90,
+   70
+  ],
+  "hair": [
+   20,
+   16,
+   18
+  ],
+  "skin": [
+   150,
+   100,
+   70
+  ],
+  "hair_style": "curly",
+  "headphones": false,
+  "backpack": false
+ },
+ "voice": {
+  "draft": "girl",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.9,
+  "energy": 0.9,
+  "shy": 0.0
+ },
+ "relations": {
+  "lea": "cousine"
+ },
+ "notes": "Cousine de Léa, énergique, toujours en t-shirt jaune."
+}

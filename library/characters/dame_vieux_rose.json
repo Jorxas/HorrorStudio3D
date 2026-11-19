@@ -1,0 +1,43 @@
+{
+ "id": "dame_vieux_rose",
+ "name": "Dame vieux rose",
+ "look": {
+  "skin": [
+   196,
+   140,
+   104
+  ],
+  "hair": [
+   52,
+   32,
+   22
+  ],
+  "hair_style": "bun",
+  "headphones": false,
+  "backpack": false,
+  "outfit": "dress",
+  "hood": [
+   196,
+   128,
+   140
+  ],
+  "jeans": [
+   196,
+   128,
+   140
+  ],
+  "costume": "dame_vieux_rose"
+ },
+ "voice": {
+  "draft": "woman",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.6,
+  "energy": 0.7,
+  "shy": 0.1
+ },
+ "relations": {},
+ "group": "bal_xviiie",
+ "notes": "Ensemble du bal XVIIIe : robe à paniers, manches au coude, chignon relevé, flûte de champagne (main droite). Tête peinte en pixels façon skin (face_skin) : sourcils, yeux, lèvres et barbe peints, yeux, sourcils et bouche animés."
+}

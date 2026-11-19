@@ -1,0 +1,25 @@
+# SCRIPT DE L'HISTOIRE — remplace tout ce texte d'exemple par le script du propriétaire.
+# Une phrase = une ligne de texte (un paragraphe). Laisse une ligne vide entre deux phrases.
+# Les lignes qui commencent par « # » ne sont JAMAIS lues ni facturées.
+# « # rythme NOM VITESSE » : une nouvelle partie de voix, générée à cette vitesse (0.7 à 1.2).
+#     soutenu ≈ 1.06 ; urgence 1.10 à 1.15 ; révélation 0.92 à 0.96 (jamais d'accélération du son après coup).
+# « [serious] », « [whispers] », « [urgent] »… seules sur leur ligne : balises ElevenLabs, le ton des phrases suivantes.
+# « # coupe » : un Short (partie 9:16) PEUT commencer à la phrase suivante. Mets-le juste APRÈS un moment de suspense.
+
+# rythme debut 1.06
+[serious]
+Il est trois heures du matin quand la sonnette de l'immeuble retentit.
+
+Tu n'attends personne.
+
+[whispers]
+Sur l'écran de l'interphone, il n'y a que le couloir vide.
+
+# coupe
+# rythme urgence 1.12
+[urgent]
+Puis la sonnette retentit encore. Mais cette fois, elle vient de ta propre porte.
+
+# rythme revelation 0.94
+[serious]
+Et derrière la porte, quelqu'un murmure ton prénom.

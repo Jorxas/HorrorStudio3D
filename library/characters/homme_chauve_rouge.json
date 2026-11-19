@@ -1,0 +1,44 @@
+{
+ "id": "homme_chauve_rouge",
+ "name": "Danseur en habit rouge",
+ "look": {
+  "skin": [
+   98,
+   62,
+   44
+  ],
+  "hair": [
+   24,
+   18,
+   16
+  ],
+  "hair_style": "bald",
+  "headphones": false,
+  "backpack": false,
+  "outfit": "coat",
+  "hood": [
+   184,
+   30,
+   36
+  ],
+  "jeans": [
+   240,
+   238,
+   232
+  ],
+  "costume": "homme_chauve_rouge",
+  "scale": 1.03
+ },
+ "voice": {
+  "draft": "man",
+  "elevenlabs_voice_id": ""
+ },
+ "personality": {
+  "expressive": 0.85,
+  "energy": 0.7,
+  "shy": 0.1
+ },
+ "relations": {},
+ "group": "bal_xviiie",
+ "notes": "Habit rouge écarlate à revers bleu nuit, culotte blanche, bottes noires, crâne rasé. Tête peinte en pixels façon skin (face_skin) : sourcils, yeux, lèvres et barbe peints, yeux, sourcils et bouche animés."
+}
