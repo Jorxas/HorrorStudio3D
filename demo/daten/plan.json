@@ -1,0 +1,1281 @@
+{
+ "Léa saute au-dessus du ravin, puis grimpe sur la corniche. Un hélicoptère rouge arrive sous l'orage.": {
+  "pixel3d": {
+   "engine": "pixel3d",
+   "needs": [
+    {
+     "kind": "action",
+     "name": "jump",
+     "terms": [
+      "saute"
+     ],
+     "status": "native",
+     "source": "acting/motion.py",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "element",
+     "name": "building",
+     "terms": [
+      "ravin"
+     ],
+     "status": "composed",
+     "source": "engines/pixel3d/compose.py",
+     "note": "",
+     "how": "élément building avec \"style\": \"rock\" (falaise praticable), sol bas (ground_y)"
+    },
+    {
+     "kind": "action",
+     "name": "climb",
+     "terms": [
+      "grimpe*"
+     ],
+     "status": "native",
+     "source": "acting/motion.py",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "element",
+     "name": "platform",
+     "terms": [
+      "corniche"
+     ],
+     "status": "composed",
+     "source": "engines/pixel3d/compose.py",
+     "note": "",
+     "how": "élément platform (y, rambarde, marquage helipad)"
+    },
+    {
+     "kind": "prop",
+     "name": "helicopter",
+     "terms": [
+      "helicoptere"
+     ],
+     "status": "native",
+     "source": "extension:helicopter",
+     "note": "",
+     "how": "objet \"mover\" (vol, vol stationnaire) ou objet du décor"
+    },
+    {
+     "kind": "weather",
+     "name": "storm",
+     "terms": [
+      "orage"
+     ],
+     "status": "native",
+     "source": "engines/pixel3d/world.py",
+     "note": "",
+     "how": ""
+    }
+   ],
+   "counts": {
+    "native": 4,
+    "composed": 2,
+    "partial": 0,
+    "missing": 0
+   },
+   "requests": [],
+   "extensions": [
+    {
+     "id": "helicopter",
+     "title": "Hélicoptère",
+     "status": "stable",
+     "loaded": true,
+     "problem": null
+    }
+   ]
+  },
+  "console": {
+   "engine": "console",
+   "needs": [
+    {
+     "kind": "action",
+     "name": "jump",
+     "terms": [
+      "saute"
+     ],
+     "status": "native",
+     "source": "acting/motion.py",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "element",
+     "name": "building",
+     "terms": [
+      "ravin"
+     ],
+     "status": "missing",
+     "source": "engines/pixel3d/compose.py",
+     "note": "existe dans pixel3d seulement",
+     "how": ""
+    },
+    {
+     "kind": "action",
+     "name": "climb",
+     "terms": [
+      "grimpe*"
+     ],
+     "status": "native",
+     "source": "acting/motion.py",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "element",
+     "name": "platform",
+     "terms": [
+      "corniche"
+     ],
+     "status": "missing",
+     "source": "engines/pixel3d/compose.py",
+     "note": "existe dans pixel3d seulement",
+     "how": ""
+    },
+    {
+     "kind": "prop",
+     "name": "helicopter",
+     "terms": [
+      "helicoptere"
+     ],
+     "status": "missing",
+     "source": "extension:helicopter",
+     "note": "existe dans pixel3d seulement",
+     "how": ""
+    },
+    {
+     "kind": "weather",
+     "name": "storm",
+     "terms": [
+      "orage"
+     ],
+     "status": "missing",
+     "source": "engines/pixel3d/world.py",
+     "note": "existe dans pixel3d seulement",
+     "how": ""
+    }
+   ],
+   "counts": {
+    "native": 2,
+    "composed": 0,
+    "partial": 0,
+    "missing": 4
+   },
+   "requests": [
+    {
+     "id": "element_building",
+     "kind": "element",
+     "name": "building",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "ravin"
+     ],
+     "context": "Léa saute au-dessus du ravin, puis grimpe sur la corniche. Un hélicoptère rouge arrive sous l'orage.",
+     "approximation": "existe dans pixel3d seulement",
+     "where": "extension library/extensions/building/ : api.element(name, builder)",
+     "contract": "builder(e, ctx) ajoute blocs, objets, niveaux praticables (ctx.walkable) et repères (compose.py)",
+     "acceptance": [
+      "une scène de test montre « building » dans un vrai rendu, dans les deux formats",
+      "rendu déterministe (deux rendus identiques)",
+      "anciens épisodes inchangés (garde de non-régression)",
+      "python -m hstudio extension test <id>, puis promote"
+     ],
+     "status": "demandée",
+     "need": "manquant"
+    },
+    {
+     "id": "element_platform",
+     "kind": "element",
+     "name": "platform",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "corniche"
+     ],
+     "context": "Léa saute au-dessus du ravin, puis grimpe sur la corniche. Un hélicoptère rouge arrive sous l'orage.",
+     "approximation": "existe dans pixel3d seulement",
+     "where": "extension library/extensions/platform/ : api.element(name, builder)",
+     "contract": "builder(e, ctx) ajoute blocs, objets, niveaux praticables (ctx.walkable) et repères (compose.py)",
+     "acceptance": [
+      "une scène de test montre « platform » dans un vrai rendu, dans les deux formats",
+      "rendu déterministe (deux rendus identiques)",
+      "anciens épisodes inchangés (garde de non-régression)",
+      "python -m hstudio extension test <id>, puis promote"
+     ],
+     "status": "demandée",
+     "need": "manquant"
+    },
+    {
+     "id": "prop_helicopter",
+     "kind": "prop",
+     "name": "helicopter",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "helicoptere"
+     ],
+     "context": "Léa saute au-dessus du ravin, puis grimpe sur la corniche. Un hélicoptère rouge arrive sous l'orage.",
+     "approximation": "existe dans pixel3d seulement",
+     "where": "extension library/extensions/helicopter/ : api.prop(name, builder, lights)",
+     "contract": "builder(p, color) -> boîtes r3d B()/C(), bas à y = 0, face avant vers -z (rot 0), moins de 80 boîtes ; animation possible avec p[\"_t\"] (temps) quand l'objet est un \"mover\"",
+     "acceptance": [
+      "une scène de test montre « helicopter » dans un vrai rendu, dans les deux formats",
+      "rendu déterministe (deux rendus identiques)",
+      "anciens épisodes inchangés (garde de non-régression)",
+      "python -m hstudio extension test <id>, puis promote"
+     ],
+     "status": "demandée",
+     "need": "manquant"
+    },
+    {
+     "id": "weather_storm",
+     "kind": "weather",
+     "name": "storm",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "orage"
+     ],
+     "context": "Léa saute au-dessus du ravin, puis grimpe sur la corniche. Un hélicoptère rouge arrive sous l'orage.",
+     "approximation": "existe dans pixel3d seulement",
+     "where": "engines/pixel3d/world.py weather() (cœur)",
+     "contract": "modification du cœur : garder les anciens épisodes identiques (tools/regress.py, tools/regress_v2.py)",
+     "acceptance": [
+      "une scène de test montre « storm » dans un vrai rendu, dans les deux formats",
+      "rendu déterministe (deux rendus identiques)",
+      "anciens épisodes inchangés (garde de non-régression)",
+      "python -m hstudio extension test <id>, puis promote"
+     ],
+     "status": "demandée",
+     "need": "manquant"
+    }
+   ],
+   "extensions": [
+    {
+     "id": "helicopter",
+     "title": "Hélicoptère",
+     "status": "stable",
+     "loaded": true,
+     "problem": null
+    }
+   ]
+  }
+ },
+ "Un requin géant nage dans une ville sous-marine.": {
+  "pixel3d": {
+   "engine": "pixel3d",
+   "needs": [
+    {
+     "kind": "creature",
+     "name": "shark",
+     "terms": [
+      "requin"
+     ],
+     "status": "missing",
+     "source": "",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "feature",
+     "name": "scale",
+     "terms": [
+      "geant"
+     ],
+     "status": "native",
+     "source": "effects.py (size), creatures.py, rigfig.py (scale)",
+     "note": "",
+     "how": "\"size\" d'un mover ou d'une créature, \"scale\" d'un personnage"
+    },
+    {
+     "kind": "action",
+     "name": "swim",
+     "terms": [
+      "nage"
+     ],
+     "status": "missing",
+     "source": "",
+     "note": "aucune nage (pas d'eau praticable)",
+     "how": ""
+    },
+    {
+     "kind": "place",
+     "name": "underwater",
+     "terms": [
+      "ville sous-marine"
+     ],
+     "status": "missing",
+     "source": "",
+     "note": "aucun milieu sous-marin (pas de rendu dans l'eau, pas de nage)",
+     "how": ""
+    }
+   ],
+   "counts": {
+    "native": 1,
+    "composed": 0,
+    "partial": 0,
+    "missing": 3
+   },
+   "requests": [
+    {
+     "id": "creature_shark",
+     "kind": "creature",
+     "name": "shark",
+     "engines": [
+      "pixel3d"
+     ],
+     "asked_by": [
+      "requin"
+     ],
+     "context": "Un requin géant nage dans une ville sous-marine.",
+     "approximation": "",
+     "where": "extension library/extensions/shark/ : api.creature(name, builder)",
+     "contract": "builder(color, swing, t, k, posture) -> boîtes face à +z, pieds à y = 0 ; posture \"fly\" pour le vol",
+     "acceptance": [
+      "une scène de test montre « shark » dans un vrai rendu, dans les deux formats",
+      "rendu déterministe (deux rendus identiques)",
+      "anciens épisodes inchangés (garde de non-régression)",
+      "python -m hstudio extension test <id>, puis promote"
+     ],
+     "status": "demandée",
+     "need": "manquant"
+    },
+    {
+     "id": "action_swim",
+     "kind": "action",
+     "name": "swim",
+     "engines": [
+      "pixel3d"
+     ],
+     "asked_by": [
+      "nage"
+     ],
+     "context": "Un requin géant nage dans une ville sous-marine.",
+     "approximation": "aucune nage (pas d'eau praticable)",
+     "where": "extension library/extensions/swim/ : api.verb(name, fn)",
+     "contract": "fn(shot, track, action, t0) -> t1 : chemins (shot.walk), segments en l'air (track.airs), flexions (track.squats), mains (track.reaches), événements sonores (track.events) ; partagé par PIXEL 3D et CONSOLE (acting/motion.py en exemple)",
+     "acceptance": [
+      "une scène de test montre « swim » dans un vrai rendu, dans les deux formats",
+      "rendu déterministe (deux rendus identiques)",
+      "anciens épisodes inchangés (garde de non-régression)",
+      "python -m hstudio extension test <id>, puis promote"
+     ],
+     "status": "demandée",
+     "need": "manquant"
+    },
+    {
+     "id": "place_underwater",
+     "kind": "place",
+     "name": "underwater",
+     "engines": [
+      "pixel3d"
+     ],
+     "asked_by": [
+      "ville sous-marine"
+     ],
+     "context": "Un requin géant nage dans une ville sous-marine.",
+     "approximation": "aucun milieu sous-marin (pas de rendu dans l'eau, pas de nage)",
+     "where": "extension library/extensions/underwater/ : api.place(name, generator, ambience)",
+     "contract": "generator(spec) -> spec RoomSet (places.py en exemple) ; ou un décor \"composed\" sans code",
+     "acceptance": [
+      "une scène de test montre « underwater » dans un vrai rendu, dans les deux formats",
+      "rendu déterministe (deux rendus identiques)",
+      "anciens épisodes inchangés (garde de non-régression)",
+      "python -m hstudio extension test <id>, puis promote"
+     ],
+     "status": "demandée",
+     "need": "manquant"
+    }
+   ],
+   "extensions": [
+    {
+     "id": "helicopter",
+     "title": "Hélicoptère",
+     "status": "stable",
+     "loaded": true,
+     "problem": null
+    }
+   ]
+  },
+  "console": {
+   "engine": "console",
+   "needs": [
+    {
+     "kind": "creature",
+     "name": "shark",
+     "terms": [
+      "requin"
+     ],
+     "status": "missing",
+     "source": "",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "feature",
+     "name": "scale",
+     "terms": [
+      "geant"
+     ],
+     "status": "missing",
+     "source": "effects.py (size), creatures.py, rigfig.py (scale)",
+     "note": "existe dans pixel3d seulement",
+     "how": ""
+    },
+    {
+     "kind": "action",
+     "name": "swim",
+     "terms": [
+      "nage"
+     ],
+     "status": "missing",
+     "source": "",
+     "note": "aucune nage (pas d'eau praticable)",
+     "how": ""
+    },
+    {
+     "kind": "place",
+     "name": "underwater",
+     "terms": [
+      "ville sous-marine"
+     ],
+     "status": "missing",
+     "source": "",
+     "note": "aucun milieu sous-marin (pas de rendu dans l'eau, pas de nage)",
+     "how": ""
+    }
+   ],
+   "counts": {
+    "native": 0,
+    "composed": 0,
+    "partial": 0,
+    "missing": 4
+   },
+   "requests": [
+    {
+     "id": "creature_shark",
+     "kind": "creature",
+     "name": "shark",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "requin"
+     ],
+     "context": "Un requin géant nage dans une ville sous-marine.",
+     "approximation": "",
+     "where": "extension library/extensions/shark/ : api.creature(name, builder)",
+     "contract": "builder(color, swing, t, k, posture) -> boîtes face à +z, pieds à y = 0 ; posture \"fly\" pour le vol",
+     "acceptance": [
+      "une scène de test montre « shark » dans un vrai rendu, dans les deux formats",
+      "rendu déterministe (deux rendus identiques)",
+      "anciens épisodes inchangés (garde de non-régression)",
+      "python -m hstudio extension test <id>, puis promote"
+     ],
+     "status": "demandée",
+     "need": "manquant"
+    },
+    {
+     "id": "feature_scale",
+     "kind": "feature",
+     "name": "scale",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "geant"
+     ],
+     "context": "Un requin géant nage dans une ville sous-marine.",
+     "approximation": "existe dans pixel3d seulement",
+     "where": "cœur du moteur",
+     "contract": "modification du cœur : garder les anciens épisodes identiques (tools/regress.py, tools/regress_v2.py)",
+     "acceptance": [
+      "une scène de test montre « scale » dans un vrai rendu, dans les deux formats",
+      "rendu déterministe (deux rendus identiques)",
+      "anciens épisodes inchangés (garde de non-régression)",
+      "python -m hstudio extension test <id>, puis promote"
+     ],
+     "status": "demandée",
+     "need": "manquant"
+    },
+    {
+     "id": "action_swim",
+     "kind": "action",
+     "name": "swim",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "nage"
+     ],
+     "context": "Un requin géant nage dans une ville sous-marine.",
+     "approximation": "aucune nage (pas d'eau praticable)",
+     "where": "extension library/extensions/swim/ : api.verb(name, fn)",
+     "contract": "fn(shot, track, action, t0) -> t1 : chemins (shot.walk), segments en l'air (track.airs), flexions (track.squats), mains (track.reaches), événements sonores (track.events) ; partagé par PIXEL 3D et CONSOLE (acting/motion.py en exemple)",
+     "acceptance": [
+      "une scène de test montre « swim » dans un vrai rendu, dans les deux formats",
+      "rendu déterministe (deux rendus identiques)",
+      "anciens épisodes inchangés (garde de non-régression)",
+      "python -m hstudio extension test <id>, puis promote"
+     ],
+     "status": "demandée",
+     "need": "manquant"
+    },
+    {
+     "id": "place_underwater",
+     "kind": "place",
+     "name": "underwater",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "ville sous-marine"
+     ],
+     "context": "Un requin géant nage dans une ville sous-marine.",
+     "approximation": "aucun milieu sous-marin (pas de rendu dans l'eau, pas de nage)",
+     "where": "extension library/extensions/underwater/ : api.place(name, generator, ambience)",
+     "contract": "generator(spec) -> spec RoomSet (places.py en exemple) ; ou un décor \"composed\" sans code",
+     "acceptance": [
+      "une scène de test montre « underwater » dans un vrai rendu, dans les deux formats",
+      "rendu déterministe (deux rendus identiques)",
+      "anciens épisodes inchangés (garde de non-régression)",
+      "python -m hstudio extension test <id>, puis promote"
+     ],
+     "status": "demandée",
+     "need": "manquant"
+    }
+   ],
+   "extensions": [
+    {
+     "id": "helicopter",
+     "title": "Hélicoptère",
+     "status": "stable",
+     "loaded": true,
+     "problem": null
+    }
+   ]
+  }
+ },
+ "Il y a quelqu'un... ?\n\nMaman ?\n\nNon... non...": {
+  "pixel3d": {
+   "engine": "pixel3d",
+   "needs": [],
+   "counts": {
+    "native": 0,
+    "composed": 0,
+    "partial": 0,
+    "missing": 0
+   },
+   "requests": [],
+   "extensions": [
+    {
+     "id": "helicopter",
+     "title": "Hélicoptère",
+     "status": "stable",
+     "loaded": true,
+     "problem": null
+    }
+   ]
+  },
+  "console": {
+   "engine": "console",
+   "needs": [],
+   "counts": {
+    "native": 0,
+    "composed": 0,
+    "partial": 0,
+    "missing": 0
+   },
+   "requests": [],
+   "extensions": [
+    {
+     "id": "helicopter",
+     "title": "Hélicoptère",
+     "status": "stable",
+     "loaded": true,
+     "problem": null
+    }
+   ]
+  }
+ },
+ "Léa rentre chez elle.\nSur la table... une clé qu'elle n'a jamais vue.\nElle s'assoit, la clé à la main.\nQui a bien pu la laisser là ?": {
+  "pixel3d": {
+   "engine": "pixel3d",
+   "needs": [
+    {
+     "kind": "action",
+     "name": "sit",
+     "terms": [
+      "s'assoit"
+     ],
+     "status": "native",
+     "source": "acting/timeline.py",
+     "note": "",
+     "how": ""
+    }
+   ],
+   "counts": {
+    "native": 1,
+    "composed": 0,
+    "partial": 0,
+    "missing": 0
+   },
+   "requests": [],
+   "extensions": [
+    {
+     "id": "helicopter",
+     "title": "Hélicoptère",
+     "status": "stable",
+     "loaded": true,
+     "problem": null
+    }
+   ]
+  },
+  "console": {
+   "engine": "console",
+   "needs": [
+    {
+     "kind": "action",
+     "name": "sit",
+     "terms": [
+      "s'assoit"
+     ],
+     "status": "native",
+     "source": "acting/timeline.py",
+     "note": "",
+     "how": ""
+    }
+   ],
+   "counts": {
+    "native": 1,
+    "composed": 0,
+    "partial": 0,
+    "missing": 0
+   },
+   "requests": [],
+   "extensions": [
+    {
+     "id": "helicopter",
+     "title": "Hélicoptère",
+     "status": "stable",
+     "loaded": true,
+     "problem": null
+    }
+   ]
+  }
+ },
+ "Trois heures du matin. Encore un niveau, et je dors.\nBienvenue au niveau sept, Noah.\nAttends... Comment il connaît mon prénom ?\nPrends la clé. Ouvre la porte.\nLa porte de ma chambre... Elle vient de s'ouvrir.\nQuelqu'un arrive. Ne mets pas pause.\nIl y a quelqu'un derrière la porte !\nTu as perdu un cœur.\nJe mets pause... ou pas ?": {
+  "pixel3d": {
+   "engine": "pixel3d",
+   "needs": [
+    {
+     "kind": "action",
+     "name": "open",
+     "terms": [
+      "ouvre"
+     ],
+     "status": "native",
+     "source": "acting/timeline.py",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "place",
+     "name": "bedroom",
+     "terms": [
+      "chambre"
+     ],
+     "status": "native",
+     "source": "engines/pixel3d/places.py",
+     "note": "",
+     "how": ""
+    }
+   ],
+   "counts": {
+    "native": 2,
+    "composed": 0,
+    "partial": 0,
+    "missing": 0
+   },
+   "requests": [],
+   "extensions": [
+    {
+     "id": "helicopter",
+     "title": "Hélicoptère",
+     "status": "stable",
+     "loaded": true,
+     "problem": null
+    }
+   ]
+  },
+  "console": {
+   "engine": "console",
+   "needs": [
+    {
+     "kind": "action",
+     "name": "open",
+     "terms": [
+      "ouvre"
+     ],
+     "status": "native",
+     "source": "acting/timeline.py",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "place",
+     "name": "bedroom",
+     "terms": [
+      "chambre"
+     ],
+     "status": "native",
+     "source": "engines/pixel3d/places.py",
+     "note": "",
+     "how": ""
+    }
+   ],
+   "counts": {
+    "native": 2,
+    "composed": 0,
+    "partial": 0,
+    "missing": 0
+   },
+   "requests": [],
+   "extensions": [
+    {
+     "id": "helicopter",
+     "title": "Hélicoptère",
+     "status": "stable",
+     "loaded": true,
+     "problem": null
+    }
+   ]
+  }
+ },
+ "Un requin géant nage dans une ville sous-marine.\nLéa saute au-dessus du ravin, puis grimpe sur la corniche.\nUn hélicoptère rouge arrive sous l'orage.": {
+  "pixel3d": {
+   "engine": "pixel3d",
+   "needs": [
+    {
+     "kind": "creature",
+     "name": "shark",
+     "terms": [
+      "requin"
+     ],
+     "status": "missing",
+     "source": "",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "feature",
+     "name": "scale",
+     "terms": [
+      "geant"
+     ],
+     "status": "native",
+     "source": "effects.py (size), creatures.py, rigfig.py (scale)",
+     "note": "",
+     "how": "\"size\" d'un mover ou d'une créature, \"scale\" d'un personnage"
+    },
+    {
+     "kind": "action",
+     "name": "swim",
+     "terms": [
+      "nage"
+     ],
+     "status": "missing",
+     "source": "",
+     "note": "aucune nage (pas d'eau praticable)",
+     "how": ""
+    },
+    {
+     "kind": "place",
+     "name": "underwater",
+     "terms": [
+      "ville sous-marine"
+     ],
+     "status": "missing",
+     "source": "",
+     "note": "aucun milieu sous-marin (pas de rendu dans l'eau, pas de nage)",
+     "how": ""
+    },
+    {
+     "kind": "action",
+     "name": "jump",
+     "terms": [
+      "saute"
+     ],
+     "status": "native",
+     "source": "acting/motion.py",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "element",
+     "name": "building",
+     "terms": [
+      "ravin"
+     ],
+     "status": "composed",
+     "source": "engines/pixel3d/compose.py",
+     "note": "",
+     "how": "élément building avec \"style\": \"rock\" (falaise praticable), sol bas (ground_y)"
+    },
+    {
+     "kind": "action",
+     "name": "climb",
+     "terms": [
+      "grimpe*"
+     ],
+     "status": "native",
+     "source": "acting/motion.py",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "element",
+     "name": "platform",
+     "terms": [
+      "corniche"
+     ],
+     "status": "composed",
+     "source": "engines/pixel3d/compose.py",
+     "note": "",
+     "how": "élément platform (y, rambarde, marquage helipad)"
+    },
+    {
+     "kind": "prop",
+     "name": "helicopter",
+     "terms": [
+      "helicoptere"
+     ],
+     "status": "native",
+     "source": "extension:helicopter",
+     "note": "",
+     "how": "objet \"mover\" (vol, vol stationnaire) ou objet du décor"
+    },
+    {
+     "kind": "weather",
+     "name": "storm",
+     "terms": [
+      "orage"
+     ],
+     "status": "native",
+     "source": "engines/pixel3d/world.py",
+     "note": "",
+     "how": ""
+    }
+   ],
+   "counts": {
+    "native": 5,
+    "composed": 2,
+    "partial": 0,
+    "missing": 3
+   },
+   "requests": [
+    {
+     "id": "creature_shark",
+     "kind": "creature",
+     "name": "shark",
+     "engines": [
+      "pixel3d"
+     ],
+     "asked_by": [
+      "requin"
+     ],
+     "context": "Un requin géant nage dans une ville sous-marine.\nLéa saute au-dessus du ravin, puis grimpe sur la corniche.\nUn hélicoptère rouge arrive sous l'orage.",
+     "approximation": "",
+     "where": "extension library/extensions/shark/ : api.creature(name, builder)",
+     "contract": "builder(color, swing, t, k, posture) -> boîtes face à +z, pieds à y = 0 ; posture \"fly\" pour le vol",
+     "acceptance": [
+      "une scène de test montre « shark » dans un vrai rendu, dans les deux formats",
+      "rendu déterministe (deux rendus identiques)",
+      "anciens épisodes inchangés (garde de non-régression)",
+      "python -m hstudio extension test <id>, puis promote"
+     ],
+     "status": "demandée",
+     "need": "manquant"
+    },
+    {
+     "id": "action_swim",
+     "kind": "action",
+     "name": "swim",
+     "engines": [
+      "pixel3d"
+     ],
+     "asked_by": [
+      "nage"
+     ],
+     "context": "Un requin géant nage dans une ville sous-marine.\nLéa saute au-dessus du ravin, puis grimpe sur la corniche.\nUn hélicoptère rouge arrive sous l'orage.",
+     "approximation": "aucune nage (pas d'eau praticable)",
+     "where": "extension library/extensions/swim/ : api.verb(name, fn)",
+     "contract": "fn(shot, track, action, t0) -> t1 : chemins (shot.walk), segments en l'air (track.airs), flexions (track.squats), mains (track.reaches), événements sonores (track.events) ; partagé par PIXEL 3D et CONSOLE (acting/motion.py en exemple)",
+     "acceptance": [
+      "une scène de test montre « swim » dans un vrai rendu, dans les deux formats",
+      "rendu déterministe (deux rendus identiques)",
+      "anciens épisodes inchangés (garde de non-régression)",
+      "python -m hstudio extension test <id>, puis promote"
+     ],
+     "status": "demandée",
+     "need": "manquant"
+    },
+    {
+     "id": "place_underwater",
+     "kind": "place",
+     "name": "underwater",
+     "engines": [
+      "pixel3d"
+     ],
+     "asked_by": [
+      "ville sous-marine"
+     ],
+     "context": "Un requin géant nage dans une ville sous-marine.\nLéa saute au-dessus du ravin, puis grimpe sur la corniche.\nUn hélicoptère rouge arrive sous l'orage.",
+     "approximation": "aucun milieu sous-marin (pas de rendu dans l'eau, pas de nage)",
+     "where": "extension library/extensions/underwater/ : api.place(name, generator, ambience)",
+     "contract": "generator(spec) -> spec RoomSet (places.py en exemple) ; ou un décor \"composed\" sans code",
+     "acceptance": [
+      "une scène de test montre « underwater » dans un vrai rendu, dans les deux formats",
+      "rendu déterministe (deux rendus identiques)",
+      "anciens épisodes inchangés (garde de non-régression)",
+      "python -m hstudio extension test <id>, puis promote"
+     ],
+     "status": "demandée",
+     "need": "manquant"
+    }
+   ],
+   "extensions": [
+    {
+     "id": "helicopter",
+     "title": "Hélicoptère",
+     "status": "stable",
+     "loaded": true,
+     "problem": null
+    }
+   ]
+  },
+  "console": {
+   "engine": "console",
+   "needs": [
+    {
+     "kind": "creature",
+     "name": "shark",
+     "terms": [
+      "requin"
+     ],
+     "status": "missing",
+     "source": "",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "feature",
+     "name": "scale",
+     "terms": [
+      "geant"
+     ],
+     "status": "missing",
+     "source": "effects.py (size), creatures.py, rigfig.py (scale)",
+     "note": "existe dans pixel3d seulement",
+     "how": ""
+    },
+    {
+     "kind": "action",
+     "name": "swim",
+     "terms": [
+      "nage"
+     ],
+     "status": "missing",
+     "source": "",
+     "note": "aucune nage (pas d'eau praticable)",
+     "how": ""
+    },
+    {
+     "kind": "place",
+     "name": "underwater",
+     "terms": [
+      "ville sous-marine"
+     ],
+     "status": "missing",
+     "source": "",
+     "note": "aucun milieu sous-marin (pas de rendu dans l'eau, pas de nage)",
+     "how": ""
+    },
+    {
+     "kind": "action",
+     "name": "jump",
+     "terms": [
+      "saute"
+     ],
+     "status": "native",
+     "source": "acting/motion.py",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "element",
+     "name": "building",
+     "terms": [
+      "ravin"
+     ],
+     "status": "missing",
+     "source": "engines/pixel3d/compose.py",
+     "note": "existe dans pixel3d seulement",
+     "how": ""
+    },
+    {
+     "kind": "action",
+     "name": "climb",
+     "terms": [
+      "grimpe*"
+     ],
+     "status": "native",
+     "source": "acting/motion.py",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "element",
+     "name": "platform",
+     "terms": [
+      "corniche"
+     ],
+     "status": "missing",
+     "source": "engines/pixel3d/compose.py",
+     "note": "existe dans pixel3d seulement",
+     "how": ""
+    },
+    {
+     "kind": "prop",
+     "name": "helicopter",
+     "terms": [
+      "helicoptere"
+     ],
+     "status": "missing",
+     "source": "extension:helicopter",
+     "note": "existe dans pixel3d seulement",
+     "how": ""
+    },
+    {
+     "kind": "weather",
+     "name": "storm",
+     "terms": [
+      "orage"
+     ],
+     "status": "missing",
+     "source": "engines/pixel3d/world.py",
+     "note": "existe dans pixel3d seulement",
+     "how": ""
+    }
+   ],
+   "counts": {
+    "native": 2,
+    "composed": 0,
+    "partial": 0,
+    "missing": 8
+   },
+   "requests": [
+    {
+     "id": "creature_shark",
+     "kind": "creature",
+     "name": "shark",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "requin"
+     ],
+     "context": "Un requin géant nage dans une ville sous-marine.\nLéa saute au-dessus du ravin, puis grimpe sur la corniche.\nUn hélicoptère rouge arrive sous l'orage.",
+     "approximation": "",
+     "where": "extension library/extensions/shark/ : api.creature(name, builder)",
+     "contract": "builder(color, swing, t, k, posture) -> boîtes face à +z, pieds à y = 0 ; posture \"fly\" pour le vol",
+     "acceptance": [
+      "une scène de test montre « shark » dans un vrai rendu, dans les deux formats",
+      "rendu déterministe (deux rendus identiques)",
+      "anciens épisodes inchangés (garde de non-régression)",
+      "python -m hstudio extension test <id>, puis promote"
+     ],
+     "status": "demandée",
+     "need": "manquant"
+    },
+    {
+     "id": "feature_scale",
+     "kind": "feature",
+     "name": "scale",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "geant"
+     ],
+     "context": "Un requin géant nage dans une ville sous-marine.\nLéa saute au-dessus du ravin, puis grimpe sur la corniche.\nUn hélicoptère rouge arrive sous l'orage.",
+     "approximation": "existe dans pixel3d seulement",
+     "where": "cœur du moteur",
+     "contract": "modification du cœur : garder les anciens épisodes identiques (tools/regress.py, tools/regress_v2.py)",
+     "acceptance": [
+      "une scène de test montre « scale » dans un vrai rendu, dans les deux formats",
+      "rendu déterministe (deux rendus identiques)",
+      "anciens épisodes inchangés (garde de non-régression)",
+      "python -m hstudio extension test <id>, puis promote"
+     ],
+     "status": "demandée",
+     "need": "manquant"
+    },
+    {
+     "id": "action_swim",
+     "kind": "action",
+     "name": "swim",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "nage"
+     ],
+     "context": "Un requin géant nage dans une ville sous-marine.\nLéa saute au-dessus du ravin, puis grimpe sur la corniche.\nUn hélicoptère rouge arrive sous l'orage.",
+     "approximation": "aucune nage (pas d'eau praticable)",
+     "where": "extension library/extensions/swim/ : api.verb(name, fn)",
+     "contract": "fn(shot, track, action, t0) -> t1 : chemins (shot.walk), segments en l'air (track.airs), flexions (track.squats), mains (track.reaches), événements sonores (track.events) ; partagé par PIXEL 3D et CONSOLE (acting/motion.py en exemple)",
+     "acceptance": [
+      "une scène de test montre « swim » dans un vrai rendu, dans les deux formats",
+      "rendu déterministe (deux rendus identiques)",
+      "anciens épisodes inchangés (garde de non-régression)",
+      "python -m hstudio extension test <id>, puis promote"
+     ],
+     "status": "demandée",
+     "need": "manquant"
+    },
+    {
+     "id": "place_underwater",
+     "kind": "place",
+     "name": "underwater",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "ville sous-marine"
+     ],
+     "context": "Un requin géant nage dans une ville sous-marine.\nLéa saute au-dessus du ravin, puis grimpe sur la corniche.\nUn hélicoptère rouge arrive sous l'orage.",
+     "approximation": "aucun milieu sous-marin (pas de rendu dans l'eau, pas de nage)",
+     "where": "extension library/extensions/underwater/ : api.place(name, generator, ambience)",
+     "contract": "generator(spec) -> spec RoomSet (places.py en exemple) ; ou un décor \"composed\" sans code",
+     "acceptance": [
+      "une scène de test montre « underwater » dans un vrai rendu, dans les deux formats",
+      "rendu déterministe (deux rendus identiques)",
+      "anciens épisodes inchangés (garde de non-régression)",
+      "python -m hstudio extension test <id>, puis promote"
+     ],
+     "status": "demandée",
+     "need": "manquant"
+    },
+    {
+     "id": "element_building",
+     "kind": "element",
+     "name": "building",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "ravin"
+     ],
+     "context": "Un requin géant nage dans une ville sous-marine.\nLéa saute au-dessus du ravin, puis grimpe sur la corniche.\nUn hélicoptère rouge arrive sous l'orage.",
+     "approximation": "existe dans pixel3d seulement",
+     "where": "extension library/extensions/building/ : api.element(name, builder)",
+     "contract": "builder(e, ctx) ajoute blocs, objets, niveaux praticables (ctx.walkable) et repères (compose.py)",
+     "acceptance": [
+      "une scène de test montre « building » dans un vrai rendu, dans les deux formats",
+      "rendu déterministe (deux rendus identiques)",
+      "anciens épisodes inchangés (garde de non-régression)",
+      "python -m hstudio extension test <id>, puis promote"
+     ],
+     "status": "demandée",
+     "need": "manquant"
+    },
+    {
+     "id": "element_platform",
+     "kind": "element",
+     "name": "platform",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "corniche"
+     ],
+     "context": "Un requin géant nage dans une ville sous-marine.\nLéa saute au-dessus du ravin, puis grimpe sur la corniche.\nUn hélicoptère rouge arrive sous l'orage.",
+     "approximation": "existe dans pixel3d seulement",
+     "where": "extension library/extensions/platform/ : api.element(name, builder)",
+     "contract": "builder(e, ctx) ajoute blocs, objets, niveaux praticables (ctx.walkable) et repères (compose.py)",
+     "acceptance": [
+      "une scène de test montre « platform » dans un vrai rendu, dans les deux formats",
+      "rendu déterministe (deux rendus identiques)",
+      "anciens épisodes inchangés (garde de non-régression)",
+      "python -m hstudio extension test <id>, puis promote"
+     ],
+     "status": "demandée",
+     "need": "manquant"
+    },
+    {
+     "id": "prop_helicopter",
+     "kind": "prop",
+     "name": "helicopter",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "helicoptere"
+     ],
+     "context": "Un requin géant nage dans une ville sous-marine.\nLéa saute au-dessus du ravin, puis grimpe sur la corniche.\nUn hélicoptère rouge arrive sous l'orage.",
+     "approximation": "existe dans pixel3d seulement",
+     "where": "extension library/extensions/helicopter/ : api.prop(name, builder, lights)",
+     "contract": "builder(p, color) -> boîtes r3d B()/C(), bas à y = 0, face avant vers -z (rot 0), moins de 80 boîtes ; animation possible avec p[\"_t\"] (temps) quand l'objet est un \"mover\"",
+     "acceptance": [
+      "une scène de test montre « helicopter » dans un vrai rendu, dans les deux formats",
+      "rendu déterministe (deux rendus identiques)",
+      "anciens épisodes inchangés (garde de non-régression)",
+      "python -m hstudio extension test <id>, puis promote"
+     ],
+     "status": "demandée",
+     "need": "manquant"
+    },
+    {
+     "id": "weather_storm",
+     "kind": "weather",
+     "name": "storm",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "orage"
+     ],
+     "context": "Un requin géant nage dans une ville sous-marine.\nLéa saute au-dessus du ravin, puis grimpe sur la corniche.\nUn hélicoptère rouge arrive sous l'orage.",
+     "approximation": "existe dans pixel3d seulement",
+     "where": "engines/pixel3d/world.py weather() (cœur)",
+     "contract": "modification du cœur : garder les anciens épisodes identiques (tools/regress.py, tools/regress_v2.py)",
+     "acceptance": [
+      "une scène de test montre « storm » dans un vrai rendu, dans les deux formats",
+      "rendu déterministe (deux rendus identiques)",
+      "anciens épisodes inchangés (garde de non-régression)",
+      "python -m hstudio extension test <id>, puis promote"
+     ],
+     "status": "demandée",
+     "need": "manquant"
+    }
+   ],
+   "extensions": [
+    {
+     "id": "helicopter",
+     "title": "Hélicoptère",
+     "status": "stable",
+     "loaded": true,
+     "problem": null
+    }
+   ]
+  }
+ }
+}

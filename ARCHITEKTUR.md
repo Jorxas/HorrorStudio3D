@@ -4,7 +4,7 @@ Ein lokales Studio verbindet Szenenbeschreibung, Figuren, Kamera, zwei Bildricht
 
 ## Verantwortungsgrenzen
 
-Die lokale Anwendung enthält den eigentlichen Dienst beziehungsweise Motor. Die öffentliche Browser-Demo erklärt einen begrenzten Ablauf. Ihre Daten stammen nicht aus einer produktiven Installation.
+Die lokale Anwendung enthält den eigentlichen Dienst beziehungsweise Motor. Die öffentliche Browser-Demo führt dieselbe Oberfläche (`hstudio/web/static`) aus, ersetzt aber den Python-Server durch `demo/demo-start.js`, das die API-Aufrufe aus vorab mit dem echten Motor erzeugten Dateien beantwortet (`tools/demo_export.py`, `tools/demo-bauen.mjs`). Ihre Daten stammen nicht aus einer produktiven Installation.
 
 ## Prüfbarkeit
 
