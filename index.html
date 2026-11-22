@@ -1,1 +1,497 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Ein eigener lokaler Studiomotor für prozedurale Figuren, Räume und Erzählungen. Szenenbeschreibungen verbinden Darsteller, Bildsprache, Ton und technische Qualitätskontrollen."><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; frame-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'"><meta name="referrer" content="no-referrer"><title>Horror Studio 3D · Projekt & Demo · Jordan Freddy</title><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="stil.css"><script src="demo.js" defer></script></head><body data-projekt="HorrorStudio3D"><a class="sprung" href="#demo">Zur Demo springen</a><header class="kopf"><div class="rahmen"><a class="marke" href="#"><span class="symbol">3D</span>Horror Studio 3D</a><nav aria-label="Projekt"><a href="#vorgehen">Vorgehen</a><a href="https://jorxas.github.io/Portfolio/projects/">Portfolio</a><a class="code" href="https://github.com/Jorxas/HorrorStudio3D">Code auf GitHub</a></nav></div></header><main><div class="rahmen"><section class="einleitung bereit"><p class="rubrik">Grafik · prozedurale Erzählwelten</p><h1>Eine Geschichte wird Szene, Kamera und Bewegung.</h1><p class="text">Ein eigener lokaler Studiomotor für prozedurale Figuren, Räume und Erzählungen. Szenenbeschreibungen verbinden Darsteller, Bildsprache, Ton und technische Qualitätskontrollen.</p><div class="techniken"><span>Python</span><span>NumPy</span><span>Three.js</span><span>FFmpeg</span></div><div class="aktionen"><a href="#demo" class="knopf primaer">Demo ausprobieren</a><a href="https://github.com/Jorxas/HorrorStudio3D" class="knopf">Quellcode ansehen</a></div></section><div class="ablaufstreifen"><span><i class="punkt" aria-hidden="true"></i>Szene beschreiben</span><span><i class="punkt" aria-hidden="true"></i>Bild komponieren</span><span><i class="punkt" aria-hidden="true"></i>Ergebnis prüfen</span></div><section class="abschnitt" id="demo"><div class="abschnittskopf"><div><p class="rubrik">Das Projekt erleben</p><h2>Bilder aus dem echten Motor</h2><p>Die folgenden Bilder wurden mit dem mitgelieferten Python-Motor aus synthetischen Beispielszenen erzeugt. Szene und Zeitpunkt sind wählbar. Der Browser zeigt gespeicherte Motorbilder; ein neuer Renderauftrag wird nicht ausgeführt.</p></div><span class="etikett">Echte Motorbilder</span></div><div class="hinweis" role="note"><strong>Öffentliche Demo.</strong> Dies ist ein Bild- und Ablaufbetrachter. Videoexport, Sprachdienste und GPU-Rendering laufen lokal. Private Geschichten, Produktionen, Stimmen und externe Ressourcen sind nicht enthalten.</div><div class="demofenster"><div class="fensterkopf"><b>Horror Studio 3D / interaktiver Einblick</b><span>Keine produktiven Konten verbunden</span></div><div class="bildbuehne"><img id="motorbild" src="bilder/demo1_mouvement-0.png" width="768" height="432" alt="Gespeichertes Bild aus dem echten PIXEL-3D-Motor"></div><div class="studiowerkzeug"><div><label for="szene">Beispielszene</label><select id="szene"><option value="demo1_mouvement">PIXEL 3D · Bewegung</option><option value="demo4_tension">PIXEL 3D · Spannung</option><option value="demo5_console">CONSOLE · Zimmer und Bildschirm</option></select></div><div><label for="zeit">Zeitpunkt im vorberechneten Beispiel</label><input id="zeit" type="range" min="0" max="3" value="0" step="1"></div></div><p class="bildinfo" id="bildstatus" role="status"></p><div class="ausgabe"><pre class="skript" id="dsl"></pre></div></div></section><section class="abschnitt" id="vorgehen"><p class="rubrik">Vom Problem zur Umsetzung</p><h2>Die Technik hinter dem Ablauf.</h2><div class="karten"><div class="karte"><h3>Beschreiben</h3><p>Figuren, Aktionen, Orte und Kameras werden in einer gemeinsamen Szenenstruktur beschrieben.</p></div><div class="karte"><h3>Inszenieren</h3><p>Eine gemeinsame Spiellogik bedient die Bildrichtungen PIXEL 3D und CONSOLE; Erweiterungen bleiben gezielt aktivierbar.</p></div><div class="karte"><h3>Prüfen</h3><p>Geometrie, Kontinuität und Ausgabe werden geprüft. Standbilder lassen sich ohne Sprachdienst oder Videoexport reproduzieren.</p></div></div></section><section class="abschnitt zweispaltig"><div><p class="rubrik">Im Repository nachvollziehen</p><h2>So ist der Code aufgebaut.</h2><ul class="quellliste"><li>hstudio/acting/ — Spiel und Kameraführung</li><li>hstudio/engines/ — Python-Bildmotoren</li><li>hstudio/voxelgpu/ — GPU-Übersetzung</li><li>demo/bilder_erstellen.py — reproduzierbare Demobilder</li></ul><div class="aktionen"><a class="knopf" href="https://github.com/Jorxas/HorrorStudio3D/blob/main/PRUEFUNG.md">Prüfungen und Grenzen</a></div></div><aside class="grenzen"><h3>Was dieser Einblick zeigt</h3><p>Die folgenden Bilder wurden mit dem mitgelieferten Python-Motor aus synthetischen Beispielszenen erzeugt. Szene und Zeitpunkt sind wählbar. Der Browser zeigt gespeicherte Motorbilder; ein neuer Renderauftrag wird nicht ausgeführt.</p><h3>Für die lokale Anwendung</h3><p>Dies ist ein Bild- und Ablaufbetrachter. Videoexport, Sprachdienste und GPU-Rendering laufen lokal. Private Geschichten, Produktionen, Stimmen und externe Ressourcen sind nicht enthalten.</p><a href="https://github.com/Jorxas/HorrorStudio3D/blob/main/README.md">Installation und Projektbeschreibung</a></aside></section></div></main><footer class="fuss"><div class="rahmen"><span>Horror Studio 3D · Eigenes Integrations- und Softwareprojekt von Jordan Freddy</span><a href="https://jorxas.github.io/Portfolio/">Zurück zum Portfolio</a></div></footer></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Horror Studio 3D Demo</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+:root{
+  --ink:#1c2230; --ink-2:#4a5368; --ink-3:#7b8498; --line:#e4e7ee; --paper:#f5f6fa; --card:#ffffff;
+  --brand:#4f46e5; --brand-2:#6d66f0; --brand-soft:#ecebfd; --ok:#16966a; --ok-soft:#e3f6ee; --warn:#c77d0a; --warn-soft:#fdf1dc; --bad:#d23f3f; --bad-soft:#fce8e8;
+  --radius:14px; --shadow:0 1px 2px rgba(28,34,48,.06),0 6px 20px rgba(28,34,48,.07); --shadow-lg:0 12px 40px rgba(28,34,48,.18);
+  --font:"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+}
+:root[data-theme="dark"]{ --ink:#eef0f6; --ink-2:#b4bbcd; --ink-3:#8a93a8; --line:#2a3040; --paper:#12151e; --card:#1a1f2c; --brand:#8b86ff; --brand-2:#a29eff; --brand-soft:#262a4a; --ok-soft:#173528; --warn-soft:#3a2d12; --bad-soft:#3d1c1c; --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.3); }
+*{box-sizing:border-box} html,body{height:100%} body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 var(--font);-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;cursor:pointer} input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid color-mix(in srgb,var(--brand) 55%,transparent);outline-offset:2px;border-radius:8px}
+.app{display:grid;grid-template-columns:292px 1fr;height:100vh}
+/* rail */
+.rail{background:var(--card);border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:0}
+.brand{display:flex;align-items:center;gap:10px;padding:20px 20px 8px;font-weight:700;font-size:17px;letter-spacing:-.01em}
+.logo{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,var(--brand),#9a5cf6);display:grid;place-items:center;color:#fff;font-size:16px;box-shadow:0 4px 12px rgba(79,70,229,.35)}
+.rail .new{margin:12px 16px 6px}
+.list{overflow:auto;padding:6px 10px 16px;flex:1}
+.item{display:flex;gap:12px;align-items:center;width:100%;text-align:left;border:1px solid transparent;background:none;border-radius:12px;padding:9px 10px;margin:2px 0;transition:background .15s,transform .15s}
+.item:hover{background:var(--paper)} .item.on{background:var(--brand-soft);border-color:color-mix(in srgb,var(--brand) 25%,transparent)}
+.thumb{width:40px;height:54px;border-radius:8px;background:var(--paper) center/cover;border:1px solid var(--line);flex:none}
+.item b{display:block;font-weight:600;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:190px} .item small{color:var(--ink-3)}
+.rail-foot{padding:12px 16px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;color:var(--ink-3);font-size:13px}
+/* main */
+main{overflow:auto;min-width:0}
+.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);padding:18px 32px 0;border-bottom:1px solid var(--line)}
+.title-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+h1{margin:0;font-size:24px;letter-spacing:-.02em;line-height:1.2} .sub{color:var(--ink-3);font-size:14px}
+.spacer{flex:1}
+.btn{border:1px solid var(--line);background:var(--card);border-radius:11px;padding:9px 15px;font-weight:600;transition:transform .12s,box-shadow .15s,background .15s}
+.btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)} .btn:active{transform:none}
+.btn.primary{background:var(--brand);border-color:var(--brand);color:#fff} .btn.primary:hover{background:var(--brand-2)}
+.btn.soft{background:var(--brand-soft);border-color:transparent;color:var(--brand)} .btn.soft.primary{background:var(--brand);color:#fff}
+.btn[disabled]{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+.seg{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:3px;gap:2px}
+.seg button{border:0;background:none;padding:7px 13px;border-radius:9px;font-weight:600;color:var(--ink-2)} .seg button.on{background:var(--brand);color:#fff;box-shadow:0 2px 8px rgba(79,70,229,.3)}
+.tabs{display:flex;gap:4px;margin-top:14px}
+.tab{border:0;background:none;padding:10px 14px;font-weight:600;color:var(--ink-3);border-bottom:3px solid transparent;margin-bottom:-1px} .tab.on{color:var(--brand);border-color:var(--brand)}
+.steps{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 4px}
+.step{display:flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:13px;color:var(--ink-2)}
+.step i{width:18px;height:18px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:11px;background:var(--paper);color:var(--ink-3);border:1px solid var(--line)}
+.step.done{color:var(--ink)} .step.done i{background:var(--ok);border-color:var(--ok);color:#fff}
+.step.next{border-color:var(--brand);color:var(--brand)} .step.next i{border-color:var(--brand);color:var(--brand)}
+.content{padding:26px 32px 80px;max-width:1280px;animation:rise .35s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+/* plans */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(176px,1fr));gap:18px}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);cursor:pointer;text-align:left;padding:0;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s,border-color .18s;animation:rise .4s ease both}
+.plan:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)} .plan.on{border-color:var(--brand);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 22%,transparent)}
+.shot{position:relative;aspect-ratio:9/16;background:linear-gradient(160deg,var(--paper),var(--line)) center/cover}
+.shot.wide{aspect-ratio:16/9}
+.num{position:absolute;left:10px;top:10px;background:rgba(20,24,34,.72);color:#fff;border-radius:8px;padding:2px 8px;font-size:12px;font-weight:700}
+.plan .meta{padding:10px 12px 12px;display:grid;gap:6px}
+.plan .txt{font-size:13px;color:var(--ink-2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.6em}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;background:var(--brand-soft);color:var(--brand)} .chip.gray{background:var(--paper);color:var(--ink-2);border:1px solid var(--line)} .chip.warn{background:var(--warn-soft);color:var(--warn)}
+.skeleton{position:relative;overflow:hidden} .skeleton::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 20%,rgba(255,255,255,.55) 50%,transparent 80%);transform:translateX(-100%);animation:shimmer 1.3s infinite}
+@keyframes shimmer{to{transform:translateX(100%)}}
+/* drawer */
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(460px,100vw);background:var(--card);border-left:1px solid var(--line);box-shadow:var(--shadow-lg);transform:translateX(105%);transition:transform .28s cubic-bezier(.2,.8,.2,1);z-index:20;display:flex;flex-direction:column}
+.drawer.open{transform:none}
+.drawer header{padding:16px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px} .drawer header h3{margin:0;font-size:17px}
+.drawer .body{padding:18px 20px;overflow:auto;flex:1;display:grid;gap:16px;align-content:start}
+.drawer .foot{padding:14px 20px;border-top:1px solid var(--line);display:flex;gap:10px}
+.preview{border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--paper);max-height:48vh;display:grid;place-items:center} .preview img{max-width:100%;max-height:48vh;display:block}
+label{display:grid;gap:6px;font-weight:600;font-size:13px;color:var(--ink-2)} select,input[type=text],textarea{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:9px 11px;width:100%;font-weight:400;color:var(--ink)}
+textarea{min-height:92px;resize:vertical} .hint{font-weight:400;color:var(--ink-3);font-size:13px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+/* cards / panels */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.empty{text-align:center;padding:64px 24px;color:var(--ink-2)} .empty h2{margin:12px 0 6px;font-size:21px;color:var(--ink)}
+.art{width:84px;height:84px;margin:0 auto;border-radius:24px;background:linear-gradient(135deg,var(--brand-soft),#f3e9ff);display:grid;place-items:center;font-size:38px;animation:float 3.2s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-6px)}}
+.styles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px} .styleopt{border:2px solid var(--line);border-radius:14px;padding:14px;background:var(--card);text-align:left;transition:border-color .15s,transform .15s} .styleopt:hover{transform:translateY(-2px)} .styleopt.on{border-color:var(--brand);background:var(--brand-soft)} .styleopt b{display:block}
+.progress{height:8px;border-radius:99px;background:var(--line);overflow:hidden} .progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--brand),#9a5cf6);transition:width .4s}
+.toasts{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);display:grid;gap:8px;z-index:50}
+.toast{background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:12px;box-shadow:var(--shadow-lg);animation:rise .25s ease both;font-weight:600} .toast.err{background:var(--bad)}
+video{width:100%;max-height:70vh;border-radius:12px;background:#000}
+.modal-bg{position:fixed;inset:0;background:rgba(20,24,34,.45);display:none;place-items:center;z-index:40;padding:20px} .modal-bg.open{display:grid;animation:rise .2s both}
+.clip{display:grid;gap:14px} .clip canvas{width:100%;height:120px;display:block;border-radius:10px;background:var(--paper);border:1px solid var(--line)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--ink-3)} .legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.kv{display:flex;gap:18px;flex-wrap:wrap} .kv div{font-size:13px;color:var(--ink-3)} .kv b{display:block;font-size:20px;color:var(--ink);letter-spacing:-.01em}
+audio{width:100%}
+.modal{background:var(--card);border-radius:18px;padding:24px;width:min(640px,100%);box-shadow:var(--shadow-lg);display:grid;gap:16px;max-height:92vh;overflow:auto}
+/* analyser une scène + capacités d'un projet : pastilles de statut (texte + icône, jamais la couleur seule) */
+:root{--ok-ink:#0b7a52;--warn-ink:#8a5600;--bad-ink:#b32b2b;--info-ink:#4338ca}
+:root[data-theme="dark"]{--ok-ink:#5fd9a8;--warn-ink:#f2bd55;--bad-ink:#ff9a9a;--info-ink:#b4b0ff}
+.rail .new+.new{margin-top:0}
+fieldset{border:0;margin:0;padding:0;min-width:0} legend{padding:0;margin-bottom:6px;font-weight:600;font-size:13px;color:var(--ink-2)}
+.segopt{position:relative;display:block;gap:0;font-size:inherit;color:var(--ink-2);border-radius:9px}
+.segopt input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.segopt span{display:block;padding:7px 13px;border-radius:9px;white-space:nowrap}
+.segopt input:checked+span{background:var(--brand);color:#fff;box-shadow:0 2px 8px rgba(79,70,229,.3)}
+.segopt input:focus-visible+span{outline:3px solid color-mix(in srgb,var(--brand) 55%,transparent);outline-offset:2px}
+.check{display:flex;align-items:flex-start;gap:9px;font-weight:400;font-size:13px;color:var(--ink-2);max-width:460px}
+.check input{margin:2px 0 0;width:16px;height:16px;flex:none;accent-color:var(--brand)}
+.sm{padding:5px 11px;font-size:13px;border-radius:9px}
+.pl-wrap{display:grid;gap:20px;max-width:980px}
+.pl-form{display:grid;gap:14px} .pl-form textarea{min-height:150px}
+.pl-row{display:flex;gap:14px 20px;align-items:flex-end;flex-wrap:wrap}
+.ex{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:13px;color:var(--ink-3)}
+.st{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;white-space:nowrap}
+.st.native{background:var(--ok-soft);color:var(--ok-ink)} .st.composed{background:var(--brand-soft);color:var(--info-ink)} .st.partial{background:var(--warn-soft);color:var(--warn-ink)} .st.missing{background:var(--bad-soft);color:var(--bad-ink)}
+.sum{display:grid;gap:12px} .sum h2{margin:0;font-size:21px;letter-spacing:-.01em;line-height:1.3} .sum p{margin:0;color:var(--ink-2)}
+.stack{display:flex;height:10px;border-radius:99px;overflow:hidden;background:var(--line);gap:2px}
+.stack i{display:block;height:100%;transform-origin:left;animation:grow .55s ease both}
+.stack .native{background:var(--ok)} .stack .composed{background:var(--brand)} .stack .partial{background:var(--warn)} .stack .missing{background:var(--bad)}
+@keyframes grow{from{transform:scaleX(0)}}
+.sec-h{margin:6px 0 0;font-size:16px;letter-spacing:-.01em}
+.needs{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.need{--stc:var(--ok);background:var(--card);border:1px solid var(--line);border-left:4px solid var(--stc);border-radius:var(--radius);padding:14px 16px;display:grid;gap:8px;box-shadow:var(--shadow);animation:rise .35s ease both;min-width:0}
+.need.composed{--stc:var(--brand)} .need.partial{--stc:var(--warn)} .need.missing{--stc:var(--bad)}
+.need-h{display:flex;gap:6px 10px;align-items:center;flex-wrap:wrap}
+.word{font-size:17px;font-weight:700;letter-spacing:-.01em;overflow-wrap:anywhere}
+.kindline{font-size:13px;color:var(--ink-2)}
+.need dl,.req dl{margin:0;display:grid;gap:1px}
+dt{font-size:12px;font-weight:700;color:var(--ink-2);letter-spacing:.02em}
+dd{margin:0 0 6px;font-size:14px;color:var(--ink-2);overflow-wrap:anywhere}
+code{font:12.5px ui-monospace,Consolas,monospace;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:1px 6px;overflow-wrap:anywhere}
+.src{font-size:12px;color:var(--ink-2);overflow-wrap:anywhere}
+.req{border:1px dashed color-mix(in srgb,var(--stc) 55%,var(--line));background:color-mix(in srgb,var(--stc) 6%,var(--card));border-radius:12px;padding:12px 14px;display:grid;gap:8px;min-width:0}
+.req-h{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.req summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--ink-2);border-radius:6px} .req ul{margin:6px 0 0;padding-left:20px;font-size:13px;color:var(--ink-2)}
+.said{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.95}
+mark.m{--stc:var(--ok);background:var(--ok-soft);color:inherit;font-weight:600;padding:1px 4px;border-radius:5px;border-bottom:2px solid var(--stc)}
+mark.m.composed{--stc:var(--brand);background:var(--brand-soft)} mark.m.partial{--stc:var(--warn);background:var(--warn-soft)} mark.m.missing{--stc:var(--bad);background:var(--bad-soft)}
+.okline{display:flex;align-items:center;gap:6px 12px;flex-wrap:wrap;padding:14px 18px;border-radius:var(--radius);background:var(--ok-soft);color:var(--ok-ink);border:1px solid color-mix(in srgb,var(--ok) 35%,transparent);font-weight:700}
+.okline small{font-weight:400;font-size:13px;color:var(--ink-2)}
+.banner{display:flex;align-items:center;gap:8px 12px;flex-wrap:wrap;padding:12px 16px;border-radius:12px;background:var(--warn-soft);border:1px solid color-mix(in srgb,var(--warn) 40%,transparent);margin-bottom:16px}
+.banner b{color:var(--warn-ink)}
+.badge{display:inline-grid;place-items:center;min-width:20px;height:20px;padding:0 6px;border-radius:99px;margin-left:6px;font-size:12px;font-weight:700;background:var(--bad-soft);color:var(--bad-ink)}
+.linkbtn{border:0;background:none;padding:0 2px;font-weight:600;color:var(--brand);text-decoration:underline;text-underline-offset:3px;border-radius:5px}
+.fold{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:4px 16px} .fold>summary{cursor:pointer;font-weight:600;padding:10px 0;border-radius:8px;color:var(--ink-2)}
+.fold ul{margin:0 0 12px;padding-left:20px;color:var(--ink-2);font-size:14px}
+.mbar,.scrim{display:none}
+@media(max-width:900px){
+  .app{grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr)}
+  .top,.content{padding-left:16px;padding-right:16px}
+  .top{position:static}                                  /* l'en-tête (titre, style, étapes, onglets) prendrait la moitié d'un écran de téléphone s'il restait collé */
+  .mbar{display:flex;align-items:center;gap:10px;padding:8px 12px;background:var(--card);border-bottom:1px solid var(--line);font-weight:700}
+  .rail{position:fixed;top:0;bottom:0;left:0;width:min(320px,86vw);z-index:30;visibility:hidden;transform:translateX(-105%);transition:transform .25s cubic-bezier(.2,.8,.2,1),visibility 0s .25s;box-shadow:var(--shadow-lg)}
+  .rail.open{visibility:visible;transform:none;transition:transform .25s cubic-bezier(.2,.8,.2,1)}
+  .scrim.open{display:block;position:fixed;inset:0;background:rgba(20,24,34,.45);z-index:25}
+}
+@media(max-width:560px){.tabs{flex-wrap:wrap;gap:0}.tab{padding:10px 9px}.word{font-size:16px}.need{padding:12px 13px}.sum h2{font-size:19px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.demo-hinweis{padding:7px 16px;background:var(--brand-soft);color:var(--ink-2);border-bottom:1px solid var(--line);font-size:12.5px;line-height:1.4;text-align:center}
+body{display:flex;flex-direction:column}
+.app{flex:1 1 0;min-height:0;height:auto}
+.drawer{top:var(--hinweis-h,0px)}
+</style>
+</head>
+<body>
+<div class="demo-hinweis" lang="de" role="note">Öffentliche Demo mit erfundenen Daten. Die Bilder sind echte, vorab gerenderte Ausgaben des Motors; Rendern, Stimme und Veröffentlichung laufen hier nicht.</div>
+<div class="app">
+  <div class="mbar"><button class="btn" id="menuBtn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="rail">☰</button><span class="logo" aria-hidden="true">▶</span>Studio vidéo</div>
+  <aside class="rail" id="rail" aria-label="Mes vidéos">
+    <div class="brand"><span class="logo" aria-hidden="true">▶</span>Studio vidéo</div>
+    <button class="btn primary new" id="newBtn">+ Nouvelle vidéo</button>
+    <button class="btn soft new" id="clipBtn" style="margin-top:0">♪ Clip musical</button>
+    <button class="btn soft new" id="planBtn" style="margin-top:0">🔎 Analyser une scène</button>
+    <button class="btn soft new" id="catBtn" style="margin-top:0">📚 Catalogue</button>
+    <div class="list" id="list" role="list"></div>
+    <div class="rail-foot"><span id="foot">—</span><button class="btn" id="themeBtn" aria-label="Changer le thème">Thème</button></div>
+  </aside>
+  <main id="main" aria-live="polite"></main>
+</div>
+<div class="scrim" id="scrim"></div>
+<div class="drawer" id="drawer" aria-hidden="true" role="dialog" aria-label="Corriger un plan"></div>
+<div class="modal-bg" id="modal"><div class="modal" id="modalBody" role="dialog" aria-modal="true"></div></div>
+<div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+
+<script src="demo-start.js"></script>
+<script>
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const api=async(m,u,b)=>{const r=await fetch(u,{method:m,headers:b?{'Content-Type':'application/json'}:{},body:b?JSON.stringify(b):undefined});
+  if(!r.ok){let t='';try{t=(await r.json()).detail||''}catch(e){} throw new Error(t||('Erreur '+r.status))} return r.json()};
+const toast=(t,err)=>{const d=document.createElement('div');d.className='toast'+(err?' err':'');d.textContent=t;$('#toasts').append(d);setTimeout(()=>d.remove(),err?6000:2800)};
+const S={projects:[],slug:null,p:null,ep:null,tab:'plans',sel:null,job:null,poll:null,bust:Date.now(),view:null,clips:[],pl:{text:'',engine:'pixel3d',write:false,res:null,txt:''}};
+const setRail=v=>{ $('#clipBtn').classList.toggle('primary',v==='clips'); $('#planBtn').classList.toggle('primary',v==='plan'); $('#catBtn').classList.toggle('primary',v==='catalogue'); };
+
+const STYLES=[
+  {id:'ps1',  name:'Style PS1',      icon:'🎮',desc:'Pixel 3D rétro, lancer de rayons. Rendu rapide.',meta:{style:'pixel3d',render_engine:'pixel3d'}},
+  {id:'voxel',name:'Style VOXEL',    icon:'🧊',desc:'Voxels éclairés sur la carte graphique. Plus riche.',meta:{style:'pixel3d',render_engine:'voxel'}},
+  {id:'console',name:'Console 2D',   icon:'🕹️',desc:'Pixel art 2D plat, façon console.',meta:{style:'console',render_engine:'pixel3d'}},
+];
+const styleOf=m=>m.style==='console'?'console':(m.render_engine==='voxel'?'voxel':'ps1');
+const CAM_SIZES=[['wide','Plan large'],['full','En pied'],['medium','Plan moyen'],['close','Gros plan'],['extreme_close','Très gros plan'],['two_shot','Deux personnages'],['ots','Par-dessus l\'épaule'],['dialogue','Dialogue'],['pov','Vue du personnage'],['insert','Détail (insert)']];
+const MOVES=[['static','Caméra fixe'],['dolly_in','Avance doucement'],['dolly_out','Recule doucement'],['track','Suit sur le côté'],['orbit','Tourne autour'],['crane_up','Monte'],['crane_down','Descend'],['follow','Suit le personnage']];
+const FACES=[['neutral','Neutre'],['happy','Content'],['sad','Triste'],['scared','Effrayé'],['nervous','Inquiet'],['angry','En colère'],['shocked','Choqué'],['surprised','Surpris'],['grin','Sourire inquiétant'],['creature','Monstre']];
+const ALIAS={closeup:'close',high_corner:'wide',low:'full',push_in:'dolly_in',pull_out:'dolly_out',push:'dolly_in',free:'libre',libre:'libre'};
+const label=(L,v)=>{v=ALIAS[v]||v; if(v==='libre')return 'Caméra libre'; return (L.find(x=>x[0]===v)||[v,v||'—'])[1]};
+
+/* ---------- données ---------- */
+async function loadList(){ S.projects=await api('GET','api/projects'); renderList(); }
+async function openProject(slug,keepTab){
+  S.view=null; setRail(null); S.slug=slug; S.p=await api('GET','api/projects/'+slug); try{S.ep=JSON.parse(S.p.episode||'null')}catch(e){S.ep=null}
+  if(!keepTab){S.tab='plans';S.sel=null;} closeDrawer(); renderList(); renderMain(); if(S.p.job&&S.p.job.state==='running') watchJob();
+}
+const urlOf=f=>`api/projects/${S.slug}/file/${f}?v=${S.bust}`;
+const shots=()=>(S.ep&&S.ep.shots)||[];
+const lineText=(sh)=>{ if(!sh.lines)return''; const [a,b]=sh.lines; const L=S.p.lines||[]; return L.slice(a,b+1).map(l=>l.text||'').join(' ').replace(/\[[^\]]*\]/g,'').trim() };
+const aspectOf=()=>($('#aspect')?.value)||'9:16';
+
+/* ---------- rail ---------- */
+function renderList(){
+  const el=$('#list'); if(!S.projects.length){el.innerHTML='<p class="hint" style="padding:12px">Aucune vidéo pour le moment.</p>';} else
+  el.innerHTML=S.projects.map(p=>`<button class="item ${p.slug===S.slug?'on':''}" data-slug="${esc(p.slug)}" role="listitem"><span class="thumb" ${p.preview===false?'':`style="background-image:url('api/projects/${esc(p.slug)}/file/preview/shot_000.jpg')"`}></span><span><b>${esc(p.name||p.slug)}</b><small>${esc(STYLES.find(s=>s.id===styleOf(p))?.name||'')} · ${p.status?.renders?.length?'vidéo prête':p.status?.episode?'plans prêts':'brouillon'}</small></span></button>`).join('');
+  $$('.item',el).forEach(b=>b.onclick=()=>openProject(b.dataset.slug));
+  $('#foot').textContent=S.projects.length+' vidéo'+(S.projects.length>1?'s':'');
+  if(window.decorateList) decorateList();           // studio_extras.js : poubelle et taille de chaque vidéo
+}
+
+/* ---------- vue principale ---------- */
+function stepsOf(st){ const L=[['Script',st.script],['Voix',st.voice],['Calage',st.lines],['Plans',st.episode],['Aperçu',(S.p.previews||[]).length>0],['Vidéo',(st.renders||[]).length>0]];
+  let nextSet=false; return L.map(([n,d])=>{const c=d?'done':(!nextSet?(nextSet=true,'next'):''); return `<span class="step ${c}"><i>${d?'✓':''}</i>${n}</span>`}).join('') }
+function renderMain(){
+  const m=$('#main');
+  if(S.view==='clips') return renderClips();
+  if(S.view==='plan') return renderPlanView();
+  if(S.view==='catalogue') return renderCatalogue();
+  if(!S.p){ m.innerHTML=`<div class="content"><div class="empty"><div class="art">🎬</div><h2>Crée ta première vidéo</h2><p>Écris ou colle ton histoire, choisis un style, et le studio prépare les plans. Tu corriges ceux qui ne vont pas.</p><p><button class="btn primary" id="emptyNew">+ Nouvelle vidéo</button></p></div></div>`; $('#emptyNew').onclick=openNew; return; }
+  const p=S.p, st=p.status||{}, sid=styleOf(p.meta||{}), job=S.job&&S.job.state==='running'?S.job:null, ci=capsInfo(p.capabilities);
+  m.innerHTML=`<div class="top">
+    <div class="title-row"><div><h1>${esc(p.meta?.name||p.slug)}</h1><div class="sub">${shots().length?shots().length+' plans':'Pas encore de plans'} · ${(p.lines||[]).length} phrases</div></div><span class="spacer"></span>
+      <div class="seg" role="group" aria-label="Style">${STYLES.map(s=>`<button data-style="${s.id}" class="${s.id===sid?'on':''}" title="${esc(s.desc)}">${s.name}</button>`).join('')}</div>
+      <select id="aspect" aria-label="Format" style="width:auto"><option value="9:16">Vertical 9:16</option><option value="16:9">Horizontal 16:9</option></select>
+      <button class="btn primary" id="makeBtn" ${job?'disabled':''}>Créer la vidéo</button></div>
+    <div class="steps">${stepsOf(st)}</div>
+    ${job?`<div style="margin:10px 0 2px"><div class="sub" style="margin-bottom:6px">${esc(job.name)} — ${esc(job.detail||'en cours')}</div><div class="progress"><i style="width:${Math.max(4,Math.round((job.progress||0)*100))}%"></i></div></div>`:''}
+    <div class="tabs" role="tablist" aria-label="Sections de la vidéo">${[['plans','Plans'],['script','Script'],['video','Vidéo'],['journal','Journal'],['caps','Capacités']].map(([k,n])=>`<button class="tab ${S.tab===k?'on':''}" data-tab="${k}" role="tab" aria-selected="${S.tab===k}">${n}${k==='caps'&&ci.total?`<span class="badge" role="img" aria-label="${ci.total} point${ci.total>1?'s':''} à régler">${ci.total}</span>`:''}</button>`).join('')}</div></div>
+    <div class="content" id="content"></div>`;
+  $$('.seg button',m).forEach(b=>b.onclick=()=>setStyle(b.dataset.style));
+  $$('.tab',m).forEach(b=>b.onclick=()=>{S.tab=b.dataset.tab;renderMain()});
+  $('#makeBtn').onclick=makeVideo; $('#aspect').value=S.aspect||'9:16'; $('#aspect').onchange=e=>S.aspect=e.target.value;
+  ({plans:renderPlans,script:renderScript,video:renderVideo,journal:renderJournal,caps:renderCaps})[S.tab]();
+}
+function renderPlans(){
+  const c=$('#content'), L=shots(), st=S.p.status||{};
+  if(!L.length){ c.innerHTML=`<div class="empty"><div class="art">🧩</div><h2>Les plans arrivent ici</h2><p>${st.lines?'Le studio peut maintenant découper ton histoire en plans.':'Commence par le script et la voix : le studio calera les phrases, puis proposera un plan par moment fort.'}</p>
+    <p style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">${st.script&&st.voice&&!st.lines?'<button class="btn primary" data-run="align">Caler la voix sur le script</button>':''}${st.lines?'<button class="btn primary" data-run="direct">Proposer les plans</button>':''}${!st.script?'<button class="btn primary" id="toScript">Écrire le script</button>':''}</p></div>`;
+    bindRun(c); $('#toScript')&&($('#toScript').onclick=()=>{S.tab='script';renderMain()}); return; }
+  const wide=aspectOf()==='16:9'||S.aspect==='16:9', prevs=S.p.previews||[];
+  const ci=capsInfo(S.p.capabilities);
+  c.innerHTML=(ci.total?`<div class="banner" role="status"><b>⚠ ${ci.total} point${ci.total>1?'s':''} à régler</b><span style="flex:1;min-width:200px">Le studio a repéré dans cette histoire ${ci.total>1?'des éléments':'un élément'} qu'il ne sait pas dessiner ou qu'il approche seulement.</span><button class="btn soft sm" data-gotab="caps">Voir les capacités</button></div>`:'')+`<div style="display:flex;align-items:center;gap:12px;margin-bottom:16px"><div class="sub" style="flex:1">Clique sur un plan pour le corriger. Les images sont des aperçus : la vidéo finale est plus fine.</div>
+    <button class="btn soft" data-run="preview">${prevs.length?'Rafraîchir les images':'Générer les images'}</button></div>
+    <div class="grid">${L.map((sh,i)=>{const cam=sh.camera||{};const sz=cam.shot||cam.preset||(cam.rig==='path'?'écrit à la main':'auto');const img=prevs[i]?`style="background-image:url('${urlOf('preview/'+prevs[i])}')"`:'';
+      return `<button class="plan ${S.sel===i?'on':''}" data-i="${i}" style="animation-delay:${Math.min(i,20)*25}ms"><div class="shot ${wide?'wide':''} ${prevs[i]?'':'skeleton'}" ${img}><span class="num">${i+1}</span></div>
+      <div class="meta"><div class="txt">${esc(lineText(sh)||'(sans parole)')}</div><div class="chips"><span class="chip">${esc(label(CAM_SIZES,sz))}</span>${cam.move&&cam.move!=='static'?`<span class="chip gray">${esc(label(MOVES,cam.move))}</span>`:''}${sh.note?'<span class="chip warn">note</span>':''}</div></div></button>`}).join('')}</div>`;
+  $$('.plan',c).forEach(b=>b.onclick=()=>openDrawer(+b.dataset.i)); bindRun(c);
+  $$('[data-gotab]',c).forEach(b=>b.onclick=()=>{S.tab=b.dataset.gotab;renderMain()});
+}
+function renderScript(){
+  const c=$('#content'); c.innerHTML=`<div class="panel" style="display:grid;gap:12px"><label>Script de l'histoire<textarea id="scr" style="min-height:340px" placeholder="Une phrase par ligne. Tu peux écrire LÉA : Bonjour pour donner la parole à un personnage.">${esc(S.p.script||'')}</textarea></label>
+   <div style="display:flex;gap:10px;align-items:center"><button class="btn primary" id="saveScr">Enregistrer le script</button><span class="hint">Si tu changes le script, il faudra refaire la voix et le calage.</span></div></div>`;
+  $('#saveScr').onclick=async()=>{await api('PUT',`api/projects/${S.slug}/script`,{script:$('#scr').value});toast('Script enregistré');await openProject(S.slug,true)};
+}
+function renderVideo(){
+  const c=$('#content'), R=(S.p.status||{}).renders||[];
+  if(!R.length){c.innerHTML=`<div class="empty"><div class="art">🍿</div><h2>Ta vidéo apparaîtra ici</h2><p>Quand les plans te conviennent, clique sur « Créer la vidéo ».</p></div>`;return}
+  c.innerHTML=`<div style="display:grid;gap:18px;grid-template-columns:minmax(0,520px) 1fr"><div class="panel"><video controls src="${urlOf('renders/'+R[R.length-1])}"></video></div><div class="panel"><h3 style="margin-top:0">Fichiers</h3>${R.map(f=>`<p><a href="${urlOf('renders/'+f)}" download>${esc(f)}</a></p>`).join('')}<p class="hint">Rien n'est publié automatiquement. Tu gardes la main sur la publication.</p></div></div>`;
+}
+function renderJournal(){
+  const j=S.job||S.p.job; $('#content').innerHTML=`<div class="panel"><h3 style="margin-top:0">${j?esc(j.name):'Aucune tâche récente'}</h3><pre style="white-space:pre-wrap;font:13px/1.5 ui-monospace,Consolas,monospace;color:var(--ink-2);margin:0">${esc(((j&&j.log)||[]).join('\n')||'Rien à afficher.')}</pre></div>`;
+}
+function bindRun(root){ $$('[data-run]',root).forEach(b=>b.onclick=()=>run(b.dataset.run)) }
+
+/* ---------- tiroir : corriger un plan ---------- */
+function openDrawer(i){
+  S.sel=i; const sh=shots()[i], cam=sh.camera||{}, directed=cam.rig==='path'||!!sh.tracks||(cam.preset==='free'&&!!cam.keys), d=$('#drawer'), prevs=S.p.previews||[];
+  const actors=(sh.actors||[]).filter(a=>a&&a.id);
+  d.innerHTML=`<header><h3>Plan ${i+1} sur ${shots().length}</h3><span class="spacer"></span><button class="btn" id="prev" ${i?'':'disabled'} aria-label="Plan précédent">←</button><button class="btn" id="next" ${i<shots().length-1?'':'disabled'} aria-label="Plan suivant">→</button><button class="btn" id="close" aria-label="Fermer">✕</button></header>
+  <div class="body"><div class="preview">${prevs[i]?`<img alt="Aperçu du plan ${i+1}" src="${urlOf('preview/'+prevs[i])}">`:'<div class="empty" style="padding:40px">Pas encore d\'image</div>'}</div>
+   <label>Ce qui est dit<span style="font-weight:400;color:var(--ink)">${esc(lineText(sh)||'(sans parole)')}</span></label>
+   ${directed?`<div class="chips"><span class="chip warn">Plan écrit à la main</span></div><p class="hint">La caméra et les acteurs de ce plan sont écrits image par image. Tu peux ajouter une note ; pour changer le cadrage, demande-le dans la conversation.</p>`:`
+   <div class="field-row"><label>Cadrage<select id="fSize">${CAM_SIZES.map(([v,n])=>`<option value="${v}" ${(ALIAS[cam.shot||cam.preset]||cam.shot||cam.preset||'')===v?'selected':''}>${n}</option>`).join('')}</select></label>
+   <label>Mouvement<select id="fMove">${MOVES.map(([v,n])=>`<option value="${v}" ${(ALIAS[cam.move]||cam.move||'static')===v?'selected':''}>${n}</option>`).join('')}</select></label></div>
+   ${actors.map((a,k)=>`<label>Expression de ${esc(a.id)}<select data-actor="${k}">${FACES.map(([v,n])=>`<option value="${v}" ${(a.face||'neutral')===v?'selected':''}>${n}</option>`).join('')}</select></label>`).join('')}`}
+   <label>Note pour toi ou pour Claude<textarea id="fNote" placeholder="Par exemple : plus proche du visage, il doit avoir peur.">${esc(sh.note||'')}</textarea></label></div>
+  <div class="foot"><button class="btn primary" id="apply" style="flex:1">Enregistrer et refaire l'image</button></div>`;
+  d.classList.add('open'); d.setAttribute('aria-hidden','false'); $$('.plan').forEach(b=>b.classList.toggle('on',+b.dataset.i===i));
+  $('#close').onclick=closeDrawer; $('#prev').onclick=()=>openDrawer(i-1); $('#next').onclick=()=>openDrawer(i+1);
+  $('#apply').onclick=()=>applyPlan(i,directed);
+  if(window.enhanceDrawer) enhanceDrawer(i,directed);   // studio_extras.js : « Voir le résultat » avant de valider
+}
+function closeDrawer(){ const d=$('#drawer'); d.classList.remove('open'); d.setAttribute('aria-hidden','true'); S.sel=null; $$('.plan').forEach(b=>b.classList.remove('on')) }
+async function applyPlan(i,directed){
+  const ep=JSON.parse(JSON.stringify(S.ep)), sh=ep.shots[i];
+  if(!directed){ sh.camera=Object.assign({},sh.camera||{}); const sz=$('#fSize').value, mv=$('#fMove').value; sh.camera.shot=sz; delete sh.camera.preset; if(mv==='static')delete sh.camera.move; else sh.camera.move=mv;
+    $$('[data-actor]').forEach(s=>{const a=(sh.actors||[]).filter(a=>a&&a.id)[+s.dataset.actor]; if(a)a.face=s.value}); }
+  const n=$('#fNote').value.trim(); if(n)sh.note=n; else delete sh.note;
+  try{ const r=await api('PUT',`api/projects/${S.slug}/episode`,{episode:JSON.stringify(ep)}); (r.warnings||[]).slice(0,2).forEach(w=>toast(String(w),true)); toast('Plan enregistré'); S.ep=ep; await run('preview',true); }catch(e){toast(e.message,true)}
+}
+
+/* ---------- actions ---------- */
+async function setStyle(id){ const s=STYLES.find(x=>x.id===id); try{ await api('PUT',`api/projects/${S.slug}/meta`,s.meta); toast('Style : '+s.name); await openProject(S.slug,true); loadList(); }catch(e){toast(e.message,true)} }
+async function run(step,keepDrawer){
+  try{ await api('POST',`api/projects/${S.slug}/run/${step}`,{aspect:S.aspect||'9:16',aspects:[S.aspect||'9:16']}); }catch(e){toast(e.message,true);return}
+  S.job={state:'running',name:'Démarrage…',progress:.02}; S.keepDrawer=!!keepDrawer; renderMain(); watchJob();
+}
+function watchJob(){ clearInterval(S.poll); S.poll=setInterval(async()=>{
+  try{ const j=await api('GET',`api/projects/${S.slug}/job`); S.job=j; if(j.state&&j.state!=='running'){ clearInterval(S.poll); S.bust=Date.now();
+      if(j.state==='error')toast('La tâche a échoué : voir le journal',true); else toast('Terminé');
+      const sel=S.sel; await openProject(S.slug,true); if(S.keepDrawer&&sel!=null)openDrawer(sel); loadList(); } else { const bar=$('.progress i'); if(bar)bar.style.width=Math.max(4,Math.round((j.progress||0)*100))+'%'; } }catch(e){clearInterval(S.poll)} },1200) }
+async function makeVideo(){
+  const st=S.p.status||{}; if(!st.episode){toast('Il faut d\'abord des plans.',true);return}
+  if(!st.voice){toast('Ajoute ou génère la voix avant de créer la vidéo.',true);return}
+  run('all');
+}
+/* ---------- nouvelle vidéo ---------- */
+function openNew(){
+  let chosen='voxel';
+  $('#modalBody').innerHTML=`<div><h2 style="margin:0 0 4px">Nouvelle vidéo</h2><div class="sub">Tu pourras changer le style plus tard : le même plan se peint dans chaque style.</div></div>
+  <label>Titre<input type="text" id="nName" placeholder="Ex. : Est-ce le vrai ?"></label>
+  <label>Histoire<textarea id="nScript" placeholder="Colle ton script ici, une phrase par ligne. Tu peux aussi le faire plus tard."></textarea></label>
+  <div><div style="font-weight:600;font-size:13px;color:var(--ink-2);margin-bottom:8px">Style</div><div class="styles">${STYLES.map(s=>`<button class="styleopt ${s.id===chosen?'on':''}" data-id="${s.id}"><span style="font-size:24px">${s.icon}</span><b>${s.name}</b><small class="hint">${s.desc}</small></button>`).join('')}</div></div>
+  <div style="display:flex;gap:10px;justify-content:flex-end"><button class="btn" id="nCancel">Annuler</button><button class="btn primary" id="nGo">Créer</button></div>`;
+  $('#modal').classList.add('open'); $('#nName').focus();
+  $$('.styleopt').forEach(b=>b.onclick=()=>{chosen=b.dataset.id;$$('.styleopt').forEach(x=>x.classList.toggle('on',x===b))});
+  $('#nCancel').onclick=()=>$('#modal').classList.remove('open');
+  $('#nGo').onclick=async()=>{ const name=$('#nName').value.trim()||'Nouvelle vidéo', s=STYLES.find(x=>x.id===chosen);
+    try{ const r=await api('POST','api/projects',Object.assign({name,script:$('#nScript').value},s.meta)); $('#modal').classList.remove('open'); await loadList(); await openProject(r.slug); toast('Vidéo créée'); }catch(e){toast(e.message,true)} };
+}
+/* ---------- clip musical : une musique -> tempo, temps forts, sections ; Claude écrit le clip dessus ---------- */
+const LVL={calme:['#5b8def','Calme'],moyen:['#e0a23a','Moyen'],fort:['#e0524f','Fort']};
+async function openClips(){ S.view='clips'; S.slug=null; S.p=null; closeDrawer(); renderList(); setRail('clips');
+  try{ S.clips=await api('GET','api/clips') }catch(e){ S.clips=[] } renderMain() }
+function renderClips(){
+  const m=$('#main');
+  m.innerHTML=`<div class="top"><div class="title-row"><div><h1>Clip musical</h1><div class="sub">Donne une musique : le studio trouve le tempo, les temps forts, les sections et les silences. Le directeur (Claude) écrit ensuite le clip dessus, en PS1 ou en VOXEL.</div></div></div><div style="height:14px"></div></div>
+  <div class="content" style="display:grid;gap:18px">
+   <div class="panel" style="display:grid;gap:12px"><h3 style="margin:0">Nouvelle musique</h3>
+    <div class="field-row"><label>Nom du clip<input type="text" id="cNom" placeholder="Ex. : tout finit par s'arranger"></label><label>Fichier audio<input type="file" id="cFile" accept="audio/*,.mp3,.wav,.m4a,.flac,.ogg,.opus"></label></div>
+    <div class="field-row"><label>Début de l'extrait (s)<input type="text" id="cDeb" value="0" inputmode="decimal"></label><label>Fin (s, vide = jusqu'au bout)<input type="text" id="cFin" placeholder="ex. 60" inputmode="decimal"></label></div>
+    <div style="display:flex;gap:10px;align-items:center"><button class="btn primary" id="cGo">Analyser la musique</button><span class="hint" id="cState">Une minute de musique s'analyse en moins d'une seconde.</span></div></div>
+   ${S.clips.length?S.clips.map(clipCard).join(''):`<div class="empty"><div class="art">🎵</div><h2>Aucun clip pour le moment</h2><p>Choisis une musique ci-dessus.</p></div>`}
+  </div>`;
+  $('#cGo').onclick=newClip; S.clips.forEach(drawClip);
+}
+function clipCard(c){ const u=f=>`api/clips/${c.slug}/file/${encodeURIComponent(f)}?v=${S.bust}`;
+  return `<div class="panel clip"><div class="title-row"><h3 style="margin:0">${esc(c.slug.replace(/_/g,' '))}</h3><span class="spacer"></span><span class="chip gray">${esc((c.source||{}).fichier||'')}</span></div>
+   <div class="kv"><div><b>${c.tempo}</b>BPM</div><div><b>${c.duration.toFixed(1)} s</b>durée</div><div><b>${c.sections.length}</b>sections</div><div><b>${c.downbeats.length}</b>mesures</div><div><b>${c.climax.toFixed(1)} s</b>sommet</div></div>
+   <canvas id="cv_${c.slug}" aria-label="Énergie de la musique, sections et premiers temps"></canvas>
+   <div class="legend">${Object.values(LVL).map(([col,n])=>`<span><i style="background:${col}"></i>${n}</span>`).join('')}<span><i style="background:var(--ink-3)"></i>Premier temps (coupe possible)</span><span><i style="background:#9a5cf6"></i>Sommet</span></div>
+   <audio controls preload="none" src="${u('musique.wav')}"></audio>
+   ${c.films.length?`<video controls preload="metadata" src="${u(c.films[c.films.length-1])}"></video>`:''}
+   <div class="hint">Étape 2 : dans la conversation, demande « écris le clip <b>${esc(c.slug)}</b> » : Claude lit la <a href="${u('FEUILLE_MUSIQUE.md')}" target="_blank">feuille de musique</a>, pose les plans sur les temps forts et rend le film. Le texte à l'écran est original (jamais les paroles). Une musique d'un autre artiste peut être revendiquée si la vidéo est publiée.</div></div>`}
+function drawClip(c){ const cv=$('#cv_'+c.slug); if(!cv)return; const r=cv.getBoundingClientRect(), dpr=devicePixelRatio||1; cv.width=r.width*dpr; cv.height=r.height*dpr;
+  const g=cv.getContext('2d'); g.scale(dpr,dpr); const W=r.width,H=r.height,X=t=>t/c.duration*W, css=getComputedStyle(document.documentElement);
+  c.sections.forEach(s=>{g.fillStyle=LVL[s.niveau||'moyen'][0]+'2a'; g.fillRect(X(s.t0),0,X(s.t1)-X(s.t0),H)});
+  c.silences.forEach(([a,b])=>{g.fillStyle='rgba(0,0,0,.12)'; g.fillRect(X(a),0,Math.max(1,X(b)-X(a)),H)});
+  g.strokeStyle=css.getPropertyValue('--ink-3'); g.globalAlpha=.45; g.lineWidth=1; c.downbeats.forEach(t=>{g.beginPath();g.moveTo(X(t)+.5,H-14);g.lineTo(X(t)+.5,H);g.stroke()}); g.globalAlpha=1;
+  g.beginPath(); c.energy.forEach((v,i)=>{const x=X(i/c.energy_hz), y=H-16-(H-26)*v; i?g.lineTo(x,y):g.moveTo(x,y)}); g.strokeStyle=css.getPropertyValue('--brand'); g.lineWidth=2; g.stroke();
+  g.fillStyle='#9a5cf6'; g.beginPath(); g.arc(X(c.climax),8,4,0,7); g.fill();
+}
+async function newClip(){ const f=$('#cFile').files[0]; if(!f){toast('Choisis un fichier audio.',true);return}
+  const nom=$('#cNom').value.trim()||f.name.replace(/\.[^.]+$/,''), deb=parseFloat(($('#cDeb').value||'0').replace(',','.'))||0, fin=parseFloat(($('#cFin').value||'').replace(',','.'))||0;
+  const fd=new FormData(); fd.append('file',f); $('#cGo').disabled=true; $('#cState').textContent='Analyse en cours…';
+  try{ const r=await fetch(`api/clips?nom=${encodeURIComponent(nom)}&debut=${deb}&fin=${fin}`,{method:'POST',body:fd}); if(!r.ok){let t='';try{t=(await r.json()).detail}catch(e){} throw new Error(t||('Erreur '+r.status))}
+    toast('Musique analysée'); S.bust=Date.now(); await openClips(); }catch(e){ toast(e.message,true); $('#cGo').disabled=false; $('#cState').textContent='' } }
+/* ---------- analyser une scène : ce que le texte demande, ce que les moteurs savent faire, ce qui manque ---------- */
+const KIND_FR={action:'Action',camera:'Caméra',camera_move:'Mouvement de caméra',character:'Personnage',creature:'Créature',effect:'Effet',element:'Élément de décor',feature:'Particularité',music:'Musique',place:'Lieu',prop:'Objet',sky:'Ciel',sound:'Son',weather:'Météo',ambience:'Ambiance sonore',monster:'Monstre',event:'Événement',expression:'Expression',gesture:'Geste',ground:'Sol',console_scene:'Scène console',style:'Style'};
+const ST={native:['Disponible','✓','disponible','disponibles'],composed:['Composé','+','composé','composés'],partial:['Partiel','◐','partiel','partiels'],missing:['Manquant','✕','manquant','manquants']};
+const ST_LIST=['native','composed','partial','missing'], ST_ORDER=['missing','partial','composed','native'];
+const ENGINES=[['pixel3d','PS1 / VOXEL'],['console','Console 2D']];
+const EXAMPLES=[['Saut et hélicoptère',"Léa saute au-dessus du ravin, puis grimpe sur la corniche. Un hélicoptère rouge arrive sous l'orage."],['Requin sous-marin','Un requin géant nage dans une ville sous-marine.']];
+const stPill=(s,n)=>`<span class="st ${s}"><span aria-hidden="true">${ST[s][1]}</span>${n==null?ST[s][0]:n+' '+(n>1?ST[s][3]:ST[s][2])}</span>`;
+const countsFr=c=>ST_LIST.filter(k=>c[k]).map(k=>`${c[k]} ${c[k]>1?ST[k][3]:ST[k][2]}`).join(', ');
+const plural=(n,a,b)=>n+' '+(n>1?b:a);
+const COPY=[];
+/* le texte en minuscules sans accents, MÊME longueur que l'original (pour retrouver le mot exact que le texte a employé) */
+const normText=s=>{ let o=''; for(let i=0;i<s.length;i++){ const c=s[i]; o+= c==='’'?"'":/\s/.test(c)?' ':(c.normalize('NFD')[0]||c).toLowerCase() } return o };
+function termRanges(tn,term){ try{ const stem=term.endsWith('*'), t=normText(stem?term.slice(0,-1):term).replace(/ +/g,' ').replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+    const re=new RegExp('(?<![a-z])'+t+(stem?'[a-z]*':'')+'(?![a-z])','g'), out=[]; let m; while((m=re.exec(tn))){ out.push([m.index,m.index+m[0].length]); if(!m[0].length)re.lastIndex++ } return out }catch(e){ return [] } }
+function wordOf(n,text){ const clean=(n.terms||[])[0]?String(n.terms[0]).replace(/\*$/,''):n.name;
+  if(!text)return clean; const tn=normText(text); let best=null; (n.terms||[]).forEach(t=>termRanges(tn,t).forEach(r=>{ if(!best||r[0]<best[0])best=r })); return best?text.slice(best[0],best[1]):clean }
+function markText(text,needs){ const tn=normText(text), sp=[];
+  needs.forEach((n,k)=>(n.terms||[]).forEach(t=>termRanges(tn,t).forEach(([a,b])=>sp.push({a,b,k}))));
+  sp.sort((x,y)=>(y.b-y.a)-(x.b-x.a)); const kept=[]; sp.forEach(s=>{ if(!kept.some(o=>s.a<o.b&&s.b>o.a))kept.push(s) }); kept.sort((x,y)=>x.a-y.a);
+  let h='',pos=0; kept.forEach(s=>{ const n=needs[s.k]; h+=esc(text.slice(pos,s.a))+`<mark class="m ${n.status}" title="${esc(KIND_FR[n.kind]||n.kind)} · ${ST[n.status][2]}">${esc(text.slice(s.a,s.b))}</mark>`; pos=s.b }); return h+esc(text.slice(pos)) }
+function requestText(q){ const L=[`DEMANDE D'EXTENSION : ${q.id}`,`Moteur : ${(q.engines||[]).join(', ')||'—'}`,`Besoin : ${KIND_FR[q.kind]||q.kind} « ${q.name} » (${q.need||'manquant'})`];
+  if((q.asked_by||[]).length)L.push('Demandé par les mots : '+q.asked_by.join(', ')); if(q.context)L.push('Contexte : '+String(q.context).replace(/\s+/g,' ').trim()); if(q.approximation)L.push('Approximation actuelle : '+q.approximation);
+  L.push("Où l'ajouter : "+q.where,'Contrat : '+q.contract,"Critères d'acceptation :"); (q.acceptance||[]).forEach(a=>L.push(' - '+a)); return L.join('\n') }
+const copyBtn=(txt,id,all)=>{ COPY.push(txt); return `<button type="button" class="btn soft sm" data-copy="${COPY.length-1}" aria-label="${all?'Copier toutes les demandes':'Copier la demande '+esc(id)}">${all?'Copier toutes les demandes':'Copier'}</button>` };
+async function copyText(t){ try{ await navigator.clipboard.writeText(t); return true }catch(e){ try{ const a=document.createElement('textarea'); a.value=t; a.setAttribute('readonly',''); a.style.cssText='position:fixed;left:-9999px;top:0'; document.body.append(a); a.select(); const ok=document.execCommand('copy'); a.remove(); return ok }catch(e2){ return false } } }
+function bindCopy(root){ $$('[data-copy]',root).forEach(b=>b.onclick=async()=>{ const txt=COPY[+b.dataset.copy], old=b.textContent, ok=await copyText(txt);
+  if(ok){ b.textContent='Copié ✓'; toast(b.getAttribute('aria-label').startsWith('Copier toutes')?'Demandes copiées':'Demande copiée'); setTimeout(()=>{b.textContent=old},2200) } else toast('Copie impossible : sélectionne le texte à la main.',true) }) }
+function reqBlock(q){ const A=q.acceptance||[];
+  return `<div class="req"><div class="req-h"><b>Demande d'extension</b><code>${esc(q.id)}</code>${q.need&&q.need!=='manquant'?'<span class="chip warn">amélioration</span>':''}<span class="spacer"></span>${copyBtn(requestText(q),q.id)}</div>
+   <dl><dt>Où l'ajouter</dt><dd>${esc(q.where)}</dd><dt>Ce que ça doit faire</dt><dd>${esc(q.contract)}</dd></dl>
+   ${A.length?`<details><summary>Critères d'acceptation (${A.length})</summary><ul>${A.map(a=>`<li>${esc(a)}</li>`).join('')}</ul></details>`:''}</div>` }
+/* une carte par besoin : pastille, mot du texte, manière dont le moteur le fait, demande d'extension s'il manque quelque chose */
+function needCard(n,i,o){ o=o||{}; const st=n.status, word=wordOf(n,o.text), rows=[];
+  if(st==='missing')rows.push(['Pourquoi',n.note||'Le moteur ne sait pas encore le dessiner.']);
+  else if(st==='partial'){ rows.push(['Ce qui existe à la place',n.note||'Une approximation existe, sans plus.']); if(n.how)rows.push(["Comment l'écrire",n.how]) }
+  else rows.push(['Comment le moteur le fait',n.how||n.note||(st==='native'?'Il le dessine tel quel.':"Il l'assemble à partir de paramètres.")]);
+  return `<li class="need ${st}" style="animation-delay:${Math.min(i,12)*40}ms"><div class="need-h"><span class="word">« ${esc(word)} »</span>${stPill(st)}</div>
+   <div class="kindline">${esc(KIND_FR[n.kind]||n.kind)} · <code>${esc(n.name)}</code></div>
+   <dl>${rows.map(([k,v])=>`<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl>${n.source?`<div class="src">${n.source.startsWith('extension:')?'Fourni par l\'extension':'Dans le code :'} <code>${esc(n.source.replace(/^extension:/,''))}</code></div>`:''}${o.req?reqBlock(o.req):''}</li>` }
+function planResult(r,text){ COPY.length=0; const N=r.needs.length, c=r.counts||{}, miss=c.missing||0, part=c.partial||0, reqs={}; (r.requests||[]).forEach(q=>reqs[q.id]=q);
+  const needs=r.needs.slice().sort((a,b)=>ST_ORDER.indexOf(a.status)-ST_ORDER.indexOf(b.status));
+  const verdict=!N?'Aucun besoin précis reconnu dans ce texte. Ajoute des détails (lieu, action, objets, météo) pour que le studio puisse vérifier.'
+    :miss?`Il manque ${plural(miss,'chose','choses')} au studio. Rien n'est remplacé en silence : chaque manque a sa demande d'extension, à copier pour Claude.`
+    :part?`Tout existe, mais ${plural(part,'besoin n\'est','besoins ne sont')} qu'approché${part>1?'s':''}. Une demande « amélioration » est prête.`
+    :'Tout est disponible : cette scène peut être écrite telle quelle.';
+  const eng=(ENGINES.find(e=>e[0]===r.engine)||[0,r.engine])[1];
+  let h=`<section class="panel sum" aria-labelledby="pSum"><h2 id="pSum" tabindex="-1">${N?plural(N,'besoin','besoins')+' : '+esc(countsFr(c)):'Aucun besoin reconnu'}</h2>
+    ${N?`<div class="stack" role="img" aria-label="${esc(countsFr(c))}">${ST_LIST.filter(k=>c[k]).map(k=>`<i class="${k}" style="flex:${c[k]}"></i>`).join('')}</div><div class="chips">${ST_LIST.filter(k=>c[k]).map(k=>stPill(k,c[k])).join('')}</div>`:''}
+    <p>${verdict}</p><div class="hint">Moteur : ${esc(eng)}</div>
+    <details class="legend-d"><summary class="hint" style="cursor:pointer">Que veulent dire ces mots ?</summary><dl style="margin:8px 0 0"><dt>Disponible</dt><dd>le moteur le dessine ou le fait tel quel.</dd><dt>Composé</dt><dd>un générateur l'assemble à partir de paramètres (décor, plateforme, falaise...).</dd><dt>Partiel</dt><dd>une approximation existe, dite explicitement ; une demande d'amélioration est rédigée.</dd><dt>Manquant</dt><dd>rien ne le fait : une demande d'extension est rédigée.</dd></dl></details></section>`;
+  if(N) h+=`<section class="panel" aria-labelledby="pTxt"><h3 class="sec-h" id="pTxt" style="margin:0 0 10px">Ton texte, annoté</h3><p class="said">${markText(text,r.needs)}</p></section>`;
+  if(N){ h+=`<h3 class="sec-h">Les besoins, des manques vers le plus simple</h3><ul class="needs" role="list">${needs.map((n,i)=>needCard(n,i,{text,req:reqs[`${n.kind}_${n.name}`]})).join('')}</ul>`;
+    if((r.requests||[]).length>1) h+=`<div>${copyBtn(r.requests.map(requestText).join('\n\n----------------------------------------\n\n'),'',true)}</div>`; }
+  if((r.written||[]).length) h+=`<p class="hint" role="status">✓ Demandes enregistrées dans library/extensions/requests : ${esc(r.written.join(', '))}</p>`;
+  if((r.extensions||[]).length) h+=`<details class="fold"><summary>Extensions installées (${r.extensions.length})</summary><ul>${r.extensions.map(e=>`<li>${esc(e.title||e.id)} — ${e.loaded?'chargée':esc(e.problem||e.status||'non chargée')}</li>`).join('')}</ul></details>`;
+  return h }
+function renderPlanView(){ const m=$('#main'), P=S.pl;
+  m.innerHTML=`<div class="top"><div class="title-row"><div><h1>Analyser une scène</h1><div class="sub">Colle une scène telle que tu l'imagines, sans la simplifier. Le studio dit ce qu'il sait déjà faire, ce qu'il assemble, ce qui n'est qu'approché et ce qui manque.</div></div></div><div style="height:14px"></div></div>
+  <div class="content pl-wrap"><form class="panel pl-form" id="pForm" novalidate>
+    <label>Colle ici une scène<textarea id="pText" maxlength="20000" placeholder="Ex. : Léa court sur le toit d'un immeuble pendant une tempête. Derrière elle, un dragon gigantesque traverse les nuages...">${esc(P.text)}</textarea></label>
+    <div class="ex"><span>Essayer :</span>${EXAMPLES.map(([n,t],i)=>`<button type="button" class="btn sm" data-ex="${i}">${n}</button>`).join('')}</div>
+    <div class="pl-row"><fieldset><legend>Moteur</legend><div class="seg">${ENGINES.map(([v,n])=>`<label class="segopt"><input type="radio" name="pEng" value="${v}" ${P.engine===v?'checked':''}><span>${n}</span></label>`).join('')}</div></fieldset>
+      <label class="check"><input type="checkbox" id="pWrite" ${P.write?'checked':''}><span>Enregistrer aussi les demandes d'extension dans la bibliothèque (pour que Claude les retrouve)</span></label>
+      <span class="spacer"></span><button type="submit" class="btn primary" id="pGo">Analyser</button></div>
+    <div class="hint">Le texte reste sur cet ordinateur. Raccourci : Ctrl + Entrée dans la zone de texte.</div></form>
+   <div id="pOut" aria-live="polite" aria-busy="false" style="display:grid;gap:18px">${P.res?planResult(P.res,P.txt):''}</div></div>`;
+  if(P.res) bindCopy($('#pOut'));
+  $('#pForm').onsubmit=e=>{e.preventDefault(); analyze()};
+  $('#pText').onkeydown=e=>{ if(e.key==='Enter'&&(e.ctrlKey||e.metaKey)){e.preventDefault(); analyze()} };
+  $('#pText').oninput=e=>{P.text=e.target.value};
+  $$('[data-ex]').forEach(b=>b.onclick=()=>{ const t=EXAMPLES[+b.dataset.ex][1]; $('#pText').value=P.text=t; $('#pText').focus() });
+  $$('input[name=pEng]').forEach(r=>r.onchange=()=>{ P.engine=r.value; if(P.res&&P.txt&&!$('#pWrite').checked)analyze(true) });
+  $('#pWrite').onchange=e=>{P.write=e.target.checked}; }
+async function analyze(quiet){ const P=S.pl, ta=$('#pText'), text=ta.value.trim(), out=$('#pOut'), go=$('#pGo');
+  if(!text){ toast('Écris ou colle une scène à analyser.',true); ta.focus(); return }
+  P.text=ta.value; P.engine=($('input[name=pEng]:checked')||{}).value||'pixel3d'; P.write=$('#pWrite').checked;
+  go.disabled=true; go.textContent='Analyse…'; out.setAttribute('aria-busy','true');
+  try{ const r=await api('POST','api/plan',{text,engine:P.engine,requests:P.write}); P.res=r; P.txt=text; out.innerHTML=planResult(r,text); bindCopy(out);
+    if(!quiet){ const h=$('#pSum'); if(h){ h.focus({preventScroll:true});                      // le résumé doit être visible, sous l'en-tête collant
+      const mn=$('#main'), hr=h.getBoundingClientRect(), mr=mn.getBoundingClientRect(), tp=$('.top'), top=getComputedStyle(tp).position==='sticky'?tp.offsetHeight:0;
+      if(hr.top>mr.top+mr.height*.55||hr.top<mr.top+top) mn.scrollTo({top:mn.scrollTop+hr.top-mr.top-top-16,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'}) } } }
+  catch(e){ out.innerHTML=`<div class="panel" role="alert" style="border-color:var(--bad)"><b style="color:var(--bad-ink)">L'analyse a échoué.</b> ${esc(e instanceof TypeError?'Le serveur du studio ne répond pas.':e.message)}</div>` }
+  finally{ go.disabled=false; go.textContent='Analyser'; out.setAttribute('aria-busy','false') } }
+function openPlan(pre){ S.view='plan'; S.slug=null; S.p=null; closeDrawer(); renderList(); setRail('plan'); if(pre)Object.assign(S.pl,pre,{res:null,txt:''}); renderMain(); }
+/* ---------- capacités d'un projet (capabilities.json, écrit quand le studio prépare les plans) ---------- */
+function capsInfo(cap){ const au=(cap&&cap.audit)||{}, pl=(cap&&cap.plan)||null, gaps=au.gaps||[], rq=au.requires||null;
+  const needs=[...(pl?pl.needs:[]),...((rq&&rq.needs)||[]).filter(n=>!(pl&&pl.needs.some(m=>m.kind===n.kind&&m.name===n.name)))];
+  const bad=needs.filter(n=>n.status==='missing'||n.status==='partial'), good=needs.filter(n=>bad.indexOf(n)<0);
+  const reqs={}; [...(pl?pl.requests:[]),...((rq&&rq.requests)||[]),...((cap&&cap.gap_requests)||[])].forEach(q=>{reqs[q.id]=reqs[q.id]||q});
+  const groups={}; gaps.forEach(g=>{ const k=g.kind+':'+g.name; (groups[k]=groups[k]||{kind:g.kind,name:g.name,cons:g.consequence,at:[]}).at.push(g.where) });
+  return {au,pl,gaps,needs,bad,good,reqs,groups:Object.values(groups),total:Object.keys(groups).length+bad.length} }
+function whereLinks(list){ return list.slice(0,12).map(w=>{ const m=/^plan (\d+)$/.exec(w); if(m&&+m[1]<shots().length)return `<button type="button" class="linkbtn" data-goto="${+m[1]}">Plan ${+m[1]+1}</button>`; return esc(w) }).join(', ')+(list.length>12?` et ${list.length-12} autres`:'') }
+function renderCaps(){ const c=$('#content'), cap=S.p.capabilities;
+  if(cap===undefined){ c.innerHTML='<p class="hint">Chargement des capacités…</p>'; const sl=S.slug;       // serveur plus ancien : on lit le fichier directement
+    fetch(urlOf('capabilities.json')).then(r=>r.ok?r.json():null).catch(()=>null).then(j=>{ if(S.p&&S.slug===sl){ S.p.capabilities=j; if(S.tab==='caps'&&!S.view)renderMain() } }); return }
+  const script=S.p.script||'', style=styleOf(S.p.meta||{}), toolBtn=script.trim()?'<button type="button" class="btn soft sm" id="capTool">Analyser le script de cette vidéo</button>':'';
+  if(!cap){ c.innerHTML=`<div class="empty"><div class="art">🔎</div><h2>Pas encore d'analyse</h2><p>Le studio écrit les capacités de la vidéo quand il prépare les plans : ce qu'il sait dessiner, et ce qui lui manque.</p>${toolBtn?`<p>${toolBtn}</p>`:''}</div>`; $('#capTool')&&($('#capTool').onclick=()=>openPlan({text:script,engine:style==='console'?'console':'pixel3d'})); return }
+  COPY.length=0; const I=capsInfo(cap), used=(I.au.used||[]).length, nN=I.needs.length;
+  let h='';
+  if(!I.total){ h=`<div class="okline" role="status"><span aria-hidden="true">✓</span>Tout est disponible<small>${used?plural(used,'élément vérifié','éléments vérifiés')+' dans les plans':''}${used&&nN?' · ':''}${nN?plural(nN,'besoin reconnu','besoins reconnus')+' dans le texte':''}</small></div>` }
+  else { h=`<section class="panel sum" aria-labelledby="cSum"><h2 id="cSum">${plural(I.total,'point à régler','points à régler')}</h2><p>Le studio ne remplace rien en silence : ce qui manque ou n'est qu'approché est listé ici. Chaque point a sa demande d'extension, à copier pour Claude.</p></section>`;
+    if(I.groups.length) h+=`<h3 class="sec-h">Dans les plans (${I.groups.length})</h3><ul class="needs" role="list">${I.groups.map((g,i)=>`<li class="need missing" style="animation-delay:${Math.min(i,12)*40}ms"><div class="need-h"><span class="word">« ${esc(g.name)} »</span>${stPill('missing')}</div><div class="kindline">${esc(KIND_FR[g.kind]||g.kind)} · <code>${esc(g.name)}</code></div><dl><dt>Demandé dans</dt><dd>${whereLinks(g.at)}</dd><dt>Ce qui se passe à la place</dt><dd>${esc(g.cons||'ignoré')}</dd></dl>${I.reqs[g.kind+'_'+g.name]?reqBlock(I.reqs[g.kind+'_'+g.name]):''}</li>`).join('')}</ul>`;
+    if(I.bad.length) h+=`<h3 class="sec-h">Dans le texte de l'histoire (${I.bad.length})</h3><ul class="needs" role="list">${I.bad.slice().sort((a,b)=>ST_ORDER.indexOf(a.status)-ST_ORDER.indexOf(b.status)).map((n,i)=>needCard(n,i,{req:I.reqs[n.kind+'_'+n.name]})).join('')}</ul>`;
+    if(I.good.length) h+=`<details class="fold"><summary>Déjà disponibles (${I.good.length})</summary><ul>${I.good.map(n=>`<li>${esc(KIND_FR[n.kind]||n.kind)} « ${esc(wordOf(n))} » — ${ST[n.status][2]}</li>`).join('')}</ul></details>`; }
+  c.innerHTML=`<div style="display:grid;gap:18px;max-width:980px">${h}<div>${toolBtn}</div></div>`;
+  bindCopy(c); $('#capTool')&&($('#capTool').onclick=()=>openPlan({text:script,engine:style==='console'?'console':'pixel3d'}));
+  $$('[data-goto]',c).forEach(b=>b.onclick=()=>{ S.tab='plans'; renderMain(); openDrawer(+b.dataset.goto) }) }
+/* ---------- menu du téléphone : le rail devient un tiroir ---------- */
+const menu=open=>{ $('#rail').classList.toggle('open',open); $('#scrim').classList.toggle('open',open); const b=$('#menuBtn'); b.setAttribute('aria-expanded',String(open)); b.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu') };
+$('#menuBtn').onclick=()=>menu(!$('#rail').classList.contains('open')); $('#scrim').onclick=()=>menu(false);
+$('#rail').addEventListener('click',e=>{ if(e.target.closest('.item,#newBtn,#clipBtn,#planBtn,#catBtn'))menu(false) });
+$('#planBtn').onclick=()=>openPlan();
+$('#clipBtn').onclick=openClips; addEventListener('resize',()=>{ if(S.view==='clips') S.clips.forEach(drawClip) });
+$('#newBtn').onclick=openNew; $('#modal').onclick=e=>{if(e.target.id==='modal')$('#modal').classList.remove('open')};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeDrawer();$('#modal').classList.remove('open');menu(false)} if(S.sel!=null&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){if(e.key==='ArrowRight'&&S.sel<shots().length-1)openDrawer(S.sel+1); if(e.key==='ArrowLeft'&&S.sel>0)openDrawer(S.sel-1)}});
+$('#themeBtn').onclick=()=>{const r=document.documentElement;const d=r.dataset.theme==='dark';r.dataset.theme=d?'light':'dark';try{localStorage.setItem('studio-theme',r.dataset.theme)}catch(e){}};
+try{const t=localStorage.getItem('studio-theme'); if(t)document.documentElement.dataset.theme=t}catch(e){}
+loadList().then(()=>{ if(S.projects.length && location.hash!=='#catalogue') openProject(S.projects[0].slug); else renderMain() });
+</script>
+<script>
+// Demo: Katalogminiaturen im Stil PS1, Motorbilder im Format 16:9, Plan-Schublade unter dem Hinweisstreifen
+S.lastStyle = 'ps1'; S.aspect = '16:9';
+const hinweis = document.querySelector('.demo-hinweis'), hoehe = () => document.documentElement.style.setProperty('--hinweis-h', hinweis.offsetHeight + 'px');
+hoehe(); addEventListener('resize', hoehe);
+</script>
+<script src="studio_extras.js"></script>
+<script src="publication_bridge.js"></script>
+</body>
+</html>
