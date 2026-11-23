@@ -1,0 +1,5127 @@
+[
+ {
+  "slug": "gewitternacht",
+  "meta": {
+   "name": "Gewitternacht",
+   "style": "pixel3d",
+   "render_engine": "pixel3d",
+   "series": null,
+   "part_label": "DEMO 4",
+   "created": 1792000000,
+   "notes": "Szenario demo4_tension",
+   "director": ""
+  },
+  "szenario": "demo4_tension",
+  "script": "Ist da jemand...?\n\nMama?\n\nNein... nein...\n",
+  "episode": "{\"engine_version\": 2, \"default_set\": \"chambre\", \"music\": \"horror\", \"intensity_start\": 0.25, \"hud\": {\"title\": [\"TU\", \"DÉCIDES\"], \"part\": \"DÉMO 4\", \"hearts\": []}, \"sets\": {\"chambre\": {\"type\": \"bedroom\", \"night\": true, \"ambient\": [0.035, 0.035, 0.055], \"fill\": 0.22, \"light\": \"blue\", \"light_power\": 0.35}}, \"cast\": {\"lea\": {\"ref\": \"lea\"}, \"ombre\": {\"kind\": \"creature\"}}, \"shots\": [{\"lines\": [0, 0], \"actors\": [{\"id\": \"lea\", \"at\": [0.4, 2.7], \"facing\": \"porte\", \"hold\": \"flashlight\", \"face\": \"nervous\"}], \"actions\": [{\"who\": \"lea\", \"do\": \"look_around\", \"dur\": 2.6, \"at\": 0.2}], \"world\": [{\"at\": 2.1, \"lightning\": true}], \"camera\": {\"shot\": \"wide\", \"on\": [\"lea\"]}, \"audio\": {\"intensity\": 0.3}, \"sfx\": []}, {\"lines\": [1, 1], \"actions\": [{\"who\": \"lea\", \"do\": \"look_at\", \"target\": \"porte\", \"dur\": 4.5}], \"world\": [{\"at\": 0.6, \"door\": \"porte\", \"open\": 0.8, \"dur\": 3.6}], \"camera\": {\"shot\": \"full\", \"on\": [\"porte\"], \"move\": \"dolly_in\", \"amount\": 0.5}, \"audio\": {\"intensity\": 0.55}, \"actors\": [], \"sfx\": []}, {\"lines\": [2, 2], \"actions\": [{\"who\": \"lea\", \"do\": \"react\", \"kind\": \"flinch\", \"at\": 0.1}, {\"who\": \"lea\", \"do\": \"face\", \"name\": \"scared\"}], \"camera\": {\"shot\": \"close\", \"on\": [\"lea\"], \"move\": \"handheld\", \"shake\": 0.25}, \"audio\": {\"intensity\": 0.65}, \"actors\": [], \"sfx\": []}, {\"lines\": [3, 3], \"actors\": [{\"id\": \"ombre\", \"at\": [-3.05, 1.5], \"facing\": \"+x\", \"visible\": [0.4, 99]}], \"actions\": [{\"who\": \"lea\", \"do\": \"look_at\", \"target\": \"ombre\", \"dur\": 3.5}], \"world\": [{\"at\": 1.4, \"lightning\": true, \"thunder_delay\": 0.35}], \"camera\": {\"shot\": \"pov\", \"on\": [\"lea\"], \"move\": \"dolly_in\", \"amount\": 0.3}, \"sfx\": [{\"name\": \"heartbeat\", \"at\": 0.3, \"gain\": 0.6}], \"audio\": {\"intensity\": 0.95}}, {\"lines\": [4, 4], \"actions\": [{\"who\": \"lea\", \"do\": \"walk_to\", \"to\": [1.0, 4.1], \"speed\": \"slow\", \"backwards\": true}, {\"who\": \"lea\", \"do\": \"face\", \"name\": \"shocked\"}], \"world\": [{\"at\": 0.8, \"lights\": \"flicker\", \"dur\": 2.6}], \"camera\": {\"shot\": \"full\", \"on\": [\"lea\"], \"move\": \"handheld\", \"shake\": 0.2}, \"audio\": {\"intensity\": 1.0}, \"actors\": [], \"sfx\": []}, {\"lines\": [5, 5], \"world\": [{\"at\": 0.9, \"door\": \"porte\", \"open\": 0.0, \"dur\": 0.22}, {\"at\": 1.15, \"lights\": \"off\", \"dur\": 9}], \"camera\": {\"shot\": \"pov\", \"on\": [\"lea\"]}, \"audio\": {\"intensity\": 0.4}, \"fx\": {\"fade_out\": 0.6}, \"actions\": [{\"who\": \"lea\", \"do\": \"look_at\", \"target\": \"porte\", \"dur\": 3}], \"actors\": [], \"sfx\": []}], \"lines\": {\"0\": {\"speaker\": \"lea\", \"label\": \"LÉA\", \"label_color\": \"orange\", \"voice_fx\": \"whisper\"}, \"1\": {}, \"2\": {\"speaker\": \"lea\", \"label\": \"LÉA\", \"label_color\": \"orange\", \"voice_fx\": \"whisper\"}, \"3\": {}, \"4\": {\"speaker\": \"lea\", \"label\": \"LÉA\", \"label_color\": \"orange\", \"voice_fx\": \"whisper\"}, \"5\": {}}, \"style\": \"pixel3d\"}",
+  "lines": [
+   {
+    "tts": "Ist da jemand...?",
+    "display": "Ist da jemand...?",
+    "text": "Ist da jemand...?",
+    "tags": [],
+    "dialogue": true,
+    "i": 0,
+    "start": 0.4,
+    "end": 3.8,
+    "segs": [
+     [
+      0.4,
+      3.8
+     ]
+    ]
+   },
+   {
+    "tts": "",
+    "display": "",
+    "text": "",
+    "tags": [],
+    "dialogue": false,
+    "i": 1,
+    "start": 4.1,
+    "end": 8.7,
+    "segs": [
+     [
+      4.1,
+      8.7
+     ]
+    ]
+   },
+   {
+    "tts": "Mama?",
+    "display": "Mama?",
+    "text": "Mama?",
+    "tags": [],
+    "dialogue": true,
+    "i": 2,
+    "start": 9.0,
+    "end": 11.4,
+    "segs": [
+     [
+      9.0,
+      11.4
+     ]
+    ]
+   },
+   {
+    "tts": "",
+    "display": "",
+    "text": "",
+    "tags": [],
+    "dialogue": false,
+    "i": 3,
+    "start": 11.7,
+    "end": 15.3,
+    "segs": [
+     [
+      11.7,
+      15.3
+     ]
+    ]
+   },
+   {
+    "tts": "Nein... nein...",
+    "display": "Nein... nein...",
+    "text": "Nein... nein...",
+    "tags": [],
+    "dialogue": true,
+    "i": 4,
+    "start": 15.6,
+    "end": 19.4,
+    "segs": [
+     [
+      15.6,
+      19.4
+     ]
+    ]
+   },
+   {
+    "tts": "",
+    "display": "",
+    "text": "",
+    "tags": [],
+    "dialogue": false,
+    "i": 5,
+    "start": 19.7,
+    "end": 22.7,
+    "segs": [
+     [
+      19.7,
+      22.7
+     ]
+    ]
+   }
+  ],
+  "warnings": [],
+  "capabilities": {
+   "audit": {
+    "style": "pixel3d",
+    "used": [
+     "action:face",
+     "action:look_around",
+     "action:look_at",
+     "action:react",
+     "action:walk_to",
+     "camera:close",
+     "camera:full",
+     "camera:pov",
+     "camera:wide",
+     "character:lea",
+     "expression:nervous",
+     "expression:scared",
+     "expression:shocked",
+     "music:horror",
+     "place:bedroom",
+     "sound:heartbeat"
+    ],
+    "gaps": [],
+    "requires": null,
+    "ok": true
+   },
+   "plan": {
+    "engine": "pixel3d",
+    "needs": [
+     {
+      "kind": "sky",
+      "name": "night",
+      "terms": [
+       "Nacht"
+      ],
+      "status": "native",
+      "source": "engines/pixel3d/world.py",
+      "note": "",
+      "how": ""
+     },
+     {
+      "kind": "weather",
+      "name": "storm",
+      "terms": [
+       "Gewitter"
+      ],
+      "status": "native",
+      "source": "engines/pixel3d/world.py",
+      "note": "",
+      "how": ""
+     },
+     {
+      "kind": "action",
+      "name": "open",
+      "terms": [
+       "öffnet"
+      ],
+      "status": "native",
+      "source": "acting/timeline.py",
+      "note": "",
+      "how": ""
+     },
+     {
+      "kind": "effect",
+      "name": "lightning_bolt",
+      "terms": [
+       "Blitz"
+      ],
+      "status": "native",
+      "source": "engines/pixel3d/effects.py",
+      "note": "",
+      "how": "Objekt lightning_bolt (trifft ein Element) oder \"world\": lightning (Fenster)"
+     },
+     {
+      "kind": "action",
+      "name": "walk_to",
+      "terms": [
+       "weicht zurück"
+      ],
+      "status": "native",
+      "source": "acting/timeline.py",
+      "note": "",
+      "how": "walk_to mit \"backwards\": true"
+     }
+    ],
+    "counts": {
+     "native": 5,
+     "composed": 0,
+     "partial": 0,
+     "missing": 0
+    },
+    "requests": []
+   }
+  },
+  "previews": [
+   "shot_000.jpg",
+   "",
+   "shot_002.jpg",
+   "shot_003.jpg",
+   "shot_004.jpg",
+   ""
+  ],
+  "status": {
+   "script": true,
+   "voice": false,
+   "lines": true,
+   "episode": true,
+   "mix": false,
+   "thumbnail": false,
+   "metadata": false,
+   "renders": []
+  },
+  "optionen": [
+   {
+    "mode": "acted",
+    "transitions": [
+     [
+      "cut",
+      "Schnitt"
+     ],
+     [
+      "fade",
+      "Abblende auf Schwarz"
+     ],
+     [
+      "flash",
+      "Weißer Blitz"
+     ]
+    ],
+    "moves": [
+     [
+      "static",
+      "Feste Kamera"
+     ],
+     [
+      "dolly_in",
+      "Fährt langsam heran"
+     ],
+     [
+      "dolly_out",
+      "Fährt langsam zurück"
+     ],
+     [
+      "track",
+      "Fährt seitlich mit"
+     ],
+     [
+      "orbit",
+      "Umkreist die Figur"
+     ],
+     [
+      "crane_up",
+      "Steigt auf"
+     ],
+     [
+      "crane_down",
+      "Sinkt ab"
+     ],
+     [
+      "follow",
+      "Folgt der Figur"
+     ]
+    ],
+    "faces": [
+     [
+      "angry",
+      "Wütend"
+     ],
+     [
+      "creature",
+      "Monster"
+     ],
+     [
+      "grin",
+      "Unheimliches Grinsen"
+     ],
+     [
+      "happy",
+      "Fröhlich"
+     ],
+     [
+      "nervous",
+      "Besorgt"
+     ],
+     [
+      "neutral",
+      "Neutral"
+     ],
+     [
+      "sad",
+      "Traurig"
+     ],
+     [
+      "scared",
+      "Verängstigt"
+     ],
+     [
+      "shocked",
+      "Schockiert"
+     ],
+     [
+      "surprised",
+      "Überrascht"
+     ],
+     [
+      "alien",
+      "Außerirdisch"
+     ],
+     [
+      "bored",
+      "Gelangweilt"
+     ],
+     [
+      "calm",
+      "Ruhig"
+     ],
+     [
+      "closed",
+      "Augen geschlossen"
+     ],
+     [
+      "confused",
+      "Verwirrt"
+     ],
+     [
+      "cool",
+      "Entspannt"
+     ],
+     [
+      "crying",
+      "Weinend"
+     ],
+     [
+      "determined",
+      "Entschlossen"
+     ],
+     [
+      "disgusted",
+      "Angewidert"
+     ],
+     [
+      "dizzy",
+      "Benommen"
+     ],
+     [
+      "double",
+      "Doppelt"
+     ],
+     [
+      "evil",
+      "Böse"
+     ],
+     [
+      "excited",
+      "Aufgeregt"
+     ],
+     [
+      "fixed_smile",
+      "Starres Lächeln"
+     ],
+     [
+      "furious",
+      "Rasend"
+     ],
+     [
+      "joy",
+      "Freudig"
+     ],
+     [
+      "ko",
+      "K.O."
+     ],
+     [
+      "laugh",
+      "Lachend"
+     ],
+     [
+      "love",
+      "Verliebt"
+     ],
+     [
+      "pain",
+      "Schmerzverzerrt"
+     ],
+     [
+      "predator",
+      "Raubtier"
+     ],
+     [
+      "predator_smile",
+      "Raubtierlächeln"
+     ],
+     [
+      "proud",
+      "Stolz"
+     ],
+     [
+      "robot",
+      "Roboter"
+     ],
+     [
+      "shy",
+      "Schüchtern"
+     ],
+     [
+      "silly",
+      "Albern"
+     ],
+     [
+      "skull",
+      "Totenkopf"
+     ],
+     [
+      "sleeping",
+      "Schlafend"
+     ],
+     [
+      "smile_sad",
+      "Trauriges Lächeln"
+     ],
+     [
+      "smirk",
+      "Schiefes Grinsen"
+     ],
+     [
+      "suspicious",
+      "Misstrauisch"
+     ],
+     [
+      "talk",
+      "Sprechend"
+     ],
+     [
+      "thinking",
+      "Nachdenklich"
+     ],
+     [
+      "tired",
+      "Müde"
+     ],
+     [
+      "urgent",
+      "Eilig"
+     ],
+     [
+      "wink",
+      "Zwinkernd"
+     ]
+    ],
+    "sizes": [
+     [
+      "wide",
+      "Totale"
+     ],
+     [
+      "full",
+      "Ganze Figur"
+     ],
+     [
+      "medium",
+      "Halbnahe"
+     ],
+     [
+      "close",
+      "Großaufnahme"
+     ],
+     [
+      "extreme_close",
+      "Extreme Großaufnahme"
+     ],
+     [
+      "two_shot",
+      "Zwei Figuren"
+     ],
+     [
+      "ots",
+      "Über die Schulter"
+     ],
+     [
+      "dialogue",
+      "Dialog"
+     ],
+     [
+      "pov",
+      "Sicht der Figur"
+     ],
+     [
+      "insert",
+      "Objektdetail (Insert)"
+     ]
+    ],
+    "current": {
+     "mode": "acted",
+     "size": "wide",
+     "move": "static",
+     "faces": {
+      "lea": "nervous"
+     },
+     "transition": "cut",
+     "directed": false
+    }
+   },
+   {
+    "mode": "acted",
+    "transitions": [
+     [
+      "cut",
+      "Schnitt"
+     ],
+     [
+      "fade",
+      "Abblende auf Schwarz"
+     ],
+     [
+      "flash",
+      "Weißer Blitz"
+     ]
+    ],
+    "moves": [
+     [
+      "static",
+      "Feste Kamera"
+     ],
+     [
+      "dolly_in",
+      "Fährt langsam heran"
+     ],
+     [
+      "dolly_out",
+      "Fährt langsam zurück"
+     ],
+     [
+      "track",
+      "Fährt seitlich mit"
+     ],
+     [
+      "orbit",
+      "Umkreist die Figur"
+     ],
+     [
+      "crane_up",
+      "Steigt auf"
+     ],
+     [
+      "crane_down",
+      "Sinkt ab"
+     ],
+     [
+      "follow",
+      "Folgt der Figur"
+     ]
+    ],
+    "faces": [
+     [
+      "angry",
+      "Wütend"
+     ],
+     [
+      "creature",
+      "Monster"
+     ],
+     [
+      "grin",
+      "Unheimliches Grinsen"
+     ],
+     [
+      "happy",
+      "Fröhlich"
+     ],
+     [
+      "nervous",
+      "Besorgt"
+     ],
+     [
+      "neutral",
+      "Neutral"
+     ],
+     [
+      "sad",
+      "Traurig"
+     ],
+     [
+      "scared",
+      "Verängstigt"
+     ],
+     [
+      "shocked",
+      "Schockiert"
+     ],
+     [
+      "surprised",
+      "Überrascht"
+     ],
+     [
+      "alien",
+      "Außerirdisch"
+     ],
+     [
+      "bored",
+      "Gelangweilt"
+     ],
+     [
+      "calm",
+      "Ruhig"
+     ],
+     [
+      "closed",
+      "Augen geschlossen"
+     ],
+     [
+      "confused",
+      "Verwirrt"
+     ],
+     [
+      "cool",
+      "Entspannt"
+     ],
+     [
+      "crying",
+      "Weinend"
+     ],
+     [
+      "determined",
+      "Entschlossen"
+     ],
+     [
+      "disgusted",
+      "Angewidert"
+     ],
+     [
+      "dizzy",
+      "Benommen"
+     ],
+     [
+      "double",
+      "Doppelt"
+     ],
+     [
+      "evil",
+      "Böse"
+     ],
+     [
+      "excited",
+      "Aufgeregt"
+     ],
+     [
+      "fixed_smile",
+      "Starres Lächeln"
+     ],
+     [
+      "furious",
+      "Rasend"
+     ],
+     [
+      "joy",
+      "Freudig"
+     ],
+     [
+      "ko",
+      "K.O."
+     ],
+     [
+      "laugh",
+      "Lachend"
+     ],
+     [
+      "love",
+      "Verliebt"
+     ],
+     [
+      "pain",
+      "Schmerzverzerrt"
+     ],
+     [
+      "predator",
+      "Raubtier"
+     ],
+     [
+      "predator_smile",
+      "Raubtierlächeln"
+     ],
+     [
+      "proud",
+      "Stolz"
+     ],
+     [
+      "robot",
+      "Roboter"
+     ],
+     [
+      "shy",
+      "Schüchtern"
+     ],
+     [
+      "silly",
+      "Albern"
+     ],
+     [
+      "skull",
+      "Totenkopf"
+     ],
+     [
+      "sleeping",
+      "Schlafend"
+     ],
+     [
+      "smile_sad",
+      "Trauriges Lächeln"
+     ],
+     [
+      "smirk",
+      "Schiefes Grinsen"
+     ],
+     [
+      "suspicious",
+      "Misstrauisch"
+     ],
+     [
+      "talk",
+      "Sprechend"
+     ],
+     [
+      "thinking",
+      "Nachdenklich"
+     ],
+     [
+      "tired",
+      "Müde"
+     ],
+     [
+      "urgent",
+      "Eilig"
+     ],
+     [
+      "wink",
+      "Zwinkernd"
+     ]
+    ],
+    "sizes": [
+     [
+      "wide",
+      "Totale"
+     ],
+     [
+      "full",
+      "Ganze Figur"
+     ],
+     [
+      "medium",
+      "Halbnahe"
+     ],
+     [
+      "close",
+      "Großaufnahme"
+     ],
+     [
+      "extreme_close",
+      "Extreme Großaufnahme"
+     ],
+     [
+      "two_shot",
+      "Zwei Figuren"
+     ],
+     [
+      "ots",
+      "Über die Schulter"
+     ],
+     [
+      "dialogue",
+      "Dialog"
+     ],
+     [
+      "pov",
+      "Sicht der Figur"
+     ],
+     [
+      "insert",
+      "Objektdetail (Insert)"
+     ]
+    ],
+    "current": {
+     "mode": "acted",
+     "size": "full",
+     "move": "dolly_in",
+     "faces": {},
+     "transition": "cut",
+     "directed": false
+    }
+   },
+   {
+    "mode": "acted",
+    "transitions": [
+     [
+      "cut",
+      "Schnitt"
+     ],
+     [
+      "fade",
+      "Abblende auf Schwarz"
+     ],
+     [
+      "flash",
+      "Weißer Blitz"
+     ]
+    ],
+    "moves": [
+     [
+      "static",
+      "Feste Kamera"
+     ],
+     [
+      "dolly_in",
+      "Fährt langsam heran"
+     ],
+     [
+      "dolly_out",
+      "Fährt langsam zurück"
+     ],
+     [
+      "track",
+      "Fährt seitlich mit"
+     ],
+     [
+      "orbit",
+      "Umkreist die Figur"
+     ],
+     [
+      "crane_up",
+      "Steigt auf"
+     ],
+     [
+      "crane_down",
+      "Sinkt ab"
+     ],
+     [
+      "follow",
+      "Folgt der Figur"
+     ]
+    ],
+    "faces": [
+     [
+      "angry",
+      "Wütend"
+     ],
+     [
+      "creature",
+      "Monster"
+     ],
+     [
+      "grin",
+      "Unheimliches Grinsen"
+     ],
+     [
+      "happy",
+      "Fröhlich"
+     ],
+     [
+      "nervous",
+      "Besorgt"
+     ],
+     [
+      "neutral",
+      "Neutral"
+     ],
+     [
+      "sad",
+      "Traurig"
+     ],
+     [
+      "scared",
+      "Verängstigt"
+     ],
+     [
+      "shocked",
+      "Schockiert"
+     ],
+     [
+      "surprised",
+      "Überrascht"
+     ],
+     [
+      "alien",
+      "Außerirdisch"
+     ],
+     [
+      "bored",
+      "Gelangweilt"
+     ],
+     [
+      "calm",
+      "Ruhig"
+     ],
+     [
+      "closed",
+      "Augen geschlossen"
+     ],
+     [
+      "confused",
+      "Verwirrt"
+     ],
+     [
+      "cool",
+      "Entspannt"
+     ],
+     [
+      "crying",
+      "Weinend"
+     ],
+     [
+      "determined",
+      "Entschlossen"
+     ],
+     [
+      "disgusted",
+      "Angewidert"
+     ],
+     [
+      "dizzy",
+      "Benommen"
+     ],
+     [
+      "double",
+      "Doppelt"
+     ],
+     [
+      "evil",
+      "Böse"
+     ],
+     [
+      "excited",
+      "Aufgeregt"
+     ],
+     [
+      "fixed_smile",
+      "Starres Lächeln"
+     ],
+     [
+      "furious",
+      "Rasend"
+     ],
+     [
+      "joy",
+      "Freudig"
+     ],
+     [
+      "ko",
+      "K.O."
+     ],
+     [
+      "laugh",
+      "Lachend"
+     ],
+     [
+      "love",
+      "Verliebt"
+     ],
+     [
+      "pain",
+      "Schmerzverzerrt"
+     ],
+     [
+      "predator",
+      "Raubtier"
+     ],
+     [
+      "predator_smile",
+      "Raubtierlächeln"
+     ],
+     [
+      "proud",
+      "Stolz"
+     ],
+     [
+      "robot",
+      "Roboter"
+     ],
+     [
+      "shy",
+      "Schüchtern"
+     ],
+     [
+      "silly",
+      "Albern"
+     ],
+     [
+      "skull",
+      "Totenkopf"
+     ],
+     [
+      "sleeping",
+      "Schlafend"
+     ],
+     [
+      "smile_sad",
+      "Trauriges Lächeln"
+     ],
+     [
+      "smirk",
+      "Schiefes Grinsen"
+     ],
+     [
+      "suspicious",
+      "Misstrauisch"
+     ],
+     [
+      "talk",
+      "Sprechend"
+     ],
+     [
+      "thinking",
+      "Nachdenklich"
+     ],
+     [
+      "tired",
+      "Müde"
+     ],
+     [
+      "urgent",
+      "Eilig"
+     ],
+     [
+      "wink",
+      "Zwinkernd"
+     ]
+    ],
+    "sizes": [
+     [
+      "wide",
+      "Totale"
+     ],
+     [
+      "full",
+      "Ganze Figur"
+     ],
+     [
+      "medium",
+      "Halbnahe"
+     ],
+     [
+      "close",
+      "Großaufnahme"
+     ],
+     [
+      "extreme_close",
+      "Extreme Großaufnahme"
+     ],
+     [
+      "two_shot",
+      "Zwei Figuren"
+     ],
+     [
+      "ots",
+      "Über die Schulter"
+     ],
+     [
+      "dialogue",
+      "Dialog"
+     ],
+     [
+      "pov",
+      "Sicht der Figur"
+     ],
+     [
+      "insert",
+      "Objektdetail (Insert)"
+     ]
+    ],
+    "current": {
+     "mode": "acted",
+     "size": "close",
+     "move": "handheld",
+     "faces": {
+      "lea": "nervous"
+     },
+     "transition": "cut",
+     "directed": false
+    }
+   },
+   {
+    "mode": "acted",
+    "transitions": [
+     [
+      "cut",
+      "Schnitt"
+     ],
+     [
+      "fade",
+      "Abblende auf Schwarz"
+     ],
+     [
+      "flash",
+      "Weißer Blitz"
+     ]
+    ],
+    "moves": [
+     [
+      "static",
+      "Feste Kamera"
+     ],
+     [
+      "dolly_in",
+      "Fährt langsam heran"
+     ],
+     [
+      "dolly_out",
+      "Fährt langsam zurück"
+     ],
+     [
+      "track",
+      "Fährt seitlich mit"
+     ],
+     [
+      "orbit",
+      "Umkreist die Figur"
+     ],
+     [
+      "crane_up",
+      "Steigt auf"
+     ],
+     [
+      "crane_down",
+      "Sinkt ab"
+     ],
+     [
+      "follow",
+      "Folgt der Figur"
+     ]
+    ],
+    "faces": [
+     [
+      "angry",
+      "Wütend"
+     ],
+     [
+      "creature",
+      "Monster"
+     ],
+     [
+      "grin",
+      "Unheimliches Grinsen"
+     ],
+     [
+      "happy",
+      "Fröhlich"
+     ],
+     [
+      "nervous",
+      "Besorgt"
+     ],
+     [
+      "neutral",
+      "Neutral"
+     ],
+     [
+      "sad",
+      "Traurig"
+     ],
+     [
+      "scared",
+      "Verängstigt"
+     ],
+     [
+      "shocked",
+      "Schockiert"
+     ],
+     [
+      "surprised",
+      "Überrascht"
+     ],
+     [
+      "alien",
+      "Außerirdisch"
+     ],
+     [
+      "bored",
+      "Gelangweilt"
+     ],
+     [
+      "calm",
+      "Ruhig"
+     ],
+     [
+      "closed",
+      "Augen geschlossen"
+     ],
+     [
+      "confused",
+      "Verwirrt"
+     ],
+     [
+      "cool",
+      "Entspannt"
+     ],
+     [
+      "crying",
+      "Weinend"
+     ],
+     [
+      "determined",
+      "Entschlossen"
+     ],
+     [
+      "disgusted",
+      "Angewidert"
+     ],
+     [
+      "dizzy",
+      "Benommen"
+     ],
+     [
+      "double",
+      "Doppelt"
+     ],
+     [
+      "evil",
+      "Böse"
+     ],
+     [
+      "excited",
+      "Aufgeregt"
+     ],
+     [
+      "fixed_smile",
+      "Starres Lächeln"
+     ],
+     [
+      "furious",
+      "Rasend"
+     ],
+     [
+      "joy",
+      "Freudig"
+     ],
+     [
+      "ko",
+      "K.O."
+     ],
+     [
+      "laugh",
+      "Lachend"
+     ],
+     [
+      "love",
+      "Verliebt"
+     ],
+     [
+      "pain",
+      "Schmerzverzerrt"
+     ],
+     [
+      "predator",
+      "Raubtier"
+     ],
+     [
+      "predator_smile",
+      "Raubtierlächeln"
+     ],
+     [
+      "proud",
+      "Stolz"
+     ],
+     [
+      "robot",
+      "Roboter"
+     ],
+     [
+      "shy",
+      "Schüchtern"
+     ],
+     [
+      "silly",
+      "Albern"
+     ],
+     [
+      "skull",
+      "Totenkopf"
+     ],
+     [
+      "sleeping",
+      "Schlafend"
+     ],
+     [
+      "smile_sad",
+      "Trauriges Lächeln"
+     ],
+     [
+      "smirk",
+      "Schiefes Grinsen"
+     ],
+     [
+      "suspicious",
+      "Misstrauisch"
+     ],
+     [
+      "talk",
+      "Sprechend"
+     ],
+     [
+      "thinking",
+      "Nachdenklich"
+     ],
+     [
+      "tired",
+      "Müde"
+     ],
+     [
+      "urgent",
+      "Eilig"
+     ],
+     [
+      "wink",
+      "Zwinkernd"
+     ]
+    ],
+    "sizes": [
+     [
+      "wide",
+      "Totale"
+     ],
+     [
+      "full",
+      "Ganze Figur"
+     ],
+     [
+      "medium",
+      "Halbnahe"
+     ],
+     [
+      "close",
+      "Großaufnahme"
+     ],
+     [
+      "extreme_close",
+      "Extreme Großaufnahme"
+     ],
+     [
+      "two_shot",
+      "Zwei Figuren"
+     ],
+     [
+      "ots",
+      "Über die Schulter"
+     ],
+     [
+      "dialogue",
+      "Dialog"
+     ],
+     [
+      "pov",
+      "Sicht der Figur"
+     ],
+     [
+      "insert",
+      "Objektdetail (Insert)"
+     ]
+    ],
+    "current": {
+     "mode": "acted",
+     "size": "pov",
+     "move": "dolly_in",
+     "faces": {
+      "lea": "nervous",
+      "ombre": "neutral"
+     },
+     "transition": "cut",
+     "directed": false
+    }
+   },
+   {
+    "mode": "acted",
+    "transitions": [
+     [
+      "cut",
+      "Schnitt"
+     ],
+     [
+      "fade",
+      "Abblende auf Schwarz"
+     ],
+     [
+      "flash",
+      "Weißer Blitz"
+     ]
+    ],
+    "moves": [
+     [
+      "static",
+      "Feste Kamera"
+     ],
+     [
+      "dolly_in",
+      "Fährt langsam heran"
+     ],
+     [
+      "dolly_out",
+      "Fährt langsam zurück"
+     ],
+     [
+      "track",
+      "Fährt seitlich mit"
+     ],
+     [
+      "orbit",
+      "Umkreist die Figur"
+     ],
+     [
+      "crane_up",
+      "Steigt auf"
+     ],
+     [
+      "crane_down",
+      "Sinkt ab"
+     ],
+     [
+      "follow",
+      "Folgt der Figur"
+     ]
+    ],
+    "faces": [
+     [
+      "angry",
+      "Wütend"
+     ],
+     [
+      "creature",
+      "Monster"
+     ],
+     [
+      "grin",
+      "Unheimliches Grinsen"
+     ],
+     [
+      "happy",
+      "Fröhlich"
+     ],
+     [
+      "nervous",
+      "Besorgt"
+     ],
+     [
+      "neutral",
+      "Neutral"
+     ],
+     [
+      "sad",
+      "Traurig"
+     ],
+     [
+      "scared",
+      "Verängstigt"
+     ],
+     [
+      "shocked",
+      "Schockiert"
+     ],
+     [
+      "surprised",
+      "Überrascht"
+     ],
+     [
+      "alien",
+      "Außerirdisch"
+     ],
+     [
+      "bored",
+      "Gelangweilt"
+     ],
+     [
+      "calm",
+      "Ruhig"
+     ],
+     [
+      "closed",
+      "Augen geschlossen"
+     ],
+     [
+      "confused",
+      "Verwirrt"
+     ],
+     [
+      "cool",
+      "Entspannt"
+     ],
+     [
+      "crying",
+      "Weinend"
+     ],
+     [
+      "determined",
+      "Entschlossen"
+     ],
+     [
+      "disgusted",
+      "Angewidert"
+     ],
+     [
+      "dizzy",
+      "Benommen"
+     ],
+     [
+      "double",
+      "Doppelt"
+     ],
+     [
+      "evil",
+      "Böse"
+     ],
+     [
+      "excited",
+      "Aufgeregt"
+     ],
+     [
+      "fixed_smile",
+      "Starres Lächeln"
+     ],
+     [
+      "furious",
+      "Rasend"
+     ],
+     [
+      "joy",
+      "Freudig"
+     ],
+     [
+      "ko",
+      "K.O."
+     ],
+     [
+      "laugh",
+      "Lachend"
+     ],
+     [
+      "love",
+      "Verliebt"
+     ],
+     [
+      "pain",
+      "Schmerzverzerrt"
+     ],
+     [
+      "predator",
+      "Raubtier"
+     ],
+     [
+      "predator_smile",
+      "Raubtierlächeln"
+     ],
+     [
+      "proud",
+      "Stolz"
+     ],
+     [
+      "robot",
+      "Roboter"
+     ],
+     [
+      "shy",
+      "Schüchtern"
+     ],
+     [
+      "silly",
+      "Albern"
+     ],
+     [
+      "skull",
+      "Totenkopf"
+     ],
+     [
+      "sleeping",
+      "Schlafend"
+     ],
+     [
+      "smile_sad",
+      "Trauriges Lächeln"
+     ],
+     [
+      "smirk",
+      "Schiefes Grinsen"
+     ],
+     [
+      "suspicious",
+      "Misstrauisch"
+     ],
+     [
+      "talk",
+      "Sprechend"
+     ],
+     [
+      "thinking",
+      "Nachdenklich"
+     ],
+     [
+      "tired",
+      "Müde"
+     ],
+     [
+      "urgent",
+      "Eilig"
+     ],
+     [
+      "wink",
+      "Zwinkernd"
+     ]
+    ],
+    "sizes": [
+     [
+      "wide",
+      "Totale"
+     ],
+     [
+      "full",
+      "Ganze Figur"
+     ],
+     [
+      "medium",
+      "Halbnahe"
+     ],
+     [
+      "close",
+      "Großaufnahme"
+     ],
+     [
+      "extreme_close",
+      "Extreme Großaufnahme"
+     ],
+     [
+      "two_shot",
+      "Zwei Figuren"
+     ],
+     [
+      "ots",
+      "Über die Schulter"
+     ],
+     [
+      "dialogue",
+      "Dialog"
+     ],
+     [
+      "pov",
+      "Sicht der Figur"
+     ],
+     [
+      "insert",
+      "Objektdetail (Insert)"
+     ]
+    ],
+    "current": {
+     "mode": "acted",
+     "size": "full",
+     "move": "handheld",
+     "faces": {
+      "lea": "nervous"
+     },
+     "transition": "cut",
+     "directed": false
+    }
+   },
+   {
+    "mode": "acted",
+    "transitions": [
+     [
+      "cut",
+      "Schnitt"
+     ],
+     [
+      "fade",
+      "Abblende auf Schwarz"
+     ],
+     [
+      "flash",
+      "Weißer Blitz"
+     ]
+    ],
+    "moves": [
+     [
+      "static",
+      "Feste Kamera"
+     ],
+     [
+      "dolly_in",
+      "Fährt langsam heran"
+     ],
+     [
+      "dolly_out",
+      "Fährt langsam zurück"
+     ],
+     [
+      "track",
+      "Fährt seitlich mit"
+     ],
+     [
+      "orbit",
+      "Umkreist die Figur"
+     ],
+     [
+      "crane_up",
+      "Steigt auf"
+     ],
+     [
+      "crane_down",
+      "Sinkt ab"
+     ],
+     [
+      "follow",
+      "Folgt der Figur"
+     ]
+    ],
+    "faces": [
+     [
+      "angry",
+      "Wütend"
+     ],
+     [
+      "creature",
+      "Monster"
+     ],
+     [
+      "grin",
+      "Unheimliches Grinsen"
+     ],
+     [
+      "happy",
+      "Fröhlich"
+     ],
+     [
+      "nervous",
+      "Besorgt"
+     ],
+     [
+      "neutral",
+      "Neutral"
+     ],
+     [
+      "sad",
+      "Traurig"
+     ],
+     [
+      "scared",
+      "Verängstigt"
+     ],
+     [
+      "shocked",
+      "Schockiert"
+     ],
+     [
+      "surprised",
+      "Überrascht"
+     ],
+     [
+      "alien",
+      "Außerirdisch"
+     ],
+     [
+      "bored",
+      "Gelangweilt"
+     ],
+     [
+      "calm",
+      "Ruhig"
+     ],
+     [
+      "closed",
+      "Augen geschlossen"
+     ],
+     [
+      "confused",
+      "Verwirrt"
+     ],
+     [
+      "cool",
+      "Entspannt"
+     ],
+     [
+      "crying",
+      "Weinend"
+     ],
+     [
+      "determined",
+      "Entschlossen"
+     ],
+     [
+      "disgusted",
+      "Angewidert"
+     ],
+     [
+      "dizzy",
+      "Benommen"
+     ],
+     [
+      "double",
+      "Doppelt"
+     ],
+     [
+      "evil",
+      "Böse"
+     ],
+     [
+      "excited",
+      "Aufgeregt"
+     ],
+     [
+      "fixed_smile",
+      "Starres Lächeln"
+     ],
+     [
+      "furious",
+      "Rasend"
+     ],
+     [
+      "joy",
+      "Freudig"
+     ],
+     [
+      "ko",
+      "K.O."
+     ],
+     [
+      "laugh",
+      "Lachend"
+     ],
+     [
+      "love",
+      "Verliebt"
+     ],
+     [
+      "pain",
+      "Schmerzverzerrt"
+     ],
+     [
+      "predator",
+      "Raubtier"
+     ],
+     [
+      "predator_smile",
+      "Raubtierlächeln"
+     ],
+     [
+      "proud",
+      "Stolz"
+     ],
+     [
+      "robot",
+      "Roboter"
+     ],
+     [
+      "shy",
+      "Schüchtern"
+     ],
+     [
+      "silly",
+      "Albern"
+     ],
+     [
+      "skull",
+      "Totenkopf"
+     ],
+     [
+      "sleeping",
+      "Schlafend"
+     ],
+     [
+      "smile_sad",
+      "Trauriges Lächeln"
+     ],
+     [
+      "smirk",
+      "Schiefes Grinsen"
+     ],
+     [
+      "suspicious",
+      "Misstrauisch"
+     ],
+     [
+      "talk",
+      "Sprechend"
+     ],
+     [
+      "thinking",
+      "Nachdenklich"
+     ],
+     [
+      "tired",
+      "Müde"
+     ],
+     [
+      "urgent",
+      "Eilig"
+     ],
+     [
+      "wink",
+      "Zwinkernd"
+     ]
+    ],
+    "sizes": [
+     [
+      "wide",
+      "Totale"
+     ],
+     [
+      "full",
+      "Ganze Figur"
+     ],
+     [
+      "medium",
+      "Halbnahe"
+     ],
+     [
+      "close",
+      "Großaufnahme"
+     ],
+     [
+      "extreme_close",
+      "Extreme Großaufnahme"
+     ],
+     [
+      "two_shot",
+      "Zwei Figuren"
+     ],
+     [
+      "ots",
+      "Über die Schulter"
+     ],
+     [
+      "dialogue",
+      "Dialog"
+     ],
+     [
+      "pov",
+      "Sicht der Figur"
+     ],
+     [
+      "insert",
+      "Objektdetail (Insert)"
+     ]
+    ],
+    "current": {
+     "mode": "acted",
+     "size": "pov",
+     "move": "static",
+     "faces": {
+      "lea": "nervous"
+     },
+     "transition": "cut",
+     "directed": false
+    }
+   }
+  ],
+  "groesse": {
+   "total": 317635,
+   "generated": 312708
+  },
+  "bilder": [
+   {
+    "plan": 0,
+    "datei": "demo4_tension-0.png",
+    "sekunden": 3.405,
+    "motor": "pixel3d"
+   },
+   {
+    "plan": 2,
+    "datei": "demo4_tension-1.png",
+    "sekunden": 9.08,
+    "motor": "pixel3d"
+   },
+   {
+    "plan": 3,
+    "datei": "demo4_tension-2.png",
+    "sekunden": 14.755,
+    "motor": "pixel3d"
+   },
+   {
+    "plan": 4,
+    "datei": "demo4_tension-3.png",
+    "sekunden": 19.295,
+    "motor": "pixel3d"
+   }
+  ],
+  "vorschau_ordner": "nuit_d_orage"
+ },
+ {
+  "slug": "der_fremde_schluessel",
+  "meta": {
+   "name": "Der fremde Schlüssel",
+   "style": "pixel3d",
+   "render_engine": "pixel3d",
+   "series": null,
+   "part_label": "DEMO 1",
+   "created": 1791913600,
+   "notes": "Szenario demo1_mouvement",
+   "director": ""
+  },
+  "szenario": "demo1_mouvement",
+  "script": "Lea kommt nach Hause.\nAuf dem Tisch... ein Schlüssel, den sie noch nie gesehen hat.\nSie setzt sich, den Schlüssel in der Hand.\nWer kann ihn nur dort hingelegt haben?",
+  "episode": "{\"engine_version\": 2, \"default_set\": \"salon\", \"music\": \"mystery\", \"hud\": {\"title\": [\"TU\", \"DÉCIDES\"], \"part\": \"DÉMO 1\", \"hearts\": []}, \"sets\": {\"salon\": {\"type\": \"living_room\", \"items\": [{\"id\": \"cle\", \"type\": \"key\", \"at\": [0.3, 0.82, 4.4]}]}}, \"cast\": {\"lea\": {\"ref\": \"lea\"}}, \"shots\": [{\"lines\": [0, 0], \"actors\": [{\"id\": \"lea\", \"at\": [2.3, 0.9], \"facing\": \"-x\"}], \"actions\": [{\"who\": \"lea\", \"do\": \"walk_to\", \"to\": [0.2, 3.6]}, {\"who\": \"lea\", \"do\": \"look_around\"}], \"camera\": {\"shot\": \"wide\", \"on\": [\"lea\"]}, \"sfx\": []}, {\"lines\": [1, 1], \"actions\": [{\"who\": \"lea\", \"do\": \"pick\", \"item\": \"cle\"}, {\"who\": \"lea\", \"do\": \"face\", \"name\": \"surprised\"}], \"camera\": {\"shot\": \"medium_full\", \"on\": [\"lea\"]}, \"actors\": [], \"sfx\": []}, {\"lines\": [2, 2], \"actions\": [{\"who\": \"lea\", \"do\": \"sit\", \"on\": \"canape\"}, {\"who\": \"lea\", \"do\": \"face\", \"name\": \"thinking\"}], \"camera\": {\"shot\": \"full\", \"on\": [\"lea\"], \"from\": [-0.8, 0.2]}, \"actors\": [], \"sfx\": []}, {\"lines\": [3, 3], \"actions\": [{\"who\": \"lea\", \"do\": \"look_at\", \"target\": \"cle\", \"dur\": 1.8}, {\"who\": \"lea\", \"do\": \"face\", \"name\": \"suspicious\"}], \"camera\": {\"shot\": \"medium\", \"on\": [\"lea\"], \"move\": \"dolly_in\", \"amount\": 0.5}, \"actors\": [], \"sfx\": []}], \"lines\": {\"0\": {}, \"1\": {}, \"2\": {}, \"3\": {}}, \"style\": \"pixel3d\"}",
+  "lines": [
+   {
+    "tts": "Lea kommt nach Hause.",
+    "display": "Lea kommt nach Hause.",
+    "text": "Lea kommt nach Hause.",
+    "tags": [],
+    "dialogue": false,
+    "i": 0,
+    "start": 0.4,
+    "end": 7.0,
+    "segs": [
+     [
+      0.4,
+      7.0
+     ]
+    ]
+   },
+   {
+    "tts": "Auf dem Tisch... ein Schlüssel, den sie noch nie gesehen hat.",
+    "display": "Auf dem Tisch... ein Schlüssel, den sie noch nie gesehen hat.",
+    "text": "Auf dem Tisch... ein Schlüssel, den sie noch nie gesehen hat.",
+    "tags": [],
+    "dialogue": false,
+    "i": 1,
+    "start": 7.3,
+    "end": 11.9,
+    "segs": [
+     [
+      7.3,
+      11.9
+     ]
+    ]
+   },
+   {
+    "tts": "Sie setzt sich, den Schlüssel in der Hand.",
+    "display": "Sie setzt sich, den Schlüssel in der Hand.",
+    "text": "Sie setzt sich, den Schlüssel in der Hand.",
+    "tags": [],
+    "dialogue": false,
+    "i": 2,
+    "start": 12.2,
+    "end": 18.0,
+    "segs": [
+     [
+      12.2,
+      18.0
+     ]
+    ]
+   },
+   {
+    "tts": "Wer kann ihn nur dort hingelegt haben?",
+    "display": "Wer kann ihn nur dort hingelegt haben?",
+    "text": "Wer kann ihn nur dort hingelegt haben?",
+    "tags": [],
+    "dialogue": false,
+    "i": 3,
+    "start": 18.3,
+    "end": 21.9,
+    "segs": [
+     [
+      18.3,
+      21.9
+     ]
+    ]
+   }
+  ],
+  "warnings": [],
+  "capabilities": {
+   "audit": {
+    "style": "pixel3d",
+    "used": [
+     "action:face",
+     "action:look_around",
+     "action:look_at",
+     "action:pick",
+     "action:sit",
+     "action:walk_to",
+     "camera:full",
+     "camera:medium",
+     "camera:medium_full",
+     "camera:wide",
+     "character:lea",
+     "expression:surprised",
+     "expression:suspicious",
+     "expression:thinking",
+     "music:mystery",
+     "place:living_room"
+    ],
+    "gaps": [],
+    "requires": null,
+    "ok": true
+   },
+   "plan": {
+    "engine": "pixel3d",
+    "needs": [
+     {
+      "kind": "place",
+      "name": "living_room",
+      "terms": [
+       "Wohnzimmer"
+      ],
+      "status": "native",
+      "source": "engines/pixel3d/places.py",
+      "note": "",
+      "how": ""
+     },
+     {
+      "kind": "action",
+      "name": "walk_to",
+      "terms": [
+       "geht"
+      ],
+      "status": "native",
+      "source": "acting/timeline.py",
+      "note": "",
+      "how": ""
+     },
+     {
+      "kind": "action",
+      "name": "look_at",
+      "terms": [
+       "schaut"
+      ],
+      "status": "native",
+      "source": "acting/timeline.py",
+      "note": "",
+      "how": ""
+     },
+     {
+      "kind": "action",
+      "name": "pick",
+      "terms": [
+       "nimmt"
+      ],
+      "status": "native",
+      "source": "acting/timeline.py",
+      "note": "",
+      "how": ""
+     },
+     {
+      "kind": "action",
+      "name": "sit",
+      "terms": [
+       "setzt sich"
+      ],
+      "status": "native",
+      "source": "acting/timeline.py",
+      "note": "",
+      "how": ""
+     }
+    ],
+    "counts": {
+     "native": 5,
+     "composed": 0,
+     "partial": 0,
+     "missing": 0
+    },
+    "requests": []
+   }
+  },
+  "previews": [
+   "shot_000.jpg",
+   "shot_001.jpg",
+   "shot_002.jpg",
+   "shot_003.jpg"
+  ],
+  "status": {
+   "script": true,
+   "voice": false,
+   "lines": true,
+   "episode": true,
+   "mix": false,
+   "thumbnail": false,
+   "metadata": false,
+   "renders": []
+  },
+  "optionen": [
+   {
+    "mode": "acted",
+    "transitions": [
+     [
+      "cut",
+      "Schnitt"
+     ],
+     [
+      "fade",
+      "Abblende auf Schwarz"
+     ],
+     [
+      "flash",
+      "Weißer Blitz"
+     ]
+    ],
+    "moves": [
+     [
+      "static",
+      "Feste Kamera"
+     ],
+     [
+      "dolly_in",
+      "Fährt langsam heran"
+     ],
+     [
+      "dolly_out",
+      "Fährt langsam zurück"
+     ],
+     [
+      "track",
+      "Fährt seitlich mit"
+     ],
+     [
+      "orbit",
+      "Umkreist die Figur"
+     ],
+     [
+      "crane_up",
+      "Steigt auf"
+     ],
+     [
+      "crane_down",
+      "Sinkt ab"
+     ],
+     [
+      "follow",
+      "Folgt der Figur"
+     ]
+    ],
+    "faces": [
+     [
+      "angry",
+      "Wütend"
+     ],
+     [
+      "creature",
+      "Monster"
+     ],
+     [
+      "grin",
+      "Unheimliches Grinsen"
+     ],
+     [
+      "happy",
+      "Fröhlich"
+     ],
+     [
+      "nervous",
+      "Besorgt"
+     ],
+     [
+      "neutral",
+      "Neutral"
+     ],
+     [
+      "sad",
+      "Traurig"
+     ],
+     [
+      "scared",
+      "Verängstigt"
+     ],
+     [
+      "shocked",
+      "Schockiert"
+     ],
+     [
+      "surprised",
+      "Überrascht"
+     ],
+     [
+      "alien",
+      "Außerirdisch"
+     ],
+     [
+      "bored",
+      "Gelangweilt"
+     ],
+     [
+      "calm",
+      "Ruhig"
+     ],
+     [
+      "closed",
+      "Augen geschlossen"
+     ],
+     [
+      "confused",
+      "Verwirrt"
+     ],
+     [
+      "cool",
+      "Entspannt"
+     ],
+     [
+      "crying",
+      "Weinend"
+     ],
+     [
+      "determined",
+      "Entschlossen"
+     ],
+     [
+      "disgusted",
+      "Angewidert"
+     ],
+     [
+      "dizzy",
+      "Benommen"
+     ],
+     [
+      "double",
+      "Doppelt"
+     ],
+     [
+      "evil",
+      "Böse"
+     ],
+     [
+      "excited",
+      "Aufgeregt"
+     ],
+     [
+      "fixed_smile",
+      "Starres Lächeln"
+     ],
+     [
+      "furious",
+      "Rasend"
+     ],
+     [
+      "joy",
+      "Freudig"
+     ],
+     [
+      "ko",
+      "K.O."
+     ],
+     [
+      "laugh",
+      "Lachend"
+     ],
+     [
+      "love",
+      "Verliebt"
+     ],
+     [
+      "pain",
+      "Schmerzverzerrt"
+     ],
+     [
+      "predator",
+      "Raubtier"
+     ],
+     [
+      "predator_smile",
+      "Raubtierlächeln"
+     ],
+     [
+      "proud",
+      "Stolz"
+     ],
+     [
+      "robot",
+      "Roboter"
+     ],
+     [
+      "shy",
+      "Schüchtern"
+     ],
+     [
+      "silly",
+      "Albern"
+     ],
+     [
+      "skull",
+      "Totenkopf"
+     ],
+     [
+      "sleeping",
+      "Schlafend"
+     ],
+     [
+      "smile_sad",
+      "Trauriges Lächeln"
+     ],
+     [
+      "smirk",
+      "Schiefes Grinsen"
+     ],
+     [
+      "suspicious",
+      "Misstrauisch"
+     ],
+     [
+      "talk",
+      "Sprechend"
+     ],
+     [
+      "thinking",
+      "Nachdenklich"
+     ],
+     [
+      "tired",
+      "Müde"
+     ],
+     [
+      "urgent",
+      "Eilig"
+     ],
+     [
+      "wink",
+      "Zwinkernd"
+     ]
+    ],
+    "sizes": [
+     [
+      "wide",
+      "Totale"
+     ],
+     [
+      "full",
+      "Ganze Figur"
+     ],
+     [
+      "medium",
+      "Halbnahe"
+     ],
+     [
+      "close",
+      "Großaufnahme"
+     ],
+     [
+      "extreme_close",
+      "Extreme Großaufnahme"
+     ],
+     [
+      "two_shot",
+      "Zwei Figuren"
+     ],
+     [
+      "ots",
+      "Über die Schulter"
+     ],
+     [
+      "dialogue",
+      "Dialog"
+     ],
+     [
+      "pov",
+      "Sicht der Figur"
+     ],
+     [
+      "insert",
+      "Objektdetail (Insert)"
+     ]
+    ],
+    "current": {
+     "mode": "acted",
+     "size": "wide",
+     "move": "static",
+     "faces": {
+      "lea": "neutral"
+     },
+     "transition": "cut",
+     "directed": false
+    }
+   },
+   {
+    "mode": "acted",
+    "transitions": [
+     [
+      "cut",
+      "Schnitt"
+     ],
+     [
+      "fade",
+      "Abblende auf Schwarz"
+     ],
+     [
+      "flash",
+      "Weißer Blitz"
+     ]
+    ],
+    "moves": [
+     [
+      "static",
+      "Feste Kamera"
+     ],
+     [
+      "dolly_in",
+      "Fährt langsam heran"
+     ],
+     [
+      "dolly_out",
+      "Fährt langsam zurück"
+     ],
+     [
+      "track",
+      "Fährt seitlich mit"
+     ],
+     [
+      "orbit",
+      "Umkreist die Figur"
+     ],
+     [
+      "crane_up",
+      "Steigt auf"
+     ],
+     [
+      "crane_down",
+      "Sinkt ab"
+     ],
+     [
+      "follow",
+      "Folgt der Figur"
+     ]
+    ],
+    "faces": [
+     [
+      "angry",
+      "Wütend"
+     ],
+     [
+      "creature",
+      "Monster"
+     ],
+     [
+      "grin",
+      "Unheimliches Grinsen"
+     ],
+     [
+      "happy",
+      "Fröhlich"
+     ],
+     [
+      "nervous",
+      "Besorgt"
+     ],
+     [
+      "neutral",
+      "Neutral"
+     ],
+     [
+      "sad",
+      "Traurig"
+     ],
+     [
+      "scared",
+      "Verängstigt"
+     ],
+     [
+      "shocked",
+      "Schockiert"
+     ],
+     [
+      "surprised",
+      "Überrascht"
+     ],
+     [
+      "alien",
+      "Außerirdisch"
+     ],
+     [
+      "bored",
+      "Gelangweilt"
+     ],
+     [
+      "calm",
+      "Ruhig"
+     ],
+     [
+      "closed",
+      "Augen geschlossen"
+     ],
+     [
+      "confused",
+      "Verwirrt"
+     ],
+     [
+      "cool",
+      "Entspannt"
+     ],
+     [
+      "crying",
+      "Weinend"
+     ],
+     [
+      "determined",
+      "Entschlossen"
+     ],
+     [
+      "disgusted",
+      "Angewidert"
+     ],
+     [
+      "dizzy",
+      "Benommen"
+     ],
+     [
+      "double",
+      "Doppelt"
+     ],
+     [
+      "evil",
+      "Böse"
+     ],
+     [
+      "excited",
+      "Aufgeregt"
+     ],
+     [
+      "fixed_smile",
+      "Starres Lächeln"
+     ],
+     [
+      "furious",
+      "Rasend"
+     ],
+     [
+      "joy",
+      "Freudig"
+     ],
+     [
+      "ko",
+      "K.O."
+     ],
+     [
+      "laugh",
+      "Lachend"
+     ],
+     [
+      "love",
+      "Verliebt"
+     ],
+     [
+      "pain",
+      "Schmerzverzerrt"
+     ],
+     [
+      "predator",
+      "Raubtier"
+     ],
+     [
+      "predator_smile",
+      "Raubtierlächeln"
+     ],
+     [
+      "proud",
+      "Stolz"
+     ],
+     [
+      "robot",
+      "Roboter"
+     ],
+     [
+      "shy",
+      "Schüchtern"
+     ],
+     [
+      "silly",
+      "Albern"
+     ],
+     [
+      "skull",
+      "Totenkopf"
+     ],
+     [
+      "sleeping",
+      "Schlafend"
+     ],
+     [
+      "smile_sad",
+      "Trauriges Lächeln"
+     ],
+     [
+      "smirk",
+      "Schiefes Grinsen"
+     ],
+     [
+      "suspicious",
+      "Misstrauisch"
+     ],
+     [
+      "talk",
+      "Sprechend"
+     ],
+     [
+      "thinking",
+      "Nachdenklich"
+     ],
+     [
+      "tired",
+      "Müde"
+     ],
+     [
+      "urgent",
+      "Eilig"
+     ],
+     [
+      "wink",
+      "Zwinkernd"
+     ]
+    ],
+    "sizes": [
+     [
+      "wide",
+      "Totale"
+     ],
+     [
+      "full",
+      "Ganze Figur"
+     ],
+     [
+      "medium",
+      "Halbnahe"
+     ],
+     [
+      "close",
+      "Großaufnahme"
+     ],
+     [
+      "extreme_close",
+      "Extreme Großaufnahme"
+     ],
+     [
+      "two_shot",
+      "Zwei Figuren"
+     ],
+     [
+      "ots",
+      "Über die Schulter"
+     ],
+     [
+      "dialogue",
+      "Dialog"
+     ],
+     [
+      "pov",
+      "Sicht der Figur"
+     ],
+     [
+      "insert",
+      "Objektdetail (Insert)"
+     ]
+    ],
+    "current": {
+     "mode": "acted",
+     "size": "medium_full",
+     "move": "static",
+     "faces": {
+      "lea": "neutral"
+     },
+     "transition": "cut",
+     "directed": false
+    }
+   },
+   {
+    "mode": "acted",
+    "transitions": [
+     [
+      "cut",
+      "Schnitt"
+     ],
+     [
+      "fade",
+      "Abblende auf Schwarz"
+     ],
+     [
+      "flash",
+      "Weißer Blitz"
+     ]
+    ],
+    "moves": [
+     [
+      "static",
+      "Feste Kamera"
+     ],
+     [
+      "dolly_in",
+      "Fährt langsam heran"
+     ],
+     [
+      "dolly_out",
+      "Fährt langsam zurück"
+     ],
+     [
+      "track",
+      "Fährt seitlich mit"
+     ],
+     [
+      "orbit",
+      "Umkreist die Figur"
+     ],
+     [
+      "crane_up",
+      "Steigt auf"
+     ],
+     [
+      "crane_down",
+      "Sinkt ab"
+     ],
+     [
+      "follow",
+      "Folgt der Figur"
+     ]
+    ],
+    "faces": [
+     [
+      "angry",
+      "Wütend"
+     ],
+     [
+      "creature",
+      "Monster"
+     ],
+     [
+      "grin",
+      "Unheimliches Grinsen"
+     ],
+     [
+      "happy",
+      "Fröhlich"
+     ],
+     [
+      "nervous",
+      "Besorgt"
+     ],
+     [
+      "neutral",
+      "Neutral"
+     ],
+     [
+      "sad",
+      "Traurig"
+     ],
+     [
+      "scared",
+      "Verängstigt"
+     ],
+     [
+      "shocked",
+      "Schockiert"
+     ],
+     [
+      "surprised",
+      "Überrascht"
+     ],
+     [
+      "alien",
+      "Außerirdisch"
+     ],
+     [
+      "bored",
+      "Gelangweilt"
+     ],
+     [
+      "calm",
+      "Ruhig"
+     ],
+     [
+      "closed",
+      "Augen geschlossen"
+     ],
+     [
+      "confused",
+      "Verwirrt"
+     ],
+     [
+      "cool",
+      "Entspannt"
+     ],
+     [
+      "crying",
+      "Weinend"
+     ],
+     [
+      "determined",
+      "Entschlossen"
+     ],
+     [
+      "disgusted",
+      "Angewidert"
+     ],
+     [
+      "dizzy",
+      "Benommen"
+     ],
+     [
+      "double",
+      "Doppelt"
+     ],
+     [
+      "evil",
+      "Böse"
+     ],
+     [
+      "excited",
+      "Aufgeregt"
+     ],
+     [
+      "fixed_smile",
+      "Starres Lächeln"
+     ],
+     [
+      "furious",
+      "Rasend"
+     ],
+     [
+      "joy",
+      "Freudig"
+     ],
+     [
+      "ko",
+      "K.O."
+     ],
+     [
+      "laugh",
+      "Lachend"
+     ],
+     [
+      "love",
+      "Verliebt"
+     ],
+     [
+      "pain",
+      "Schmerzverzerrt"
+     ],
+     [
+      "predator",
+      "Raubtier"
+     ],
+     [
+      "predator_smile",
+      "Raubtierlächeln"
+     ],
+     [
+      "proud",
+      "Stolz"
+     ],
+     [
+      "robot",
+      "Roboter"
+     ],
+     [
+      "shy",
+      "Schüchtern"
+     ],
+     [
+      "silly",
+      "Albern"
+     ],
+     [
+      "skull",
+      "Totenkopf"
+     ],
+     [
+      "sleeping",
+      "Schlafend"
+     ],
+     [
+      "smile_sad",
+      "Trauriges Lächeln"
+     ],
+     [
+      "smirk",
+      "Schiefes Grinsen"
+     ],
+     [
+      "suspicious",
+      "Misstrauisch"
+     ],
+     [
+      "talk",
+      "Sprechend"
+     ],
+     [
+      "thinking",
+      "Nachdenklich"
+     ],
+     [
+      "tired",
+      "Müde"
+     ],
+     [
+      "urgent",
+      "Eilig"
+     ],
+     [
+      "wink",
+      "Zwinkernd"
+     ]
+    ],
+    "sizes": [
+     [
+      "wide",
+      "Totale"
+     ],
+     [
+      "full",
+      "Ganze Figur"
+     ],
+     [
+      "medium",
+      "Halbnahe"
+     ],
+     [
+      "close",
+      "Großaufnahme"
+     ],
+     [
+      "extreme_close",
+      "Extreme Großaufnahme"
+     ],
+     [
+      "two_shot",
+      "Zwei Figuren"
+     ],
+     [
+      "ots",
+      "Über die Schulter"
+     ],
+     [
+      "dialogue",
+      "Dialog"
+     ],
+     [
+      "pov",
+      "Sicht der Figur"
+     ],
+     [
+      "insert",
+      "Objektdetail (Insert)"
+     ]
+    ],
+    "current": {
+     "mode": "acted",
+     "size": "full",
+     "move": "static",
+     "faces": {
+      "lea": "neutral"
+     },
+     "transition": "cut",
+     "directed": false
+    }
+   },
+   {
+    "mode": "acted",
+    "transitions": [
+     [
+      "cut",
+      "Schnitt"
+     ],
+     [
+      "fade",
+      "Abblende auf Schwarz"
+     ],
+     [
+      "flash",
+      "Weißer Blitz"
+     ]
+    ],
+    "moves": [
+     [
+      "static",
+      "Feste Kamera"
+     ],
+     [
+      "dolly_in",
+      "Fährt langsam heran"
+     ],
+     [
+      "dolly_out",
+      "Fährt langsam zurück"
+     ],
+     [
+      "track",
+      "Fährt seitlich mit"
+     ],
+     [
+      "orbit",
+      "Umkreist die Figur"
+     ],
+     [
+      "crane_up",
+      "Steigt auf"
+     ],
+     [
+      "crane_down",
+      "Sinkt ab"
+     ],
+     [
+      "follow",
+      "Folgt der Figur"
+     ]
+    ],
+    "faces": [
+     [
+      "angry",
+      "Wütend"
+     ],
+     [
+      "creature",
+      "Monster"
+     ],
+     [
+      "grin",
+      "Unheimliches Grinsen"
+     ],
+     [
+      "happy",
+      "Fröhlich"
+     ],
+     [
+      "nervous",
+      "Besorgt"
+     ],
+     [
+      "neutral",
+      "Neutral"
+     ],
+     [
+      "sad",
+      "Traurig"
+     ],
+     [
+      "scared",
+      "Verängstigt"
+     ],
+     [
+      "shocked",
+      "Schockiert"
+     ],
+     [
+      "surprised",
+      "Überrascht"
+     ],
+     [
+      "alien",
+      "Außerirdisch"
+     ],
+     [
+      "bored",
+      "Gelangweilt"
+     ],
+     [
+      "calm",
+      "Ruhig"
+     ],
+     [
+      "closed",
+      "Augen geschlossen"
+     ],
+     [
+      "confused",
+      "Verwirrt"
+     ],
+     [
+      "cool",
+      "Entspannt"
+     ],
+     [
+      "crying",
+      "Weinend"
+     ],
+     [
+      "determined",
+      "Entschlossen"
+     ],
+     [
+      "disgusted",
+      "Angewidert"
+     ],
+     [
+      "dizzy",
+      "Benommen"
+     ],
+     [
+      "double",
+      "Doppelt"
+     ],
+     [
+      "evil",
+      "Böse"
+     ],
+     [
+      "excited",
+      "Aufgeregt"
+     ],
+     [
+      "fixed_smile",
+      "Starres Lächeln"
+     ],
+     [
+      "furious",
+      "Rasend"
+     ],
+     [
+      "joy",
+      "Freudig"
+     ],
+     [
+      "ko",
+      "K.O."
+     ],
+     [
+      "laugh",
+      "Lachend"
+     ],
+     [
+      "love",
+      "Verliebt"
+     ],
+     [
+      "pain",
+      "Schmerzverzerrt"
+     ],
+     [
+      "predator",
+      "Raubtier"
+     ],
+     [
+      "predator_smile",
+      "Raubtierlächeln"
+     ],
+     [
+      "proud",
+      "Stolz"
+     ],
+     [
+      "robot",
+      "Roboter"
+     ],
+     [
+      "shy",
+      "Schüchtern"
+     ],
+     [
+      "silly",
+      "Albern"
+     ],
+     [
+      "skull",
+      "Totenkopf"
+     ],
+     [
+      "sleeping",
+      "Schlafend"
+     ],
+     [
+      "smile_sad",
+      "Trauriges Lächeln"
+     ],
+     [
+      "smirk",
+      "Schiefes Grinsen"
+     ],
+     [
+      "suspicious",
+      "Misstrauisch"
+     ],
+     [
+      "talk",
+      "Sprechend"
+     ],
+     [
+      "thinking",
+      "Nachdenklich"
+     ],
+     [
+      "tired",
+      "Müde"
+     ],
+     [
+      "urgent",
+      "Eilig"
+     ],
+     [
+      "wink",
+      "Zwinkernd"
+     ]
+    ],
+    "sizes": [
+     [
+      "wide",
+      "Totale"
+     ],
+     [
+      "full",
+      "Ganze Figur"
+     ],
+     [
+      "medium",
+      "Halbnahe"
+     ],
+     [
+      "close",
+      "Großaufnahme"
+     ],
+     [
+      "extreme_close",
+      "Extreme Großaufnahme"
+     ],
+     [
+      "two_shot",
+      "Zwei Figuren"
+     ],
+     [
+      "ots",
+      "Über die Schulter"
+     ],
+     [
+      "dialogue",
+      "Dialog"
+     ],
+     [
+      "pov",
+      "Sicht der Figur"
+     ],
+     [
+      "insert",
+      "Objektdetail (Insert)"
+     ]
+    ],
+    "current": {
+     "mode": "acted",
+     "size": "medium",
+     "move": "dolly_in",
+     "faces": {
+      "lea": "neutral"
+     },
+     "transition": "cut",
+     "directed": false
+    }
+   }
+  ],
+  "groesse": {
+   "total": 340807,
+   "generated": 337303
+  },
+  "bilder": [
+   {
+    "plan": 0,
+    "datei": "demo1_mouvement-0.png",
+    "sekunden": 3.285,
+    "motor": "pixel3d"
+   },
+   {
+    "plan": 1,
+    "datei": "demo1_mouvement-1.png",
+    "sekunden": 8.76,
+    "motor": "pixel3d"
+   },
+   {
+    "plan": 2,
+    "datei": "demo1_mouvement-2.png",
+    "sekunden": 14.235,
+    "motor": "pixel3d"
+   },
+   {
+    "plan": 3,
+    "datei": "demo1_mouvement-3.png",
+    "sekunden": 18.615,
+    "motor": "pixel3d"
+   }
+  ],
+  "vorschau_ordner": "la_cle_inconnue"
+ },
+ {
+  "slug": "nicht_pausieren_level_7",
+  "meta": {
+   "name": "Nicht pausieren: Level 7",
+   "style": "console",
+   "render_engine": "pixel3d",
+   "series": null,
+   "part_label": "LEVEL 7",
+   "created": 1791827200,
+   "notes": "Szenario demo5_console",
+   "director": ""
+  },
+  "szenario": "demo5_console",
+  "script": "Drei Uhr morgens. Noch ein Level, dann schlafe ich.\nWillkommen in Level sieben, Noah.\nMoment... Woher kennt er meinen Vornamen?\nNimm den Schlüssel. Öffne die Tür.\nDie Tür zu meinem Zimmer... Sie hat sich gerade geöffnet.\nJemand kommt. Drück nicht auf Pause.\nDa ist jemand hinter der Tür!\nDu hast ein Herz verloren.\nSoll ich pausieren... oder nicht?",
+  "episode": "{\"engine_version\": 2, \"game_map\": \"maison\", \"game_hp\": 3, \"hud\": {\"series\": \"NE METS PAS PAUSE\", \"level\": \"NIVEAU 7\", \"clock_start\": \"3:07\", \"clock_rate\": 0.125}, \"cast\": {\"noah\": {\"ref\": \"noah\"}}, \"shots\": [{\"lines\": [0, 0], \"scene\": {\"type\": \"room\", \"console_on_bed\": false}, \"actors\": [{\"id\": \"noah\", \"on\": \"bed\", \"hold\": \"console\", \"face\": \"tired\"}], \"camera\": {\"move\": \"push_in\", \"amount\": 0.6, \"on\": \"noah\"}, \"sfx\": []}, {\"lines\": [1, 1], \"scene\": {\"type\": \"console\", \"screen\": {\"type\": \"game\"}}, \"camera\": {\"move\": \"push_in\", \"focus\": [0.5, 0.42]}, \"game\": [{\"at\": 0.4, \"do\": \"say\", \"text\": \"NIVEAU 7\", \"dur\": 1.6}, {\"at\": 1.4, \"do\": \"walk\", \"to\": \"key\"}], \"sfx\": [{\"name\": \"chip_blip\", \"at\": 0.1, \"gain\": 0.5}]}, {\"lines\": [2, 2], \"scene\": {\"type\": \"room\", \"console_on_bed\": false}, \"actions\": [{\"who\": \"noah\", \"do\": \"face\", \"name\": \"suspicious\"}, {\"who\": \"noah\", \"do\": \"look_at\", \"target\": [-0.2, 1.4, 2.5], \"dur\": 1.0, \"at\": 1.6}], \"camera\": {\"move\": \"push_in\", \"amount\": 1.0, \"on\": \"noah\"}, \"sfx\": []}, {\"lines\": [3, 3], \"scene\": {\"type\": \"screen\", \"screen\": {\"type\": \"game\"}}, \"camera\": {\"move\": \"drift\"}, \"game\": [{\"at\": 0.2, \"do\": \"pick\", \"item\": \"key\"}, {\"at\": 0.5, \"do\": \"walk\", \"to\": \"door1\"}, {\"do\": \"open\", \"door\": \"door1\"}], \"sfx\": []}, {\"lines\": [4, 4], \"scene\": {\"type\": \"door\", \"x\": 0.55, \"light_under\": \"warm\"}, \"camera\": {\"move\": \"push_in\", \"amount\": 0.8}, \"sfx\": []}, {\"lines\": [5, 5], \"scene\": {\"type\": \"split\", \"left\": {\"type\": \"screen\", \"screen\": {\"type\": \"game\"}}, \"right\": {\"type\": \"door\", \"light_under\": \"warm\"}}, \"game\": [{\"at\": 0.6, \"do\": \"enemy\", \"pos\": [10, 3], \"dur\": 0.1}, {\"at\": 1.2, \"do\": \"enemy_to\", \"to\": [8, 3], \"dur\": 1.8}], \"sfx\": []}, {\"lines\": [6, 6], \"scene\": {\"type\": \"room\", \"console_on_bed\": false}, \"actions\": [{\"who\": \"noah\", \"do\": \"react\", \"kind\": \"startle\"}, {\"who\": \"noah\", \"do\": \"stand\"}, {\"who\": \"noah\", \"do\": \"turn_to\", \"target\": \"door\"}, {\"who\": \"noah\", \"do\": \"face\", \"name\": \"scared\"}], \"camera\": {\"move\": \"handheld\", \"on\": \"noah\", \"shake\": 0.2}, \"sfx\": []}, {\"lines\": [7, 7], \"scene\": {\"type\": \"console\", \"screen\": {\"type\": \"game\"}}, \"camera\": {\"move\": \"push_in\", \"shake\": 0.15, \"focus\": [0.5, 0.42]}, \"game\": [{\"at\": 0.3, \"do\": \"hp\", \"delta\": -1}, {\"at\": 0.4, \"do\": \"say\", \"text\": \"TU AS PERDU UN COEUR\", \"dur\": 2.2}], \"sfx\": []}, {\"lines\": [8, 8], \"scene\": {\"type\": \"room\", \"console_on_bed\": false}, \"actions\": [{\"who\": \"noah\", \"do\": \"look_at\", \"target\": \"door\", \"dur\": 3}], \"camera\": {\"move\": \"push_in\", \"amount\": 0.5, \"on\": \"noah\"}, \"ui\": {\"choice\": {\"title\": \"TU METS PAUSE ?\", \"A\": \"OUI\", \"B\": \"NON\"}}, \"sfx\": []}], \"lines\": {\"0\": {\"speaker\": \"noah\", \"label\": \"NOAH\", \"label_color\": \"white\"}, \"1\": {\"speaker\": \"console\", \"label\": \"CONSOLE · FICHIER 1\", \"label_color\": \"green\", \"voice_fx\": \"console\"}, \"2\": {\"speaker\": \"noah\", \"label\": \"NOAH\", \"label_color\": \"white\"}, \"3\": {\"speaker\": \"console\", \"label\": \"CONSOLE · FICHIER 1\", \"label_color\": \"green\", \"voice_fx\": \"console\"}, \"4\": {\"speaker\": \"noah\", \"label\": \"NOAH\", \"label_color\": \"white\"}, \"5\": {\"speaker\": \"console\", \"label\": \"CONSOLE · FICHIER 1\", \"label_color\": \"green\", \"voice_fx\": \"console\"}, \"6\": {\"speaker\": \"noah\", \"label\": \"NOAH\", \"label_color\": \"white\"}, \"7\": {\"speaker\": \"console\", \"label\": \"CONSOLE · FICHIER 1\", \"label_color\": \"green\", \"voice_fx\": \"console\"}, \"8\": {\"speaker\": \"noah\", \"label\": \"NOAH\", \"label_color\": \"white\"}}, \"style\": \"console\"}",
+  "lines": [
+   {
+    "tts": "Drei Uhr morgens. Noch ein Level, dann schlafe ich.",
+    "display": "Drei Uhr morgens. Noch ein Level, dann schlafe ich.",
+    "text": "Drei Uhr morgens. Noch ein Level, dann schlafe ich.",
+    "tags": [],
+    "dialogue": true,
+    "i": 0,
+    "start": 0.4,
+    "end": 4.386,
+    "segs": [
+     [
+      0.4,
+      4.386
+     ]
+    ]
+   },
+   {
+    "tts": "Willkommen in Level sieben, Noah.",
+    "display": "Willkommen in Level sieben, Noah.",
+    "text": "Willkommen in Level sieben, Noah.",
+    "tags": [],
+    "dialogue": true,
+    "i": 1,
+    "start": 4.686,
+    "end": 7.244,
+    "segs": [
+     [
+      4.686,
+      7.244
+     ]
+    ]
+   },
+   {
+    "tts": "Moment... Woher kennt er meinen Vornamen?",
+    "display": "Moment... Woher kennt er meinen Vornamen?",
+    "text": "Moment... Woher kennt er meinen Vornamen?",
+    "tags": [],
+    "dialogue": true,
+    "i": 2,
+    "start": 7.544,
+    "end": 10.85,
+    "segs": [
+     [
+      7.544,
+      10.85
+     ]
+    ]
+   },
+   {
+    "tts": "Nimm den Schlüssel. Öffne die Tür.",
+    "display": "Nimm den Schlüssel. Öffne die Tür.",
+    "text": "Nimm den Schlüssel. Öffne die Tür.",
+    "tags": [],
+    "dialogue": true,
+    "i": 3,
+    "start": 11.15,
+    "end": 15.35,
+    "segs": [
+     [
+      11.15,
+      15.35
+     ]
+    ]
+   },
+   {
+    "tts": "Die Tür zu meinem Zimmer... Sie hat sich gerade geöffnet.",
+    "display": "Die Tür zu meinem Zimmer... Sie hat sich gerade geöffnet.",
+    "text": "Die Tür zu meinem Zimmer... Sie hat sich gerade geöffnet.",
+    "tags": [],
+    "dialogue": true,
+    "i": 4,
+    "start": 15.65,
+    "end": 19.25,
+    "segs": [
+     [
+      15.65,
+      19.25
+     ]
+    ]
+   },
+   {
+    "tts": "Jemand kommt. Drück nicht auf Pause.",
+    "display": "Jemand kommt. Drück nicht auf Pause.",
+    "text": "Jemand kommt. Drück nicht auf Pause.",
+    "tags": [],
+    "dialogue": true,
+    "i": 5,
+    "start": 19.55,
+    "end": 23.35,
+    "segs": [
+     [
+      19.55,
+      23.35
+     ]
+    ]
+   },
+   {
+    "tts": "Da ist jemand hinter der Tür!",
+    "display": "Da ist jemand hinter der Tür!",
+    "text": "Da ist jemand hinter der Tür!",
+    "tags": [],
+    "dialogue": true,
+    "i": 6,
+    "start": 23.65,
+    "end": 26.548,
+    "segs": [
+     [
+      23.65,
+      26.548
+     ]
+    ]
+   },
+   {
+    "tts": "Du hast ein Herz verloren.",
+    "display": "Du hast ein Herz verloren.",
+    "text": "Du hast ein Herz verloren.",
+    "tags": [],
+    "dialogue": true,
+    "i": 7,
+    "start": 26.848,
+    "end": 29.848,
+    "segs": [
+     [
+      26.848,
+      29.848
+     ]
+    ]
+   },
+   {
+    "tts": "Soll ich pausieren... oder nicht?",
+    "display": "Soll ich pausieren... oder nicht?",
+    "text": "Soll ich pausieren... oder nicht?",
+    "tags": [],
+    "dialogue": true,
+    "i": 8,
+    "start": 30.148,
+    "end": 33.748,
+    "segs": [
+     [
+      30.148,
+      33.748
+     ]
+    ]
+   }
+  ],
+  "warnings": [],
+  "capabilities": {
+   "audit": {
+    "style": "console",
+    "used": [
+     "action:face",
+     "action:look_at",
+     "action:react",
+     "action:stand",
+     "action:turn_to",
+     "character:noah",
+     "console_scene:console",
+     "console_scene:door",
+     "console_scene:room",
+     "console_scene:screen",
+     "console_scene:split",
+     "expression:scared",
+     "expression:suspicious",
+     "expression:tired",
+     "sound:chip_blip"
+    ],
+    "gaps": [],
+    "requires": null,
+    "ok": true
+   },
+   "plan": {
+    "engine": "console",
+    "needs": [
+     {
+      "kind": "place",
+      "name": "bedroom",
+      "terms": [
+       "Zimmer"
+      ],
+      "status": "native",
+      "source": "engines/pixel3d/places.py",
+      "note": "",
+      "how": ""
+     },
+     {
+      "kind": "action",
+      "name": "open",
+      "terms": [
+       "öffnet"
+      ],
+      "status": "native",
+      "source": "acting/timeline.py",
+      "note": "",
+      "how": ""
+     }
+    ],
+    "counts": {
+     "native": 2,
+     "composed": 0,
+     "partial": 0,
+     "missing": 0
+    },
+    "requests": []
+   }
+  },
+  "previews": [
+   "",
+   "shot_001.jpg",
+   "",
+   "shot_003.jpg",
+   "",
+   "shot_005.jpg",
+   "",
+   "shot_007.jpg",
+   ""
+  ],
+  "status": {
+   "script": true,
+   "voice": false,
+   "lines": true,
+   "episode": true,
+   "mix": false,
+   "thumbnail": false,
+   "metadata": false,
+   "renders": []
+  },
+  "optionen": [
+   {
+    "mode": "console",
+    "transitions": [
+     [
+      "cut",
+      "Schnitt"
+     ],
+     [
+      "fade",
+      "Abblende auf Schwarz"
+     ],
+     [
+      "flash",
+      "Weißer Blitz"
+     ]
+    ],
+    "moves": [
+     [
+      "static",
+      "Feste Kamera"
+     ],
+     [
+      "push_in",
+      "Fährt langsam heran"
+     ],
+     [
+      "pull_out",
+      "Fährt langsam zurück"
+     ],
+     [
+      "pan_left",
+      "Gleitet nach links"
+     ],
+     [
+      "pan_right",
+      "Gleitet nach rechts"
+     ],
+     [
+      "pan_up",
+      "Gleitet nach oben"
+     ],
+     [
+      "pan_down",
+      "Gleitet nach unten"
+     ],
+     [
+      "drift",
+      "Langsames Treiben"
+     ],
+     [
+      "handheld",
+      "Handkamera"
+     ]
+    ],
+    "faces": [
+     [
+      "neutral",
+      "Neutral"
+     ],
+     [
+      "tired",
+      "Müde"
+     ],
+     [
+      "sleeping",
+      "Schlafend"
+     ],
+     [
+      "closed",
+      "Augen geschlossen"
+     ],
+     [
+      "scared",
+      "Verängstigt"
+     ],
+     [
+      "shocked",
+      "Schockiert"
+     ],
+     [
+      "surprised",
+      "Überrascht"
+     ],
+     [
+      "nervous",
+      "Besorgt"
+     ],
+     [
+      "suspicious",
+      "Misstrauisch"
+     ],
+     [
+      "angry",
+      "Wütend"
+     ],
+     [
+      "determined",
+      "Entschlossen"
+     ],
+     [
+      "sad",
+      "Traurig"
+     ],
+     [
+      "crying",
+      "Weinend"
+     ],
+     [
+      "smile_sad",
+      "Trauriges Lächeln"
+     ],
+     [
+      "smile",
+      "Lächeln"
+     ],
+     [
+      "happy",
+      "Fröhlich"
+     ],
+     [
+      "joy",
+      "Freudig"
+     ],
+     [
+      "laugh",
+      "Lachend"
+     ],
+     [
+      "excited",
+      "Aufgeregt"
+     ],
+     [
+      "proud",
+      "Stolz"
+     ]
+    ],
+    "sizes": [
+     [
+      "wide",
+      "Totale"
+     ],
+     [
+      "medium",
+      "Halbnahe"
+     ],
+     [
+      "close",
+      "Großaufnahme"
+     ]
+    ],
+    "current": {
+     "mode": "console",
+     "size": "wide",
+     "move": "push_in",
+     "faces": {
+      "noah": "tired"
+     },
+     "transition": "cut",
+     "directed": false
+    }
+   },
+   {
+    "mode": "console",
+    "transitions": [
+     [
+      "cut",
+      "Schnitt"
+     ],
+     [
+      "fade",
+      "Abblende auf Schwarz"
+     ],
+     [
+      "flash",
+      "Weißer Blitz"
+     ]
+    ],
+    "moves": [
+     [
+      "static",
+      "Feste Kamera"
+     ],
+     [
+      "push_in",
+      "Fährt langsam heran"
+     ],
+     [
+      "pull_out",
+      "Fährt langsam zurück"
+     ],
+     [
+      "pan_left",
+      "Gleitet nach links"
+     ],
+     [
+      "pan_right",
+      "Gleitet nach rechts"
+     ],
+     [
+      "pan_up",
+      "Gleitet nach oben"
+     ],
+     [
+      "pan_down",
+      "Gleitet nach unten"
+     ],
+     [
+      "drift",
+      "Langsames Treiben"
+     ],
+     [
+      "handheld",
+      "Handkamera"
+     ]
+    ],
+    "faces": [
+     [
+      "neutral",
+      "Neutral"
+     ],
+     [
+      "tired",
+      "Müde"
+     ],
+     [
+      "sleeping",
+      "Schlafend"
+     ],
+     [
+      "closed",
+      "Augen geschlossen"
+     ],
+     [
+      "scared",
+      "Verängstigt"
+     ],
+     [
+      "shocked",
+      "Schockiert"
+     ],
+     [
+      "surprised",
+      "Überrascht"
+     ],
+     [
+      "nervous",
+      "Besorgt"
+     ],
+     [
+      "suspicious",
+      "Misstrauisch"
+     ],
+     [
+      "angry",
+      "Wütend"
+     ],
+     [
+      "determined",
+      "Entschlossen"
+     ],
+     [
+      "sad",
+      "Traurig"
+     ],
+     [
+      "crying",
+      "Weinend"
+     ],
+     [
+      "smile_sad",
+      "Trauriges Lächeln"
+     ],
+     [
+      "smile",
+      "Lächeln"
+     ],
+     [
+      "happy",
+      "Fröhlich"
+     ],
+     [
+      "joy",
+      "Freudig"
+     ],
+     [
+      "laugh",
+      "Lachend"
+     ],
+     [
+      "excited",
+      "Aufgeregt"
+     ],
+     [
+      "proud",
+      "Stolz"
+     ]
+    ],
+    "sizes": [
+     [
+      "wide",
+      "Totale"
+     ],
+     [
+      "medium",
+      "Halbnahe"
+     ],
+     [
+      "close",
+      "Großaufnahme"
+     ]
+    ],
+    "current": {
+     "mode": "console",
+     "size": "wide",
+     "move": "push_in",
+     "faces": {},
+     "transition": "cut",
+     "directed": false
+    }
+   },
+   {
+    "mode": "console",
+    "transitions": [
+     [
+      "cut",
+      "Schnitt"
+     ],
+     [
+      "fade",
+      "Abblende auf Schwarz"
+     ],
+     [
+      "flash",
+      "Weißer Blitz"
+     ]
+    ],
+    "moves": [
+     [
+      "static",
+      "Feste Kamera"
+     ],
+     [
+      "push_in",
+      "Fährt langsam heran"
+     ],
+     [
+      "pull_out",
+      "Fährt langsam zurück"
+     ],
+     [
+      "pan_left",
+      "Gleitet nach links"
+     ],
+     [
+      "pan_right",
+      "Gleitet nach rechts"
+     ],
+     [
+      "pan_up",
+      "Gleitet nach oben"
+     ],
+     [
+      "pan_down",
+      "Gleitet nach unten"
+     ],
+     [
+      "drift",
+      "Langsames Treiben"
+     ],
+     [
+      "handheld",
+      "Handkamera"
+     ]
+    ],
+    "faces": [
+     [
+      "neutral",
+      "Neutral"
+     ],
+     [
+      "tired",
+      "Müde"
+     ],
+     [
+      "sleeping",
+      "Schlafend"
+     ],
+     [
+      "closed",
+      "Augen geschlossen"
+     ],
+     [
+      "scared",
+      "Verängstigt"
+     ],
+     [
+      "shocked",
+      "Schockiert"
+     ],
+     [
+      "surprised",
+      "Überrascht"
+     ],
+     [
+      "nervous",
+      "Besorgt"
+     ],
+     [
+      "suspicious",
+      "Misstrauisch"
+     ],
+     [
+      "angry",
+      "Wütend"
+     ],
+     [
+      "determined",
+      "Entschlossen"
+     ],
+     [
+      "sad",
+      "Traurig"
+     ],
+     [
+      "crying",
+      "Weinend"
+     ],
+     [
+      "smile_sad",
+      "Trauriges Lächeln"
+     ],
+     [
+      "smile",
+      "Lächeln"
+     ],
+     [
+      "happy",
+      "Fröhlich"
+     ],
+     [
+      "joy",
+      "Freudig"
+     ],
+     [
+      "laugh",
+      "Lachend"
+     ],
+     [
+      "excited",
+      "Aufgeregt"
+     ],
+     [
+      "proud",
+      "Stolz"
+     ]
+    ],
+    "sizes": [
+     [
+      "wide",
+      "Totale"
+     ],
+     [
+      "medium",
+      "Halbnahe"
+     ],
+     [
+      "close",
+      "Großaufnahme"
+     ]
+    ],
+    "current": {
+     "mode": "console",
+     "size": "wide",
+     "move": "push_in",
+     "faces": {
+      "noah": "tired"
+     },
+     "transition": "cut",
+     "directed": false
+    }
+   },
+   {
+    "mode": "console",
+    "transitions": [
+     [
+      "cut",
+      "Schnitt"
+     ],
+     [
+      "fade",
+      "Abblende auf Schwarz"
+     ],
+     [
+      "flash",
+      "Weißer Blitz"
+     ]
+    ],
+    "moves": [
+     [
+      "static",
+      "Feste Kamera"
+     ],
+     [
+      "push_in",
+      "Fährt langsam heran"
+     ],
+     [
+      "pull_out",
+      "Fährt langsam zurück"
+     ],
+     [
+      "pan_left",
+      "Gleitet nach links"
+     ],
+     [
+      "pan_right",
+      "Gleitet nach rechts"
+     ],
+     [
+      "pan_up",
+      "Gleitet nach oben"
+     ],
+     [
+      "pan_down",
+      "Gleitet nach unten"
+     ],
+     [
+      "drift",
+      "Langsames Treiben"
+     ],
+     [
+      "handheld",
+      "Handkamera"
+     ]
+    ],
+    "faces": [
+     [
+      "neutral",
+      "Neutral"
+     ],
+     [
+      "tired",
+      "Müde"
+     ],
+     [
+      "sleeping",
+      "Schlafend"
+     ],
+     [
+      "closed",
+      "Augen geschlossen"
+     ],
+     [
+      "scared",
+      "Verängstigt"
+     ],
+     [
+      "shocked",
+      "Schockiert"
+     ],
+     [
+      "surprised",
+      "Überrascht"
+     ],
+     [
+      "nervous",
+      "Besorgt"
+     ],
+     [
+      "suspicious",
+      "Misstrauisch"
+     ],
+     [
+      "angry",
+      "Wütend"
+     ],
+     [
+      "determined",
+      "Entschlossen"
+     ],
+     [
+      "sad",
+      "Traurig"
+     ],
+     [
+      "crying",
+      "Weinend"
+     ],
+     [
+      "smile_sad",
+      "Trauriges Lächeln"
+     ],
+     [
+      "smile",
+      "Lächeln"
+     ],
+     [
+      "happy",
+      "Fröhlich"
+     ],
+     [
+      "joy",
+      "Freudig"
+     ],
+     [
+      "laugh",
+      "Lachend"
+     ],
+     [
+      "excited",
+      "Aufgeregt"
+     ],
+     [
+      "proud",
+      "Stolz"
+     ]
+    ],
+    "sizes": [
+     [
+      "wide",
+      "Totale"
+     ],
+     [
+      "medium",
+      "Halbnahe"
+     ],
+     [
+      "close",
+      "Großaufnahme"
+     ]
+    ],
+    "current": {
+     "mode": "console",
+     "size": "wide",
+     "move": "drift",
+     "faces": {},
+     "transition": "cut",
+     "directed": false
+    }
+   },
+   {
+    "mode": "console",
+    "transitions": [
+     [
+      "cut",
+      "Schnitt"
+     ],
+     [
+      "fade",
+      "Abblende auf Schwarz"
+     ],
+     [
+      "flash",
+      "Weißer Blitz"
+     ]
+    ],
+    "moves": [
+     [
+      "static",
+      "Feste Kamera"
+     ],
+     [
+      "push_in",
+      "Fährt langsam heran"
+     ],
+     [
+      "pull_out",
+      "Fährt langsam zurück"
+     ],
+     [
+      "pan_left",
+      "Gleitet nach links"
+     ],
+     [
+      "pan_right",
+      "Gleitet nach rechts"
+     ],
+     [
+      "pan_up",
+      "Gleitet nach oben"
+     ],
+     [
+      "pan_down",
+      "Gleitet nach unten"
+     ],
+     [
+      "drift",
+      "Langsames Treiben"
+     ],
+     [
+      "handheld",
+      "Handkamera"
+     ]
+    ],
+    "faces": [
+     [
+      "neutral",
+      "Neutral"
+     ],
+     [
+      "tired",
+      "Müde"
+     ],
+     [
+      "sleeping",
+      "Schlafend"
+     ],
+     [
+      "closed",
+      "Augen geschlossen"
+     ],
+     [
+      "scared",
+      "Verängstigt"
+     ],
+     [
+      "shocked",
+      "Schockiert"
+     ],
+     [
+      "surprised",
+      "Überrascht"
+     ],
+     [
+      "nervous",
+      "Besorgt"
+     ],
+     [
+      "suspicious",
+      "Misstrauisch"
+     ],
+     [
+      "angry",
+      "Wütend"
+     ],
+     [
+      "determined",
+      "Entschlossen"
+     ],
+     [
+      "sad",
+      "Traurig"
+     ],
+     [
+      "crying",
+      "Weinend"
+     ],
+     [
+      "smile_sad",
+      "Trauriges Lächeln"
+     ],
+     [
+      "smile",
+      "Lächeln"
+     ],
+     [
+      "happy",
+      "Fröhlich"
+     ],
+     [
+      "joy",
+      "Freudig"
+     ],
+     [
+      "laugh",
+      "Lachend"
+     ],
+     [
+      "excited",
+      "Aufgeregt"
+     ],
+     [
+      "proud",
+      "Stolz"
+     ]
+    ],
+    "sizes": [
+     [
+      "wide",
+      "Totale"
+     ],
+     [
+      "medium",
+      "Halbnahe"
+     ],
+     [
+      "close",
+      "Großaufnahme"
+     ]
+    ],
+    "current": {
+     "mode": "console",
+     "size": "wide",
+     "move": "push_in",
+     "faces": {},
+     "transition": "cut",
+     "directed": false
+    }
+   },
+   {
+    "mode": "console",
+    "transitions": [
+     [
+      "cut",
+      "Schnitt"
+     ],
+     [
+      "fade",
+      "Abblende auf Schwarz"
+     ],
+     [
+      "flash",
+      "Weißer Blitz"
+     ]
+    ],
+    "moves": [
+     [
+      "static",
+      "Feste Kamera"
+     ],
+     [
+      "push_in",
+      "Fährt langsam heran"
+     ],
+     [
+      "pull_out",
+      "Fährt langsam zurück"
+     ],
+     [
+      "pan_left",
+      "Gleitet nach links"
+     ],
+     [
+      "pan_right",
+      "Gleitet nach rechts"
+     ],
+     [
+      "pan_up",
+      "Gleitet nach oben"
+     ],
+     [
+      "pan_down",
+      "Gleitet nach unten"
+     ],
+     [
+      "drift",
+      "Langsames Treiben"
+     ],
+     [
+      "handheld",
+      "Handkamera"
+     ]
+    ],
+    "faces": [
+     [
+      "neutral",
+      "Neutral"
+     ],
+     [
+      "tired",
+      "Müde"
+     ],
+     [
+      "sleeping",
+      "Schlafend"
+     ],
+     [
+      "closed",
+      "Augen geschlossen"
+     ],
+     [
+      "scared",
+      "Verängstigt"
+     ],
+     [
+      "shocked",
+      "Schockiert"
+     ],
+     [
+      "surprised",
+      "Überrascht"
+     ],
+     [
+      "nervous",
+      "Besorgt"
+     ],
+     [
+      "suspicious",
+      "Misstrauisch"
+     ],
+     [
+      "angry",
+      "Wütend"
+     ],
+     [
+      "determined",
+      "Entschlossen"
+     ],
+     [
+      "sad",
+      "Traurig"
+     ],
+     [
+      "crying",
+      "Weinend"
+     ],
+     [
+      "smile_sad",
+      "Trauriges Lächeln"
+     ],
+     [
+      "smile",
+      "Lächeln"
+     ],
+     [
+      "happy",
+      "Fröhlich"
+     ],
+     [
+      "joy",
+      "Freudig"
+     ],
+     [
+      "laugh",
+      "Lachend"
+     ],
+     [
+      "excited",
+      "Aufgeregt"
+     ],
+     [
+      "proud",
+      "Stolz"
+     ]
+    ],
+    "sizes": [
+     [
+      "wide",
+      "Totale"
+     ],
+     [
+      "medium",
+      "Halbnahe"
+     ],
+     [
+      "close",
+      "Großaufnahme"
+     ]
+    ],
+    "current": {
+     "mode": "console",
+     "size": "wide",
+     "move": "drift",
+     "faces": {},
+     "transition": "cut",
+     "directed": false
+    }
+   },
+   {
+    "mode": "console",
+    "transitions": [
+     [
+      "cut",
+      "Schnitt"
+     ],
+     [
+      "fade",
+      "Abblende auf Schwarz"
+     ],
+     [
+      "flash",
+      "Weißer Blitz"
+     ]
+    ],
+    "moves": [
+     [
+      "static",
+      "Feste Kamera"
+     ],
+     [
+      "push_in",
+      "Fährt langsam heran"
+     ],
+     [
+      "pull_out",
+      "Fährt langsam zurück"
+     ],
+     [
+      "pan_left",
+      "Gleitet nach links"
+     ],
+     [
+      "pan_right",
+      "Gleitet nach rechts"
+     ],
+     [
+      "pan_up",
+      "Gleitet nach oben"
+     ],
+     [
+      "pan_down",
+      "Gleitet nach unten"
+     ],
+     [
+      "drift",
+      "Langsames Treiben"
+     ],
+     [
+      "handheld",
+      "Handkamera"
+     ]
+    ],
+    "faces": [
+     [
+      "neutral",
+      "Neutral"
+     ],
+     [
+      "tired",
+      "Müde"
+     ],
+     [
+      "sleeping",
+      "Schlafend"
+     ],
+     [
+      "closed",
+      "Augen geschlossen"
+     ],
+     [
+      "scared",
+      "Verängstigt"
+     ],
+     [
+      "shocked",
+      "Schockiert"
+     ],
+     [
+      "surprised",
+      "Überrascht"
+     ],
+     [
+      "nervous",
+      "Besorgt"
+     ],
+     [
+      "suspicious",
+      "Misstrauisch"
+     ],
+     [
+      "angry",
+      "Wütend"
+     ],
+     [
+      "determined",
+      "Entschlossen"
+     ],
+     [
+      "sad",
+      "Traurig"
+     ],
+     [
+      "crying",
+      "Weinend"
+     ],
+     [
+      "smile_sad",
+      "Trauriges Lächeln"
+     ],
+     [
+      "smile",
+      "Lächeln"
+     ],
+     [
+      "happy",
+      "Fröhlich"
+     ],
+     [
+      "joy",
+      "Freudig"
+     ],
+     [
+      "laugh",
+      "Lachend"
+     ],
+     [
+      "excited",
+      "Aufgeregt"
+     ],
+     [
+      "proud",
+      "Stolz"
+     ]
+    ],
+    "sizes": [
+     [
+      "wide",
+      "Totale"
+     ],
+     [
+      "medium",
+      "Halbnahe"
+     ],
+     [
+      "close",
+      "Großaufnahme"
+     ]
+    ],
+    "current": {
+     "mode": "console",
+     "size": "wide",
+     "move": "handheld",
+     "faces": {
+      "noah": "tired"
+     },
+     "transition": "cut",
+     "directed": false
+    }
+   },
+   {
+    "mode": "console",
+    "transitions": [
+     [
+      "cut",
+      "Schnitt"
+     ],
+     [
+      "fade",
+      "Abblende auf Schwarz"
+     ],
+     [
+      "flash",
+      "Weißer Blitz"
+     ]
+    ],
+    "moves": [
+     [
+      "static",
+      "Feste Kamera"
+     ],
+     [
+      "push_in",
+      "Fährt langsam heran"
+     ],
+     [
+      "pull_out",
+      "Fährt langsam zurück"
+     ],
+     [
+      "pan_left",
+      "Gleitet nach links"
+     ],
+     [
+      "pan_right",
+      "Gleitet nach rechts"
+     ],
+     [
+      "pan_up",
+      "Gleitet nach oben"
+     ],
+     [
+      "pan_down",
+      "Gleitet nach unten"
+     ],
+     [
+      "drift",
+      "Langsames Treiben"
+     ],
+     [
+      "handheld",
+      "Handkamera"
+     ]
+    ],
+    "faces": [
+     [
+      "neutral",
+      "Neutral"
+     ],
+     [
+      "tired",
+      "Müde"
+     ],
+     [
+      "sleeping",
+      "Schlafend"
+     ],
+     [
+      "closed",
+      "Augen geschlossen"
+     ],
+     [
+      "scared",
+      "Verängstigt"
+     ],
+     [
+      "shocked",
+      "Schockiert"
+     ],
+     [
+      "surprised",
+      "Überrascht"
+     ],
+     [
+      "nervous",
+      "Besorgt"
+     ],
+     [
+      "suspicious",
+      "Misstrauisch"
+     ],
+     [
+      "angry",
+      "Wütend"
+     ],
+     [
+      "determined",
+      "Entschlossen"
+     ],
+     [
+      "sad",
+      "Traurig"
+     ],
+     [
+      "crying",
+      "Weinend"
+     ],
+     [
+      "smile_sad",
+      "Trauriges Lächeln"
+     ],
+     [
+      "smile",
+      "Lächeln"
+     ],
+     [
+      "happy",
+      "Fröhlich"
+     ],
+     [
+      "joy",
+      "Freudig"
+     ],
+     [
+      "laugh",
+      "Lachend"
+     ],
+     [
+      "excited",
+      "Aufgeregt"
+     ],
+     [
+      "proud",
+      "Stolz"
+     ]
+    ],
+    "sizes": [
+     [
+      "wide",
+      "Totale"
+     ],
+     [
+      "medium",
+      "Halbnahe"
+     ],
+     [
+      "close",
+      "Großaufnahme"
+     ]
+    ],
+    "current": {
+     "mode": "console",
+     "size": "wide",
+     "move": "push_in",
+     "faces": {},
+     "transition": "cut",
+     "directed": false
+    }
+   },
+   {
+    "mode": "console",
+    "transitions": [
+     [
+      "cut",
+      "Schnitt"
+     ],
+     [
+      "fade",
+      "Abblende auf Schwarz"
+     ],
+     [
+      "flash",
+      "Weißer Blitz"
+     ]
+    ],
+    "moves": [
+     [
+      "static",
+      "Feste Kamera"
+     ],
+     [
+      "push_in",
+      "Fährt langsam heran"
+     ],
+     [
+      "pull_out",
+      "Fährt langsam zurück"
+     ],
+     [
+      "pan_left",
+      "Gleitet nach links"
+     ],
+     [
+      "pan_right",
+      "Gleitet nach rechts"
+     ],
+     [
+      "pan_up",
+      "Gleitet nach oben"
+     ],
+     [
+      "pan_down",
+      "Gleitet nach unten"
+     ],
+     [
+      "drift",
+      "Langsames Treiben"
+     ],
+     [
+      "handheld",
+      "Handkamera"
+     ]
+    ],
+    "faces": [
+     [
+      "neutral",
+      "Neutral"
+     ],
+     [
+      "tired",
+      "Müde"
+     ],
+     [
+      "sleeping",
+      "Schlafend"
+     ],
+     [
+      "closed",
+      "Augen geschlossen"
+     ],
+     [
+      "scared",
+      "Verängstigt"
+     ],
+     [
+      "shocked",
+      "Schockiert"
+     ],
+     [
+      "surprised",
+      "Überrascht"
+     ],
+     [
+      "nervous",
+      "Besorgt"
+     ],
+     [
+      "suspicious",
+      "Misstrauisch"
+     ],
+     [
+      "angry",
+      "Wütend"
+     ],
+     [
+      "determined",
+      "Entschlossen"
+     ],
+     [
+      "sad",
+      "Traurig"
+     ],
+     [
+      "crying",
+      "Weinend"
+     ],
+     [
+      "smile_sad",
+      "Trauriges Lächeln"
+     ],
+     [
+      "smile",
+      "Lächeln"
+     ],
+     [
+      "happy",
+      "Fröhlich"
+     ],
+     [
+      "joy",
+      "Freudig"
+     ],
+     [
+      "laugh",
+      "Lachend"
+     ],
+     [
+      "excited",
+      "Aufgeregt"
+     ],
+     [
+      "proud",
+      "Stolz"
+     ]
+    ],
+    "sizes": [
+     [
+      "wide",
+      "Totale"
+     ],
+     [
+      "medium",
+      "Halbnahe"
+     ],
+     [
+      "close",
+      "Großaufnahme"
+     ]
+    ],
+    "current": {
+     "mode": "console",
+     "size": "wide",
+     "move": "push_in",
+     "faces": {
+      "noah": "tired"
+     },
+     "transition": "cut",
+     "directed": false
+    }
+   }
+  ],
+  "groesse": {
+   "total": 133063,
+   "generated": 126370
+  },
+  "bilder": [
+   {
+    "plan": 1,
+    "datei": "demo5_console-0.png",
+    "sekunden": 5.062,
+    "motor": "console"
+   },
+   {
+    "plan": 3,
+    "datei": "demo5_console-1.png",
+    "sekunden": 13.499,
+    "motor": "console"
+   },
+   {
+    "plan": 5,
+    "datei": "demo5_console-2.png",
+    "sekunden": 21.936,
+    "motor": "console"
+   },
+   {
+    "plan": 7,
+    "datei": "demo5_console-3.png",
+    "sekunden": 28.686,
+    "motor": "console"
+   }
+  ],
+  "vorschau_ordner": "ne_mets_pas_pause"
+ },
+ {
+  "slug": "die_stadt_unter_wasser",
+  "meta": {
+   "name": "Die Stadt unter Wasser",
+   "style": "pixel3d",
+   "render_engine": "pixel3d",
+   "series": null,
+   "part_label": "ENTWURF",
+   "created": 1791222400,
+   "notes": "erfundener Entwurf ohne Pläne",
+   "director": ""
+  },
+  "szenario": null,
+  "script": "Ein riesiger Hai schwimmt durch eine Unterwasserstadt.\nLea springt über die Schlucht und klettert dann auf den Felsvorsprung.\nEin roter Hubschrauber kommt im Gewitter an.",
+  "episode": "",
+  "lines": [],
+  "warnings": [],
+  "capabilities": null,
+  "previews": [],
+  "status": {
+   "script": true,
+   "voice": false,
+   "lines": false,
+   "episode": false,
+   "mix": false,
+   "thumbnail": false,
+   "metadata": false,
+   "renders": []
+  },
+  "optionen": [],
+  "groesse": {
+   "total": 153,
+   "generated": 0
+  },
+  "bilder": [],
+  "vorschau_ordner": "la_ville_sous_leau"
+ }
+]
