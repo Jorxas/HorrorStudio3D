@@ -10,20 +10,22 @@ Ein lokales Studio verbindet Szenenbeschreibung, Figuren, Kamera, zwei Bildricht
 
 ## Ausprobieren
 
-Die Demo ist die echte Oberfläche des Studios (`hstudio/web/static/studio.html` mit `studio_extras.js`), keine Nachbildung. Sie öffnet vier erfundene Beispielprojekte: drei aus den Szenarien unter `examples/demos` mit ihren echten Plänen und Zeiten und einen Entwurf ohne Pläne. Plan korrigieren, Szene analysieren und Katalog durchsuchen funktionieren; Änderungen gelten nur bis zum Neuladen.
+Die Demo ist die echte Oberfläche des Studios (`hstudio/web/static/studio.html` mit `studio_extras.js`), keine Nachbildung. Sie öffnet vier erfundene Beispielprojekte: drei aus den Szenarien unter `examples/demos` mit ihren echten Plänen und Zeiten und einen Entwurf ohne Pläne. Einstellungen korrigieren, Szene analysieren und Katalog durchsuchen funktionieren; Änderungen gelten nur bis zum Neuladen.
 
-Was die Demo nicht tut: Der Python-Motor läuft nicht im Browser. Die Plan-Bilder sind die zwölf echten, vorab gerenderten Motorbilder aus `demo/bilder` (Zuordnung in `demo/daten/projekte.json`), der Szenenplaner antwortet für den Entwurf, die Beispieltexte und die Projektskripte mit vorab berechneten echten Ergebnissen, der Katalog zeigt eine Auswahl mit vom Motor gemalten Miniaturen (PS1 und Console 2D; VOXEL braucht die GPU). Rendern, Stimme, Musikanalyse, freie Szenenanalyse und Veröffentlichung sind nicht verfügbar und sagen das, statt ein Ergebnis zu erfinden.
+**Zwei Sprachen:** Die Demo startet auf Deutsch. Über den Schalter DE | FR im Hinweisstreifen oder mit `?lang=fr` in der Adresse (`fr.html`) erscheint die Oberfläche in ihrer Originalsprache Französisch, mit `?lang=de` oder dem Schalter wieder auf Deutsch. Die Quelldateien der Oberfläche bleiben französisch; die deutsche Fassung entsteht beim Bau aus der Tabelle `demo/sprache/de.txt` (jedes Fragment muss vorkommen), die Daten liegen in `demo/daten/fr` (Rohausgabe des Motors) und `demo/daten/de` (übersetzt mit `tools/demo_deutsch.py`). Die Bilder sind unverändert die echten Motorausgaben, auch ihre eingemalten Texte bleiben französisch.
+
+Was die Demo nicht tut: Der Python-Motor läuft nicht im Browser. Die Plan-Bilder sind die zwölf echten, vorab gerenderten Motorbilder aus `demo/bilder` (Zuordnung in `demo/daten/fr/projekte.json`), der Szenenplaner antwortet für den Entwurf, die Beispieltexte und die Projektskripte mit vorab berechneten echten Ergebnissen, der Katalog zeigt eine Auswahl mit vom Motor gemalten Miniaturen (PS1 und Console 2D; VOXEL braucht die GPU). Die Suchwörter der Szenenanalyse sind in der deutschen Fassung übersetzte Wörter, die in den deutschen Beispieltexten stehen (der Planer selbst arbeitet auf Französisch); die Bewertung (verfügbar, zusammengesetzt, fehlt) ist die echte Motorausgabe. Rendern, Stimme, Musikanalyse, freie Szenenanalyse und Veröffentlichung sind nicht verfügbar und sagen das, statt ein Ergebnis zu erfinden.
 
 ## Demo bauen und prüfen
 
 ~~~sh
-node tools/demo-bauen.mjs                   # schreibt dist/
+node tools/demo-bauen.mjs                   # schreibt dist/ (index.html deutsch, fr.html französisch)
 npm install --no-save puppeteer-core        # einmalig, für die Browserprüfung
-node tools/demo-pruefen.cjs                 # Chrome oder Edge, optional --bild=docs/vorschau.png
+node tools/demo-pruefen.cjs                 # Chrome oder Edge, beide Sprachen, optional --bild=docs/vorschau.png (deutsche Oberfläche)
 python -m http.server 8080 --bind 127.0.0.1 --directory dist
 ~~~
 
-Danach http://127.0.0.1:8080 öffnen. Die Demo benötigt weder Konten noch Modellgewichte. Die Daten unter `demo/daten`, `demo/vorschau` und `demo/katalog` erzeugt `python tools/demo_export.py` aus dem echten Motor; der Server `python -m hstudio web` liefert dieselbe Oberfläche mit dem vollen Funktionsumfang.
+Danach http://127.0.0.1:8080 öffnen. Die Demo benötigt weder Konten noch Modellgewichte. Die Daten unter `demo/daten/fr`, `demo/vorschau` und `demo/katalog` erzeugt `python tools/demo_export.py` aus dem echten Motor (danach schreibt `tools/demo_deutsch.py` die deutsche Fassung `demo/daten/de`, einzeln: `python tools/demo_deutsch.py`); der Server `python -m hstudio web` liefert dieselbe Oberfläche mit dem vollen Funktionsumfang.
 
 ## Lokal prüfen
 
@@ -36,7 +38,7 @@ Die genauen geprüften Befehle und Grenzen stehen in [PRUEFUNG.md](PRUEFUNG.md).
 
 ## Herkunft
 
-Dies ist eine für die Veröffentlichung geprüfte Ableitung eines bestehenden lokalen Projekts. [HERKUNFT.md](HERKUNFT.md) trennt den ursprünglichen Entwicklungsstand von den jetzt ausgeführten Veröffentlichungsarbeiten. Die ursprünglichen Oberflächen und technischen Bezeichner sind teilweise französisch oder englisch. Neue Präsentation und Dokumentation sind deutsch.
+Dies ist eine für die Veröffentlichung geprüfte Ableitung eines bestehenden lokalen Projekts. [HERKUNFT.md](HERKUNFT.md) trennt den ursprünglichen Entwicklungsstand von den jetzt ausgeführten Veröffentlichungsarbeiten. Die ursprünglichen Oberflächen und technischen Bezeichner sind teilweise französisch oder englisch. Neue Präsentation und Dokumentation sind deutsch; die Browser-Demo zeigt beide Sprachen (Deutsch als Standard). Die Python-Seite des lokalen Studios (Servermeldungen, Planertexte, Auswahllisten des Motors) bleibt französisch.
 
 ## Rechte und Abhängigkeiten
 

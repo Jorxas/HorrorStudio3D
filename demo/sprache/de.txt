@@ -1,0 +1,358 @@
+# Deutsche Fassung der Oberfläche (hstudio/web/static/studio.html, studio_extras.js, publication_bridge.js).
+# Die Quelldateien bleiben französisch (Originalsprache). tools/demo-bauen.mjs ersetzt beim Bau jedes Fragment links durch das Fragment rechts.
+# Format: eine Zeile je Paar, "FRANZÖSISCH ::: DEUTSCH". Zeilen mit # und leere Zeilen werden übersprungen.
+# Regeln: Jedes Fragment muss mindestens einmal vorkommen (sonst bricht der Bau ab). Längere Fragmente haben Vorrang. Der Code bleibt unberührt.
+
+# ---------- Rahmen, Seitenleiste ----------
+aria-label="Ouvrir le menu" ::: aria-label="Menü öffnen"
+open?'Fermer le menu':'Ouvrir le menu' ::: open?'Menü schließen':'Menü öffnen'
+</span>Studio vidéo</div> ::: </span>Videostudio</div>
+aria-label="Mes vidéos" ::: aria-label="Meine Videos"
++ Nouvelle vidéo</button> ::: + Neues Video</button>
+♪ Clip musical</button> ::: ♪ Musikvideo</button>
+🔎 Analyser une scène</button> ::: 🔎 Szene analysieren</button>
+📚 Catalogue</button> ::: 📚 Katalog</button>
+aria-label="Changer le thème">Thème</button> ::: aria-label="Farbschema wechseln">Farbschema</button>
+aria-label="Corriger un plan" ::: aria-label="Einstellung korrigieren"
+aria-label="Fermer" ::: aria-label="Schließen"
+('Erreur '+r.status) ::: ('Fehler '+r.status)
+
+# ---------- Stile, Kamera, Gesichter ----------
+'Style PS1' ::: 'PS1-Stil'
+'Pixel 3D rétro, lancer de rayons. Rendu rapide.' ::: 'Retro-Pixel-3D mit Strahlverfolgung (Raytracing). Schnelles Rendern.'
+'Style VOXEL' ::: 'VOXEL-Stil'
+'Voxels éclairés sur la carte graphique. Plus riche.' ::: 'Auf der Grafikkarte beleuchtete Voxel. Reichhaltiger.'
+'Console 2D' ::: 'Konsole 2D'
+'Pixel art 2D plat, façon console.' ::: 'Flache 2D-Pixelgrafik im Konsolenlook.'
+'Plan large' ::: 'Totale'
+'En pied' ::: 'Ganze Figur'
+'Plan moyen' ::: 'Halbnahe'
+'Gros plan' ::: 'Großaufnahme'
+'Très gros plan' ::: 'Extreme Großaufnahme'
+'Deux personnages' ::: 'Zwei Figuren'
+'Par-dessus l\'épaule' ::: 'Über die Schulter'
+'Dialogue' ::: 'Dialog'
+'Vue du personnage' ::: 'Sicht der Figur'
+'Détail (insert)' ::: 'Objektdetail (Insert)'
+'Caméra fixe' ::: 'Feste Kamera'
+'Avance doucement' ::: 'Fährt langsam heran'
+'Recule doucement' ::: 'Fährt langsam zurück'
+'Suit sur le côté' ::: 'Fährt seitlich mit'
+'Tourne autour' ::: 'Umkreist die Figur'
+'Monte' ::: 'Steigt auf'
+'Descend' ::: 'Sinkt ab'
+'Suit le personnage' ::: 'Folgt der Figur'
+'Neutre' ::: 'Neutral'
+'Content' ::: 'Fröhlich'
+'Triste' ::: 'Traurig'
+'Effrayé' ::: 'Verängstigt'
+'Inquiet' ::: 'Besorgt'
+'En colère' ::: 'Wütend'
+'Choqué' ::: 'Schockiert'
+'Surpris' ::: 'Überrascht'
+'Sourire inquiétant' ::: 'Unheimliches Grinsen'
+'Monstre' ::: 'Monster'
+'Caméra libre' ::: 'Freie Kamera'
+
+# ---------- Liste und Hauptansicht ----------
+>Aucune vidéo pour le moment.</p> ::: >Noch kein Video vorhanden.</p>
+'vidéo prête' ::: 'Video fertig'
+'plans prêts' ::: 'Einstellungen fertig'
+'brouillon' ::: 'Entwurf'
+' vidéo'+(S.projects.length>1?'s':'') ::: ' Video'+(S.projects.length>1?'s':'')
+['Script',st.script] ::: ['Skript',st.script]
+['Voix',st.voice] ::: ['Stimme',st.voice]
+['Calage',st.lines] ::: ['Abgleich',st.lines]
+['Plans',st.episode] ::: ['Einstellungen',st.episode]
+['Aperçu', ::: ['Vorschau',
+['Vidéo',(st.renders ::: ['Video',(st.renders
+Crée ta première vidéo ::: Erstelle dein erstes Video
+Écris ou colle ton histoire, choisis un style, et le studio prépare les plans. Tu corriges ceux qui ne vont pas. ::: Schreibe oder füge deine Geschichte ein, wähle einen Stil, und das Studio bereitet die Einstellungen vor. Du korrigierst die, die nicht passen.
+' plans':'Pas encore de plans' ::: ' Einstellungen':'Noch keine Einstellungen'
+(p.lines||[]).length} phrases</div> ::: (p.lines||[]).length} Sätze</div>
+role="group" aria-label="Style" ::: role="group" aria-label="Stil"
+>Vertical 9:16< ::: >Hochformat 9:16<
+>Horizontal 16:9< ::: >Querformat 16:9<
+Créer la vidéo</button> ::: Video erstellen</button>
+${esc(job.name)} — ${esc(job.detail||'en cours')} ::: ${esc(job.name)} · ${esc(job.detail||'läuft')}
+['plans','Plans'] ::: ['plans','Einstellungen']
+['script','Script'] ::: ['script','Skript']
+['video','Vidéo'] ::: ['video','Video']
+['journal','Journal'] ::: ['journal','Protokoll']
+['caps','Capacités'] ::: ['caps','Fähigkeiten']
+aria-label="Sections de la vidéo" ::: aria-label="Abschnitte des Videos"
+aria-label="${ci.total} point${ci.total>1?'s':''} à régler" ::: aria-label="${ci.total} ${ci.total>1?'offene Punkte':'offener Punkt'}"
+
+# ---------- Einstellungen ----------
+Les plans arrivent ici ::: Hier erscheinen die Einstellungen
+'Le studio peut maintenant découper ton histoire en plans.' ::: 'Das Studio kann deine Geschichte jetzt in Einstellungen aufteilen.'
+'Commence par le script et la voix : le studio calera les phrases, puis proposera un plan par moment fort.' ::: 'Beginne mit Skript und Stimme: Das Studio gleicht die Sätze ab und schlägt dann für jeden starken Moment eine Einstellung vor.'
+Caler la voix sur le script</button> ::: Stimme auf das Skript abgleichen</button>
+Proposer les plans</button> ::: Einstellungen vorschlagen</button>
+Écrire le script</button> ::: Skript schreiben</button>
+⚠ ${ci.total} point${ci.total>1?'s':''} à régler</b> ::: ⚠ ${ci.total} ${ci.total>1?'offene Punkte':'offener Punkt'}</b>
+Le studio a repéré dans cette histoire ${ci.total>1?'des éléments':'un élément'} qu'il ne sait pas dessiner ou qu'il approche seulement. ::: Das Studio hat in dieser Geschichte ${ci.total>1?'Elemente, die':'ein Element, das'} es nicht zeichnen oder nur annähernd darstellen kann.
+Voir les capacités</button> ::: Fähigkeiten ansehen</button>
+Clique sur un plan pour le corriger. Les images sont des aperçus : la vidéo finale est plus fine. ::: Klicke auf eine Einstellung, um sie zu korrigieren. Die Bilder sind Vorschauen: Das fertige Video ist feiner.
+'Rafraîchir les images':'Générer les images' ::: 'Bilder aktualisieren':'Bilder erzeugen'
+'écrit à la main':'auto' ::: 'von Hand geschrieben':'auto'
+'(sans parole)' ::: '(ohne Sprechtext)'
+class="chip warn">note</span> ::: class="chip warn">Notiz</span>
+
+# ---------- Skript, Video, Protokoll ----------
+Script de l'histoire<textarea ::: Skript der Geschichte<textarea
+placeholder="Une phrase par ligne. Tu peux écrire LÉA : Bonjour pour donner la parole à un personnage." ::: placeholder="Ein Satz pro Zeile. Du kannst LEA: Hallo schreiben, um einer Figur das Wort zu geben."
+Enregistrer le script</button> ::: Skript speichern</button>
+Si tu changes le script, il faudra refaire la voix et le calage. ::: Wenn du das Skript änderst, müssen Stimme und Abgleich neu gemacht werden.
+toast('Script enregistré') ::: toast('Skript gespeichert')
+Ta vidéo apparaîtra ici ::: Hier erscheint dein Video
+Quand les plans te conviennent, clique sur « Créer la vidéo ». ::: Wenn die Einstellungen passen, klicke auf „Video erstellen“.
+<h3 style="margin-top:0">Fichiers</h3> ::: <h3 style="margin-top:0">Dateien</h3>
+Rien n'est publié automatiquement. Tu gardes la main sur la publication. ::: Nichts wird automatisch veröffentlicht. Die Veröffentlichung bleibt in deiner Hand.
+'Aucune tâche récente' ::: 'Keine aktuelle Aufgabe'
+'Rien à afficher.' ::: 'Nichts anzuzeigen.'
+
+# ---------- Schublade: Einstellung korrigieren ----------
+Plan ${i+1} sur ${shots().length} ::: Einstellung ${i+1} von ${shots().length}
+aria-label="Plan précédent" ::: aria-label="Vorherige Einstellung"
+aria-label="Plan suivant" ::: aria-label="Nächste Einstellung"
+alt="Aperçu du plan ${i+1}" ::: alt="Vorschau der Einstellung ${i+1}"
+Pas encore d\'image ::: Noch kein Bild
+Ce qui est dit<span ::: Gesprochener Text<span
+Plan écrit à la main</span> ::: Von Hand geschriebene Einstellung</span>
+La caméra et les acteurs de ce plan sont écrits image par image. Tu peux ajouter une note ; pour changer le cadrage, demande-le dans la conversation. ::: Kamera und Figuren dieser Einstellung sind Bild für Bild geschrieben. Du kannst eine Notiz hinzufügen; um den Bildausschnitt zu ändern, bitte darum im Gespräch.
+Cadrage<select id="fSize"> ::: Bildausschnitt<select id="fSize">
+Mouvement<select id="fMove"> ::: Bewegung<select id="fMove">
+Expression de ${esc(a.id)}<select ::: Ausdruck von ${esc(a.id)}<select
+Note pour toi ou pour Claude<textarea id="fNote" placeholder="Par exemple : plus proche du visage, il doit avoir peur."> ::: Notiz für dich oder für Claude<textarea id="fNote" placeholder="Zum Beispiel: näher am Gesicht, er muss Angst haben.">
+Enregistrer et refaire l'image</button> ::: Speichern und Bild neu erzeugen</button>
+toast('Plan enregistré') ::: toast('Einstellung gespeichert')
+toast('Style : '+s.name) ::: toast('Stil: '+s.name)
+name:'Démarrage…' ::: name:'Start…'
+toast('La tâche a échoué : voir le journal',true); else toast('Terminé') ::: toast('Die Aufgabe ist fehlgeschlagen: siehe Protokoll',true); else toast('Fertig')
+toast('Il faut d\'abord des plans.',true) ::: toast('Zuerst braucht es Einstellungen.',true)
+toast('Ajoute ou génère la voix avant de créer la vidéo.',true) ::: toast('Füge die Stimme hinzu oder erzeuge sie, bevor du das Video erstellst.',true)
+
+# ---------- Neues Video ----------
+>Nouvelle vidéo</h2> ::: >Neues Video</h2>
+Tu pourras changer le style plus tard : le même plan se peint dans chaque style. ::: Den Stil kannst du später ändern: Dieselbe Einstellung wird in jedem Stil gemalt.
+<label>Titre<input type="text" id="nName" placeholder="Ex. : Est-ce le vrai ?"> ::: <label>Titel<input type="text" id="nName" placeholder="Z. B.: Ist das echt?">
+<label>Histoire<textarea id="nScript" placeholder="Colle ton script ici, une phrase par ligne. Tu peux aussi le faire plus tard."> ::: <label>Geschichte<textarea id="nScript" placeholder="Füge dein Skript hier ein, ein Satz pro Zeile. Du kannst es auch später tun.">
+margin-bottom:8px">Style</div> ::: margin-bottom:8px">Stil</div>
+Annuler</button> ::: Abbrechen</button>
+id="nGo">Créer</button> ::: id="nGo">Erstellen</button>
+||'Nouvelle vidéo' ::: ||'Neues Video'
+toast('Vidéo créée') ::: toast('Video erstellt')
+
+# ---------- Musikvideo ----------
+<h1>Clip musical</h1> ::: <h1>Musikvideo</h1>
+Donne une musique : le studio trouve le tempo, les temps forts, les sections et les silences. Le directeur (Claude) écrit ensuite le clip dessus, en PS1 ou en VOXEL. ::: Gib ein Musikstück vor: Das Studio findet Tempo, betonte Schläge, Abschnitte und Pausen. Der Regisseur (Claude) schreibt danach das Video dazu, in PS1 oder VOXEL.
+<h3 style="margin:0">Nouvelle musique</h3> ::: <h3 style="margin:0">Neue Musik</h3>
+Nom du clip<input type="text" id="cNom" placeholder="Ex. : tout finit par s'arranger"> ::: Name des Videos<input type="text" id="cNom" placeholder="Z. B.: am Ende wird alles gut">
+Fichier audio<input ::: Audiodatei<input
+Début de l'extrait (s)<input ::: Beginn des Ausschnitts (s)<input
+Fin (s, vide = jusqu'au bout)<input type="text" id="cFin" placeholder="ex. 60" ::: Ende (s, leer = bis zum Schluss)<input type="text" id="cFin" placeholder="z. B. 60"
+Analyser la musique</button> ::: Musik analysieren</button>
+Une minute de musique s'analyse en moins d'une seconde. ::: Eine Minute Musik ist in unter einer Sekunde analysiert.
+<h2>Aucun clip pour le moment</h2><p>Choisis une musique ci-dessus.</p> ::: <h2>Noch kein Musikvideo</h2><p>Wähle oben ein Musikstück.</p>
+</b>durée</div> ::: </b>Dauer</div>
+</b>sections</div> ::: </b>Abschnitte</div>
+</b>mesures</div> ::: </b>Takte</div>
+</b>sommet</div> ::: </b>Höhepunkt</div>
+aria-label="Énergie de la musique, sections et premiers temps" ::: aria-label="Energie der Musik, Abschnitte und erste Schläge"
+['#5b8def','Calme'] ::: ['#5b8def','Ruhig']
+'Moyen'] ::: 'Mittel']
+'Fort'] ::: 'Stark']
+Premier temps (coupe possible)</span> ::: Erster Schlag (Schnitt möglich)</span>
+Sommet</span> ::: Höhepunkt</span>
+Étape 2 : dans la conversation, demande « écris le clip <b> ::: Schritt 2: Bitte im Gespräch: „Schreibe das Musikvideo <b>
+</b> » : Claude lit la <a href= ::: </b>“. Claude liest das <a href=
+>feuille de musique</a>, pose les plans sur les temps forts et rend le film. Le texte à l'écran est original (jamais les paroles). Une musique d'un autre artiste peut être revendiquée si la vidéo est publiée. ::: >Musikblatt</a>, setzt die Einstellungen auf die betonten Schläge und rendert den Film. Der Text im Bild ist original (nie der Liedtext). Musik anderer Künstler kann beanstandet werden, wenn das Video veröffentlicht wird.
+toast('Choisis un fichier audio.',true) ::: toast('Wähle eine Audiodatei.',true)
+'Analyse en cours…' ::: 'Analyse läuft…'
+toast('Musique analysée') ::: toast('Musik analysiert')
+
+# ---------- Szene analysieren ----------
+{action:'Action',camera:'Caméra',camera_move:'Mouvement de caméra',character:'Personnage',creature:'Créature',effect:'Effet',element:'Élément de décor',feature:'Particularité',music:'Musique',place:'Lieu',prop:'Objet',sky:'Ciel',sound:'Son',weather:'Météo',ambience:'Ambiance sonore',monster:'Monstre',event:'Événement',expression:'Expression',gesture:'Geste',ground:'Sol',console_scene:'Scène console',style:'Style'} ::: {action:'Aktion',camera:'Kamera',camera_move:'Kamerabewegung',character:'Figur',creature:'Kreatur',effect:'Effekt',element:'Dekorelement',feature:'Besonderheit',music:'Musik',place:'Ort',prop:'Objekt',sky:'Himmel',sound:'Ton',weather:'Wetter',ambience:'Klangkulisse',monster:'Monster',event:'Ereignis',expression:'Ausdruck',gesture:'Geste',ground:'Boden',console_scene:'Konsolenszene',style:'Stil'}
+{native:['Disponible','✓','disponible','disponibles'],composed:['Composé','+','composé','composés'],partial:['Partiel','◐','partiel','partiels'],missing:['Manquant','✕','manquant','manquants']} ::: {native:['Verfügbar','✓','verfügbar','verfügbar'],composed:['Zusammengesetzt','+','zusammengesetzt','zusammengesetzt'],partial:['Teilweise','◐','teilweise','teilweise'],missing:['Fehlt','✕','fehlt','fehlen']}
+'Saut et hélicoptère' ::: 'Sprung und Hubschrauber'
+"Léa saute au-dessus du ravin, puis grimpe sur la corniche. Un hélicoptère rouge arrive sous l'orage." ::: "Lea springt über die Schlucht und klettert dann auf den Felsvorsprung. Ein roter Hubschrauber kommt im Gewitter an."
+'Requin sous-marin' ::: 'Unterwasser-Hai'
+'Un requin géant nage dans une ville sous-marine.' ::: 'Ein riesiger Hai schwimmt durch eine Unterwasserstadt.'
+'Copier toutes les demandes' ::: 'Alle Anfragen kopieren'
+'Copier la demande ' ::: 'Anfrage kopieren: '
+:'Copier'}</button> ::: :'Kopieren'}</button>
+startsWith('Copier toutes') ::: startsWith('Alle Anfragen')
+'Copié ✓' ::: 'Kopiert ✓'
+'Demandes copiées':'Demande copiée' ::: 'Anfragen kopiert':'Anfrage kopiert'
+'Copie impossible : sélectionne le texte à la main.' ::: 'Kopieren nicht möglich: Markiere den Text von Hand.'
+DEMANDE D'EXTENSION : ::: ERWEITERUNGSANFRAGE:
+Moteur : ::: Motor:
+Besoin : ${KIND_FR[q.kind]||q.kind} « ${q.name} » (${q.need||'manquant'}) ::: Bedarf: ${KIND_FR[q.kind]||q.kind} „${q.name}“ (${q.need||'fehlend'})
+'Demandé par les mots : ' ::: 'Gefragt durch die Wörter: '
+'Contexte : ' ::: 'Kontext: '
+'Approximation actuelle : ' ::: 'Aktuelle Annäherung: '
+"Où l'ajouter : " ::: "Wo hinzufügen: "
+'Contrat : ' ::: 'Vertrag: '
+"Critères d'acceptation :" ::: "Abnahmekriterien:"
+<b>Demande d'extension</b> ::: <b>Erweiterungsanfrage</b>
+q.need!=='manquant' ::: q.need!=='fehlend'
+'<span class="chip warn">amélioration</span>' ::: '<span class="chip warn">Verbesserung</span>'
+<dt>Où l'ajouter</dt> ::: <dt>Wo hinzufügen</dt>
+<dt>Ce que ça doit faire</dt> ::: <dt>Was es leisten muss</dt>
+Critères d'acceptation (${A.length})</summary> ::: Abnahmekriterien (${A.length})</summary>
+['Pourquoi',n.note||'Le moteur ne sait pas encore le dessiner.'] ::: ['Warum',n.note||'Der Motor kann es noch nicht zeichnen.']
+['Ce qui existe à la place',n.note||'Une approximation existe, sans plus.'] ::: ['Was stattdessen existiert',n.note||'Es gibt eine Annäherung, mehr nicht.']
+["Comment l'écrire",n.how] ::: ["So schreibst du es",n.how]
+['Comment le moteur le fait',n.how||n.note||(st==='native'?'Il le dessine tel quel.':"Il l'assemble à partir de paramètres.")] ::: ['So macht es der Motor',n.how||n.note||(st==='native'?'Er zeichnet es unverändert.':"Er setzt es aus Parametern zusammen.")]
+'Fourni par l\'extension':'Dans le code :' ::: 'Geliefert von der Erweiterung':'Im Code:'
+'Aucun besoin précis reconnu dans ce texte. Ajoute des détails (lieu, action, objets, météo) pour que le studio puisse vérifier.' ::: 'In diesem Text wurde kein genauer Bedarf erkannt. Ergänze Details (Ort, Handlung, Objekte, Wetter), damit das Studio prüfen kann.'
+`Il manque ${plural(miss,'chose','choses')} au studio. Rien n'est remplacé en silence : chaque manque a sa demande d'extension, à copier pour Claude.` ::: `Dem Studio ${miss>1?'fehlen':'fehlt'} ${plural(miss,'Ding','Dinge')}. Nichts wird stillschweigend ersetzt: Jede Lücke hat ihre Erweiterungsanfrage, die du für Claude kopieren kannst.`
+`Tout existe, mais ${plural(part,'besoin n\'est','besoins ne sont')} qu'approché${part>1?'s':''}. Une demande « amélioration » est prête.` ::: `Alles ist vorhanden, aber ${plural(part,'Bedarf ist','Bedarfe sind')} nur angenähert. Eine Anfrage „Verbesserung“ liegt bereit.`
+'Tout est disponible : cette scène peut être écrite telle quelle.' ::: 'Alles ist verfügbar: Diese Szene kann so geschrieben werden.'
+plural(N,'besoin','besoins')+' : ' ::: plural(N,'Bedarf','Bedarfe')+': '
+:'Aucun besoin reconnu'} ::: :'Kein Bedarf erkannt'}
+Que veulent dire ces mots ? ::: Was bedeuten diese Wörter?
+<dt>Disponible</dt><dd>le moteur le dessine ou le fait tel quel.</dd> ::: <dt>Verfügbar</dt><dd>der Motor zeichnet oder macht es unverändert.</dd>
+<dt>Composé</dt><dd>un générateur l'assemble à partir de paramètres (décor, plateforme, falaise...).</dd> ::: <dt>Zusammengesetzt</dt><dd>ein Generator setzt es aus Parametern zusammen (Dekor, Plattform, Felswand ...).</dd>
+<dt>Partiel</dt><dd>une approximation existe, dite explicitement ; une demande d'amélioration est rédigée.</dd> ::: <dt>Teilweise</dt><dd>es gibt eine ausdrücklich benannte Annäherung; eine Verbesserungsanfrage wird verfasst.</dd>
+<dt>Manquant</dt><dd>rien ne le fait : une demande d'extension est rédigée.</dd> ::: <dt>Fehlt</dt><dd>nichts leistet es: Eine Erweiterungsanfrage wird verfasst.</dd>
+Ton texte, annoté</h3> ::: Dein Text, annotiert</h3>
+Les besoins, des manques vers le plus simple</h3> ::: Die Bedarfe, von den Lücken zum Einfachsten</h3>
+✓ Demandes enregistrées dans library/extensions/requests : ::: ✓ Anfragen gespeichert in library/extensions/requests:
+Extensions installées (${r.extensions.length})</summary> ::: Installierte Erweiterungen (${r.extensions.length})</summary>
+${esc(e.title||e.id)} — ${e.loaded?'chargée':esc(e.problem||e.status||'non chargée')} ::: ${esc(e.title||e.id)} · ${e.loaded?'geladen':esc(e.problem||e.status||'nicht geladen')}
+<h1>Analyser une scène</h1> ::: <h1>Szene analysieren</h1>
+Colle une scène telle que tu l'imagines, sans la simplifier. Le studio dit ce qu'il sait déjà faire, ce qu'il assemble, ce qui n'est qu'approché et ce qui manque. ::: Füge eine Szene so ein, wie du sie dir vorstellst, ohne sie zu vereinfachen. Das Studio sagt, was es schon kann, was es zusammensetzt, was nur angenähert ist und was fehlt.
+<label>Colle ici une scène<textarea ::: <label>Füge hier eine Szene ein<textarea
+placeholder="Ex. : Léa court sur le toit d'un immeuble pendant une tempête. Derrière elle, un dragon gigantesque traverse les nuages..." ::: placeholder="Z. B.: Lea rennt während eines Sturms über das Dach eines Hochhauses. Hinter ihr zieht ein riesiger Drache durch die Wolken ..."
+<span>Essayer :</span> ::: <span>Ausprobieren:</span>
+<legend>Moteur</legend> ::: <legend>Motor</legend>
+Enregistrer aussi les demandes d'extension dans la bibliothèque (pour que Claude les retrouve) ::: Erweiterungsanfragen auch in der Bibliothek speichern (damit Claude sie wiederfindet)
+id="pGo">Analyser</button> ::: id="pGo">Analysieren</button>
+go.textContent='Analyse…' ::: go.textContent='Analyse …'
+go.textContent='Analyser' ::: go.textContent='Analysieren'
+Le texte reste sur cet ordinateur. Raccourci : Ctrl + Entrée dans la zone de texte. ::: Der Text bleibt auf diesem Computer. Tastenkürzel: Strg + Eingabe im Textfeld.
+toast('Écris ou colle une scène à analyser.',true) ::: toast('Schreibe oder füge eine Szene zum Analysieren ein.',true)
+L'analyse a échoué.</b> ::: Die Analyse ist fehlgeschlagen.</b>
+'Le serveur du studio ne répond pas.' ::: 'Der Studioserver antwortet nicht.'
+
+# ---------- Fähigkeiten ----------
+` et ${list.length-12} autres` ::: ` und ${list.length-12} weitere`
+>Plan ${+m[1]+1}</button> ::: >Einstellung ${+m[1]+1}</button>
+'<p class="hint">Chargement des capacités…</p>' ::: '<p class="hint">Fähigkeiten werden geladen …</p>'
+Analyser le script de cette vidéo</button> ::: Skript dieses Videos analysieren</button>
+<h2>Pas encore d'analyse</h2><p>Le studio écrit les capacités de la vidéo quand il prépare les plans : ce qu'il sait dessiner, et ce qui lui manque.</p> ::: <h2>Noch keine Analyse</h2><p>Das Studio schreibt die Fähigkeiten des Videos, wenn es die Einstellungen vorbereitet: was es zeichnen kann und was ihm fehlt.</p>
+>Tout est disponible<small> ::: >Alles verfügbar<small>
+plural(used,'élément vérifié','éléments vérifiés')+' dans les plans' ::: plural(used,'Element geprüft','Elemente geprüft')+' in den Einstellungen'
+plural(nN,'besoin reconnu','besoins reconnus')+' dans le texte' ::: plural(nN,'Bedarf erkannt','Bedarfe erkannt')+' im Text'
+plural(I.total,'point à régler','points à régler') ::: plural(I.total,'offener Punkt','offene Punkte')
+Le studio ne remplace rien en silence : ce qui manque ou n'est qu'approché est listé ici. Chaque point a sa demande d'extension, à copier pour Claude. ::: Das Studio ersetzt nichts stillschweigend: Was fehlt oder nur angenähert ist, steht hier. Jeder Punkt hat seine Erweiterungsanfrage, die du für Claude kopieren kannst.
+Dans les plans (${I.groups.length})</h3> ::: In den Einstellungen (${I.groups.length})</h3>
+<dt>Demandé dans</dt> ::: <dt>Angefragt in</dt>
+<dt>Ce qui se passe à la place</dt> ::: <dt>Was stattdessen passiert</dt>
+g.cons||'ignoré' ::: g.cons||'ignoriert'
+Dans le texte de l'histoire (${I.bad.length})</h3> ::: Im Text der Geschichte (${I.bad.length})</h3>
+Déjà disponibles (${I.good.length})</summary> ::: Bereits verfügbar (${I.good.length})</summary>
+« ${esc(word)} » ::: „${esc(word)}“
+« ${esc(g.name)} » ::: „${esc(g.name)}“
+« ${esc(wordOf(n))} » — ${ST[n.status][2]} ::: „${esc(wordOf(n))}“ · ${ST[n.status][2]}
+
+# ---------- studio_extras.js: Speicher ----------
+' Go' ::: ' GB'
+' Mo' ::: ' MB'
+' Ko' ::: ' KB'
+return b + ' o' ::: return b + ' B'
+del.title = 'Supprimer ou libérer de l\'espace' ::: del.title = 'Löschen oder Speicher freigeben'
+'Supprimer cette vidéo ou libérer de l\'espace' ::: 'Dieses Video löschen oder Speicher freigeben'
+vidéo${S.projects.length > 1 ? 's' : ''} ::: Video${S.projects.length > 1 ? 's' : ''}
+Gérer l'espace</button> ::: Speicher verwalten</button>
+Supprimer « ${esc(name)} »</h2> ::: „${esc(name)}“ löschen</h2>
+Ce projet occupe <b>${fmt(s.total)}</b> sur ton disque. ::: Dieses Projekt belegt <b>${fmt(s.total)}</b> auf deiner Festplatte.
+${fmt(s.generated)} sont des fichiers que le studio sait refaire (vidéo, aperçus, fichiers de travail) ; ${fmt(keep)} sont à toi (script, voix, plans). ::: ${fmt(s.generated)} ist Material, das das Studio neu erzeugen kann (Video, Vorschauen, Arbeitsdateien); ${fmt(keep)} gehören dir (Skript, Stimme, Einstellungen).
+<b>Libérer l'espace · ${fmt(s.generated)}</b> ::: <b>Speicher freigeben · ${fmt(s.generated)}</b>
+Supprime la vidéo, les aperçus et les fichiers de travail. Tu gardes ton script, ta voix et tes plans : tu pourras refaire la vidéo. ::: Löscht das Video, die Vorschauen und die Arbeitsdateien. Skript, Stimme und Einstellungen bleiben erhalten: Du kannst das Video neu erstellen.
+<b>Supprimer entièrement · ${fmt(s.total)}</b> ::: <b>Vollständig löschen · ${fmt(s.total)}</b>
+Efface tout le projet. Impossible à annuler. ::: Löscht das ganze Projekt. Nicht rückgängig zu machen.
+Mettre à la corbeille à la place (récupérable, ne libère pas d'espace)</button> ::: Stattdessen in den Papierkorb legen (wiederherstellbar, gibt keinen Speicher frei)</button>
+<b>Rien à libérer</b> ::: <b>Nichts freizugeben</b>
+Ce projet ne contient aucune vidéo ni aucun aperçu à effacer. ::: Dieses Projekt enthält kein Video und keine Vorschau zum Löschen.
+<b>Oui, supprimer pour de bon</b> ::: <b>Ja, endgültig löschen</b>
+Dernière confirmation : « ' ::: Letzte Bestätigung: „'
+' » sera effacé définitivement. ::: '“ wird endgültig gelöscht.
+`Espace libéré : ${fmt(r.freed)}` ::: `Speicher freigegeben: ${fmt(r.freed)}`
+`Supprimé · ${fmt(r.freed)} libérés` ::: `Gelöscht · ${fmt(r.freed)} freigegeben`
+'Mis à la corbeille' ::: 'In den Papierkorb gelegt'
+Espace disque</h2> ::: Speicherplatz</h2>
+${rows.length} projets · ::: ${rows.length} Projekte ·
+` · corbeille ${fmt(st.trash_bytes)}` ::: ` · Papierkorb ${fmt(st.trash_bytes)}`
+Supprimer…</button> ::: Löschen …</button>
+'<li class="hint">Aucun projet.</li>' ::: '<li class="hint">Kein Projekt.</li>'
+<b>Corbeille · ${fmt(st.trash_bytes)}</b> ::: <b>Papierkorb · ${fmt(st.trash_bytes)}</b>
+Restaurer</button> ::: Wiederherstellen</button>
+Vider la corbeille et libérer ${fmt(st.trash_bytes)}</button> ::: Papierkorb leeren und ${fmt(st.trash_bytes)} freigeben</button>
+Fermer</button> ::: Schließen</button>
+toast('Projet restauré') ::: toast('Projekt wiederhergestellt')
+`Corbeille vidée · ${fmt(r.freed)} libérés` ::: `Papierkorb geleert · ${fmt(r.freed)} freigegeben`
+
+# ---------- studio_extras.js: Katalog ----------
+'Le style Console 2D a son propre catalogue : pixel art plat façon console.' ::: 'Der Stil Konsole 2D hat seinen eigenen Katalog: flache Pixelgrafik im Konsolenlook.'
+'PS1 et VOXEL présentent exactement les mêmes éléments : seule la manière de les dessiner change. Une pastille dit si l\'élément est dessiné « natif » dans ce style, « converti » depuis l\'autre, ou « approché ».' ::: 'PS1 und VOXEL zeigen genau dieselben Elemente: Nur die Art, sie zu zeichnen, ändert sich. Eine Plakette sagt, ob das Element in diesem Stil „nativ“ gezeichnet, aus dem anderen „konvertiert“ oder „angenähert“ ist.'
+native: 'natif', converted: 'converti', approx: 'approché' ::: native: 'nativ', converted: 'konvertiert', approx: 'angenähert'
+<h1>Catalogue</h1> ::: <h1>Katalog</h1>
+Tout ce que le studio sait dessiner · ${all.length.toLocaleString('fr-FR')} éléments en style ${STYLE_NAMES[s]} ::: Alles, was das Studio zeichnen kann · ${all.length.toLocaleString('de-DE')} Elemente im Stil ${STYLE_NAMES[s]}
+aria-label="Style du catalogue" ::: aria-label="Stil des Katalogs"
+placeholder="Chercher : zombie, lit, église, lampe, squelette…" ::: placeholder="Suchen: Zombie, Bett, Kirche, Lampe, Skelett …"
+aria-label="Chercher dans le catalogue" ::: aria-label="Im Katalog suchen"
+title="Les modèles importés servent d'inspiration : ils ne sont pas utilisés tels quels dans les films." ::: title="Importierte Modelle dienen als Inspiration: In den Filmen werden sie nicht unverändert verwendet."
+${CAT.ref ? 'Masquer' : 'Afficher'} les références d'inspiration (${refN}) ::: ${CAT.ref ? 'Inspirationsreferenzen ausblenden' : 'Inspirationsreferenzen anzeigen'} (${refN})
+aria-label="Catégories" ::: aria-label="Kategorien"
+data-cc="">Tout<small> ::: data-cc="">Alle<small>
+<h2>Catalogue vide</h2><p>Lance « python -m hstudio.catalogue build » dans le dossier du studio.</p> ::: <h2>Katalog leer</h2><p>Starte „python -m hstudio.catalogue build“ im Studioordner.</p>
+<h2>Rien ne correspond</h2><p>Essaie un autre mot ou une autre catégorie.</p> ::: <h2>Nichts passt</h2><p>Versuche ein anderes Wort oder eine andere Kategorie.</p>
+Image ${STYLE_NAMES[s]} en préparation ::: Bild ${STYLE_NAMES[s]} in Vorbereitung
+title="Crédit à publier">crédit</span> ::: title="Quellenangabe zu veröffentlichen">Quellenangabe</span>
+Voir plus (${list.length - CAT.shown} restants)</button> ::: Mehr anzeigen (${list.length - CAT.shown} übrig)</button>
+<b>Licence ${esc(e.license || '')}.</b> À mettre dans la description de la vidéo : ::: <b>Lizenz ${esc(e.license || '')}.</b> In die Videobeschreibung zu übernehmen:
+Licence : ${esc(e.license || 'créé pour ce studio')} ::: Lizenz: ${esc(e.license || 'für dieses Studio geschaffen')}
+À copier dans un épisode</div> ::: In eine Episode zu kopieren</div>
+Copier la ligne</button> ::: Zeile kopieren</button>
+'Copier la ligne' ::: 'Zeile kopieren'
+'Sélectionné : Ctrl+C' ::: 'Markiert: Strg+C'
+
+# ---------- studio_extras.js: Einstellungsschublade ----------
+<label>Transition d'entrée<select ::: <label>Einblendung zu Beginn<select
+Choisis un réglage, puis clique sur « Voir le résultat » : tu valides seulement si ça te plaît. ::: Wähle eine Einstellung und klicke auf „Ergebnis ansehen“: Du bestätigst nur, wenn es dir gefällt.
+▶ Voir le résultat</button><button class="btn" id="pvOk" disabled>Valider</button> ::: ▶ Ergebnis ansehen</button><button class="btn" id="pvOk" disabled>Bestätigen</button>
+Enregistrer sans regarder</button> ::: Ohne Ansehen speichern</button>
+Le réglage a changé : regarde de nouveau le résultat avant de valider. ::: Die Einstellung hat sich geändert: Sieh dir das Ergebnis erneut an, bevor du bestätigst.
+<span>Le studio prépare ce plan…</span> ::: <span>Das Studio bereitet diese Einstellung vor …</span>
+'En cours…' ::: 'Läuft …'
+'Le clip n\'a pas pu être fait : ouvre le Journal pour voir pourquoi.' ::: 'Der Clip konnte nicht erstellt werden: Öffne das Protokoll, um den Grund zu sehen.'
+Voici le résultat. <b>Il te plaît ?</b> Valide pour l\'enregistrer, ou change le réglage et regarde de nouveau. ::: Hier ist das Ergebnis. <b>Gefällt es dir?</b> Bestätige, um es zu speichern, oder ändere die Einstellung und sieh es dir erneut an.
+'▶ Revoir avec ce réglage' ::: '▶ Mit dieser Einstellung erneut ansehen'
+
+# ---------- Kommentare am Zeilenende ----------
+// studio_extras.js : poubelle et taille de chaque vidéo :::
+// studio_extras.js : « Voir le résultat » avant de valider :::
+// le résumé doit être visible, sous l'en-tête collant :::
+// serveur plus ancien : on lit le fichier directement :::
+// module d'aperçu absent : on garde l'ancien bouton :::
+// les listes du style (Console 2D n'a ni les mêmes cadrages ni les mêmes mouvements) ::: 
+
+# ---------- publication_bridge.js ----------
+button.textContent='Publication ↗' ::: button.textContent='Veröffentlichung ↗'
+<h2>Préparer dans Publication</h2><p>Choisissez un rendu. Le compte et l’envoi seront confirmés dans la régie.</p> ::: <h2>In der Veröffentlichung vorbereiten</h2><p>Wähle ein Rendering. Konto und Versand werden in der Regie bestätigt.</p>
+<option value="fr">Français</option><option value="en">Anglais</option><option value="de">Allemand</option> ::: <option value="fr">Französisch</option><option value="en">Englisch</option><option value="de">Deutsch</option>
+Préparer la vidéo</button> ::: Video vorbereiten</button>
+Ouvrir Publication ↗</a> ::: Veröffentlichung öffnen ↗</a>
+<button data-close>Fermer</button> ::: <button data-close>Schließen</button>
+'Rendus indisponibles.' ::: 'Renderings nicht verfügbar.'
+Error('Ce projet ne possède pas encore de rendu.') ::: Error('Dieses Projekt hat noch kein Rendering.')
+'Préparation refusée.' ::: 'Vorbereitung abgelehnt.'
+'Vidéo préparée. Ouvrez Publication pour choisir le compte.' ::: 'Video vorbereitet. Öffne die Veröffentlichung, um das Konto zu wählen.'
+
+# ---------- Beschriftungen für Kennungen, die die Oberfläche selbst nicht aufführt (siehe tools/demo-bauen.mjs) ----------
+'Caméra à l\'épaule' ::: 'Handkamera'
+'Dérive lente' ::: 'Langsames Treiben'
+'Plan américain' ::: 'Amerikanische'

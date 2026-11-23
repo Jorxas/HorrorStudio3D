@@ -8,12 +8,56 @@
 'use strict';
 const BASIS = location.pathname.replace(/[^/]*$/, '');                 // z. B. /HorrorStudio3D/ auf GitHub Pages
 const original = window.fetch.bind(window);
-const MOTOR = 'Demo: Der Studiomotor (Python, GPU, Stimme) läuft hier nicht, deshalb entstehen keine neuen Bilder, Stimmen oder Videos. Die gezeigten Bilder sind echte, vorab gerenderte Motorausgaben.';
+/* Sprache: <html lang> wird vom Bau gesetzt (de ist der Standard, fr die Originalsprache der Oberfläche). Texte und Daten folgen ihr. */
+const SPRACHE = document.documentElement.lang === 'fr' ? 'fr' : 'de';
+const TXT = {
+  de: {
+    motor: 'Demo: Der Studiomotor (Python, GPU, Stimme) läuft hier nicht, deshalb entstehen keine neuen Bilder, Stimmen oder Videos. Die gezeigten Bilder sind echte, vorab gerenderte Motorausgaben.',
+    gefuehrt: 'Die Kamera dieser Einstellung ist von Hand Bild für Bild geschrieben und lässt sich hier nicht einstellen.',
+    groesse: x => 'Der Bildausschnitt „' + x + '“ ist für diese Einstellung nicht verfügbar.',
+    bewegung: x => 'Die Bewegung „' + x + '“ ist für diese Einstellung nicht verfügbar.',
+    ausdruck: x => 'Der Ausdruck „' + x + '“ ist für diese Einstellung nicht verfügbar.',
+    figur: x => 'Die Figur „' + x + '“ kommt in dieser Einstellung nicht vor.',
+    uebergang: x => 'Der Übergang „' + x + '“ ist in diesem Stil nicht verfügbar.',
+    unbekannt: 'Projekt nicht gefunden.',
+    neu: 'Neue Episode',
+    json: 'Ungültiges JSON: ',
+    nummer: 'Die Nummer der Einstellung fehlt.',
+    stilwechsel: 'Demo: Die Vorschaubilder dieses Projekts sind vorab im ursprünglichen Stil gerendert; ein anderer Stil würde neu gerendert und braucht den Motor, der hier nicht läuft. Im Entwurf oder in einem neuen Projekt lässt sich der Stil wählen.',
+    optionen: 'Demo: Auswahllisten gibt es nur für die Einstellungen der Beispielprojekte.',
+    korb: 'Nicht gefunden.',
+    musik: 'Demo: Die Musikanalyse (Tempo, Takte, Abschnitte) braucht Python und ffmpeg und läuft hier nicht.',
+    planer: 'Demo: Der Szenenplaner (Python) läuft hier nicht. Vorbereitet sind die beiden Beispieltexte und die Skripte der Projekte; deren Ergebnisse sind echte Ausgaben des Planers.',
+    fehlt: 'Demo: Diese Funktion gibt es in der öffentlichen Demo nicht.',
+    vorsilbe: 'Demo: ',
+  },
+  fr: {
+    motor: 'Démo : le moteur du studio (Python, GPU, voix) ne tourne pas ici, donc aucune nouvelle image, voix ou vidéo n\'est produite. Les images affichées sont de vraies sorties du moteur, rendues à l\'avance.',
+    gefuehrt: 'La caméra de ce plan est écrite à la main, image par image : elle ne se règle pas ici.',
+    groesse: x => 'Cadrage « ' + x + ' » indisponible pour ce plan.',
+    bewegung: x => 'Mouvement « ' + x + ' » indisponible pour ce plan.',
+    ausdruck: x => 'Expression « ' + x + ' » indisponible pour ce plan.',
+    figur: x => 'Le personnage « ' + x + ' » n\'est pas dans ce plan.',
+    uebergang: x => 'Transition « ' + x + ' » indisponible dans ce style.',
+    unbekannt: 'projet introuvable',
+    neu: 'Nouvel épisode',
+    json: 'JSON invalide : ',
+    nummer: 'Numéro de plan manquant.',
+    stilwechsel: 'Démo : les aperçus de ce projet ont été rendus à l\'avance dans le style d\'origine ; un autre style serait rendu de nouveau et demande le moteur, qui ne tourne pas ici. Le style se choisit dans le brouillon ou dans un nouveau projet.',
+    optionen: 'Démo : les listes de choix n\'existent que pour les plans des projets d\'exemple.',
+    korb: 'introuvable',
+    musik: 'Démo : l\'analyse musicale (tempo, mesures, sections) demande Python et ffmpeg et ne tourne pas ici.',
+    planer: 'Démo : le planificateur de scènes (Python) ne tourne pas ici. Sont préparés : les deux textes d\'exemple et les scripts des projets ; leurs résultats sont de vraies sorties du planificateur.',
+    fehlt: 'Démo : cette fonction n\'existe pas dans la démo publique.',
+    vorsilbe: 'Démo : ',
+  },
+}[SPRACHE];
+const MOTOR = TXT.motor;
 
 const antwort = (daten, status) => new Response(JSON.stringify(daten), { status: status || 200, headers: { 'Content-Type': 'application/json' } });
 const fehler = (status, text) => antwort({ detail: text }, status);
 const kopie = x => JSON.parse(JSON.stringify(x));
-const laden = name => original(BASIS + 'daten/' + name).then(r => { if (!r.ok) throw new Error(name + ': ' + r.status); return r.json(); });
+const laden = name => original(BASIS + 'daten/' + SPRACHE + '/' + name).then(r => { if (!r.ok) throw new Error(name + ': ' + r.status); return r.json(); });
 
 let zustand = null;
 function bereit() {
@@ -52,26 +96,26 @@ function aktuell(ep, index, modus) {
 function anwenden(ep, index, patch, opt) {
   const sh = ep.shots[index]; patch = patch || {};
   if (patch.camera) {
-    if (gefuehrt(sh)) throw new Error('La caméra de ce plan est écrite à la main, image par image : elle ne se règle pas ici.');
+    if (gefuehrt(sh)) throw new Error(TXT.gefuehrt);
     const sz = patch.camera.shot, mv = patch.camera.move, c = Object.assign({}, sh.camera || {});
-    if (sz != null && !ids(opt.sizes).has(sz)) throw new Error('Cadrage « ' + sz + ' » indisponible pour ce plan.');
-    if (mv != null && !ids(opt.moves).has(mv)) throw new Error('Mouvement « ' + mv + ' » indisponible pour ce plan.');
+    if (sz != null && !ids(opt.sizes).has(sz)) throw new Error(TXT.groesse(sz));
+    if (mv != null && !ids(opt.moves).has(mv)) throw new Error(TXT.bewegung(mv));
     if (opt.mode === 'console') { if (sz != null) c.zoom = ZOOM[sz]; if (mv != null) c.move = mv; }
     else { if (sz != null) { c.shot = sz; delete c.preset; } if (mv === 'static') delete c.move; else if (mv != null) c.move = mv; }
     sh.camera = c;
   }
   (patch.actors || []).forEach(a => {
-    if (!ids(opt.faces).has(a.face)) throw new Error('Expression « ' + a.face + ' » indisponible pour ce plan.');
+    if (!ids(opt.faces).has(a.face)) throw new Error(TXT.ausdruck(a.face));
     let ziel = (sh.actors || []).find(x => x && x.id === a.id);
     if (!ziel) {
       const bekannt = ep.shots.slice(0, index).some(s => (s.actors || []).some(x => x && x.id === a.id)) || a.id in (ep.cast || {});
-      if (!bekannt) throw new Error('Le personnage « ' + a.id + ' » n\'est pas dans ce plan.');
+      if (!bekannt) throw new Error(TXT.figur(a.id));
       ziel = { id: a.id }; (sh.actors = sh.actors || []).push(ziel);
     }
     ziel.face = a.face;
   });
   if (patch.transition != null) {
-    if (!ids(opt.transitions).has(patch.transition)) throw new Error('Transition « ' + patch.transition + ' » indisponible dans ce style.');
+    if (!ids(opt.transitions).has(patch.transition)) throw new Error(TXT.uebergang(patch.transition));
     const vor = index ? ep.shots[index - 1] : null, fx = Object.assign({}, sh.fx || {}), vfx = vor ? Object.assign({}, vor.fx || {}) : null;
     delete fx.fade_in; delete fx.flash; if (vfx) delete vfx.fade_out;
     if (patch.transition === 'fade') { fx.fade_in = 0.6; if (vfx) vfx.fade_out = 0.6; } else if (patch.transition === 'flash') fx.flash = 0.9;
@@ -84,9 +128,9 @@ function anwenden(ep, index, patch, opt) {
 /* ---------- Hilfen ---------- */
 const eintrag = p => ({ slug: p.slug, name: p.meta.name, style: p.meta.style, render_engine: p.meta.render_engine, series: p.meta.series, part_label: p.meta.part_label,
   created: p.meta.created, status: p.status, preview: !!(p.previews && p.previews[0]) });
-const slugify = s => (String(s || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '').slice(0, 60)) || 'video';
+const slugify = s => (String(s || '').replace(/ß/g, 'ss').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '').slice(0, 60)) || 'video';
 const holen = (z, slug) => z.projekte.get(decodeURIComponent(slug));
-const nicht_gefunden = () => fehler(404, 'projet introuvable');
+const nicht_gefunden = () => fehler(404, TXT.unbekannt);
 
 async function bearbeiten(methode, pfad, abfrage, body, z) {
   let m;
@@ -94,7 +138,7 @@ async function bearbeiten(methode, pfad, abfrage, body, z) {
     if (methode === 'GET') return antwort([...z.projekte.values()].map(eintrag).sort((a, b) => b.created - a.created));
     if (methode === 'POST') {
       let slug = slugify(body.name), n = 2; const basis = slug; while (z.projekte.has(slug)) slug = basis + '_' + n++;
-      const meta = { name: body.name || 'Nouvel épisode', style: body.style || 'pixel3d', render_engine: body.render_engine || 'pixel3d', series: null, part_label: null, created: Date.now() / 1000, notes: '', director: '' };
+      const meta = { name: body.name || TXT.neu, style: body.style || 'pixel3d', render_engine: body.render_engine || 'pixel3d', series: null, part_label: null, created: Date.now() / 1000, notes: '', director: '' };
       const script = body.script || '';
       z.projekte.set(slug, { slug, meta, szenario: null, script, episode: '', lines: [], warnings: [], capabilities: null, previews: [],
         status: { script: !!script, voice: false, lines: false, episode: false, mix: false, thumbnail: false, metadata: false, renders: [] },
@@ -118,12 +162,12 @@ async function bearbeiten(methode, pfad, abfrage, body, z) {
     if (was === 'job') return antwort({});
     if (was === 'meta' && methode === 'PUT') {
       const stilwechsel = ('style' in body && body.style !== p.meta.style) || ('render_engine' in body && body.render_engine !== p.meta.render_engine);
-      if (stilwechsel && p.previews.some(Boolean)) return fehler(409, 'Demo: Die Vorschaubilder dieses Projekts sind vorab im ursprünglichen Stil gerendert; ein anderer Stil würde neu gerendert und braucht den Motor, der hier nicht läuft. Im Entwurf oder in einem neuen Projekt lässt sich der Stil wählen.');
+      if (stilwechsel && p.previews.some(Boolean)) return fehler(409, TXT.stilwechsel);
       Object.assign(p.meta, body); return antwort({ ok: true });
     }
     if (was === 'script' && methode === 'PUT') { p.script = body.script || ''; p.status.script = !!p.script; return antwort({ ok: true }); }
     if (was === 'episode' && methode === 'PUT') {
-      try { p.episode = JSON.stringify(JSON.parse(body.episode)); } catch (e) { return fehler(400, 'JSON invalide : ' + e.message); }
+      try { p.episode = JSON.stringify(JSON.parse(body.episode)); } catch (e) { return fehler(400, TXT.json + e.message); }
       return antwort({ ok: true, warnings: [] });
     }
     if (was === 'clean' && methode === 'POST') {
@@ -134,13 +178,13 @@ async function bearbeiten(methode, pfad, abfrage, body, z) {
   if ((m = /^\/api\/projects\/([^/]+)\/shot_preview$/.exec(pfad)) && methode === 'POST') return holen(z, m[1]) ? fehler(409, MOTOR) : nicht_gefunden();
   if ((m = /^\/api\/projects\/([^/]+)\/shot_apply$/.exec(pfad)) && methode === 'POST') {
     const p = holen(z, m[1]); if (!p) return nicht_gefunden();
-    const i = body.index; if (!p.episode || !Number.isInteger(i)) return fehler(400, 'Numéro de plan manquant.');
+    const i = body.index; if (!p.episode || !Number.isInteger(i)) return fehler(400, TXT.nummer);
     try { const ep = JSON.parse(p.episode); anwenden(ep, i, body.patch, p.optionen[i]); p.episode = JSON.stringify(ep); } catch (e) { return fehler(400, e.message); }
     return antwort({ ok: true, warnings: [] });
   }
   if (pfad === '/api/shot_preview/options' && methode === 'GET') {
     const p = holen(z, abfrage.get('slug') || ''), i = parseInt(abfrage.get('index'), 10);
-    if (!p || !(i >= 0) || !p.optionen[i]) return fehler(400, 'Demo: Auswahllisten gibt es nur für die Pläne der Beispielprojekte.');
+    if (!p || !(i >= 0) || !p.optionen[i]) return fehler(400, TXT.optionen);
     const o = kopie(p.optionen[i]); o.current = aktuell(JSON.parse(p.episode), i, o.mode); return antwort(o);
   }
   if (pfad === '/api/storage' && methode === 'GET') {
@@ -150,18 +194,18 @@ async function bearbeiten(methode, pfad, abfrage, body, z) {
   }
   if (pfad === '/api/trash' && methode === 'DELETE') { const frei = z.papierkorb.reduce((a, t) => a + t.size, 0); z.papierkorb = []; return antwort({ ok: true, freed: frei }); }
   if ((m = /^\/api\/trash\/([^/]+)\/restore$/.exec(pfad)) && methode === 'POST') {
-    const k = z.papierkorb.findIndex(t => t.name === decodeURIComponent(m[1])); if (k < 0) return fehler(404, 'introuvable');
+    const k = z.papierkorb.findIndex(t => t.name === decodeURIComponent(m[1])); if (k < 0) return fehler(404, TXT.korb);
     const t = z.papierkorb.splice(k, 1)[0]; z.projekte.set(t.slug, t.projekt); return antwort({ ok: true, slug: t.slug });
   }
   if (pfad === '/api/catalogue' && methode === 'GET') return antwort(z.katalog);
-  if (pfad === '/api/clips') return methode === 'GET' ? antwort([]) : fehler(409, 'Demo: Die Musikanalyse (Tempo, Takte, Sektionen) braucht Python und ffmpeg und läuft hier nicht.');
+  if (pfad === '/api/clips') return methode === 'GET' ? antwort([]) : fehler(409, TXT.musik);
   if (pfad === '/api/plan' && methode === 'POST') {
     const text = String(body.text || '').trim(), eng = body.engine === 'console' ? 'console' : 'pixel3d', vorbereitet = z.plan[text];
-    if (!vorbereitet) return fehler(400, 'Demo: Der Szenenplaner (Python) läuft hier nicht. Vorbereitet sind die beiden Beispieltexte und die Skripte der Projekte; deren Ergebnisse sind echte Ausgaben des Planers.');
+    if (!vorbereitet) return fehler(400, TXT.planer);
     return antwort(vorbereitet[eng]);
   }
   if (pfad === '/api/publication/status') return antwort({ enabled: false });
-  return fehler(404, 'Demo: Diese Funktion gibt es in der öffentlichen Demo nicht.');
+  return fehler(404, TXT.fehlt);
 }
 
 window.fetch = async function (eingabe, optionen) {
@@ -171,6 +215,6 @@ window.fetch = async function (eingabe, optionen) {
   const methode = ((optionen && optionen.method) || 'GET').toUpperCase();
   let body = {}; if (optionen && typeof optionen.body === 'string' && optionen.body) { try { body = JSON.parse(optionen.body); } catch (e) { body = {}; } }
   try { return await bearbeiten(methode, pfad, adresse.searchParams, body, await bereit()); }
-  catch (e) { return fehler(500, 'Demo: ' + e.message); }
+  catch (e) { return fehler(500, TXT.vorsilbe + e.message); }
 };
 })();

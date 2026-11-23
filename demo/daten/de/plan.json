@@ -1,0 +1,1281 @@
+{
+ "Lea springt über die Schlucht und klettert dann auf den Felsvorsprung. Ein roter Hubschrauber kommt im Gewitter an.": {
+  "pixel3d": {
+   "engine": "pixel3d",
+   "needs": [
+    {
+     "kind": "action",
+     "name": "jump",
+     "terms": [
+      "springt"
+     ],
+     "status": "native",
+     "source": "acting/motion.py",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "element",
+     "name": "building",
+     "terms": [
+      "Schlucht"
+     ],
+     "status": "composed",
+     "source": "engines/pixel3d/compose.py",
+     "note": "",
+     "how": "Element building mit \"style\": \"rock\" (begehbare Felswand), tiefer Boden (ground_y)"
+    },
+    {
+     "kind": "action",
+     "name": "climb",
+     "terms": [
+      "klettert*"
+     ],
+     "status": "native",
+     "source": "acting/motion.py",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "element",
+     "name": "platform",
+     "terms": [
+      "Felsvorsprung"
+     ],
+     "status": "composed",
+     "source": "engines/pixel3d/compose.py",
+     "note": "",
+     "how": "Element platform (y, Geländer, Helipad-Markierung)"
+    },
+    {
+     "kind": "prop",
+     "name": "helicopter",
+     "terms": [
+      "Hubschrauber"
+     ],
+     "status": "native",
+     "source": "extension:helicopter",
+     "note": "",
+     "how": "Objekt \"mover\" (Flug, Schwebeflug) oder Dekorobjekt"
+    },
+    {
+     "kind": "weather",
+     "name": "storm",
+     "terms": [
+      "Gewitter"
+     ],
+     "status": "native",
+     "source": "engines/pixel3d/world.py",
+     "note": "",
+     "how": ""
+    }
+   ],
+   "counts": {
+    "native": 4,
+    "composed": 2,
+    "partial": 0,
+    "missing": 0
+   },
+   "requests": [],
+   "extensions": [
+    {
+     "id": "helicopter",
+     "title": "Hubschrauber",
+     "status": "stabil",
+     "loaded": true,
+     "problem": null
+    }
+   ]
+  },
+  "console": {
+   "engine": "console",
+   "needs": [
+    {
+     "kind": "action",
+     "name": "jump",
+     "terms": [
+      "springt"
+     ],
+     "status": "native",
+     "source": "acting/motion.py",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "element",
+     "name": "building",
+     "terms": [
+      "Schlucht"
+     ],
+     "status": "missing",
+     "source": "engines/pixel3d/compose.py",
+     "note": "gibt es nur in pixel3d",
+     "how": ""
+    },
+    {
+     "kind": "action",
+     "name": "climb",
+     "terms": [
+      "klettert*"
+     ],
+     "status": "native",
+     "source": "acting/motion.py",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "element",
+     "name": "platform",
+     "terms": [
+      "Felsvorsprung"
+     ],
+     "status": "missing",
+     "source": "engines/pixel3d/compose.py",
+     "note": "gibt es nur in pixel3d",
+     "how": ""
+    },
+    {
+     "kind": "prop",
+     "name": "helicopter",
+     "terms": [
+      "Hubschrauber"
+     ],
+     "status": "missing",
+     "source": "extension:helicopter",
+     "note": "gibt es nur in pixel3d",
+     "how": ""
+    },
+    {
+     "kind": "weather",
+     "name": "storm",
+     "terms": [
+      "Gewitter"
+     ],
+     "status": "missing",
+     "source": "engines/pixel3d/world.py",
+     "note": "gibt es nur in pixel3d",
+     "how": ""
+    }
+   ],
+   "counts": {
+    "native": 2,
+    "composed": 0,
+    "partial": 0,
+    "missing": 4
+   },
+   "requests": [
+    {
+     "id": "element_building",
+     "kind": "element",
+     "name": "building",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "Schlucht"
+     ],
+     "context": "Lea springt über die Schlucht und klettert dann auf den Felsvorsprung. Ein roter Hubschrauber kommt im Gewitter an.",
+     "approximation": "gibt es nur in pixel3d",
+     "where": "Erweiterung library/extensions/building/ : api.element(name, builder)",
+     "contract": "builder(e, ctx) fügt Blöcke, Objekte, begehbare Ebenen (ctx.walkable) und Marker hinzu (compose.py)",
+     "acceptance": [
+      "eine Testszene zeigt „building“ in einem echten Rendering, in beiden Formaten",
+      "deterministisches Rendering (zwei identische Renderings)",
+      "alte Episoden unverändert (Schutz gegen Regression)",
+      "python -m hstudio extension test <id>, dann promote"
+     ],
+     "status": "angefragt",
+     "need": "fehlend"
+    },
+    {
+     "id": "element_platform",
+     "kind": "element",
+     "name": "platform",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "Felsvorsprung"
+     ],
+     "context": "Lea springt über die Schlucht und klettert dann auf den Felsvorsprung. Ein roter Hubschrauber kommt im Gewitter an.",
+     "approximation": "gibt es nur in pixel3d",
+     "where": "Erweiterung library/extensions/platform/ : api.element(name, builder)",
+     "contract": "builder(e, ctx) fügt Blöcke, Objekte, begehbare Ebenen (ctx.walkable) und Marker hinzu (compose.py)",
+     "acceptance": [
+      "eine Testszene zeigt „platform“ in einem echten Rendering, in beiden Formaten",
+      "deterministisches Rendering (zwei identische Renderings)",
+      "alte Episoden unverändert (Schutz gegen Regression)",
+      "python -m hstudio extension test <id>, dann promote"
+     ],
+     "status": "angefragt",
+     "need": "fehlend"
+    },
+    {
+     "id": "prop_helicopter",
+     "kind": "prop",
+     "name": "helicopter",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "Hubschrauber"
+     ],
+     "context": "Lea springt über die Schlucht und klettert dann auf den Felsvorsprung. Ein roter Hubschrauber kommt im Gewitter an.",
+     "approximation": "gibt es nur in pixel3d",
+     "where": "Erweiterung library/extensions/helicopter/ : api.prop(name, builder, lights)",
+     "contract": "builder(p, color) -> r3d-Boxen B()/C(), Unterseite bei y = 0, Vorderseite zu -z (rot 0), weniger als 80 Boxen; Animation mit p[\"_t\"] (Zeit) möglich, wenn das Objekt ein \"mover\" ist",
+     "acceptance": [
+      "eine Testszene zeigt „helicopter“ in einem echten Rendering, in beiden Formaten",
+      "deterministisches Rendering (zwei identische Renderings)",
+      "alte Episoden unverändert (Schutz gegen Regression)",
+      "python -m hstudio extension test <id>, dann promote"
+     ],
+     "status": "angefragt",
+     "need": "fehlend"
+    },
+    {
+     "id": "weather_storm",
+     "kind": "weather",
+     "name": "storm",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "Gewitter"
+     ],
+     "context": "Lea springt über die Schlucht und klettert dann auf den Felsvorsprung. Ein roter Hubschrauber kommt im Gewitter an.",
+     "approximation": "gibt es nur in pixel3d",
+     "where": "engines/pixel3d/world.py weather() (Kern)",
+     "contract": "Änderung am Kern: alte Episoden müssen identisch bleiben (tools/regress.py, tools/regress_v2.py)",
+     "acceptance": [
+      "eine Testszene zeigt „storm“ in einem echten Rendering, in beiden Formaten",
+      "deterministisches Rendering (zwei identische Renderings)",
+      "alte Episoden unverändert (Schutz gegen Regression)",
+      "python -m hstudio extension test <id>, dann promote"
+     ],
+     "status": "angefragt",
+     "need": "fehlend"
+    }
+   ],
+   "extensions": [
+    {
+     "id": "helicopter",
+     "title": "Hubschrauber",
+     "status": "stabil",
+     "loaded": true,
+     "problem": null
+    }
+   ]
+  }
+ },
+ "Ein riesiger Hai schwimmt durch eine Unterwasserstadt.": {
+  "pixel3d": {
+   "engine": "pixel3d",
+   "needs": [
+    {
+     "kind": "creature",
+     "name": "shark",
+     "terms": [
+      "Hai"
+     ],
+     "status": "missing",
+     "source": "",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "feature",
+     "name": "scale",
+     "terms": [
+      "riesig*"
+     ],
+     "status": "native",
+     "source": "effects.py (size), creatures.py, rigfig.py (scale)",
+     "note": "",
+     "how": "\"size\" eines mover oder einer Kreatur, \"scale\" einer Figur"
+    },
+    {
+     "kind": "action",
+     "name": "swim",
+     "terms": [
+      "schwimmt"
+     ],
+     "status": "missing",
+     "source": "",
+     "note": "kein Schwimmen (kein begehbares Wasser)",
+     "how": ""
+    },
+    {
+     "kind": "place",
+     "name": "underwater",
+     "terms": [
+      "Unterwasserstadt"
+     ],
+     "status": "missing",
+     "source": "",
+     "note": "kein Unterwassermilieu (kein Rendering im Wasser, kein Schwimmen)",
+     "how": ""
+    }
+   ],
+   "counts": {
+    "native": 1,
+    "composed": 0,
+    "partial": 0,
+    "missing": 3
+   },
+   "requests": [
+    {
+     "id": "creature_shark",
+     "kind": "creature",
+     "name": "shark",
+     "engines": [
+      "pixel3d"
+     ],
+     "asked_by": [
+      "Hai"
+     ],
+     "context": "Ein riesiger Hai schwimmt durch eine Unterwasserstadt.",
+     "approximation": "",
+     "where": "Erweiterung library/extensions/shark/ : api.creature(name, builder)",
+     "contract": "builder(color, swing, t, k, posture) -> Boxen mit Blick nach +z, Füße bei y = 0; Haltung \"fly\" für den Flug",
+     "acceptance": [
+      "eine Testszene zeigt „shark“ in einem echten Rendering, in beiden Formaten",
+      "deterministisches Rendering (zwei identische Renderings)",
+      "alte Episoden unverändert (Schutz gegen Regression)",
+      "python -m hstudio extension test <id>, dann promote"
+     ],
+     "status": "angefragt",
+     "need": "fehlend"
+    },
+    {
+     "id": "action_swim",
+     "kind": "action",
+     "name": "swim",
+     "engines": [
+      "pixel3d"
+     ],
+     "asked_by": [
+      "schwimmt"
+     ],
+     "context": "Ein riesiger Hai schwimmt durch eine Unterwasserstadt.",
+     "approximation": "kein Schwimmen (kein begehbares Wasser)",
+     "where": "Erweiterung library/extensions/swim/ : api.verb(name, fn)",
+     "contract": "fn(shot, track, action, t0) -> t1: Wege (shot.walk), Luftphasen (track.airs), Kniebeugen (track.squats), Hände (track.reaches), Klangereignisse (track.events); gemeinsam genutzt von PIXEL 3D und CONSOLE (acting/motion.py als Beispiel)",
+     "acceptance": [
+      "eine Testszene zeigt „swim“ in einem echten Rendering, in beiden Formaten",
+      "deterministisches Rendering (zwei identische Renderings)",
+      "alte Episoden unverändert (Schutz gegen Regression)",
+      "python -m hstudio extension test <id>, dann promote"
+     ],
+     "status": "angefragt",
+     "need": "fehlend"
+    },
+    {
+     "id": "place_underwater",
+     "kind": "place",
+     "name": "underwater",
+     "engines": [
+      "pixel3d"
+     ],
+     "asked_by": [
+      "Unterwasserstadt"
+     ],
+     "context": "Ein riesiger Hai schwimmt durch eine Unterwasserstadt.",
+     "approximation": "kein Unterwassermilieu (kein Rendering im Wasser, kein Schwimmen)",
+     "where": "Erweiterung library/extensions/underwater/ : api.place(name, generator, ambience)",
+     "contract": "generator(spec) -> spec RoomSet (places.py als Beispiel); oder ein \"composed\"-Dekor ohne Code",
+     "acceptance": [
+      "eine Testszene zeigt „underwater“ in einem echten Rendering, in beiden Formaten",
+      "deterministisches Rendering (zwei identische Renderings)",
+      "alte Episoden unverändert (Schutz gegen Regression)",
+      "python -m hstudio extension test <id>, dann promote"
+     ],
+     "status": "angefragt",
+     "need": "fehlend"
+    }
+   ],
+   "extensions": [
+    {
+     "id": "helicopter",
+     "title": "Hubschrauber",
+     "status": "stabil",
+     "loaded": true,
+     "problem": null
+    }
+   ]
+  },
+  "console": {
+   "engine": "console",
+   "needs": [
+    {
+     "kind": "creature",
+     "name": "shark",
+     "terms": [
+      "Hai"
+     ],
+     "status": "missing",
+     "source": "",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "feature",
+     "name": "scale",
+     "terms": [
+      "riesig*"
+     ],
+     "status": "missing",
+     "source": "effects.py (size), creatures.py, rigfig.py (scale)",
+     "note": "gibt es nur in pixel3d",
+     "how": ""
+    },
+    {
+     "kind": "action",
+     "name": "swim",
+     "terms": [
+      "schwimmt"
+     ],
+     "status": "missing",
+     "source": "",
+     "note": "kein Schwimmen (kein begehbares Wasser)",
+     "how": ""
+    },
+    {
+     "kind": "place",
+     "name": "underwater",
+     "terms": [
+      "Unterwasserstadt"
+     ],
+     "status": "missing",
+     "source": "",
+     "note": "kein Unterwassermilieu (kein Rendering im Wasser, kein Schwimmen)",
+     "how": ""
+    }
+   ],
+   "counts": {
+    "native": 0,
+    "composed": 0,
+    "partial": 0,
+    "missing": 4
+   },
+   "requests": [
+    {
+     "id": "creature_shark",
+     "kind": "creature",
+     "name": "shark",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "Hai"
+     ],
+     "context": "Ein riesiger Hai schwimmt durch eine Unterwasserstadt.",
+     "approximation": "",
+     "where": "Erweiterung library/extensions/shark/ : api.creature(name, builder)",
+     "contract": "builder(color, swing, t, k, posture) -> Boxen mit Blick nach +z, Füße bei y = 0; Haltung \"fly\" für den Flug",
+     "acceptance": [
+      "eine Testszene zeigt „shark“ in einem echten Rendering, in beiden Formaten",
+      "deterministisches Rendering (zwei identische Renderings)",
+      "alte Episoden unverändert (Schutz gegen Regression)",
+      "python -m hstudio extension test <id>, dann promote"
+     ],
+     "status": "angefragt",
+     "need": "fehlend"
+    },
+    {
+     "id": "feature_scale",
+     "kind": "feature",
+     "name": "scale",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "riesig"
+     ],
+     "context": "Ein riesiger Hai schwimmt durch eine Unterwasserstadt.",
+     "approximation": "gibt es nur in pixel3d",
+     "where": "Kern des Motors",
+     "contract": "Änderung am Kern: alte Episoden müssen identisch bleiben (tools/regress.py, tools/regress_v2.py)",
+     "acceptance": [
+      "eine Testszene zeigt „scale“ in einem echten Rendering, in beiden Formaten",
+      "deterministisches Rendering (zwei identische Renderings)",
+      "alte Episoden unverändert (Schutz gegen Regression)",
+      "python -m hstudio extension test <id>, dann promote"
+     ],
+     "status": "angefragt",
+     "need": "fehlend"
+    },
+    {
+     "id": "action_swim",
+     "kind": "action",
+     "name": "swim",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "schwimmt"
+     ],
+     "context": "Ein riesiger Hai schwimmt durch eine Unterwasserstadt.",
+     "approximation": "kein Schwimmen (kein begehbares Wasser)",
+     "where": "Erweiterung library/extensions/swim/ : api.verb(name, fn)",
+     "contract": "fn(shot, track, action, t0) -> t1: Wege (shot.walk), Luftphasen (track.airs), Kniebeugen (track.squats), Hände (track.reaches), Klangereignisse (track.events); gemeinsam genutzt von PIXEL 3D und CONSOLE (acting/motion.py als Beispiel)",
+     "acceptance": [
+      "eine Testszene zeigt „swim“ in einem echten Rendering, in beiden Formaten",
+      "deterministisches Rendering (zwei identische Renderings)",
+      "alte Episoden unverändert (Schutz gegen Regression)",
+      "python -m hstudio extension test <id>, dann promote"
+     ],
+     "status": "angefragt",
+     "need": "fehlend"
+    },
+    {
+     "id": "place_underwater",
+     "kind": "place",
+     "name": "underwater",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "Unterwasserstadt"
+     ],
+     "context": "Ein riesiger Hai schwimmt durch eine Unterwasserstadt.",
+     "approximation": "kein Unterwassermilieu (kein Rendering im Wasser, kein Schwimmen)",
+     "where": "Erweiterung library/extensions/underwater/ : api.place(name, generator, ambience)",
+     "contract": "generator(spec) -> spec RoomSet (places.py als Beispiel); oder ein \"composed\"-Dekor ohne Code",
+     "acceptance": [
+      "eine Testszene zeigt „underwater“ in einem echten Rendering, in beiden Formaten",
+      "deterministisches Rendering (zwei identische Renderings)",
+      "alte Episoden unverändert (Schutz gegen Regression)",
+      "python -m hstudio extension test <id>, dann promote"
+     ],
+     "status": "angefragt",
+     "need": "fehlend"
+    }
+   ],
+   "extensions": [
+    {
+     "id": "helicopter",
+     "title": "Hubschrauber",
+     "status": "stabil",
+     "loaded": true,
+     "problem": null
+    }
+   ]
+  }
+ },
+ "Ist da jemand...?\n\nMama?\n\nNein... nein...": {
+  "pixel3d": {
+   "engine": "pixel3d",
+   "needs": [],
+   "counts": {
+    "native": 0,
+    "composed": 0,
+    "partial": 0,
+    "missing": 0
+   },
+   "requests": [],
+   "extensions": [
+    {
+     "id": "helicopter",
+     "title": "Hubschrauber",
+     "status": "stabil",
+     "loaded": true,
+     "problem": null
+    }
+   ]
+  },
+  "console": {
+   "engine": "console",
+   "needs": [],
+   "counts": {
+    "native": 0,
+    "composed": 0,
+    "partial": 0,
+    "missing": 0
+   },
+   "requests": [],
+   "extensions": [
+    {
+     "id": "helicopter",
+     "title": "Hubschrauber",
+     "status": "stabil",
+     "loaded": true,
+     "problem": null
+    }
+   ]
+  }
+ },
+ "Lea kommt nach Hause.\nAuf dem Tisch... ein Schlüssel, den sie noch nie gesehen hat.\nSie setzt sich, den Schlüssel in der Hand.\nWer kann ihn nur dort hingelegt haben?": {
+  "pixel3d": {
+   "engine": "pixel3d",
+   "needs": [
+    {
+     "kind": "action",
+     "name": "sit",
+     "terms": [
+      "setzt sich"
+     ],
+     "status": "native",
+     "source": "acting/timeline.py",
+     "note": "",
+     "how": ""
+    }
+   ],
+   "counts": {
+    "native": 1,
+    "composed": 0,
+    "partial": 0,
+    "missing": 0
+   },
+   "requests": [],
+   "extensions": [
+    {
+     "id": "helicopter",
+     "title": "Hubschrauber",
+     "status": "stabil",
+     "loaded": true,
+     "problem": null
+    }
+   ]
+  },
+  "console": {
+   "engine": "console",
+   "needs": [
+    {
+     "kind": "action",
+     "name": "sit",
+     "terms": [
+      "setzt sich"
+     ],
+     "status": "native",
+     "source": "acting/timeline.py",
+     "note": "",
+     "how": ""
+    }
+   ],
+   "counts": {
+    "native": 1,
+    "composed": 0,
+    "partial": 0,
+    "missing": 0
+   },
+   "requests": [],
+   "extensions": [
+    {
+     "id": "helicopter",
+     "title": "Hubschrauber",
+     "status": "stabil",
+     "loaded": true,
+     "problem": null
+    }
+   ]
+  }
+ },
+ "Drei Uhr morgens. Noch ein Level, dann schlafe ich.\nWillkommen in Level sieben, Noah.\nMoment... Woher kennt er meinen Vornamen?\nNimm den Schlüssel. Öffne die Tür.\nDie Tür zu meinem Zimmer... Sie hat sich gerade geöffnet.\nJemand kommt. Drück nicht auf Pause.\nDa ist jemand hinter der Tür!\nDu hast ein Herz verloren.\nSoll ich pausieren... oder nicht?": {
+  "pixel3d": {
+   "engine": "pixel3d",
+   "needs": [
+    {
+     "kind": "action",
+     "name": "open",
+     "terms": [
+      "öffne"
+     ],
+     "status": "native",
+     "source": "acting/timeline.py",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "place",
+     "name": "bedroom",
+     "terms": [
+      "zimmer*"
+     ],
+     "status": "native",
+     "source": "engines/pixel3d/places.py",
+     "note": "",
+     "how": ""
+    }
+   ],
+   "counts": {
+    "native": 2,
+    "composed": 0,
+    "partial": 0,
+    "missing": 0
+   },
+   "requests": [],
+   "extensions": [
+    {
+     "id": "helicopter",
+     "title": "Hubschrauber",
+     "status": "stabil",
+     "loaded": true,
+     "problem": null
+    }
+   ]
+  },
+  "console": {
+   "engine": "console",
+   "needs": [
+    {
+     "kind": "action",
+     "name": "open",
+     "terms": [
+      "öffne"
+     ],
+     "status": "native",
+     "source": "acting/timeline.py",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "place",
+     "name": "bedroom",
+     "terms": [
+      "zimmer*"
+     ],
+     "status": "native",
+     "source": "engines/pixel3d/places.py",
+     "note": "",
+     "how": ""
+    }
+   ],
+   "counts": {
+    "native": 2,
+    "composed": 0,
+    "partial": 0,
+    "missing": 0
+   },
+   "requests": [],
+   "extensions": [
+    {
+     "id": "helicopter",
+     "title": "Hubschrauber",
+     "status": "stabil",
+     "loaded": true,
+     "problem": null
+    }
+   ]
+  }
+ },
+ "Ein riesiger Hai schwimmt durch eine Unterwasserstadt.\nLea springt über die Schlucht und klettert dann auf den Felsvorsprung.\nEin roter Hubschrauber kommt im Gewitter an.": {
+  "pixel3d": {
+   "engine": "pixel3d",
+   "needs": [
+    {
+     "kind": "creature",
+     "name": "shark",
+     "terms": [
+      "Hai"
+     ],
+     "status": "missing",
+     "source": "",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "feature",
+     "name": "scale",
+     "terms": [
+      "riesig*"
+     ],
+     "status": "native",
+     "source": "effects.py (size), creatures.py, rigfig.py (scale)",
+     "note": "",
+     "how": "\"size\" eines mover oder einer Kreatur, \"scale\" einer Figur"
+    },
+    {
+     "kind": "action",
+     "name": "swim",
+     "terms": [
+      "schwimmt"
+     ],
+     "status": "missing",
+     "source": "",
+     "note": "kein Schwimmen (kein begehbares Wasser)",
+     "how": ""
+    },
+    {
+     "kind": "place",
+     "name": "underwater",
+     "terms": [
+      "Unterwasserstadt"
+     ],
+     "status": "missing",
+     "source": "",
+     "note": "kein Unterwassermilieu (kein Rendering im Wasser, kein Schwimmen)",
+     "how": ""
+    },
+    {
+     "kind": "action",
+     "name": "jump",
+     "terms": [
+      "springt"
+     ],
+     "status": "native",
+     "source": "acting/motion.py",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "element",
+     "name": "building",
+     "terms": [
+      "Schlucht"
+     ],
+     "status": "composed",
+     "source": "engines/pixel3d/compose.py",
+     "note": "",
+     "how": "Element building mit \"style\": \"rock\" (begehbare Felswand), tiefer Boden (ground_y)"
+    },
+    {
+     "kind": "action",
+     "name": "climb",
+     "terms": [
+      "klettert*"
+     ],
+     "status": "native",
+     "source": "acting/motion.py",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "element",
+     "name": "platform",
+     "terms": [
+      "Felsvorsprung"
+     ],
+     "status": "composed",
+     "source": "engines/pixel3d/compose.py",
+     "note": "",
+     "how": "Element platform (y, Geländer, Helipad-Markierung)"
+    },
+    {
+     "kind": "prop",
+     "name": "helicopter",
+     "terms": [
+      "Hubschrauber"
+     ],
+     "status": "native",
+     "source": "extension:helicopter",
+     "note": "",
+     "how": "Objekt \"mover\" (Flug, Schwebeflug) oder Dekorobjekt"
+    },
+    {
+     "kind": "weather",
+     "name": "storm",
+     "terms": [
+      "Gewitter"
+     ],
+     "status": "native",
+     "source": "engines/pixel3d/world.py",
+     "note": "",
+     "how": ""
+    }
+   ],
+   "counts": {
+    "native": 5,
+    "composed": 2,
+    "partial": 0,
+    "missing": 3
+   },
+   "requests": [
+    {
+     "id": "creature_shark",
+     "kind": "creature",
+     "name": "shark",
+     "engines": [
+      "pixel3d"
+     ],
+     "asked_by": [
+      "Hai"
+     ],
+     "context": "Ein riesiger Hai schwimmt durch eine Unterwasserstadt.\nLea springt über die Schlucht und klettert dann auf den Felsvorsprung.\nEin roter Hubschrauber kommt im Gewitter an.",
+     "approximation": "",
+     "where": "Erweiterung library/extensions/shark/ : api.creature(name, builder)",
+     "contract": "builder(color, swing, t, k, posture) -> Boxen mit Blick nach +z, Füße bei y = 0; Haltung \"fly\" für den Flug",
+     "acceptance": [
+      "eine Testszene zeigt „shark“ in einem echten Rendering, in beiden Formaten",
+      "deterministisches Rendering (zwei identische Renderings)",
+      "alte Episoden unverändert (Schutz gegen Regression)",
+      "python -m hstudio extension test <id>, dann promote"
+     ],
+     "status": "angefragt",
+     "need": "fehlend"
+    },
+    {
+     "id": "action_swim",
+     "kind": "action",
+     "name": "swim",
+     "engines": [
+      "pixel3d"
+     ],
+     "asked_by": [
+      "schwimmt"
+     ],
+     "context": "Ein riesiger Hai schwimmt durch eine Unterwasserstadt.\nLea springt über die Schlucht und klettert dann auf den Felsvorsprung.\nEin roter Hubschrauber kommt im Gewitter an.",
+     "approximation": "kein Schwimmen (kein begehbares Wasser)",
+     "where": "Erweiterung library/extensions/swim/ : api.verb(name, fn)",
+     "contract": "fn(shot, track, action, t0) -> t1: Wege (shot.walk), Luftphasen (track.airs), Kniebeugen (track.squats), Hände (track.reaches), Klangereignisse (track.events); gemeinsam genutzt von PIXEL 3D und CONSOLE (acting/motion.py als Beispiel)",
+     "acceptance": [
+      "eine Testszene zeigt „swim“ in einem echten Rendering, in beiden Formaten",
+      "deterministisches Rendering (zwei identische Renderings)",
+      "alte Episoden unverändert (Schutz gegen Regression)",
+      "python -m hstudio extension test <id>, dann promote"
+     ],
+     "status": "angefragt",
+     "need": "fehlend"
+    },
+    {
+     "id": "place_underwater",
+     "kind": "place",
+     "name": "underwater",
+     "engines": [
+      "pixel3d"
+     ],
+     "asked_by": [
+      "Unterwasserstadt"
+     ],
+     "context": "Ein riesiger Hai schwimmt durch eine Unterwasserstadt.\nLea springt über die Schlucht und klettert dann auf den Felsvorsprung.\nEin roter Hubschrauber kommt im Gewitter an.",
+     "approximation": "kein Unterwassermilieu (kein Rendering im Wasser, kein Schwimmen)",
+     "where": "Erweiterung library/extensions/underwater/ : api.place(name, generator, ambience)",
+     "contract": "generator(spec) -> spec RoomSet (places.py als Beispiel); oder ein \"composed\"-Dekor ohne Code",
+     "acceptance": [
+      "eine Testszene zeigt „underwater“ in einem echten Rendering, in beiden Formaten",
+      "deterministisches Rendering (zwei identische Renderings)",
+      "alte Episoden unverändert (Schutz gegen Regression)",
+      "python -m hstudio extension test <id>, dann promote"
+     ],
+     "status": "angefragt",
+     "need": "fehlend"
+    }
+   ],
+   "extensions": [
+    {
+     "id": "helicopter",
+     "title": "Hubschrauber",
+     "status": "stabil",
+     "loaded": true,
+     "problem": null
+    }
+   ]
+  },
+  "console": {
+   "engine": "console",
+   "needs": [
+    {
+     "kind": "creature",
+     "name": "shark",
+     "terms": [
+      "Hai"
+     ],
+     "status": "missing",
+     "source": "",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "feature",
+     "name": "scale",
+     "terms": [
+      "riesig*"
+     ],
+     "status": "missing",
+     "source": "effects.py (size), creatures.py, rigfig.py (scale)",
+     "note": "gibt es nur in pixel3d",
+     "how": ""
+    },
+    {
+     "kind": "action",
+     "name": "swim",
+     "terms": [
+      "schwimmt"
+     ],
+     "status": "missing",
+     "source": "",
+     "note": "kein Schwimmen (kein begehbares Wasser)",
+     "how": ""
+    },
+    {
+     "kind": "place",
+     "name": "underwater",
+     "terms": [
+      "Unterwasserstadt"
+     ],
+     "status": "missing",
+     "source": "",
+     "note": "kein Unterwassermilieu (kein Rendering im Wasser, kein Schwimmen)",
+     "how": ""
+    },
+    {
+     "kind": "action",
+     "name": "jump",
+     "terms": [
+      "springt"
+     ],
+     "status": "native",
+     "source": "acting/motion.py",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "element",
+     "name": "building",
+     "terms": [
+      "Schlucht"
+     ],
+     "status": "missing",
+     "source": "engines/pixel3d/compose.py",
+     "note": "gibt es nur in pixel3d",
+     "how": ""
+    },
+    {
+     "kind": "action",
+     "name": "climb",
+     "terms": [
+      "klettert*"
+     ],
+     "status": "native",
+     "source": "acting/motion.py",
+     "note": "",
+     "how": ""
+    },
+    {
+     "kind": "element",
+     "name": "platform",
+     "terms": [
+      "Felsvorsprung"
+     ],
+     "status": "missing",
+     "source": "engines/pixel3d/compose.py",
+     "note": "gibt es nur in pixel3d",
+     "how": ""
+    },
+    {
+     "kind": "prop",
+     "name": "helicopter",
+     "terms": [
+      "Hubschrauber"
+     ],
+     "status": "missing",
+     "source": "extension:helicopter",
+     "note": "gibt es nur in pixel3d",
+     "how": ""
+    },
+    {
+     "kind": "weather",
+     "name": "storm",
+     "terms": [
+      "Gewitter"
+     ],
+     "status": "missing",
+     "source": "engines/pixel3d/world.py",
+     "note": "gibt es nur in pixel3d",
+     "how": ""
+    }
+   ],
+   "counts": {
+    "native": 2,
+    "composed": 0,
+    "partial": 0,
+    "missing": 8
+   },
+   "requests": [
+    {
+     "id": "creature_shark",
+     "kind": "creature",
+     "name": "shark",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "Hai"
+     ],
+     "context": "Ein riesiger Hai schwimmt durch eine Unterwasserstadt.\nLea springt über die Schlucht und klettert dann auf den Felsvorsprung.\nEin roter Hubschrauber kommt im Gewitter an.",
+     "approximation": "",
+     "where": "Erweiterung library/extensions/shark/ : api.creature(name, builder)",
+     "contract": "builder(color, swing, t, k, posture) -> Boxen mit Blick nach +z, Füße bei y = 0; Haltung \"fly\" für den Flug",
+     "acceptance": [
+      "eine Testszene zeigt „shark“ in einem echten Rendering, in beiden Formaten",
+      "deterministisches Rendering (zwei identische Renderings)",
+      "alte Episoden unverändert (Schutz gegen Regression)",
+      "python -m hstudio extension test <id>, dann promote"
+     ],
+     "status": "angefragt",
+     "need": "fehlend"
+    },
+    {
+     "id": "feature_scale",
+     "kind": "feature",
+     "name": "scale",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "riesig"
+     ],
+     "context": "Ein riesiger Hai schwimmt durch eine Unterwasserstadt.\nLea springt über die Schlucht und klettert dann auf den Felsvorsprung.\nEin roter Hubschrauber kommt im Gewitter an.",
+     "approximation": "gibt es nur in pixel3d",
+     "where": "Kern des Motors",
+     "contract": "Änderung am Kern: alte Episoden müssen identisch bleiben (tools/regress.py, tools/regress_v2.py)",
+     "acceptance": [
+      "eine Testszene zeigt „scale“ in einem echten Rendering, in beiden Formaten",
+      "deterministisches Rendering (zwei identische Renderings)",
+      "alte Episoden unverändert (Schutz gegen Regression)",
+      "python -m hstudio extension test <id>, dann promote"
+     ],
+     "status": "angefragt",
+     "need": "fehlend"
+    },
+    {
+     "id": "action_swim",
+     "kind": "action",
+     "name": "swim",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "schwimmt"
+     ],
+     "context": "Ein riesiger Hai schwimmt durch eine Unterwasserstadt.\nLea springt über die Schlucht und klettert dann auf den Felsvorsprung.\nEin roter Hubschrauber kommt im Gewitter an.",
+     "approximation": "kein Schwimmen (kein begehbares Wasser)",
+     "where": "Erweiterung library/extensions/swim/ : api.verb(name, fn)",
+     "contract": "fn(shot, track, action, t0) -> t1: Wege (shot.walk), Luftphasen (track.airs), Kniebeugen (track.squats), Hände (track.reaches), Klangereignisse (track.events); gemeinsam genutzt von PIXEL 3D und CONSOLE (acting/motion.py als Beispiel)",
+     "acceptance": [
+      "eine Testszene zeigt „swim“ in einem echten Rendering, in beiden Formaten",
+      "deterministisches Rendering (zwei identische Renderings)",
+      "alte Episoden unverändert (Schutz gegen Regression)",
+      "python -m hstudio extension test <id>, dann promote"
+     ],
+     "status": "angefragt",
+     "need": "fehlend"
+    },
+    {
+     "id": "place_underwater",
+     "kind": "place",
+     "name": "underwater",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "Unterwasserstadt"
+     ],
+     "context": "Ein riesiger Hai schwimmt durch eine Unterwasserstadt.\nLea springt über die Schlucht und klettert dann auf den Felsvorsprung.\nEin roter Hubschrauber kommt im Gewitter an.",
+     "approximation": "kein Unterwassermilieu (kein Rendering im Wasser, kein Schwimmen)",
+     "where": "Erweiterung library/extensions/underwater/ : api.place(name, generator, ambience)",
+     "contract": "generator(spec) -> spec RoomSet (places.py als Beispiel); oder ein \"composed\"-Dekor ohne Code",
+     "acceptance": [
+      "eine Testszene zeigt „underwater“ in einem echten Rendering, in beiden Formaten",
+      "deterministisches Rendering (zwei identische Renderings)",
+      "alte Episoden unverändert (Schutz gegen Regression)",
+      "python -m hstudio extension test <id>, dann promote"
+     ],
+     "status": "angefragt",
+     "need": "fehlend"
+    },
+    {
+     "id": "element_building",
+     "kind": "element",
+     "name": "building",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "Schlucht"
+     ],
+     "context": "Ein riesiger Hai schwimmt durch eine Unterwasserstadt.\nLea springt über die Schlucht und klettert dann auf den Felsvorsprung.\nEin roter Hubschrauber kommt im Gewitter an.",
+     "approximation": "gibt es nur in pixel3d",
+     "where": "Erweiterung library/extensions/building/ : api.element(name, builder)",
+     "contract": "builder(e, ctx) fügt Blöcke, Objekte, begehbare Ebenen (ctx.walkable) und Marker hinzu (compose.py)",
+     "acceptance": [
+      "eine Testszene zeigt „building“ in einem echten Rendering, in beiden Formaten",
+      "deterministisches Rendering (zwei identische Renderings)",
+      "alte Episoden unverändert (Schutz gegen Regression)",
+      "python -m hstudio extension test <id>, dann promote"
+     ],
+     "status": "angefragt",
+     "need": "fehlend"
+    },
+    {
+     "id": "element_platform",
+     "kind": "element",
+     "name": "platform",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "Felsvorsprung"
+     ],
+     "context": "Ein riesiger Hai schwimmt durch eine Unterwasserstadt.\nLea springt über die Schlucht und klettert dann auf den Felsvorsprung.\nEin roter Hubschrauber kommt im Gewitter an.",
+     "approximation": "gibt es nur in pixel3d",
+     "where": "Erweiterung library/extensions/platform/ : api.element(name, builder)",
+     "contract": "builder(e, ctx) fügt Blöcke, Objekte, begehbare Ebenen (ctx.walkable) und Marker hinzu (compose.py)",
+     "acceptance": [
+      "eine Testszene zeigt „platform“ in einem echten Rendering, in beiden Formaten",
+      "deterministisches Rendering (zwei identische Renderings)",
+      "alte Episoden unverändert (Schutz gegen Regression)",
+      "python -m hstudio extension test <id>, dann promote"
+     ],
+     "status": "angefragt",
+     "need": "fehlend"
+    },
+    {
+     "id": "prop_helicopter",
+     "kind": "prop",
+     "name": "helicopter",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "Hubschrauber"
+     ],
+     "context": "Ein riesiger Hai schwimmt durch eine Unterwasserstadt.\nLea springt über die Schlucht und klettert dann auf den Felsvorsprung.\nEin roter Hubschrauber kommt im Gewitter an.",
+     "approximation": "gibt es nur in pixel3d",
+     "where": "Erweiterung library/extensions/helicopter/ : api.prop(name, builder, lights)",
+     "contract": "builder(p, color) -> r3d-Boxen B()/C(), Unterseite bei y = 0, Vorderseite zu -z (rot 0), weniger als 80 Boxen; Animation mit p[\"_t\"] (Zeit) möglich, wenn das Objekt ein \"mover\" ist",
+     "acceptance": [
+      "eine Testszene zeigt „helicopter“ in einem echten Rendering, in beiden Formaten",
+      "deterministisches Rendering (zwei identische Renderings)",
+      "alte Episoden unverändert (Schutz gegen Regression)",
+      "python -m hstudio extension test <id>, dann promote"
+     ],
+     "status": "angefragt",
+     "need": "fehlend"
+    },
+    {
+     "id": "weather_storm",
+     "kind": "weather",
+     "name": "storm",
+     "engines": [
+      "console"
+     ],
+     "asked_by": [
+      "Gewitter"
+     ],
+     "context": "Ein riesiger Hai schwimmt durch eine Unterwasserstadt.\nLea springt über die Schlucht und klettert dann auf den Felsvorsprung.\nEin roter Hubschrauber kommt im Gewitter an.",
+     "approximation": "gibt es nur in pixel3d",
+     "where": "engines/pixel3d/world.py weather() (Kern)",
+     "contract": "Änderung am Kern: alte Episoden müssen identisch bleiben (tools/regress.py, tools/regress_v2.py)",
+     "acceptance": [
+      "eine Testszene zeigt „storm“ in einem echten Rendering, in beiden Formaten",
+      "deterministisches Rendering (zwei identische Renderings)",
+      "alte Episoden unverändert (Schutz gegen Regression)",
+      "python -m hstudio extension test <id>, dann promote"
+     ],
+     "status": "angefragt",
+     "need": "fehlend"
+    }
+   ],
+   "extensions": [
+    {
+     "id": "helicopter",
+     "title": "Hubschrauber",
+     "status": "stabil",
+     "loaded": true,
+     "problem": null
+    }
+   ]
+  }
+ }
+}

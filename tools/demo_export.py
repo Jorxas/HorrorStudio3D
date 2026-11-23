@@ -2,10 +2,11 @@
 
 Die Demo zeigt die echte Oberfläche (hstudio/web/static/studio.html). Ihre Serverantworten kommen aus den Dateien, die dieses Skript schreibt:
 
-  demo/daten/projekte.json   drei Projekte aus echten Szenarien (examples/demos) mit Zeilen, Plänen, Fähigkeitsbericht, Reglerlisten und
+  demo/daten/fr/projekte.json   drei Projekte aus echten Szenarien (examples/demos) mit Zeilen, Plänen, Fähigkeitsbericht, Reglerlisten und
                              den echten Stand der Bildzuordnung, dazu ein erfundener Entwurf ohne Pläne
-  demo/daten/plan.json       echte Ausgaben des Szenenplaners (hstudio.capabilities.planner) für die vorbereiteten Texte
-  demo/daten/katalog.json    Katalogeinträge, für die der Motor eine Miniatur gemalt hat
+  demo/daten/fr/plan.json       echte Ausgaben des Szenenplaners (hstudio.capabilities.planner) für die vorbereiteten Texte
+  demo/daten/fr/katalog.json    Katalogeinträge, für die der Motor eine Miniatur gemalt hat
+  demo/daten/de/             dieselben Dateien auf Deutsch (python tools/demo_deutsch.py, wird hier am Ende aufgerufen)
   demo/vorschau/<projekt>/   die zwölf Motorbilder aus demo/bilder als JPEG (Name wie im echten Studio: shot_00N.jpg)
   demo/katalog/thumbs_*/     vom Motor gemalte Katalogminiaturen (PS1 per CPU-Raytracing, Console 2D)
 
@@ -15,12 +16,13 @@ import argparse, json, os, re, shutil, sys, tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT)); sys.path.insert(0, str(Path(__file__).resolve().parent))
 os.environ.setdefault('PYTHONUTF8', '1')
 
 DEMO = ROOT / 'demo'
 BILDER = DEMO / 'bilder'
 DATEN = DEMO / 'daten'
+DATEN_FR = DATEN / 'fr'      # Rohausgabe des Motors (Originalsprache); demo/daten/de entsteht daraus mit tools/demo_deutsch.py
 VORSCHAU = DEMO / 'vorschau'
 KATALOG = DEMO / 'katalog'
 
@@ -168,15 +170,17 @@ def main():
     protokoll = lesen(BILDER / 'herkunft.json')
     start = 1792000000
     projekte = [projekt_aus_szenario(p, protokoll, start - 86400 * k) for k, p in enumerate(PROJEKTE)] + [entwurf(start - 86400 * 9)]
-    schreiben(DATEN / 'projekte.json', projekte)
+    schreiben(DATEN_FR / 'projekte.json', projekte)
     texte = BEISPIELE + [p['script'] for p in projekte]
     plan = {}
     for t in texte:
         plan[t.strip()] = {eng: planer_ausgabe(t.strip(), eng) for eng in ('pixel3d', 'console')}
-    schreiben(DATEN / 'plan.json', plan)
+    schreiben(DATEN_FR / 'plan.json', plan)
     cache = Path(a.miniaturen) if a.miniaturen else Path(tempfile.mkdtemp(prefix='hs_katalog_'))
     katalog = katalog_bauen(cache)
-    schreiben(DATEN / 'katalog.json', katalog)
+    schreiben(DATEN_FR / 'katalog.json', katalog)
+    import demo_deutsch
+    demo_deutsch.uebersetzen()
     n_bild = sum(1 for p in projekte for n in p['previews'] if n)
     print(f'{len(projekte)} Projekte, {n_bild} Vorschaubilder, {len(plan)} Planertexte, {len(katalog)} Katalogeinträge mit Miniatur.')
 
